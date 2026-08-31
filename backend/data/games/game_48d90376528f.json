@@ -1,0 +1,551 @@
+{
+  "case": {
+    "id": "case_46da815730f0",
+    "title": "The Velvet Mask Mystery",
+    "difficulty": "normal",
+    "location_type": "Mansion",
+    "location_name": "Rosewood Manor",
+    "introduction": "You are at Rosewood Manor. A guest has used a fake name. A theft has been reported. Find the fake guest.",
+    "crime": "A priceless jade necklace has been stolen.",
+    "target_fake_identity": "Lena Hart",
+    "escape_plan": "The target will leave by the hidden tunnel at midnight.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Library",
+        "description": "Rows of old books. A quiet desk."
+      },
+      {
+        "id": "R2",
+        "name": "Garden",
+        "description": "Stone paths and a small pond."
+      },
+      {
+        "id": "R3",
+        "name": "Kitchen",
+        "description": "Busy with pots and a big oven."
+      },
+      {
+        "id": "R4",
+        "name": "Music Room",
+        "description": "A piano and many records."
+      },
+      {
+        "id": "R5",
+        "name": "Lounge",
+        "description": "Soft chairs and a fireplace."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Lena Hart",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Art Dealer",
+        "personality": "charming",
+        "background": "From a small town.",
+        "secret": "Real name is Mara Quinn, ex thief.",
+        "goal": "Escape with the necklace.",
+        "alibi": "She was in the library reading.",
+        "speaking_style": "soft and sweet",
+        "habits": "twirls hair",
+        "fear": "caught",
+        "likes": [
+          "jewelry",
+          "wine"
+        ],
+        "dislikes": [
+          "loud music"
+        ],
+        "intelligence": 85,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "acquaintance",
+            "detail": "met at a show"
+          }
+        ],
+        "knowledge": [
+          "history of jewels"
+        ],
+        "lies": [
+          "She says she never stole before"
+        ],
+        "inventory": [
+          "small clutch",
+          "handkerchief"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C2",
+        "name": "Victor Hale",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Retired Colonel",
+        "personality": "stern",
+        "background": "Military career.",
+        "secret": "He once stole a map.",
+        "goal": "Find the necklace for his collection.",
+        "alibi": "He was in the garden.",
+        "speaking_style": "short commands",
+        "habits": "checks watch",
+        "fear": "fire",
+        "likes": [
+          "whiskey",
+          "chess"
+        ],
+        "dislikes": [
+          "lies"
+        ],
+        "intelligence": 70,
+        "confidence": 75,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "acquaintance",
+            "detail": "talked at dinner"
+          }
+        ],
+        "knowledge": [
+          "security systems"
+        ],
+        "lies": [
+          "He says he was in the garden but was in the study"
+        ],
+        "inventory": [
+          "pocketknife"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Sofia Mendes",
+        "age": 33,
+        "gender": "female",
+        "occupation": "Chef",
+        "personality": "warm",
+        "background": "Worked in many restaurants.",
+        "secret": "She owes money to a loan shark.",
+        "goal": "Get money to pay debt.",
+        "alibi": "She was in the kitchen prepping.",
+        "speaking_style": "cheerful and fast",
+        "habits": "taps foot",
+        "fear": "being hungry",
+        "likes": [
+          "spices",
+          "cats"
+        ],
+        "dislikes": [
+          "cleaning"
+        ],
+        "intelligence": 60,
+        "confidence": 65,
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "cousin",
+            "detail": "they grew up together"
+          }
+        ],
+        "knowledge": [
+          "food safety"
+        ],
+        "lies": [
+          "She says she never met Lena"
+        ],
+        "inventory": [
+          "knife"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Ethan Reed",
+        "age": 29,
+        "gender": "nonbinary",
+        "occupation": "Music Producer",
+        "personality": "quiet",
+        "background": "Runs a small studio.",
+        "secret": "They are a spy for a rival firm.",
+        "goal": "Gather intel on guests.",
+        "alibi": "In the music room listening to records.",
+        "speaking_style": "soft whisper",
+        "habits": "hum a tune",
+        "fear": "silence",
+        "likes": [
+          "vinyl",
+          "coffee"
+        ],
+        "dislikes": [
+          "crowds"
+        ],
+        "intelligence": 78,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "cousin",
+            "detail": "close"
+          }
+        ],
+        "knowledge": [
+          "audio equipment"
+        ],
+        "lies": [
+          "They say they never entered the study"
+        ],
+        "inventory": [
+          "earbuds"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C5",
+        "name": "Harold Finch",
+        "age": 60,
+        "gender": "male",
+        "occupation": "Retired Professor",
+        "personality": "curious",
+        "background": "Taught history for 30 years.",
+        "secret": "He hides a secret diary.",
+        "goal": "Write a book about the night.",
+        "alibi": "He was in the lounge reading.",
+        "speaking_style": "slow and clear",
+        "habits": "strokes beard",
+        "fear": "being ignored",
+        "likes": [
+          "books",
+          "tea"
+        ],
+        "dislikes": [
+          "noise"
+        ],
+        "intelligence": 90,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "old friend",
+            "detail": "met in college"
+          }
+        ],
+        "knowledge": [
+          "history of manor"
+        ],
+        "lies": [
+          "He claims he never saw the necklace"
+        ],
+        "inventory": [
+          "notebook"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive and greet each other.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "The host shows the jade necklace.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Lights flicker, a scream is heard.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:20 PM",
+        "description": "The necklace is missing.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "11:45 PM",
+        "description": "Guests hear a noise near the garden tunnel.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Hairpin with rose engraving",
+        "description": "A tiny hairpin left on a desk.",
+        "location": "Library",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Footprint cast in mud",
+        "description": "A cast that matches a small shoe.",
+        "location": "Garden tunnel",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Broken vase",
+        "description": "A vase shattered on the ground.",
+        "location": "Garden",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Spilled wine on floor",
+        "description": "Red wine stain near a stove.",
+        "location": "Kitchen",
+        "points_to": "C3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "A torn piece of a map in Victor's pocket",
+      "A receipt for music equipment in Ethan's bag"
+    ],
+    "red_herrings": [
+      "The broken vase seems to point to Victor",
+      "The wine spill seems to point to Sofia"
+    ],
+    "solution": {
+      "target_character_id": "C1",
+      "target_true_identity": "Mara Quinn",
+      "reasoning": "The hairpin and the mud footprint both point to Lena. Both match her fake story. The broken vase and wine are false clues. Victor and Sofia have other secrets but not the necklace. The hidden tunnel plan fits Lena's escape.",
+      "key_evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_48d90376528f",
+    "case_id": "case_46da815730f0",
+    "status": "in_progress",
+    "created_at": "2026-08-31T17:32:30.950936+00:00",
+    "updated_at": "2026-08-31T17:35:07.390742+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "Library",
+    "current_objective": "One of the 5 guests at Rosewood Manor is using a fake name. Find the clue that breaks their alibi and name the person behind a priceless jade necklace has been stolen. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "C5": {
+        "character_id": "C5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Lena Hart",
+          "detail": "28, Art Dealer. charming.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victor Hale",
+          "detail": "45, Retired Colonel. stern.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Mendes",
+          "detail": "33, Chef. warm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ethan Reed",
+          "detail": "29, Music Producer. quiet.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Harold Finch",
+          "detail": "60, Retired Professor. curious.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive and greet each other.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "The host shows the jade necklace.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Lights flicker, a scream is heard.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:20 PM",
+          "detail": "The necklace is missing.",
+          "at_time": "9:20 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:45 PM",
+          "detail": "Guests hear a noise near the garden tunnel.",
+          "at_time": "11:45 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You are at Rosewood Manor. A guest has used a fake name. A theft has been reported. Find the fake guest.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lena Hart. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C1"
+      }
+    ],
+    "active_character_id": "C1",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

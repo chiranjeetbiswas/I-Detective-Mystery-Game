@@ -32,6 +32,11 @@ class GroqProvider(LLMProvider):
             "temperature": temperature,
             "max_tokens": max_tokens,
         }
+        # gpt-oss models are reasoning models: without a low reasoning effort they
+        # spend the whole token budget on internal reasoning and return empty
+        # content. Keep reasoning minimal so the model produces actual answers.
+        if "gpt-oss" in self._model:
+            kwargs["reasoning_effort"] = "low"
         if json_mode:
             kwargs["response_format"] = {"type": "json_object"}
         resp = self._client.chat.completions.create(**kwargs)

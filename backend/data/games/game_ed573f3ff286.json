@@ -1,0 +1,581 @@
+{
+  "case": {
+    "id": "case_497f91d680c8",
+    "title": "The Midnight Mix",
+    "difficulty": "normal",
+    "location_type": "Hotel",
+    "location_name": "Grand Echo Hotel",
+    "introduction": "At Grand Echo Hotel, a thief stole a precious gem. A guest is hiding a fake name. You must find the hidden thief.",
+    "crime": "Someone stole a sapphire necklace from the lobby display.",
+    "target_fake_identity": "Alex Mercer",
+    "escape_plan": "The thief will run to the back corridor and slip into a service tunnel.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "1",
+        "name": "Lobby",
+        "description": "Bright lobby with a display case."
+      },
+      {
+        "id": "2",
+        "name": "Back Corridor",
+        "description": "Narrow hallway behind the lobby."
+      },
+      {
+        "id": "3",
+        "name": "Service Tunnel",
+        "description": "Hidden tunnel behind a wall."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Alex Mercer",
+        "age": 32,
+        "gender": "male",
+        "occupation": "Art Dealer",
+        "personality": "Calm",
+        "background": "Sells paintings in city galleries.",
+        "secret": "Uses a fake name, real name is Daniel Hale.",
+        "goal": "Steal the necklace and leave.",
+        "alibi": "Was in the lobby office at the time.",
+        "speaking_style": "Talks slowly.",
+        "habits": "Closes eyes when nervous.",
+        "fear": "Being caught.",
+        "likes": [
+          "Fine art",
+          "Quiet moments"
+        ],
+        "dislikes": [
+          "Loud noises",
+          "Crowds"
+        ],
+        "intelligence": 70,
+        "confidence": 85,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "friend",
+            "detail": "They work together."
+          },
+          {
+            "with_character": "c5",
+            "kind": "rival",
+            "detail": "They compete for buyers."
+          }
+        ],
+        "knowledge": [
+          "He knows the layout of the hotel."
+        ],
+        "lies": [
+          "He said he was in the lobby office."
+        ],
+        "inventory": [
+          "Wallet",
+          "Phone"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Maya Lee",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Hotel Manager",
+        "personality": "Efficient",
+        "background": "Manages hotel operations.",
+        "secret": "She knows the thief\u2019s plan but will not tell anyone.",
+        "goal": "Keep hotel running smoothly.",
+        "alibi": "In the front desk at 8:00 PM.",
+        "speaking_style": "Speaks quickly.",
+        "habits": "Checks her phone often.",
+        "fear": "Bad reviews",
+        "likes": [
+          "Order",
+          "Cleanliness"
+        ],
+        "dislikes": [
+          "Mess",
+          "Delay"
+        ],
+        "intelligence": 80,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "colleague",
+            "detail": "They discuss staff."
+          }
+        ],
+        "knowledge": [
+          "She knows all guests' names."
+        ],
+        "lies": [
+          "She says she was busy."
+        ],
+        "inventory": [
+          "Keycard",
+          "Clipboard"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Jules O'Connor",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Security Guard",
+        "personality": "Gruff",
+        "background": "Security in the hotel.",
+        "secret": "He has a secret love for jazz.",
+        "goal": "Protect guests.",
+        "alibi": "Patrolling the hallway at 8:00 PM.",
+        "speaking_style": "Uses short words.",
+        "habits": "Taps his foot when thinking.",
+        "fear": "Being seen as weak",
+        "likes": [
+          "Jazz music",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Noise",
+          "Late nights"
+        ],
+        "intelligence": 65,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "c4",
+            "kind": "friend",
+            "detail": "They share jokes."
+          }
+        ],
+        "knowledge": [
+          "He knows the tunnel layout."
+        ],
+        "lies": [
+          "He says he was on patrol."
+        ],
+        "inventory": [
+          "Radio",
+          "Flashlight"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Lila Torres",
+        "age": 38,
+        "gender": "female",
+        "occupation": "Chef",
+        "personality": "Cheerful",
+        "background": "Runs the hotel restaurant.",
+        "secret": "She made a secret spice blend for the banquet.",
+        "goal": "Make dinner a success.",
+        "alibi": "In the kitchen at 8:00 PM.",
+        "speaking_style": "Talks loudly.",
+        "habits": "Stirs pots with rhythm.",
+        "fear": "Food burns",
+        "likes": [
+          "Spices",
+          "People"
+        ],
+        "dislikes": [
+          "Rough textures",
+          "Cold weather"
+        ],
+        "intelligence": 75,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "c3",
+            "kind": "colleague",
+            "detail": "They work together."
+          }
+        ],
+        "knowledge": [
+          "She knows the kitchen layout."
+        ],
+        "lies": [
+          "She says she was cooking."
+        ],
+        "inventory": [
+          "Knife",
+          "Spatula"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c5",
+        "name": "Ravi Patel",
+        "age": 30,
+        "gender": "male",
+        "occupation": "Art Curator",
+        "personality": "Thoughtful",
+        "background": "Curates art for galleries.",
+        "secret": "He has a hidden collection of rare coins.",
+        "goal": "Find the perfect piece for an exhibition.",
+        "alibi": "In the museum wing at 8:00 PM.",
+        "speaking_style": "Speaks softly.",
+        "habits": "Taps his fingers on the table.",
+        "fear": "Missing a masterpiece",
+        "likes": [
+          "Coins",
+          "History"
+        ],
+        "dislikes": [
+          "Crowds",
+          "Noise"
+        ],
+        "intelligence": 85,
+        "confidence": 75,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "rival",
+            "detail": "They both sell art."
+          }
+        ],
+        "knowledge": [
+          "He knows the museum layout."
+        ],
+        "lies": [
+          "He says he was in the museum wing."
+        ],
+        "inventory": [
+          "Coin pouch",
+          "Notebook"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive at the lobby.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The necklace disappears from the display case.",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "8:20 PM",
+        "description": "The thief runs to the back corridor.",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "8:25 PM",
+        "description": "The thief slips into the service tunnel.",
+        "involved": [
+          "c1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Broken Lock",
+        "description": "The lock on the display case is broken.",
+        "location": "Lobby",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Fingerprint",
+        "description": "Fingerprint on the case door.",
+        "location": "Lobby",
+        "points_to": "c2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e3",
+        "name": "Phone Call",
+        "description": "Alex's phone rings at 8:10 PM.",
+        "location": "Back Corridor",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      }
+    ],
+    "hidden_clues": [
+      "The phone call was a fake call set up by Alex."
+    ],
+    "red_herrings": [
+      "The broken lock was made by Maya to mislead."
+    ],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "Daniel Hale",
+      "reasoning": "The lock was broken and a phone call was fake. Alex used a fake name. The fingerprint is a fake clue set by Maya. Alex is the thief.",
+      "key_evidence_ids": [
+        "e1",
+        "e3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_ed573f3ff286",
+    "case_id": "case_497f91d680c8",
+    "status": "in_progress",
+    "created_at": "2026-08-31T17:45:36.734140+00:00",
+    "updated_at": "2026-08-31T17:45:39.177499+00:00",
+    "minutes_elapsed": 30,
+    "current_location": "Lobby",
+    "current_objective": "One of the 5 guests at Grand Echo Hotel is using a fake name. Match the clues to the lies and point out the guilty one behind someone stole a sapphire necklace from the lobby display. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 3,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "Where were you tonight?",
+          "Did you see anyone near the necklace?",
+          "What is your real name?"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "Where were you tonight?",
+            "answer": "I was in the lobby office. It was quiet, just me and some papers. Nothing else."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "Did you see anyone near the necklace?",
+            "answer": "I didn\u2019t see anyone near the necklace. I was just in the lobby office, looking at papers. No one was close to it."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "What is your real name?",
+            "answer": "Alex Mercer."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'Where were you tonight?'",
+          "Detective asked: 'Did you see anyone near the necklace?'",
+          "Detective asked: 'What is your real name?'"
+        ],
+        "has_met": true
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c5": {
+        "character_id": "c5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Alex Mercer",
+          "detail": "32, Art Dealer. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Maya Lee",
+          "detail": "28, Hotel Manager. Efficient.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Jules O'Connor",
+          "detail": "45, Security Guard. Gruff.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lila Torres",
+          "detail": "38, Chef. Cheerful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ravi Patel",
+          "detail": "30, Art Curator. Thoughtful.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive at the lobby.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The necklace disappears from the display case.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:20 PM",
+          "detail": "The thief runs to the back corridor.",
+          "at_time": "8:20 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:25 PM",
+          "detail": "The thief slips into the service tunnel.",
+          "at_time": "8:25 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "At Grand Echo Hotel, a thief stole a precious gem. A guest is hiding a fake name. You must find the hidden thief.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Alex Mercer. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Where were you tonight?",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Alex Mercer",
+        "text": "I was in the lobby office. It was quiet, just me and some papers. Nothing else.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "Did you see anyone near the necklace?",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Alex Mercer",
+        "text": "I didn\u2019t see anyone near the necklace. I was just in the lobby office, looking at papers. No one was close to it.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "What is your real name?",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Alex Mercer",
+        "text": "Alex Mercer.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      }
+    ],
+    "active_character_id": "c1",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

@@ -1,0 +1,778 @@
+{
+  "slot": "night-one",
+  "case": {
+    "id": "case_36bccb82d02e",
+    "title": "The Airport Lounge Mystery",
+    "difficulty": "expert",
+    "location_type": "Airport Lounge",
+    "location_name": "The Skyline Executive Lounge",
+    "introduction": "Tonight at The Skyline Executive Lounge, the loss of a secret new machine has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The loss of a secret new machine",
+    "target_fake_identity": "Olivia Ashford, a retired government worker people trust",
+    "escape_plan": "Olivia Ashford plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "nadia0",
+        "name": "Nadia Sterling",
+        "age": 55,
+        "gender": "female",
+        "occupation": "money investor",
+        "personality": "loud and showy",
+        "background": "A money investor with a messy past.",
+        "secret": "Nadia is covering for a family member.",
+        "goal": "Nadia wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "clears their throat before a lie",
+        "fear": "prison",
+        "likes": [
+          "strong coffee",
+          "the sea"
+        ],
+        "dislikes": [
+          "cheap things",
+          "waiting"
+        ],
+        "intelligence": 59,
+        "confidence": 71,
+        "relationships": [
+          {
+            "with_character": "Idris Marchetti",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Olivia Ashford acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "idris1",
+        "name": "Idris Marchetti",
+        "age": 42,
+        "gender": "male",
+        "occupation": "ship captain",
+        "personality": "proud and rude",
+        "background": "A ship captain with a messy past.",
+        "secret": "Idris saw something that night and has not told anyone.",
+        "goal": "Idris wants to find out who is watching them.",
+        "alibi": "Says they were in The Guest Rooms when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "smiles too much when lying",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "strong coffee",
+          "the garden"
+        ],
+        "dislikes": [
+          "the cold",
+          "cheap things"
+        ],
+        "intelligence": 49,
+        "confidence": 82,
+        "relationships": [
+          {
+            "with_character": "Daniel Alcott",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Olivia Ashford acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Idris is using a false name, but for a different reason."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "daniel2",
+        "name": "Daniel Alcott",
+        "age": 54,
+        "gender": "male",
+        "occupation": "house manager",
+        "personality": "smiles a lot, but always planning",
+        "background": "A house manager with a messy past.",
+        "secret": "Daniel faked part of their papers years ago.",
+        "goal": "Daniel wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "touches their necklace when nervous",
+        "fear": "being caught in a lie",
+        "likes": [
+          "music",
+          "money"
+        ],
+        "dislikes": [
+          "loud people",
+          "being touched"
+        ],
+        "intelligence": 90,
+        "confidence": 41,
+        "relationships": [
+          {
+            "with_character": "Olivia Ashford",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Olivia Ashford acting strange near The Grand Lobby.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "olivia3",
+        "name": "Olivia Ashford",
+        "age": 37,
+        "gender": "female",
+        "occupation": "retired government worker",
+        "personality": "cold and very exact",
+        "background": "A retired government worker with a messy past.",
+        "secret": "Olivia took a small thing earlier that night.",
+        "goal": "Olivia wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "gruff and blunt",
+        "habits": "avoids eye contact",
+        "fear": "prison",
+        "likes": [
+          "control",
+          "the sea"
+        ],
+        "dislikes": [
+          "loud people",
+          "being rushed"
+        ],
+        "intelligence": 87,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "Marcus Nakamura",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "marcus4",
+        "name": "Marcus Nakamura",
+        "age": 66,
+        "gender": "male",
+        "occupation": "retired government worker",
+        "personality": "smiles a lot, but always planning",
+        "background": "A retired government worker with a messy past.",
+        "secret": "Marcus was taking money from another guest to keep a secret quiet.",
+        "goal": "Marcus wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Guest Rooms when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "glances at the door often",
+        "fear": "being caught in a lie",
+        "likes": [
+          "control",
+          "the sea"
+        ],
+        "dislikes": [
+          "cheap things",
+          "questions"
+        ],
+        "intelligence": 53,
+        "confidence": 45,
+        "relationships": [
+          {
+            "with_character": "Freya Reyes",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Olivia Ashford acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "freya5",
+        "name": "Freya Reyes",
+        "age": 59,
+        "gender": "female",
+        "occupation": "art expert",
+        "personality": "closed off and quick to defend",
+        "background": "A art expert with a messy past.",
+        "secret": "Freya faked part of their papers years ago.",
+        "goal": "Freya wants to find out who is watching them.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "gruff and blunt",
+        "habits": "clears their throat before a lie",
+        "fear": "losing their good name",
+        "likes": [
+          "the sea",
+          "old books"
+        ],
+        "dislikes": [
+          "waiting",
+          "gossip"
+        ],
+        "intelligence": 79,
+        "confidence": 53,
+        "relationships": [
+          {
+            "with_character": "Nadia Sterling",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Olivia Ashford acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the loss of a secret new machine.",
+        "involved": [
+          "Olivia Ashford"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Olivia Ashford is seen moving toward a side door.",
+        "involved": [
+          "Olivia Ashford"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Lounge",
+        "points_to": "Olivia Ashford",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Private Study",
+        "points_to": "Olivia Ashford",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Dining Room",
+        "points_to": "Olivia Ashford",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Guest Rooms",
+        "points_to": "Olivia Ashford",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Private Study",
+        "points_to": "Idris Marchetti",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a page from an account book",
+        "description": "A page of numbers that do not add up.",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Olivia Ashford's story about where they were does not match the a torn train ticket.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a fake passport",
+      "a photo",
+      "a scary note"
+    ],
+    "solution": {
+      "target_character_id": "olivia3",
+      "target_true_identity": "A wanted criminal pretending to be a retired government worker",
+      "reasoning": "Olivia Ashford is the hidden person. The main clues (a torn train ticket, a cheap phone) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_e67510cef2b9",
+    "case_id": "case_36bccb82d02e",
+    "status": "in_progress",
+    "created_at": "2026-08-31T14:38:20.566278+00:00",
+    "updated_at": "2026-08-31T14:38:20.790888+00:00",
+    "minutes_elapsed": 70,
+    "current_location": "The Grand Lobby",
+    "current_objective": "At The Skyline Executive Lounge tonight, 6 guests are trapped \u2014 and one is lying about who they are. Find the clue that breaks their alibi and name the person behind the loss of a secret new machine. Guests are careful and some clues are fake. Be sharp.",
+    "inventory": [],
+    "discovered_evidence": [
+      "ev0",
+      "ev5",
+      "ev1",
+      "ev4"
+    ],
+    "visited_rooms": [
+      "The Lounge",
+      "The Private Study"
+    ],
+    "npc_states": {
+      "nadia0": {
+        "character_id": "nadia0",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "idris1": {
+        "character_id": "idris1",
+        "trust": 27,
+        "stress": 35,
+        "suspicion_of_player": 15,
+        "times_questioned": 4,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "Where were you at nine?",
+          "You seem nervous. Why?",
+          "I think you are lying to me",
+          "look around"
+        ],
+        "relationship_notes": [
+          "The detective spoke to me harshly."
+        ],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "Where were you at nine?",
+            "answer": "I heard loud voices near the study just before it happened."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "You seem nervous. Why?",
+            "answer": "You asked me about this before. I still say the same thing."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "I think you are lying to me",
+            "answer": "You asked me about this before. I still say the same thing."
+          },
+          {
+            "at_time": "9:00 PM",
+            "question": "look around",
+            "answer": "That is my business, not yours."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'Where were you at nine?'",
+          "Detective asked: 'You seem nervous. Why?'",
+          "Detective asked: 'I think you are lying to me'",
+          "Detective asked: 'look around'"
+        ],
+        "has_met": true
+      },
+      "daniel2": {
+        "character_id": "daniel2",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "olivia3": {
+        "character_id": "olivia3",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "marcus4": {
+        "character_id": "marcus4",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "freya5": {
+        "character_id": "freya5",
+        "trust": 34,
+        "stress": 28,
+        "suspicion_of_player": 15,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Nadia Sterling",
+          "detail": "55, money investor. loud and showy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Idris Marchetti",
+          "detail": "42, ship captain. proud and rude.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Daniel Alcott",
+          "detail": "54, house manager. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Olivia Ashford",
+          "detail": "37, retired government worker. cold and very exact.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marcus Nakamura",
+          "detail": "66, retired government worker. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Freya Reyes",
+          "detail": "59, art expert. closed off and quick to defend.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "a torn train ticket",
+          "detail": "A ticket ripped in two. The time on it is earlier than someone said. (found in The Lounge).",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a wine glass",
+          "detail": "A half-full glass. The drink smells bitter. (found in The Lounge).",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a cheap phone",
+          "detail": "A cheap phone with only one number called. (found in The Private Study).",
+          "at_time": "8:45 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a scary note",
+          "detail": "Big letters: 'THEY KNOW. LEAVE TONIGHT.' (found in The Private Study).",
+          "at_time": "8:45 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the loss of a secret new machine.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Olivia Ashford is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Skyline Executive Lounge, the loss of a secret new machine has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Idris Marchetti. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Where were you at nine?",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Idris Marchetti",
+        "text": "I heard loud voices near the study just before it happened.",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "You seem nervous. Why?",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Idris Marchetti",
+        "text": "You asked me about this before. I still say the same thing.",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "I think you are lying to me",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Idris Marchetti",
+        "text": "You asked me about this before. I still say the same thing.",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "search the lounge",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Narrator",
+        "text": "You search with care. Something here does not belong.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "search the study",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Narrator",
+        "text": "You move slowly and notice the small things other people miss.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "look around",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Idris Marchetti",
+        "text": "That is my business, not yours.",
+        "kind": "dialogue",
+        "character_id": "idris1"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Hint",
+        "text": "Compare what each guest says about where they were with the clues you have found. The one whose story does not match the main clue, and whose papers look wrong, is the one to watch.",
+        "kind": "system",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "idris1",
+    "hints_used": 1,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

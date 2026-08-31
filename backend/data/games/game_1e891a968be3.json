@@ -1,0 +1,1037 @@
+{
+  "case": {
+    "id": "case_73c2ed920a9a",
+    "title": "Midnight at Maple Manor",
+    "difficulty": "beginner",
+    "location_type": "Mansion",
+    "location_name": "Maple Manor",
+    "introduction": "A storm hits Maple Manor. A priceless painting is gone. One guest is a fake. Find who.",
+    "crime": "The painting was stolen.",
+    "target_fake_identity": "Eve Blackwood",
+    "escape_plan": "The thief will run at dawn.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "1",
+        "name": "Grand Hall",
+        "description": "Big hall with a door."
+      },
+      {
+        "id": "2",
+        "name": "Library",
+        "description": "Quiet room with books."
+      },
+      {
+        "id": "3",
+        "name": "Garden",
+        "description": "Small garden with flowers."
+      },
+      {
+        "id": "4",
+        "name": "Dining Room",
+        "description": "Room for meals."
+      },
+      {
+        "id": "5",
+        "name": "Attic",
+        "description": "Old attic, dusty."
+      },
+      {
+        "id": "6",
+        "name": "Basement",
+        "description": "Dark basement."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Eve Blackwood",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Art Curator",
+        "personality": "Calm",
+        "background": "Works at museum.",
+        "secret": "She is not Eve, her real name is Sarah.",
+        "goal": "Hide the painting.",
+        "alibi": "In the attic at 8:30 PM.",
+        "speaking_style": "Soft voice",
+        "habits": "Always checks clocks",
+        "fear": "Being caught",
+        "likes": [
+          "Art",
+          "Quiet"
+        ],
+        "dislikes": [
+          "Noise",
+          "Crowds"
+        ],
+        "intelligence": 80,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "friend",
+            "detail": "They talk often"
+          },
+          {
+            "with_character": "c3",
+            "kind": "colleague",
+            "detail": "They share projects"
+          }
+        ],
+        "knowledge": [
+          "She loves art"
+        ],
+        "lies": [
+          "I saw no one leave the house."
+        ],
+        "inventory": [
+          "Paint brush"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Tom Rivers",
+        "age": 34,
+        "gender": "male",
+        "occupation": "Chef",
+        "personality": "Talkative",
+        "background": "Runs the kitchen.",
+        "secret": "He once hid a food stash.",
+        "goal": "Find a good meal.",
+        "alibi": "Was cooking at 9 PM.",
+        "speaking_style": "Loud voice",
+        "habits": "Tastes everything",
+        "fear": "Burning food",
+        "likes": [
+          "Food",
+          "Music"
+        ],
+        "dislikes": [
+          "Spicy",
+          "Silence"
+        ],
+        "intelligence": 60,
+        "confidence": 75,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "acquaintance",
+            "detail": "He sees her often"
+          }
+        ],
+        "knowledge": [
+          "He likes spices"
+        ],
+        "lies": [],
+        "inventory": [
+          "Knife"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Lila Hart",
+        "age": 22,
+        "gender": "female",
+        "occupation": "Student",
+        "personality": "Shy",
+        "background": "Studies art history.",
+        "secret": "She knows where the painting is hidden.",
+        "goal": "Learn more about art.",
+        "alibi": "In the library at 8:45 PM.",
+        "speaking_style": "Quiet voice",
+        "habits": "Always reads",
+        "fear": "Being late",
+        "likes": [
+          "Books",
+          "Tea"
+        ],
+        "dislikes": [
+          "Noise",
+          "Late"
+        ],
+        "intelligence": 85,
+        "confidence": 50,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "friend",
+            "detail": "They study together"
+          }
+        ],
+        "knowledge": [
+          "She knows art history"
+        ],
+        "lies": [],
+        "inventory": [
+          "Notebook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Mark Lee",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Security Guard",
+        "personality": "Strict",
+        "background": "Guard at the manor.",
+        "secret": "He hides his past crime.",
+        "goal": "Keep peace.",
+        "alibi": "Watching the hallway at 9 PM.",
+        "speaking_style": "Firm voice",
+        "habits": "Counts footsteps",
+        "fear": "Violence",
+        "likes": [
+          "Order",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Disorder",
+          "Noise"
+        ],
+        "intelligence": 70,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "c3",
+            "kind": "mentor",
+            "detail": "He watches her"
+          }
+        ],
+        "knowledge": [
+          "He knows the layout"
+        ],
+        "lies": [],
+        "inventory": [
+          "Flashlight"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c5",
+        "name": "Nina Park",
+        "age": 30,
+        "gender": "female",
+        "occupation": "Journalist",
+        "personality": "Curious",
+        "background": "Wants stories.",
+        "secret": "She has a fake ID.",
+        "goal": "Write a good article.",
+        "alibi": "In the dining room at 8:50 PM.",
+        "speaking_style": "Fast voice",
+        "habits": "Takes notes",
+        "fear": "Missing a story",
+        "likes": [
+          "Writing",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Boredom",
+          "Loud"
+        ],
+        "intelligence": 65,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "colleague",
+            "detail": "They talk about food"
+          }
+        ],
+        "knowledge": [
+          "She knows media"
+        ],
+        "lies": [],
+        "inventory": [
+          "Camera"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c6",
+        "name": "Sam Torres",
+        "age": 50,
+        "gender": "nonbinary",
+        "occupation": "Gardener",
+        "personality": "Quiet",
+        "background": "Tends the garden.",
+        "secret": "They planted a secret box.",
+        "goal": "Keep plants healthy.",
+        "alibi": "In the garden at 9 PM.",
+        "speaking_style": "Soft voice",
+        "habits": "Holds a watering can",
+        "fear": "Dirt",
+        "likes": [
+          "Plants",
+          "Sun"
+        ],
+        "dislikes": [
+          "Cold",
+          "Noise"
+        ],
+        "intelligence": 55,
+        "confidence": 40,
+        "relationships": [
+          {
+            "with_character": "c4",
+            "kind": "neighbor",
+            "detail": "They share tools"
+          }
+        ],
+        "knowledge": [
+          "They know plants"
+        ],
+        "lies": [],
+        "inventory": [
+          "Watering can"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Storm begins. Guests arrive.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      },
+      {
+        "time": "8:20 PM",
+        "description": "Eve enters the attic.",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Painting is missing.",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Everyone checks rooms.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Broken Frame",
+        "description": "The frame is broken on the floor.",
+        "location": "Attic",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Footprints",
+        "description": "Wet footprints in the garden.",
+        "location": "Garden",
+        "points_to": "c6",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e3",
+        "name": "Paint Brush",
+        "description": "A brush with paint on it.",
+        "location": "Attic",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e4",
+        "name": "Key Card",
+        "description": "Card with wrong name.",
+        "location": "Entrance",
+        "points_to": "c5",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Eve says she saw no one leave the house. That is false.",
+      "Eve keeps a watch on the clock. She is not on time."
+    ],
+    "red_herrings": [
+      "Tom says he saw no one in the attic. He is lying about the time."
+    ],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "Sarah Johnson",
+      "reasoning": "The frame is broken in the attic. The brush has paint. Eve was in the attic. Her name is fake.",
+      "key_evidence_ids": [
+        "e1",
+        "e3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_1e891a968be3",
+    "case_id": "case_73c2ed920a9a",
+    "status": "lost",
+    "created_at": "2026-08-31T18:04:18.722361+00:00",
+    "updated_at": "2026-08-31T18:42:42.004657+00:00",
+    "minutes_elapsed": 200,
+    "current_location": "Grand Hall",
+    "current_objective": "One of the 6 guests at Maple Manor is using a fake name. Look for clues, compare their stories, and unmask the one behind the painting was stolen. There are many clues to help you.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [
+      "Grand Hall"
+    ],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 33,
+        "stress": 20,
+        "suspicion_of_player": 45,
+        "times_questioned": 12,
+        "mood": "suspicious",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii",
+          "tell me about your self",
+          "hello eve",
+          "Look around",
+          "what is your name",
+          "you see any unusual on your room",
+          "tell me about TOM",
+          "which time all you gether",
+          "you know every person on this manor",
+          "who work here regular",
+          "you don't know about security guard"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:40 PM",
+            "question": "hii",
+            "answer": "hi. i'm here. how can i help?"
+          },
+          {
+            "at_time": "8:50 PM",
+            "question": "tell me about your self",
+            "answer": "Hi. I\u2019m Eve Blackwood, 28. I work as an art curator. I love quiet places and always check the clock."
+          },
+          {
+            "at_time": "9:35 PM",
+            "question": "hello eve",
+            "answer": "Hi. I\u2019m still here. What do you need?"
+          },
+          {
+            "at_time": "9:45 PM",
+            "question": "Look around",
+            "answer": "The room is quiet. The lights are dim. The painting is on the wall. The clock ticks softly."
+          },
+          {
+            "at_time": "9:55 PM",
+            "question": "what is your name",
+            "answer": "My name is Eve Blackwood."
+          },
+          {
+            "at_time": "10:05 PM",
+            "question": "you see any unusual on your room",
+            "answer": "No. The room is quiet. The clock ticks. The painting looks the same."
+          },
+          {
+            "at_time": "10:30 PM",
+            "question": "tell me about TOM",
+            "answer": "I don\u2019t know."
+          },
+          {
+            "at_time": "10:40 PM",
+            "question": "which time all you gether",
+            "answer": "The clock says 10:40. I check it now."
+          },
+          {
+            "at_time": "10:50 PM",
+            "question": "you know every person on this manor",
+            "answer": "I don\u2019t know. I only know the people who work here. I check the clock again."
+          },
+          {
+            "at_time": "11:00 PM",
+            "question": "who work here regular",
+            "answer": "I work here as the art curator. The house has a few staff \u2013 the butler, the gardener, and a cleaning lady. Those are the people who come in every day."
+          },
+          {
+            "at_time": "11:10 PM",
+            "question": "you don't know about security guard",
+            "answer": "I don\u2019t know anything about a security guard. I only see the staff who work daily. The clock says 11:10."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'tell me about your self'",
+          "Detective asked: 'hello eve'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'what is your name'",
+          "Detective asked: 'you see any unusual on your room'",
+          "Detective asked: 'tell me about TOM'",
+          "Detective asked: 'which time all you gether'",
+          "Detective asked: 'you know every person on this manor'",
+          "Detective asked: 'who work here regular'",
+          "Detective asked: 'you don't know about security guard'"
+        ],
+        "has_met": true
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 51,
+        "stress": 20,
+        "suspicion_of_player": 15,
+        "times_questioned": 6,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "who is the last persson who visit maple manor",
+          "you know that there is stolen happen in your maansion",
+          "where the painting located did you know ?",
+          "who is the last person in the hall",
+          "you watching the hallway you know anyone is come or not in hallway",
+          "before 9:00 who you saw there"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "who is the last persson who visit maple manor",
+            "answer": "I don\u2019t know who was last. I was just watching the hallway at nine."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "you know that there is stolen happen in your maansion",
+            "answer": "I\u2019m not aware of any theft. I was just on duty, watching the hall at nine. I have no idea who did it."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "where the painting located did you know ?",
+            "answer": "I don't know where the painting is. I just watch the hall. The layout is my job."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "who is the last person in the hall",
+            "answer": "I don\u2019t know who was last. I was just watching the hallway."
+          },
+          {
+            "at_time": "9:00 PM",
+            "question": "you watching the hallway you know anyone is come or not in hallway",
+            "answer": "I watch the hallway every night. If someone comes, I count the steps. I saw no footsteps after nine. I don\u2019t know who was there."
+          },
+          {
+            "at_time": "9:10 PM",
+            "question": "before 9:00 who you saw there",
+            "answer": "I didn\u2019t see anyone before 9:00. I was still on my shift, watching the hallway. No footsteps."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'who is the last persson who visit maple manor'",
+          "Detective asked: 'you know that there is stolen happen in your maansion'",
+          "Detective asked: 'where the painting located did you know ?'",
+          "Detective asked: 'who is the last person in the hall'",
+          "Detective asked: 'you watching the hallway you know anyone is come or not in hallway'",
+          "Detective asked: 'before 9:00 who you saw there'"
+        ],
+        "has_met": true
+      },
+      "c5": {
+        "character_id": "c5",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c6": {
+        "character_id": "c6",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Eve Blackwood",
+          "detail": "28, Art Curator. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Tom Rivers",
+          "detail": "34, Chef. Talkative.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lila Hart",
+          "detail": "22, Student. Shy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mark Lee",
+          "detail": "45, Security Guard. Strict.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Nina Park",
+          "detail": "30, Journalist. Curious.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sam Torres",
+          "detail": "50, Gardener. Quiet.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Storm begins. Guests arrive.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:20 PM",
+          "detail": "Eve enters the attic.",
+          "at_time": "8:20 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Painting is missing.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Everyone checks rooms.",
+          "at_time": "9:00 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A storm hits Maple Manor. A priceless painting is gone. One guest is a fake. Find who.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Mark Lee. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "who is the last persson who visit maple manor",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Mark Lee",
+        "text": "I don\u2019t know who was last. I was just watching the hallway at nine.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "you know that there is stolen happen in your maansion",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Mark Lee",
+        "text": "I\u2019m not aware of any theft. I was just on duty, watching the hall at nine. I have no idea who did it.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "where the painting located did you know ?",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Mark Lee",
+        "text": "I don't know where the painting is. I just watch the hall. The layout is my job.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "who is the last person in the hall",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Mark Lee",
+        "text": "I don\u2019t know who was last. I was just watching the hallway.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Eve Blackwood. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Eve Blackwood",
+        "text": "hi. i'm here. how can i help?",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "tell me about your self",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Eve Blackwood",
+        "text": "Hi. I\u2019m Eve Blackwood, 28. I work as an art curator. I love quiet places and always check the clock.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Mark Lee. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "you watching the hallway you know anyone is come or not in hallway",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Mark Lee",
+        "text": "I watch the hallway every night. If someone comes, I count the steps. I saw no footsteps after nine. I don\u2019t know who was there.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "before 9:00 who you saw there",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Mark Lee",
+        "text": "I didn\u2019t see anyone before 9:00. I was still on my shift, watching the hallway. No footsteps.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "You",
+        "text": "search the room if anything see unusual tall me",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Narrator",
+        "text": "You walk into the Grand Hall.  \nYou look around for something tall that looks odd.  \nYou check the walls, the floor, and the big windows.  \nYou listen for any strange noises.  \nYou smell the old wood and a faint scent of dust.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Eve Blackwood. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "You",
+        "text": "hello miss",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "You",
+        "text": "hello eve",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "Eve Blackwood",
+        "text": "Hi. I\u2019m still here. What do you need?",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "Eve Blackwood",
+        "text": "The room is quiet. The lights are dim. The painting is on the wall. The clock ticks softly.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "You",
+        "text": "what is your name",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "Eve Blackwood",
+        "text": "My name is Eve Blackwood.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "You",
+        "text": "you see any unusual on your room",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "Eve Blackwood",
+        "text": "No. The room is quiet. The clock ticks. The painting looks the same.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Narrator",
+        "text": "You step into the Grand Hall and feel the cold floor underfoot.  \nYou see a dusty chandelier hanging low, its light flickering.  \nYou hear a distant creak as the old floorboards shift in the wind.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "Hint",
+        "text": "Check the stories that have not been asked yet. Look for a guest who says something that is different from the others.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "You",
+        "text": "tell me about TOM",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "Eve Blackwood",
+        "text": "I don\u2019t know.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "You",
+        "text": "which time all you gether",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "Eve Blackwood",
+        "text": "The clock says 10:40. I check it now.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:50 PM",
+        "speaker": "You",
+        "text": "you know every person on this manor",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "10:50 PM",
+        "speaker": "Eve Blackwood",
+        "text": "I don\u2019t know. I only know the people who work here. I check the clock again.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "You",
+        "text": "who work here regular",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Eve Blackwood",
+        "text": "I work here as the art curator. The house has a few staff \u2013 the butler, the gardener, and a cleaning lady. Those are the people who come in every day.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "You",
+        "text": "you don't know about security guard",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "Eve Blackwood",
+        "text": "I don\u2019t know anything about a security guard. I only see the staff who work daily. The clock says 11:10.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "11:20 PM",
+        "speaker": "Verdict",
+        "text": "You are wrong.  \nEve Blackwood was the real culprit.  \nThe frame in the attic was broken.  \nHer name on the list was fake.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "c1",
+    "hints_used": 1,
+    "accusation_made": true,
+    "accused_character_id": "c3"
+  }
+}

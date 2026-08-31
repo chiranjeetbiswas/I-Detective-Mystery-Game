@@ -2,52 +2,383 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================================================================
+   IDENTITY HUNT — DESIGN TOKENS
+   A cinematic detective-noir system: layered navy/slate surfaces lit by
+   antique gold. All colours are stored as bare HSL triplets so Tailwind can
+   compose them with opacity modifiers (e.g. `bg-primary/15`).
+   ========================================================================= */
+
 :root {
-  /* Dark cinematic noir detective theme */
-  --background: 20 14% 6%;
-  --foreground: 40 30% 92%;
-  --card: 20 14% 9%;
-  --card-foreground: 40 30% 92%;
-  --primary: 38 92% 55%;          /* amber/gold */
-  --primary-foreground: 20 14% 8%;
-  --secondary: 20 10% 16%;
-  --secondary-foreground: 40 30% 92%;
-  --muted: 20 10% 14%;
-  --muted-foreground: 40 10% 62%;
-  --accent: 200 30% 30%;
-  --accent-foreground: 40 30% 92%;
-  --destructive: 0 72% 51%;
-  --destructive-foreground: 40 30% 96%;
-  --border: 30 10% 20%;
-  --input: 30 10% 18%;
-  --ring: 38 92% 55%;
-  --gold: 40 90% 60%;
-  --radius: 0.6rem;
+  /* ── Canvas & surfaces ─────────────────────────────────────────────────
+     Five stacked planes. Each step up in elevation gets lighter and very
+     slightly less saturated, which reads as light falling from above. */
+  --bg: 222 47% 4%;              /* deepest canvas — the room in shadow   */
+  --bg-elevated: 221 40% 6%;     /* app chrome / header wash              */
+  --surface: 221 33% 9%;         /* cards, panels                         */
+  --surface-2: 220 26% 13%;      /* raised rows, secondary fills          */
+  --surface-3: 219 21% 18%;      /* inputs, hover states                  */
+  --border: 217 18% 22%;         /* hairlines                             */
+  --border-strong: 215 16% 34%;  /* emphasised dividers, focus outlines   */
+
+  /* ── Ink ───────────────────────────────────────────────────────────────
+     Cool off-white so it sits in the same light as the navy surfaces. */
+  --fg: 210 30% 95%;
+  --fg-muted: 214 17% 74%;
+  --fg-subtle: 215 14% 60%;
+
+  /* ── Antique gold ──────────────────────────────────────────────────────
+     Deliberately desaturated versus the old neon amber: this is tarnished
+     brass and gilt-edged paper, not a warning light. */
+  --gold: 43 52% 60%;
+  --gold-bright: 45 76% 74%;
+  --gold-deep: 38 42% 36%;
+
+  /* ── Semantic accents ──────────────────────────────────────────────────*/
+  --trust: 168 46% 47%;          /* verdigris green                       */
+  --stress: 30 78% 57%;          /* ember orange                          */
+  --suspicion: 268 46% 68%;      /* cold violet                           */
+  --danger: 356 64% 55%;         /* deep crimson                          */
+  --info: 199 60% 62%;           /* pale cyan                             */
+
+  /* ── shadcn-compatible aliases (do not rename: components consume these) */
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--surface);
+  --card-foreground: var(--fg);
+  --primary: var(--gold);
+  --primary-foreground: 222 47% 6%;
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--fg);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--fg-muted);
+  --accent: var(--info);
+  --accent-foreground: 222 47% 6%;
+  --destructive: var(--danger);
+  --destructive-foreground: 210 30% 97%;
+  --input: var(--surface-3);
+  --ring: var(--gold);
+
+  /* ── Elevation ─────────────────────────────────────────────────────────
+     Layered soft shadows plus a 1px inner top highlight, which is what
+     makes a dark surface read as a physical object rather than a hole. */
+  --shadow-sm: 0 1px 2px hsl(222 60% 2% / 0.5);
+  --shadow-md: 0 4px 12px -2px hsl(222 60% 2% / 0.55),
+               0 2px 4px -2px hsl(222 60% 2% / 0.4);
+  --shadow-lg: 0 16px 40px -12px hsl(222 60% 2% / 0.7),
+               0 4px 10px -4px hsl(222 60% 2% / 0.5);
+  --shadow-xl: 0 32px 64px -16px hsl(222 60% 2% / 0.8),
+               0 8px 20px -8px hsl(222 60% 2% / 0.6);
+  --bevel: inset 0 1px 0 0 hsl(210 40% 100% / 0.06);
+  --glow-gold: 0 0 0 1px hsl(var(--gold) / 0.35),
+               0 8px 28px -8px hsl(var(--gold) / 0.3);
+
+  --radius: 0.625rem;
 }
+
+/* =========================================================================
+   BASE
+   ========================================================================= */
 
 * {
   border-color: hsl(var(--border));
 }
 
-body {
-  background:
-    radial-gradient(1200px 600px at 50% -10%, hsl(38 40% 20% / 0.25), transparent 70%),
-    hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-family: Georgia, Cambria, serif;
-  min-height: 100vh;
+html {
+  color-scheme: dark;
 }
 
+body {
+  /* Three-light setup: a warm gold key from top-centre, a cool slate fill
+     from the lower left, and the deep navy canvas underneath. */
+  background-color: hsl(var(--bg));
+  background-image:
+    radial-gradient(
+      1100px 520px at 50% -8%,
+      hsl(43 52% 50% / 0.11),
+      transparent 68%
+    ),
+    radial-gradient(
+      760px 520px at 8% 105%,
+      hsl(215 60% 40% / 0.13),
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      hsl(221 42% 6%) 0%,
+      hsl(var(--bg)) 45%,
+      hsl(224 50% 3%) 100%
+    );
+  background-attachment: fixed;
+  color: hsl(var(--fg));
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: hsl(var(--gold) / 0.28);
+  color: hsl(var(--fg));
+}
+
+/* Gold focus ring everywhere, always visible for keyboard users. */
+:focus-visible {
+  outline: 2px solid hsl(var(--gold) / 0.75);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* =========================================================================
+   TYPOGRAPHY UTILITIES
+   Cinzel = engraved display (case files, titles).
+   Cormorant Garamond = spoken dialogue and narration.
+   Inter = every piece of interface furniture.
+   JetBrains Mono = clock, counters, anything numeric.
+   ========================================================================= */
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+  .font-prose {
+    font-family: var(--font-prose), Georgia, serif;
+  }
+
+  /* Display scale — Cinzel is all-caps by design, so tracking opens up. */
+  .type-display-xl {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: 0.03em;
+  }
+  .type-display-lg {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.025em;
+  }
+  .type-display-md {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .type-display-sm {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+  }
+
+  /* Spoken words. Cormorant runs optically small, hence the size bump. */
+  .type-dialogue {
+    font-family: var(--font-prose), Georgia, serif;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.005em;
+  }
+  .type-narration {
+    font-family: var(--font-prose), Georgia, serif;
+    font-size: 1.0625rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  /* Interface furniture. 12px is the floor; 11px only for timestamps. */
+  .type-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .type-micro {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 0.06em;
+  }
+  .type-num {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+  }
+
+  /* Gilt text — used sparingly, on titles only. */
+  .text-gilt {
+    background-image: linear-gradient(
+      168deg,
+      hsl(var(--gold-bright)) 0%,
+      hsl(var(--gold)) 42%,
+      hsl(var(--gold-deep)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ── Surface treatments ─────────────────────────────────────────────── */
+
+  /* Frosted chrome for headers and floating bars. */
+  .glass {
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--surface) / 0.82),
+      hsl(var(--surface) / 0.62)
+    );
+    backdrop-filter: blur(14px) saturate(1.25);
+    -webkit-backdrop-filter: blur(14px) saturate(1.25);
+    border-color: hsl(var(--border) / 0.85);
+  }
+
+  /* The workhorse card: gradient fill, hairline, bevel, soft shadow. */
+  .surface-card {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(var(--surface-2) / 0.7),
+      hsl(var(--surface) / 0.55)
+    );
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-md), var(--bevel);
+  }
+
+  /* Same, one step brighter — for the selected suspect. */
+  .surface-card-gold {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(var(--gold) / 0.13),
+      hsl(var(--surface) / 0.6)
+    );
+    border: 1px solid hsl(var(--gold) / 0.45);
+    box-shadow: var(--shadow-lg), var(--glow-gold), var(--bevel);
+  }
+
+  /* Aged paper, for the notebook. Warm, not navy. */
+  .surface-paper {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(38 22% 15% / 0.55),
+      hsl(34 18% 11% / 0.45)
+    );
+    border: 1px solid hsl(40 20% 30% / 0.42);
+    box-shadow: var(--shadow-sm), var(--bevel);
+  }
+
+  .elev-sm { box-shadow: var(--shadow-sm), var(--bevel); }
+  .elev-md { box-shadow: var(--shadow-md), var(--bevel); }
+  .elev-lg { box-shadow: var(--shadow-lg), var(--bevel); }
+  .elev-xl { box-shadow: var(--shadow-xl), var(--bevel); }
+  .elev-gold { box-shadow: var(--glow-gold), var(--shadow-md); }
+
+  /* A hairline that fades out at both ends — a small handcrafted touch
+     that stops long dividers looking mechanical. */
+  .rule-gold {
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      hsl(var(--gold) / 0.5) 18%,
+      hsl(var(--gold) / 0.5) 82%,
+      transparent
+    );
+  }
+
+  /* Small caps section heading with a gold tick on the left. */
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: hsl(var(--fg-muted));
+  }
+  .eyebrow::before {
+    content: "";
+    width: 2px;
+    height: 0.8em;
+    background: hsl(var(--gold));
+    border-radius: 1px;
+    flex: none;
+  }
+}
+
+/* =========================================================================
+   ATMOSPHERE OVERLAYS
+   Fixed, pointer-events-none, and layered under the app content (z-0 vs the
+   app's z-10 wrapper) so they tint the scene without intercepting clicks.
+   ========================================================================= */
+
+/* Film grain — real fractal noise rather than a dot pattern. */
 .noir-grain::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Lens vignette — darkens the corners so the eye is pulled to the centre. */
+.noir-grain::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(hsl(0 0% 100% / 0.02) 1px, transparent 1px);
-  background-size: 3px 3px;
   z-index: 0;
+  background: radial-gradient(
+    128% 128% at 50% 42%,
+    transparent 52%,
+    hsl(224 60% 2% / 0.55) 100%
+  );
 }
 
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 8px; }
-::-webkit-scrollbar-track { background: transparent; }
+/* =========================================================================
+   SCROLLBARS
+   ========================================================================= */
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--bg) / 0.4); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--border-strong)),
+    hsl(var(--border))
+  );
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--gold) / 0.5); background-clip: padding-box; }
+* { scrollbar-color: hsl(var(--border-strong)) transparent; scrollbar-width: thin; }
+
+/* =========================================================================
+   MOTION
+   One global gate. Framer Motion is additionally wrapped in a MotionConfig
+   with reducedMotion="user", so both CSS and JS animation respect this.
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

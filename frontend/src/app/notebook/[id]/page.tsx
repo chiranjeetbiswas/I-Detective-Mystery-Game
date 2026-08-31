@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, Loader2 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardGilt, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { NotebookPanel } from "@/components/game/notebook-panel";
 import { api } from "@/lib/api";
@@ -20,8 +21,11 @@ export default function NotebookPage() {
 
   if (!snap) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4">
+        <Loader2 className="h-7 w-7 animate-spin text-gold" />
+        <p className="text-micro uppercase tracking-[0.2em] text-ink-subtle">
+          Finding your notebook
+        </p>
       </div>
     );
   }
@@ -31,21 +35,29 @@ export default function NotebookPage() {
       <Button
         variant="ghost"
         size="sm"
-        className="mb-4"
+        className="mb-5"
         onClick={() => router.push(`/case/${id}`)}
       >
-        <ArrowLeft className="h-4 w-4" /> Back to the case
+        <ArrowLeft className="h-3.5 w-3.5" /> Back to the case
       </Button>
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <BookOpen className="h-5 w-5 text-primary" /> Your Notes
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <NotebookPanel notebook={snap.notebook} />
-        </CardContent>
-      </Card>
+
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <CardGilt>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2.5">
+              <BookOpen className="h-4 w-4 text-gold" strokeWidth={2} aria-hidden />
+              Your Notes
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <NotebookPanel notebook={snap.notebook} />
+          </CardContent>
+        </CardGilt>
+      </motion.div>
     </main>
   );
 }

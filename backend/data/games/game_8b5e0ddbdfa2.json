@@ -1,0 +1,778 @@
+{
+  "case": {
+    "id": "case_e783236193c8",
+    "title": "Midnight in the Museum",
+    "difficulty": "normal",
+    "location_type": "Museum",
+    "location_name": "Ravenwood Art Museum",
+    "introduction": "A grand museum. A priceless painting is stolen. One guest hides his real name. You must find him.",
+    "crime": "The painting 'Moonlit Lake' was taken from the gallery.",
+    "target_fake_identity": "Alex Mercer",
+    "escape_plan": "The thief will slip out in the back door at midnight.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "1",
+        "name": "Gallery",
+        "description": "Bright lights. Many paintings."
+      },
+      {
+        "id": "2",
+        "name": "Back Corridor",
+        "description": "Short hall. Lock on door."
+      },
+      {
+        "id": "3",
+        "name": "Storage",
+        "description": "Full of boxes."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Alex Mercer",
+        "age": 35,
+        "gender": "male",
+        "occupation": "Art Curator",
+        "personality": "Calm",
+        "background": "Works at museum.",
+        "secret": "He is not a curator, he is a thief.",
+        "goal": "Steal the painting.",
+        "alibi": "Was in the kitchen.",
+        "speaking_style": "Soft voice",
+        "habits": "Touches his hat",
+        "fear": "Being caught",
+        "likes": [
+          "Art",
+          "Quiet"
+        ],
+        "dislikes": [
+          "Crowds"
+        ],
+        "intelligence": 85,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "friend",
+            "detail": "They plan a party."
+          }
+        ],
+        "knowledge": [
+          "Painting layout",
+          "Security"
+        ],
+        "lies": [
+          "I was in the kitchen"
+        ],
+        "inventory": [
+          "Lockpick",
+          "Fake ID"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Mira Lane",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Museum Visitor",
+        "personality": "Cheerful",
+        "background": "Loves art.",
+        "secret": "She has a hidden scar.",
+        "goal": "Enjoy the night.",
+        "alibi": "In the gallery.",
+        "speaking_style": "Bright voice",
+        "habits": "Sings to herself",
+        "fear": "Losing her ticket",
+        "likes": [
+          "Singing"
+        ],
+        "dislikes": [
+          "Rain"
+        ],
+        "intelligence": 70,
+        "confidence": 65,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "acquaintance",
+            "detail": "They talk about art."
+          }
+        ],
+        "knowledge": [
+          "Artist biographies"
+        ],
+        "lies": [
+          "I was in the gallery"
+        ],
+        "inventory": [
+          "Notebook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Jorge Silva",
+        "age": 42,
+        "gender": "male",
+        "occupation": "Security Guard",
+        "personality": "Strict",
+        "background": "Veteran guard.",
+        "secret": "He hates his boss.",
+        "goal": "Keep the museum safe.",
+        "alibi": "On duty.",
+        "speaking_style": "Low voice",
+        "habits": "Checks clocks",
+        "fear": "Failure",
+        "likes": [
+          "Order"
+        ],
+        "dislikes": [
+          "Noise"
+        ],
+        "intelligence": 75,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "rival",
+            "detail": "Dislikes Alex."
+          }
+        ],
+        "knowledge": [
+          "Security system"
+        ],
+        "lies": [
+          "I was on duty"
+        ],
+        "inventory": [
+          "Flashlight"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Lena Hart",
+        "age": 31,
+        "gender": "female",
+        "occupation": "Gallery Owner",
+        "personality": "Shy",
+        "background": "Runs a small gallery.",
+        "secret": "She sells fake paintings.",
+        "goal": "Make money.",
+        "alibi": "In her office.",
+        "speaking_style": "Soft tone",
+        "habits": "Taps fingers",
+        "fear": "Reputation",
+        "likes": [
+          "Painting"
+        ],
+        "dislikes": [
+          "Shadows"
+        ],
+        "intelligence": 68,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "friend",
+            "detail": "They share art."
+          }
+        ],
+        "knowledge": [
+          "Art market"
+        ],
+        "lies": [
+          "I was in my office"
+        ],
+        "inventory": [
+          "Fake cash"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c5",
+        "name": "Tom Rojas",
+        "age": 50,
+        "gender": "male",
+        "occupation": "Archivist",
+        "personality": "Quiet",
+        "background": "Loves history.",
+        "secret": "He hides a secret diary.",
+        "goal": "Protect artifacts.",
+        "alibi": "In archive room.",
+        "speaking_style": "Measured",
+        "habits": "Reads aloud",
+        "fear": "Loss of records",
+        "likes": [
+          "Books"
+        ],
+        "dislikes": [
+          "Modern art"
+        ],
+        "intelligence": 82,
+        "confidence": 78,
+        "relationships": [
+          {
+            "with_character": "c3",
+            "kind": "colleague",
+            "detail": "They discuss security."
+          }
+        ],
+        "knowledge": [
+          "Museum history"
+        ],
+        "lies": [
+          "I was in archive"
+        ],
+        "inventory": [
+          "Magnifying glass"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c6",
+        "name": "Nina Patel",
+        "age": 23,
+        "gender": "nonbinary",
+        "occupation": "Student",
+        "personality": "Energetic",
+        "background": "Studies art history.",
+        "secret": "Has a twin.",
+        "goal": "Learn more.",
+        "alibi": "In the cafe.",
+        "speaking_style": "Upbeat",
+        "habits": "Tap feet",
+        "fear": "Being ignored",
+        "likes": [
+          "Coffee"
+        ],
+        "dislikes": [
+          "Toys"
+        ],
+        "intelligence": 80,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "c4",
+            "kind": "friend",
+            "detail": "They share a class."
+          }
+        ],
+        "knowledge": [
+          "Modern art"
+        ],
+        "lies": [
+          "I was in cafe"
+        ],
+        "inventory": [
+          "Sketchbook"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive at museum",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "Paintings are opened for viewing",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      },
+      {
+        "time": "10:15 PM",
+        "description": "Security alarm triggers",
+        "involved": [
+          "c3"
+        ]
+      },
+      {
+        "time": "11:00 PM",
+        "description": "Painting stolen",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "11:30 PM",
+        "description": "All leave the museum",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Fingerprint",
+        "description": "Fingerprint on the frame",
+        "location": "Gallery",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Security Footage",
+        "description": "Shows a shadow",
+        "location": "Back Corridor",
+        "points_to": "c3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e3",
+        "name": "Broken Lock",
+        "description": "Back door lock broken",
+        "location": "Back Corridor",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e4",
+        "name": "Fake ID",
+        "description": "ID of Alex is fake",
+        "location": "Storage",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      }
+    ],
+    "hidden_clues": [
+      "The real name is not Alex. The real name is Sam.",
+      "The fingerprint does not match a real hand."
+    ],
+    "red_herrings": [
+      "The shadow was just a cat.",
+      "The lock break was an accident."
+    ],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "Sam Brooks",
+      "reasoning": "The fake ID, the broken lock and the fingerprint all point to the thief. The real name is not Alex.",
+      "key_evidence_ids": [
+        "e1",
+        "e3",
+        "e4"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_8b5e0ddbdfa2",
+    "case_id": "case_e783236193c8",
+    "status": "lost",
+    "created_at": "2026-08-31T17:46:23.458011+00:00",
+    "updated_at": "2026-08-31T18:02:54.806630+00:00",
+    "minutes_elapsed": 85,
+    "current_location": "Gallery",
+    "current_objective": "6 guests. One fake identity. It happened at Ravenwood Art Museum. Look for clues, compare their stories, and unmask the one behind the painting 'Moonlit Lake' was taken from the gallery. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [
+      "e1"
+    ],
+    "visited_rooms": [
+      "Gallery"
+    ],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 46,
+        "stress": 15,
+        "suspicion_of_player": 20,
+        "times_questioned": 7,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [
+          "I was in the kitchen"
+        ],
+        "asked_questions": [
+          "hii",
+          "tell me about yourself",
+          "you know about painting",
+          "please check in your room one time",
+          "you can say this is which person footprint on the floor",
+          "you know which time security alarm triggers",
+          "and painting stolen time"
+        ],
+        "relationship_notes": [
+          "The detective was kind to me."
+        ],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hii",
+            "answer": "Hi. How can I help?"
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "tell me about yourself",
+            "answer": "I'm Alex Mercer, an art curator. I love quiet places and painting layouts. I keep my hat on, because it helps me think. I was in the kitchen when you asked."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "you know about painting",
+            "answer": "I know the layout of the painting. It\u2019s in the third room on the left. I can show you the floor plan if you want."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "please check in your room one time ",
+            "answer": "I\u2019m still in the kitchen. I don\u2019t have a room to check."
+          },
+          {
+            "at_time": "8:55 PM",
+            "question": "you can say this is which person footprint on the floor",
+            "answer": "I don\u2019t see any footprints. The floor is clean. I was in the kitchen, as I said."
+          },
+          {
+            "at_time": "9:05 PM",
+            "question": "you know which time security alarm triggers",
+            "answer": "I don\u2019t know."
+          },
+          {
+            "at_time": "9:15 PM",
+            "question": "and painting stolen time",
+            "answer": "I\u2019m not sure. I was in the kitchen when you asked. The painting is still in its place. I didn\u2019t see anyone move it."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii'",
+          "Detective asked: 'tell me about yourself'",
+          "Detective asked: 'you know about painting'",
+          "Detective asked: 'please check in your room one time '",
+          "Detective asked: 'you can say this is which person footprint on the floor'",
+          "Detective asked: 'you know which time security alarm triggers'",
+          "Detective asked: 'and painting stolen time'"
+        ],
+        "has_met": true
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 42,
+        "stress": 28,
+        "suspicion_of_player": 15,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c5": {
+        "character_id": "c5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c6": {
+        "character_id": "c6",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Alex Mercer",
+          "detail": "35, Art Curator. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mira Lane",
+          "detail": "28, Museum Visitor. Cheerful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Jorge Silva",
+          "detail": "42, Security Guard. Strict.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lena Hart",
+          "detail": "31, Gallery Owner. Shy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Tom Rojas",
+          "detail": "50, Archivist. Quiet.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Nina Patel",
+          "detail": "23, Student. Energetic.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "Fingerprint",
+          "detail": "Fingerprint on the frame (found in Gallery).",
+          "at_time": "8:40 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive at museum",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "Paintings are opened for viewing",
+          "at_time": "9:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:15 PM",
+          "detail": "Security alarm triggers",
+          "at_time": "10:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:00 PM",
+          "detail": "Painting stolen",
+          "at_time": "11:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:30 PM",
+          "detail": "All leave the museum",
+          "at_time": "11:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A grand museum. A priceless painting is stolen. One guest hides his real name. You must find him.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Alex Mercer. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Alex Mercer",
+        "text": "Hi. How can I help?",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "tell me about yourself",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Alex Mercer",
+        "text": "I'm Alex Mercer, an art curator. I love quiet places and painting layouts. I keep my hat on, because it helps me think. I was in the kitchen when you asked.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "you know about painting",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Alex Mercer",
+        "text": "I know the layout of the painting. It\u2019s in the third room on the left. I can show you the floor plan if you want.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "please check in your room one time ",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Alex Mercer",
+        "text": "I\u2019m still in the kitchen. I don\u2019t have a room to check.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "check in the kitchen anything unusual",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Narrator",
+        "text": "You walk into the gallery kitchen.  \nThe air smells like old paint and cold metal.  \nOn the floor a single fingerprint is visible.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "You",
+        "text": "you can say this is which person footprint on the floor",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "Alex Mercer",
+        "text": "I don\u2019t see any footprints. The floor is clean. I was in the kitchen, as I said.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "You",
+        "text": "you know which time security alarm triggers",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "Alex Mercer",
+        "text": "I don\u2019t know.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "and painting stolen time",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Alex Mercer",
+        "text": "I\u2019m not sure. I was in the kitchen when you asked. The painting is still in its place. I didn\u2019t see anyone move it.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      }
+    ],
+    "active_character_id": "c1",
+    "hints_used": 0,
+    "accusation_made": true,
+    "accused_character_id": "c6"
+  }
+}

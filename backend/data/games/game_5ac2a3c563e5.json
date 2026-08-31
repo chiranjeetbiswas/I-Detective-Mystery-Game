@@ -309,8 +309,8 @@
     "case_id": "case_6187d6fe0bba",
     "status": "in_progress",
     "created_at": "2026-08-31T12:02:54.069996+00:00",
-    "updated_at": "2026-08-31T12:13:05.548381+00:00",
-    "minutes_elapsed": 85,
+    "updated_at": "2026-08-31T17:11:11.230713+00:00",
+    "minutes_elapsed": 200,
     "current_location": "The Grand Lobby",
     "current_objective": "At The Aurora Voyager tonight, 4 guests are trapped \u2014 and one is lying about who they are. Look for clues, compare their stories, and unmask the one behind the ruin of the big event of the evening. Some guests lie. Check their stories carefully.",
     "inventory": [],
@@ -324,10 +324,10 @@
     "npc_states": {
       "rowan0": {
         "character_id": "rowan0",
-        "trust": 50,
+        "trust": 47,
         "stress": 20,
-        "suspicion_of_player": 0,
-        "times_questioned": 2,
+        "suspicion_of_player": 5,
+        "times_questioned": 4,
         "mood": "confident",
         "status": "available",
         "evidence_shown": [],
@@ -335,7 +335,8 @@
         "lies_told": [],
         "asked_questions": [
           "Look around",
-          "say your story"
+          "say your story",
+          "hii"
         ],
         "relationship_notes": [],
         "exchanges": [
@@ -348,20 +349,32 @@
             "at_time": "8:10 PM",
             "question": "say your story",
             "answer": "I was in the lounge all evening. Ask anyone."
+          },
+          {
+            "at_time": "9:25 PM",
+            "question": "hii",
+            "answer": "I was in the lounge all evening. Ask anyone."
+          },
+          {
+            "at_time": "9:50 PM",
+            "question": "Look around",
+            "answer": "I was in the lounge all evening. Ask anyone."
           }
         ],
         "memory": [
           "Detective asked: 'Look around'",
-          "Detective asked: 'say your story'"
+          "Detective asked: 'say your story'",
+          "Detective asked: 'hii'",
+          "Detective asked: 'Look around'"
         ],
         "has_met": true
       },
       "lucas1": {
         "character_id": "lucas1",
-        "trust": 44,
+        "trust": 41,
         "stress": 20,
-        "suspicion_of_player": 10,
-        "times_questioned": 5,
+        "suspicion_of_player": 15,
+        "times_questioned": 6,
         "mood": "confident",
         "status": "available",
         "evidence_shown": [],
@@ -372,7 +385,8 @@
           "what you saw",
           "what",
           "what more thing you want to share",
-          "who drink the wine"
+          "who drink the wine",
+          "Look around"
         ],
         "relationship_notes": [],
         "exchanges": [
@@ -400,6 +414,11 @@
             "at_time": "9:15 PM",
             "question": "who drink the wine",
             "answer": "I already told you my side. But yes, there is more I could share."
+          },
+          {
+            "at_time": "10:15 PM",
+            "question": "Look around",
+            "answer": "I already told you my side. But yes, there is more I could share."
           }
         ],
         "memory": [
@@ -407,28 +426,44 @@
           "Detective asked: 'what you saw'",
           "Detective asked: 'what'",
           "Detective asked: 'what more thing you want to share'",
-          "Detective asked: 'who drink the wine'"
+          "Detective asked: 'who drink the wine'",
+          "Detective asked: 'Look around'"
         ],
         "has_met": true
       },
       "diego2": {
         "character_id": "diego2",
-        "trust": 42,
-        "stress": 28,
-        "suspicion_of_player": 15,
-        "times_questioned": 0,
-        "mood": "confident",
-        "status": "available",
+        "trust": 2,
+        "stress": 68,
+        "suspicion_of_player": 90,
+        "times_questioned": 1,
+        "mood": "angry",
+        "status": "talking",
         "evidence_shown": [],
         "revealed_knowledge": [],
         "lies_told": [],
-        "asked_questions": [],
+        "asked_questions": [
+          "Look around"
+        ],
         "relationship_notes": [
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
           "The detective searched a room close to me."
         ],
-        "exchanges": [],
-        "memory": [],
-        "has_met": false
+        "exchanges": [
+          {
+            "at_time": "10:55 PM",
+            "question": "Look around",
+            "answer": "You are pointing fingers at everyone. Maybe that is the problem."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
       },
       "ronan3": {
         "character_id": "ronan3",
@@ -437,7 +472,7 @@
         "suspicion_of_player": 0,
         "times_questioned": 0,
         "mood": "confident",
-        "status": "talking",
+        "status": "available",
         "evidence_shown": [],
         "revealed_knowledge": [],
         "lies_told": [],
@@ -708,10 +743,185 @@
         "text": "You walk over to Ronan Novak. You have not spoken yet.",
         "kind": "narration",
         "character_id": "ronan3"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Rowan Okafor. You have spoken before.",
+        "kind": "narration",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Rowan Okafor",
+        "text": "I was in the lounge all evening. Ask anyone.",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "Rowan Okafor",
+        "text": "I was in the lounge all evening. Ask anyone.",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "10:00 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:00 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Lucas Reyes. You have spoken before.",
+        "kind": "narration",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Lucas Reyes",
+        "text": "I already told you my side. But yes, there is more I could share.",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "Hint",
+        "text": "Compare what each guest says about where they were with the clues you have found. The one whose story does not match the main clue, and whose papers look wrong, is the one to watch.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Diego Holloway. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "diego2"
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "Hint",
+        "text": "Compare what each guest says about where they were with the clues you have found. The one whose story does not match the main clue, and whose papers look wrong, is the one to watch.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "diego2"
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "Diego Holloway",
+        "text": "You are pointing fingers at everyone. Maybe that is the problem.",
+        "kind": "dialogue",
+        "character_id": "diego2"
+      },
+      {
+        "at_time": "11:05 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:05 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
       }
     ],
-    "active_character_id": "ronan3",
-    "hints_used": 2,
+    "active_character_id": "diego2",
+    "hints_used": 4,
     "accusation_made": false,
     "accused_character_id": ""
   }

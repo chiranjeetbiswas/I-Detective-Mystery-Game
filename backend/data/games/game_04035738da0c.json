@@ -1,0 +1,537 @@
+{
+  "case": {
+    "id": "case_e0cfefe437c8",
+    "title": "The Missing Heirloom",
+    "difficulty": "normal",
+    "location_type": "Mansion",
+    "location_name": "Starlight Manor",
+    "introduction": "Starlight Manor is old. A valuable necklace vanished. One guest hides a real name. Find the liar.",
+    "crime": "The necklace was stolen from the master bedroom.",
+    "target_fake_identity": "Evelyn Hart",
+    "escape_plan": "The thief will leave through the back gate.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "r1",
+        "name": "Master Bedroom",
+        "description": "Dark room with big bed."
+      },
+      {
+        "id": "r2",
+        "name": "Living Room",
+        "description": "Soft couch and fireplace."
+      },
+      {
+        "id": "r3",
+        "name": "Library",
+        "description": "Shelves of old books."
+      },
+      {
+        "id": "r4",
+        "name": "Garden",
+        "description": "Green grass and roses."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Charles Finch",
+        "age": 54,
+        "gender": "male",
+        "occupation": "butler",
+        "personality": "quiet",
+        "background": "worked at many houses",
+        "secret": "missing ring",
+        "goal": "protect family",
+        "alibi": "in kitchen",
+        "speaking_style": "low tone",
+        "habits": "checks clock",
+        "fear": "fire",
+        "likes": [
+          "coffee"
+        ],
+        "dislikes": [
+          "noise"
+        ],
+        "intelligence": 80,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "c6",
+            "kind": "friend",
+            "detail": "trusts her"
+          }
+        ],
+        "knowledge": [
+          "knows door codes"
+        ],
+        "lies": [],
+        "inventory": [
+          "silver key"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Mara Lune",
+        "age": 28,
+        "gender": "female",
+        "occupation": "art curator",
+        "personality": "energetic",
+        "background": "studied art",
+        "secret": "unpaid debt",
+        "goal": "sell painting",
+        "alibi": "in library",
+        "speaking_style": "fast",
+        "habits": "taps foot",
+        "fear": "spiders",
+        "likes": [
+          "paintings"
+        ],
+        "dislikes": [
+          "cold"
+        ],
+        "intelligence": 70,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "c5",
+            "kind": "lover",
+            "detail": "shares music"
+          }
+        ],
+        "knowledge": [
+          "knows art styles"
+        ],
+        "lies": [
+          "The painting was on the wall"
+        ],
+        "inventory": [
+          "paint palette"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Jonas Reed",
+        "age": 35,
+        "gender": "male",
+        "occupation": "chef",
+        "personality": "boisterous",
+        "background": "worked restaurants",
+        "secret": "scar on left hand",
+        "goal": "win cooking contest",
+        "alibi": "in kitchen",
+        "speaking_style": "loud",
+        "habits": "spices",
+        "fear": "fainting",
+        "likes": [
+          "spicy food"
+        ],
+        "dislikes": [
+          "quiet"
+        ],
+        "intelligence": 65,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "c4",
+            "kind": "colleague",
+            "detail": "helps in garden"
+          }
+        ],
+        "knowledge": [
+          "knows secret recipe"
+        ],
+        "lies": [
+          "The kitchen door is closed"
+        ],
+        "inventory": [
+          "knife"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Lydia Moore",
+        "age": 42,
+        "gender": "female",
+        "occupation": "historian",
+        "personality": "soft",
+        "background": "studied history",
+        "secret": "hidden diary",
+        "goal": "find family tree",
+        "alibi": "in garden",
+        "speaking_style": "soft",
+        "habits": "taps pen",
+        "fear": "dark",
+        "likes": [
+          "books"
+        ],
+        "dislikes": [
+          "noise"
+        ],
+        "intelligence": 75,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "friend",
+            "detail": "trusts him"
+          }
+        ],
+        "knowledge": [
+          "knows old letters"
+        ],
+        "lies": [
+          "The diary is safe"
+        ],
+        "inventory": [
+          "old map"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [],
+    "evidence": [],
+    "hidden_clues": [],
+    "red_herrings": [],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "The hidden person who was pretending to be Charles Finch",
+      "reasoning": "The clues do not match their story or their name.",
+      "key_evidence_ids": []
+    }
+  },
+  "state": {
+    "id": "game_04035738da0c",
+    "case_id": "case_e0cfefe437c8",
+    "status": "lost",
+    "created_at": "2026-08-31T17:37:39.467946+00:00",
+    "updated_at": "2026-08-31T17:40:57.718214+00:00",
+    "minutes_elapsed": 80,
+    "current_location": "Master Bedroom",
+    "current_objective": "Among the 4 people at Starlight Manor, one is not who they claim to be. Find the clue that breaks their alibi and name the person behind the necklace was stolen from the master bedroom. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 44,
+        "stress": 20,
+        "suspicion_of_player": 10,
+        "times_questioned": 5,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii",
+          "tell me yourself",
+          "why",
+          "ok but why you not tell yourself",
+          "what you saw"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hii",
+            "answer": "Hello. I'm here if you need anything. The clock says eight. The kitchen is quiet."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "tell me yourself",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "why",
+            "answer": "I am here to keep the house running.  \nMy job is to serve."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "ok but why you not tell yourself",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "what you saw",
+            "answer": "I have nothing to say about that."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii'",
+          "Detective asked: 'tell me yourself'",
+          "Detective asked: 'why'",
+          "Detective asked: 'ok but why you not tell yourself'",
+          "Detective asked: 'what you saw'"
+        ],
+        "has_met": true
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 3,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "can you tell something",
+          "what you not say"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:50 PM",
+            "question": "hello",
+            "answer": "Hi! Nice to meet you. I'm Mara, an art curator. What brings you here tonight?"
+          },
+          {
+            "at_time": "9:00 PM",
+            "question": "can you tell something",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "9:10 PM",
+            "question": "what you not say",
+            "answer": "I have nothing to say about that."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'",
+          "Detective asked: 'can you tell something'",
+          "Detective asked: 'what you not say'"
+        ],
+        "has_met": true
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Charles Finch",
+          "detail": "54, butler. quiet.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mara Lune",
+          "detail": "28, art curator. energetic.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Jonas Reed",
+          "detail": "35, chef. boisterous.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lydia Moore",
+          "detail": "42, historian. soft.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Starlight Manor is old. A valuable necklace vanished. One guest hides a real name. Find the liar.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Charles Finch. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Charles Finch",
+        "text": "Hello. I'm here if you need anything. The clock says eight. The kitchen is quiet.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "tell me yourself",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Charles Finch",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "why",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Charles Finch",
+        "text": "I am here to keep the house running.  \nMy job is to serve.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "ok but why you not tell yourself",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Charles Finch",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "what you saw",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Charles Finch",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Mara Lune. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Mara Lune",
+        "text": "Hi! Nice to meet you. I'm Mara, an art curator. What brings you here tonight?",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "can you tell something",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Mara Lune",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "what you not say",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Mara Lune",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Jonas Reed. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Verdict",
+        "text": "You were wrong. The hidden person was Charles Finch. The clues do not match Lydia Moore. He is the one who is guilty.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "c3",
+    "hints_used": 0,
+    "accusation_made": true,
+    "accused_character_id": "c4"
+  }
+}

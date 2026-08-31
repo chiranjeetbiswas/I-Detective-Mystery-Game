@@ -1,0 +1,523 @@
+{
+  "case": {
+    "id": "case_268215503954",
+    "title": "The Cruise Ship Mystery",
+    "difficulty": "normal",
+    "location_type": "Cruise Ship",
+    "location_name": "The Aurora Voyager",
+    "introduction": "Tonight at The Aurora Voyager, the swap of a famous painting with a fake one has turned the evening upside down. No one is allowed to leave. 4 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The swap of a famous painting with a fake one",
+    "target_fake_identity": "Rowan Bianchi, a art expert people trust",
+    "escape_plan": "Rowan Bianchi plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "priya0",
+        "name": "Priya Sinclair",
+        "age": 39,
+        "gender": "female",
+        "occupation": "ship captain",
+        "personality": "smiles a lot, but always planning",
+        "background": "A ship captain with a messy past.",
+        "secret": "Priya is using a false name, but for a different reason.",
+        "goal": "Priya wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "touches their necklace when nervous",
+        "fear": "being left alone",
+        "likes": [
+          "the garden",
+          "the sea"
+        ],
+        "dislikes": [
+          "the cold",
+          "waiting"
+        ],
+        "intelligence": 86,
+        "confidence": 37,
+        "relationships": [
+          {
+            "with_character": "Rowan Bianchi",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Bianchi acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Priya owes a lot of money from betting."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "rowan1",
+        "name": "Rowan Bianchi",
+        "age": 31,
+        "gender": "nonbinary",
+        "occupation": "art expert",
+        "personality": "cold and very exact",
+        "background": "A art expert with a messy past.",
+        "secret": "Rowan saw something that night and has not told anyone.",
+        "goal": "Rowan wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Guest Rooms when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "avoids eye contact",
+        "fear": "their secret coming out",
+        "likes": [
+          "music",
+          "the garden"
+        ],
+        "dislikes": [
+          "gossip",
+          "loud people"
+        ],
+        "intelligence": 61,
+        "confidence": 76,
+        "relationships": [
+          {
+            "with_character": "Isabella Reyes",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "isabella2",
+        "name": "Isabella Reyes",
+        "age": 56,
+        "gender": "female",
+        "occupation": "wine taster",
+        "personality": "warm and easy to like",
+        "background": "A wine taster with a messy past.",
+        "secret": "Isabella was in a secret relationship with the victim.",
+        "goal": "Isabella wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "gruff and blunt",
+        "habits": "touches their necklace when nervous",
+        "fear": "being left alone",
+        "likes": [
+          "control",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "waiting",
+          "being rushed"
+        ],
+        "intelligence": 80,
+        "confidence": 77,
+        "relationships": [
+          {
+            "with_character": "Ronan Petrov",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Bianchi acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Isabella is using a false name, but for a different reason."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "ronan3",
+        "name": "Ronan Petrov",
+        "age": 65,
+        "gender": "male",
+        "occupation": "rich family heir",
+        "personality": "smiles a lot, but always planning",
+        "background": "A rich family heir with a messy past.",
+        "secret": "Ronan owes a lot of money from betting.",
+        "goal": "Ronan wants to keep their good name safe, no matter what.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "smiles too much when lying",
+        "fear": "their secret coming out",
+        "likes": [
+          "music",
+          "control"
+        ],
+        "dislikes": [
+          "being rushed",
+          "cheap things"
+        ],
+        "intelligence": 45,
+        "confidence": 72,
+        "relationships": [
+          {
+            "with_character": "Priya Sinclair",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Bianchi acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Ronan is covering for a family member."
+        ],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the swap of a famous painting with a fake one.",
+        "involved": [
+          "Rowan Bianchi"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Rowan Bianchi is seen moving toward a side door.",
+        "involved": [
+          "Rowan Bianchi"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Lounge",
+        "points_to": "Rowan Bianchi",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Guest Rooms",
+        "points_to": "Rowan Bianchi",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Grand Lobby",
+        "points_to": "Isabella Reyes",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Terrace Garden",
+        "points_to": "Isabella Reyes",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Guest Rooms",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Rowan Bianchi's story about where they were does not match the a cheap phone.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a fake passport",
+      "a photo"
+    ],
+    "solution": {
+      "target_character_id": "rowan1",
+      "target_true_identity": "A wanted criminal pretending to be a art expert",
+      "reasoning": "Rowan Bianchi is the hidden person. The main clues (a cheap phone, a torn train ticket) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_a9b1074c11bf",
+    "case_id": "case_268215503954",
+    "status": "in_progress",
+    "created_at": "2026-08-31T14:03:58.791629+00:00",
+    "updated_at": "2026-08-31T14:04:14.409927+00:00",
+    "minutes_elapsed": 25,
+    "current_location": "The Grand Lobby",
+    "current_objective": "At The Aurora Voyager tonight, 4 guests are trapped \u2014 and one is lying about who they are. Search the rooms, talk to everyone, and find the person behind the swap of a famous painting with a fake one. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [
+      "ev0"
+    ],
+    "visited_rooms": [
+      "The Lounge"
+    ],
+    "npc_states": {
+      "priya0": {
+        "character_id": "priya0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "Where were you at nine?"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "Where were you at nine?",
+            "answer": "I will tell you what I know, but keep my name out of it."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'Where were you at nine?'"
+        ],
+        "has_met": true
+      },
+      "rowan1": {
+        "character_id": "rowan1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "isabella2": {
+        "character_id": "isabella2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "ronan3": {
+        "character_id": "ronan3",
+        "trust": 42,
+        "stress": 28,
+        "suspicion_of_player": 15,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Priya Sinclair",
+          "detail": "39, ship captain. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Rowan Bianchi",
+          "detail": "31, art expert. cold and very exact.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Isabella Reyes",
+          "detail": "56, wine taster. warm and easy to like.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ronan Petrov",
+          "detail": "65, rich family heir. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "a cheap phone",
+          "detail": "A cheap phone with only one number called. (found in The Lounge).",
+          "at_time": "8:10 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the swap of a famous painting with a fake one.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Rowan Bianchi is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Aurora Voyager, the swap of a famous painting with a fake one has turned the evening upside down. No one is allowed to leave. 4 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Priya Sinclair. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "priya0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Where were you at nine?",
+        "kind": "dialogue",
+        "character_id": "priya0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Priya Sinclair",
+        "text": "I will tell you what I know, but keep my name out of it.",
+        "kind": "dialogue",
+        "character_id": "priya0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "search the lounge",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "You move slowly and notice the small things other people miss.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "priya0",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

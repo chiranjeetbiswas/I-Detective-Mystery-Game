@@ -1,0 +1,755 @@
+{
+  "case": {
+    "id": "case_cb877877546e",
+    "title": "The Safe House Mystery",
+    "difficulty": "normal",
+    "location_type": "Safe House",
+    "location_name": "The Ashgrove Safe House",
+    "introduction": "Tonight at The Ashgrove Safe House, the swap of a famous painting with a fake one has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The swap of a famous painting with a fake one",
+    "target_fake_identity": "Isabella Okafor, a doctor people trust",
+    "escape_plan": "Isabella Okafor plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "isabella0",
+        "name": "Isabella Okafor",
+        "age": 29,
+        "gender": "female",
+        "occupation": "doctor",
+        "personality": "nervous and talks a lot",
+        "background": "A doctor with a messy past.",
+        "secret": "Isabella is covering for a family member.",
+        "goal": "Isabella wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "short, clipped answers",
+        "habits": "fidgets with a ring",
+        "fear": "losing their good name",
+        "likes": [
+          "music",
+          "the sea"
+        ],
+        "dislikes": [
+          "being touched",
+          "loud people"
+        ],
+        "intelligence": 72,
+        "confidence": 78,
+        "relationships": [
+          {
+            "with_character": "Camille Fenwick",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "camille1",
+        "name": "Camille Fenwick",
+        "age": 53,
+        "gender": "female",
+        "occupation": "retired government worker",
+        "personality": "smiles a lot, but always planning",
+        "background": "A retired government worker with a messy past.",
+        "secret": "Camille is using a false name, but for a different reason.",
+        "goal": "Camille wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "gruff and blunt",
+        "habits": "fidgets with a ring",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "strong coffee",
+          "music"
+        ],
+        "dislikes": [
+          "being rushed",
+          "the cold"
+        ],
+        "intelligence": 79,
+        "confidence": 38,
+        "relationships": [
+          {
+            "with_character": "Nathan Marchetti",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Okafor acting strange near The Guest Rooms.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "nathan2",
+        "name": "Nathan Marchetti",
+        "age": 44,
+        "gender": "male",
+        "occupation": "software company owner",
+        "personality": "loud and showy",
+        "background": "A software company owner with a messy past.",
+        "secret": "Nathan was taking money from another guest to keep a secret quiet.",
+        "goal": "Nathan wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "cold and precise",
+        "habits": "taps the table while thinking",
+        "fear": "prison",
+        "likes": [
+          "strong coffee",
+          "the sea"
+        ],
+        "dislikes": [
+          "gossip",
+          "surprises"
+        ],
+        "intelligence": 78,
+        "confidence": 50,
+        "relationships": [
+          {
+            "with_character": "Lucas Castellano",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Okafor acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "lucas3",
+        "name": "Lucas Castellano",
+        "age": 53,
+        "gender": "male",
+        "occupation": "security adviser",
+        "personality": "warm and easy to like",
+        "background": "A security adviser with a messy past.",
+        "secret": "Lucas was in a secret relationship with the victim.",
+        "goal": "Lucas wants to find out who is watching them.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "calm and polite",
+        "habits": "avoids eye contact",
+        "fear": "the police",
+        "likes": [
+          "quiet rooms",
+          "control"
+        ],
+        "dislikes": [
+          "loud people",
+          "being touched"
+        ],
+        "intelligence": 56,
+        "confidence": 37,
+        "relationships": [
+          {
+            "with_character": "Marcus Delacroix",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Okafor acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "marcus4",
+        "name": "Marcus Delacroix",
+        "age": 33,
+        "gender": "male",
+        "occupation": "piano player",
+        "personality": "smiles a lot, but always planning",
+        "background": "A piano player with a messy past.",
+        "secret": "Marcus is using a false name, but for a different reason.",
+        "goal": "Marcus wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "glances at the door often",
+        "fear": "the police",
+        "likes": [
+          "music",
+          "money"
+        ],
+        "dislikes": [
+          "surprises",
+          "cheap things"
+        ],
+        "intelligence": 89,
+        "confidence": 40,
+        "relationships": [
+          {
+            "with_character": "Daniel Reyes",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Okafor acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Marcus saw something that night and has not told anyone."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "daniel5",
+        "name": "Daniel Reyes",
+        "age": 41,
+        "gender": "male",
+        "occupation": "news reporter",
+        "personality": "quiet and watchful",
+        "background": "A news reporter with a messy past.",
+        "secret": "Daniel took a small thing earlier that night.",
+        "goal": "Daniel wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Guest Rooms when it happened.",
+        "speaking_style": "calm and polite",
+        "habits": "clears their throat before a lie",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "quiet rooms",
+          "the sea"
+        ],
+        "dislikes": [
+          "being rushed",
+          "being touched"
+        ],
+        "intelligence": 78,
+        "confidence": 63,
+        "relationships": [
+          {
+            "with_character": "Isabella Okafor",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Okafor acting strange near The Lounge.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the swap of a famous painting with a fake one.",
+        "involved": [
+          "Isabella Okafor"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Isabella Okafor is seen moving toward a side door.",
+        "involved": [
+          "Isabella Okafor"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Private Study",
+        "points_to": "Isabella Okafor",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Dining Room",
+        "points_to": "Isabella Okafor",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Private Study",
+        "points_to": "Nathan Marchetti",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Grand Lobby",
+        "points_to": "Nathan Marchetti",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Isabella Okafor's story about where they were does not match the a cloth with blood on it.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a photo",
+      "a hidden key"
+    ],
+    "solution": {
+      "target_character_id": "isabella0",
+      "target_true_identity": "A wanted criminal pretending to be a doctor",
+      "reasoning": "Isabella Okafor is the hidden person. The main clues (a cloth with blood on it, a wine glass) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_ebb2594454af",
+    "case_id": "case_cb877877546e",
+    "status": "in_progress",
+    "created_at": "2026-08-31T16:33:37.322801+00:00",
+    "updated_at": "2026-08-31T16:33:37.744131+00:00",
+    "minutes_elapsed": 60,
+    "current_location": "The Grand Lobby",
+    "current_objective": "One of the 6 guests at The Ashgrove Safe House is using a fake name. Search the rooms, talk to everyone, and find the person behind the swap of a famous painting with a fake one. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [
+      "ev5",
+      "ev6",
+      "ev0",
+      "ev2"
+    ],
+    "visited_rooms": [
+      "The Lounge",
+      "The Private Study"
+    ],
+    "npc_states": {
+      "isabella0": {
+        "character_id": "isabella0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "camille1": {
+        "character_id": "camille1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "nathan2": {
+        "character_id": "nathan2",
+        "trust": 38,
+        "stress": 35,
+        "suspicion_of_player": 10,
+        "times_questioned": 3,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "Where were you at nine?",
+          "You seem nervous, why?",
+          "I think you are lying"
+        ],
+        "relationship_notes": [
+          "The detective spoke to me harshly."
+        ],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "Where were you at nine?",
+            "answer": "I will tell you what I know, but keep my name out of it."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "You seem nervous, why?",
+            "answer": "Since you have been kind, I will tell you one more thing."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "I think you are lying",
+            "answer": "Since you have been kind, I will tell you one more thing."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'Where were you at nine?'",
+          "Detective asked: 'You seem nervous, why?'",
+          "Detective asked: 'I think you are lying'"
+        ],
+        "has_met": true
+      },
+      "lucas3": {
+        "character_id": "lucas3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "marcus4": {
+        "character_id": "marcus4",
+        "trust": 42,
+        "stress": 28,
+        "suspicion_of_player": 15,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "daniel5": {
+        "character_id": "daniel5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Isabella Okafor",
+          "detail": "29, doctor. nervous and talks a lot.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Camille Fenwick",
+          "detail": "53, retired government worker. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Nathan Marchetti",
+          "detail": "44, software company owner. loud and showy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lucas Castellano",
+          "detail": "53, security adviser. warm and easy to like.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marcus Delacroix",
+          "detail": "33, piano player. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Daniel Reyes",
+          "detail": "41, news reporter. quiet and watchful.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "a fake passport",
+          "detail": "It looks real, but the year of birth is a little bit wrong. (found in The Lounge).",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a torn train ticket",
+          "detail": "A ticket ripped in two. The time on it is earlier than someone said. (found in The Lounge).",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a cloth with blood on it",
+          "detail": "A fine cloth with two letters sewn on it and a dark stain. (found in The Private Study).",
+          "at_time": "8:45 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a photo",
+          "detail": "A photo of two guests who say they have never met. (found in The Private Study).",
+          "at_time": "8:45 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the swap of a famous painting with a fake one.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Isabella Okafor is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Ashgrove Safe House, the swap of a famous painting with a fake one has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Nathan Marchetti. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "nathan2"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Where were you at nine?",
+        "kind": "dialogue",
+        "character_id": "nathan2"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Nathan Marchetti",
+        "text": "I will tell you what I know, but keep my name out of it.",
+        "kind": "dialogue",
+        "character_id": "nathan2"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "You seem nervous, why?",
+        "kind": "dialogue",
+        "character_id": "nathan2"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Nathan Marchetti",
+        "text": "Since you have been kind, I will tell you one more thing.",
+        "kind": "dialogue",
+        "character_id": "nathan2"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "I think you are lying",
+        "kind": "dialogue",
+        "character_id": "nathan2"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Nathan Marchetti",
+        "text": "Since you have been kind, I will tell you one more thing.",
+        "kind": "dialogue",
+        "character_id": "nathan2"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "search the lounge",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Narrator",
+        "text": "You search with care. Something here does not belong.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "search the study",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Hint",
+        "text": "Compare what each guest says about where they were with the clues you have found. The one whose story does not match the main clue, and whose papers look wrong, is the one to watch.",
+        "kind": "system",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "nathan2",
+    "hints_used": 1,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

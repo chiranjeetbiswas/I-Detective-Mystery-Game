@@ -1,0 +1,718 @@
+{
+  "case": {
+    "id": "case_d8cc22a8d4d5",
+    "title": "The Mansion Mystery",
+    "difficulty": "normal",
+    "location_type": "Mansion",
+    "location_name": "Blackwood Manor",
+    "introduction": "Tonight at Blackwood Manor, the theft of a very costly diamond called the Midnight Star has turned the evening upside down. No one is allowed to leave. 5 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The theft of a very costly diamond called the midnight star",
+    "target_fake_identity": "Isabella Holloway, a software company owner people trust",
+    "escape_plan": "Isabella Holloway plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "isabella0",
+        "name": "Isabella Holloway",
+        "age": 34,
+        "gender": "female",
+        "occupation": "software company owner",
+        "personality": "smiles a lot, but always planning",
+        "background": "A software company owner with a messy past.",
+        "secret": "Isabella saw something that night and has not told anyone.",
+        "goal": "Isabella wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "glances at the door often",
+        "fear": "the police",
+        "likes": [
+          "being praised",
+          "the sea"
+        ],
+        "dislikes": [
+          "questions",
+          "being rushed"
+        ],
+        "intelligence": 59,
+        "confidence": 64,
+        "relationships": [
+          {
+            "with_character": "Victoria Petrov",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "victoria1",
+        "name": "Victoria Petrov",
+        "age": 53,
+        "gender": "female",
+        "occupation": "money investor",
+        "personality": "proud and rude",
+        "background": "A money investor with a messy past.",
+        "secret": "Victoria is using a false name, but for a different reason.",
+        "goal": "Victoria wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "avoids eye contact",
+        "fear": "the police",
+        "likes": [
+          "old books",
+          "money"
+        ],
+        "dislikes": [
+          "being touched",
+          "waiting"
+        ],
+        "intelligence": 40,
+        "confidence": 58,
+        "relationships": [
+          {
+            "with_character": "Sofia Marchetti",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Holloway acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Victoria was in a secret relationship with the victim."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "sofia2",
+        "name": "Sofia Marchetti",
+        "age": 53,
+        "gender": "female",
+        "occupation": "rich family heir",
+        "personality": "nervous and talks a lot",
+        "background": "A rich family heir with a messy past.",
+        "secret": "Sofia is using a false name, but for a different reason.",
+        "goal": "Sofia wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "clears their throat before a lie",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "strong coffee",
+          "being praised"
+        ],
+        "dislikes": [
+          "cheap things",
+          "surprises"
+        ],
+        "intelligence": 81,
+        "confidence": 52,
+        "relationships": [
+          {
+            "with_character": "Ronan Ashford",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Holloway acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Sofia took a small thing earlier that night."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "ronan3",
+        "name": "Ronan Ashford",
+        "age": 34,
+        "gender": "male",
+        "occupation": "art shop owner",
+        "personality": "friendly but hard to pin down",
+        "background": "A art shop owner with a messy past.",
+        "secret": "Ronan was in a secret relationship with the victim.",
+        "goal": "Ronan wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "touches their necklace when nervous",
+        "fear": "their secret coming out",
+        "likes": [
+          "quiet rooms",
+          "money"
+        ],
+        "dislikes": [
+          "cheap things",
+          "being rushed"
+        ],
+        "intelligence": 43,
+        "confidence": 36,
+        "relationships": [
+          {
+            "with_character": "Amara Bianchi",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Holloway acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "amara4",
+        "name": "Amara Bianchi",
+        "age": 61,
+        "gender": "female",
+        "occupation": "doctor",
+        "personality": "quiet and watchful",
+        "background": "A doctor with a messy past.",
+        "secret": "Amara is using a false name, but for a different reason.",
+        "goal": "Amara wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "formal and careful",
+        "habits": "glances at the door often",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "the garden",
+          "fine wine"
+        ],
+        "dislikes": [
+          "gossip",
+          "loud people"
+        ],
+        "intelligence": 53,
+        "confidence": 86,
+        "relationships": [
+          {
+            "with_character": "Isabella Holloway",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Holloway acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the theft of a very costly diamond called the Midnight Star.",
+        "involved": [
+          "Isabella Holloway"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Isabella Holloway is seen moving toward a side door.",
+        "involved": [
+          "Isabella Holloway"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Dining Room",
+        "points_to": "Isabella Holloway",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Grand Lobby",
+        "points_to": "Isabella Holloway",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Grand Lobby",
+        "points_to": "Isabella Holloway",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Guest Rooms",
+        "points_to": "Isabella Holloway",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Guest Rooms",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Isabella Holloway's story about where they were does not match the a cloth with blood on it.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a fake passport",
+      "muddy shoes"
+    ],
+    "solution": {
+      "target_character_id": "isabella0",
+      "target_true_identity": "A wanted criminal pretending to be a software company owner",
+      "reasoning": "Isabella Holloway is the hidden person. The main clues (a cloth with blood on it, a torn train ticket) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_a40aa34d0480",
+    "case_id": "case_d8cc22a8d4d5",
+    "status": "lost",
+    "created_at": "2026-08-31T16:50:09.038729+00:00",
+    "updated_at": "2026-08-31T17:12:15.110615+00:00",
+    "minutes_elapsed": 70,
+    "current_location": "The Grand Lobby",
+    "current_objective": "At Blackwood Manor tonight, 5 guests are trapped \u2014 and one is lying about who they are. Match the clues to the lies and point out the guilty one behind the theft of a very costly diamond called the midnight star. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "isabella0": {
+        "character_id": "isabella0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 2,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii",
+          "i want to talk with you"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hii",
+            "answer": "Whoever did this, it was not me. Look somewhere else."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "i want to talk with you",
+            "answer": "Whoever did this, it was not me. Look somewhere else."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii'",
+          "Detective asked: 'i want to talk with you'"
+        ],
+        "has_met": true
+      },
+      "victoria1": {
+        "character_id": "victoria1",
+        "trust": 47,
+        "stress": 20,
+        "suspicion_of_player": 5,
+        "times_questioned": 4,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii",
+          "i want to talk with you",
+          "what you saw odd",
+          "fuck you"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:20 PM",
+            "question": "hii",
+            "answer": "I did see something odd earlier. A guest was going where they should not go."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "i want to talk with you",
+            "answer": "Like I said before, I saw something odd that night."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "what you saw odd",
+            "answer": "Like I said before, I saw something odd that night."
+          },
+          {
+            "at_time": "8:50 PM",
+            "question": "fuck you",
+            "answer": "Like I said before, I saw something odd that night."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii'",
+          "Detective asked: 'i want to talk with you'",
+          "Detective asked: 'what you saw odd'",
+          "Detective asked: 'fuck you'"
+        ],
+        "has_met": true
+      },
+      "sofia2": {
+        "character_id": "sofia2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "9:00 PM",
+            "question": "hello",
+            "answer": "I did see something odd earlier. A guest was going where they should not go."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'"
+        ],
+        "has_met": true
+      },
+      "ronan3": {
+        "character_id": "ronan3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "amara4": {
+        "character_id": "amara4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Isabella Holloway",
+          "detail": "34, software company owner. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victoria Petrov",
+          "detail": "53, money investor. proud and rude.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Marchetti",
+          "detail": "53, rich family heir. nervous and talks a lot.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ronan Ashford",
+          "detail": "34, art shop owner. friendly but hard to pin down.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Amara Bianchi",
+          "detail": "61, doctor. quiet and watchful.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the theft of a very costly diamond called the Midnight Star.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Isabella Holloway is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at Blackwood Manor, the theft of a very costly diamond called the Midnight Star has turned the evening upside down. No one is allowed to leave. 5 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Isabella Holloway. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "isabella0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "isabella0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Isabella Holloway",
+        "text": "Whoever did this, it was not me. Look somewhere else.",
+        "kind": "dialogue",
+        "character_id": "isabella0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "i want to talk with you",
+        "kind": "dialogue",
+        "character_id": "isabella0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Isabella Holloway",
+        "text": "Whoever did this, it was not me. Look somewhere else.",
+        "kind": "dialogue",
+        "character_id": "isabella0"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Victoria Petrov. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Victoria Petrov",
+        "text": "I did see something odd earlier. A guest was going where they should not go.",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "i want to talk with you",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Victoria Petrov",
+        "text": "Like I said before, I saw something odd that night.",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "what you saw odd",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Victoria Petrov",
+        "text": "Like I said before, I saw something odd that night.",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "fuck you",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Victoria Petrov",
+        "text": "Like I said before, I saw something odd that night.",
+        "kind": "dialogue",
+        "character_id": "victoria1"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Sofia Marchetti. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "sofia2"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "sofia2"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Sofia Marchetti",
+        "text": "I did see something odd earlier. A guest was going where they should not go.",
+        "kind": "dialogue",
+        "character_id": "sofia2"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Verdict",
+        "text": "You say your case with a strong voice, but the pieces do not fit. The real guilty one walks out into the night. The truth was in front of you the whole time. This one got away.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "sofia2",
+    "hints_used": 0,
+    "accusation_made": true,
+    "accused_character_id": "amara4"
+  }
+}

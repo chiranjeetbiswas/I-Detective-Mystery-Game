@@ -1,0 +1,652 @@
+{
+  "case": {
+    "id": "case_e7af4b4181f0",
+    "title": "The Cruise Ship Mystery",
+    "difficulty": "normal",
+    "location_type": "Cruise Ship",
+    "location_name": "The Aurora Voyager",
+    "introduction": "Tonight at The Aurora Voyager, the swap of a famous painting with a fake one has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The swap of a famous painting with a fake one",
+    "target_fake_identity": "Priya Bianchi, a money investor people trust",
+    "escape_plan": "Priya Bianchi plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "priya0",
+        "name": "Priya Bianchi",
+        "age": 40,
+        "gender": "female",
+        "occupation": "money investor",
+        "personality": "loud and showy",
+        "background": "A money investor with a messy past.",
+        "secret": "Priya saw something that night and has not told anyone.",
+        "goal": "Priya wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "short, clipped answers",
+        "habits": "clears their throat before a lie",
+        "fear": "the police",
+        "likes": [
+          "control",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "cheap things",
+          "waiting"
+        ],
+        "intelligence": 55,
+        "confidence": 57,
+        "relationships": [
+          {
+            "with_character": "Idris Novak",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "idris1",
+        "name": "Idris Novak",
+        "age": 66,
+        "gender": "male",
+        "occupation": "old furniture seller",
+        "personality": "friendly but hard to pin down",
+        "background": "A old furniture seller with a messy past.",
+        "secret": "Idris was in a secret relationship with the victim.",
+        "goal": "Idris wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "formal and careful",
+        "habits": "taps the table while thinking",
+        "fear": "the police",
+        "likes": [
+          "quiet rooms",
+          "strong coffee"
+        ],
+        "dislikes": [
+          "being touched",
+          "gossip"
+        ],
+        "intelligence": 69,
+        "confidence": 63,
+        "relationships": [
+          {
+            "with_character": "Julian Vance",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Priya Bianchi acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "julian2",
+        "name": "Julian Vance",
+        "age": 54,
+        "gender": "male",
+        "occupation": "piano player",
+        "personality": "friendly but hard to pin down",
+        "background": "A piano player with a messy past.",
+        "secret": "Julian faked part of their papers years ago.",
+        "goal": "Julian wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "glances at the door often",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "fine wine",
+          "the garden"
+        ],
+        "dislikes": [
+          "questions",
+          "waiting"
+        ],
+        "intelligence": 81,
+        "confidence": 81,
+        "relationships": [
+          {
+            "with_character": "Isabella Okafor",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Priya Bianchi acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Julian was taking money from another guest to keep a secret quiet."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "isabella3",
+        "name": "Isabella Okafor",
+        "age": 33,
+        "gender": "female",
+        "occupation": "piano player",
+        "personality": "warm and easy to like",
+        "background": "A piano player with a messy past.",
+        "secret": "Isabella was in a secret relationship with the victim.",
+        "goal": "Isabella wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "formal and careful",
+        "habits": "glances at the door often",
+        "fear": "being caught in a lie",
+        "likes": [
+          "being praised",
+          "old books"
+        ],
+        "dislikes": [
+          "being rushed",
+          "surprises"
+        ],
+        "intelligence": 74,
+        "confidence": 47,
+        "relationships": [
+          {
+            "with_character": "Marcus Petrov",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Priya Bianchi acting strange near The Grand Lobby.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "marcus4",
+        "name": "Marcus Petrov",
+        "age": 65,
+        "gender": "male",
+        "occupation": "money investor",
+        "personality": "nervous and talks a lot",
+        "background": "A money investor with a messy past.",
+        "secret": "Marcus faked part of their papers years ago.",
+        "goal": "Marcus wants to keep their good name safe, no matter what.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "taps the table while thinking",
+        "fear": "being left alone",
+        "likes": [
+          "money",
+          "the garden"
+        ],
+        "dislikes": [
+          "being rushed",
+          "waiting"
+        ],
+        "intelligence": 88,
+        "confidence": 69,
+        "relationships": [
+          {
+            "with_character": "Diego Nakamura",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Priya Bianchi acting strange near The Grand Lobby.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Marcus took a small thing earlier that night."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "diego5",
+        "name": "Diego Nakamura",
+        "age": 58,
+        "gender": "male",
+        "occupation": "piano player",
+        "personality": "quiet and watchful",
+        "background": "A piano player with a messy past.",
+        "secret": "Diego was taking money from another guest to keep a secret quiet.",
+        "goal": "Diego wants to find out who is watching them.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "calm and polite",
+        "habits": "taps the table while thinking",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "music",
+          "the garden"
+        ],
+        "dislikes": [
+          "waiting",
+          "cheap things"
+        ],
+        "intelligence": 61,
+        "confidence": 86,
+        "relationships": [
+          {
+            "with_character": "Priya Bianchi",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Priya Bianchi acting strange near The Lounge.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Diego is covering for a family member."
+        ],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the swap of a famous painting with a fake one.",
+        "involved": [
+          "Priya Bianchi"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Priya Bianchi is seen moving toward a side door.",
+        "involved": [
+          "Priya Bianchi"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Grand Lobby",
+        "points_to": "Priya Bianchi",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a page from an account book",
+        "description": "A page of numbers that do not add up.",
+        "location": "The Lounge",
+        "points_to": "Priya Bianchi",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Grand Lobby",
+        "points_to": "Julian Vance",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Grand Lobby",
+        "points_to": "Idris Novak",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Grand Lobby",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Priya Bianchi's story about where they were does not match the a torn train ticket.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a cheap phone",
+      "a scary note"
+    ],
+    "solution": {
+      "target_character_id": "priya0",
+      "target_true_identity": "A wanted criminal pretending to be a money investor",
+      "reasoning": "Priya Bianchi is the hidden person. The main clues (a torn train ticket, a page from an account book) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_bc4c28fa5234",
+    "case_id": "case_e7af4b4181f0",
+    "status": "in_progress",
+    "created_at": "2026-08-31T14:05:10.838403+00:00",
+    "updated_at": "2026-08-31T14:05:34.865562+00:00",
+    "minutes_elapsed": 15,
+    "current_location": "The Grand Lobby",
+    "current_objective": "Among the 6 people at The Aurora Voyager, one is not who they claim to be. Find the clue that breaks their alibi and name the person behind the swap of a famous painting with a fake one. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "priya0": {
+        "character_id": "priya0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello priya"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:05 PM",
+            "question": "hello priya",
+            "answer": "I was in the lounge all evening. Ask anyone."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello priya'"
+        ],
+        "has_met": true
+      },
+      "idris1": {
+        "character_id": "idris1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "julian2": {
+        "character_id": "julian2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "isabella3": {
+        "character_id": "isabella3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "marcus4": {
+        "character_id": "marcus4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "diego5": {
+        "character_id": "diego5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Priya Bianchi",
+          "detail": "40, money investor. loud and showy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Idris Novak",
+          "detail": "66, old furniture seller. friendly but hard to pin down.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Julian Vance",
+          "detail": "54, piano player. friendly but hard to pin down.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Isabella Okafor",
+          "detail": "33, piano player. warm and easy to like.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marcus Petrov",
+          "detail": "65, money investor. nervous and talks a lot.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Diego Nakamura",
+          "detail": "58, piano player. quiet and watchful.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the swap of a famous painting with a fake one.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Priya Bianchi is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Aurora Voyager, the swap of a famous painting with a fake one has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Priya Bianchi. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "priya0"
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "You",
+        "text": "hello priya",
+        "kind": "dialogue",
+        "character_id": "priya0"
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "Priya Bianchi",
+        "text": "I was in the lounge all evening. Ask anyone.",
+        "kind": "dialogue",
+        "character_id": "priya0"
+      }
+    ],
+    "active_character_id": "priya0",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

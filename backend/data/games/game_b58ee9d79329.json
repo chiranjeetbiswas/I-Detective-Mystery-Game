@@ -1,0 +1,759 @@
+{
+  "case": {
+    "id": "case_a8e3d30bc992",
+    "title": "The Hotel Mystery",
+    "difficulty": "normal",
+    "location_type": "Hotel",
+    "location_name": "The Meridian Grand Hotel",
+    "introduction": "Tonight at The Meridian Grand Hotel, the loss of a secret new machine has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The loss of a secret new machine",
+    "target_fake_identity": "Victoria Sterling, a security adviser people trust",
+    "escape_plan": "Victoria Sterling plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "emma0",
+        "name": "Emma Alcott",
+        "age": 31,
+        "gender": "female",
+        "occupation": "lab scientist",
+        "personality": "cold and very exact",
+        "background": "A lab scientist with a messy past.",
+        "secret": "Emma was in a secret relationship with the victim.",
+        "goal": "Emma wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "gruff and blunt",
+        "habits": "avoids eye contact",
+        "fear": "the police",
+        "likes": [
+          "control",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "loud people",
+          "waiting"
+        ],
+        "intelligence": 54,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "Victoria Sterling",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Victoria Sterling acting strange near The Guest Rooms.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Emma was taking money from another guest to keep a secret quiet."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "victoria1",
+        "name": "Victoria Sterling",
+        "age": 61,
+        "gender": "female",
+        "occupation": "security adviser",
+        "personality": "loud and showy",
+        "background": "A security adviser with a messy past.",
+        "secret": "Victoria owes a lot of money from betting.",
+        "goal": "Victoria wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "cold and precise",
+        "habits": "smiles too much when lying",
+        "fear": "losing their good name",
+        "likes": [
+          "being praised",
+          "music"
+        ],
+        "dislikes": [
+          "cheap things",
+          "surprises"
+        ],
+        "intelligence": 53,
+        "confidence": 57,
+        "relationships": [
+          {
+            "with_character": "Olivia Sinclair",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "olivia2",
+        "name": "Olivia Sinclair",
+        "age": 53,
+        "gender": "female",
+        "occupation": "security adviser",
+        "personality": "smiles a lot, but always planning",
+        "background": "A security adviser with a messy past.",
+        "secret": "Olivia was taking money from another guest to keep a secret quiet.",
+        "goal": "Olivia wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Guest Rooms when it happened.",
+        "speaking_style": "short, clipped answers",
+        "habits": "fidgets with a ring",
+        "fear": "being left alone",
+        "likes": [
+          "the garden",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "cheap things",
+          "questions"
+        ],
+        "intelligence": 74,
+        "confidence": 82,
+        "relationships": [
+          {
+            "with_character": "Freya Castellano",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Victoria Sterling acting strange near The Grand Lobby.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Olivia took a small thing earlier that night."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "freya3",
+        "name": "Freya Castellano",
+        "age": 49,
+        "gender": "female",
+        "occupation": "doctor",
+        "personality": "nervous and talks a lot",
+        "background": "A doctor with a messy past.",
+        "secret": "Freya faked part of their papers years ago.",
+        "goal": "Freya wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "calm and polite",
+        "habits": "clears their throat before a lie",
+        "fear": "being left alone",
+        "likes": [
+          "being praised",
+          "old books"
+        ],
+        "dislikes": [
+          "the cold",
+          "questions"
+        ],
+        "intelligence": 59,
+        "confidence": 77,
+        "relationships": [
+          {
+            "with_character": "Theo Nakamura",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Victoria Sterling acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "theo4",
+        "name": "Theo Nakamura",
+        "age": 64,
+        "gender": "male",
+        "occupation": "wine taster",
+        "personality": "quiet and watchful",
+        "background": "A wine taster with a messy past.",
+        "secret": "Theo took a small thing earlier that night.",
+        "goal": "Theo wants to keep their good name safe, no matter what.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "fidgets with a ring",
+        "fear": "being left alone",
+        "likes": [
+          "old books",
+          "fine wine"
+        ],
+        "dislikes": [
+          "waiting",
+          "being touched"
+        ],
+        "intelligence": 56,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "Daniel Holloway",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Victoria Sterling acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Theo is using a false name, but for a different reason."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "daniel5",
+        "name": "Daniel Holloway",
+        "age": 29,
+        "gender": "male",
+        "occupation": "crime teacher",
+        "personality": "cold and very exact",
+        "background": "A crime teacher with a messy past.",
+        "secret": "Daniel is using a false name, but for a different reason.",
+        "goal": "Daniel wants to find out who is watching them.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "cold and precise",
+        "habits": "taps the table while thinking",
+        "fear": "the police",
+        "likes": [
+          "quiet rooms",
+          "being praised"
+        ],
+        "dislikes": [
+          "gossip",
+          "being touched"
+        ],
+        "intelligence": 60,
+        "confidence": 59,
+        "relationships": [
+          {
+            "with_character": "Emma Alcott",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Victoria Sterling acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Daniel is using a false name, but for a different reason."
+        ],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the loss of a secret new machine.",
+        "involved": [
+          "Victoria Sterling"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Victoria Sterling is seen moving toward a side door.",
+        "involved": [
+          "Victoria Sterling"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Grand Lobby",
+        "points_to": "Victoria Sterling",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Guest Rooms",
+        "points_to": "Victoria Sterling",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Terrace Garden",
+        "points_to": "Emma Alcott",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Lounge",
+        "points_to": "Daniel Holloway",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Guest Rooms",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Private Study",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Victoria Sterling's story about where they were does not match the a photo.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a cheap phone",
+      "a hidden key"
+    ],
+    "solution": {
+      "target_character_id": "victoria1",
+      "target_true_identity": "A wanted criminal pretending to be a security adviser",
+      "reasoning": "Victoria Sterling is the hidden person. The main clues (a photo, a scary note) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_b58ee9d79329",
+    "case_id": "case_a8e3d30bc992",
+    "status": "in_progress",
+    "created_at": "2026-08-31T17:12:25.461737+00:00",
+    "updated_at": "2026-08-31T17:13:35.157855+00:00",
+    "minutes_elapsed": 70,
+    "current_location": "The Grand Lobby",
+    "current_objective": "One of the 6 guests at The Meridian Grand Hotel is using a fake name. Look for clues, compare their stories, and unmask the one behind the loss of a secret new machine. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [
+      "ev0"
+    ],
+    "visited_rooms": [
+      "The Grand Lobby"
+    ],
+    "npc_states": {
+      "emma0": {
+        "character_id": "emma0",
+        "trust": 31,
+        "stress": 36,
+        "suspicion_of_player": 35,
+        "times_questioned": 4,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "ok tell me",
+          "ok",
+          "Look around"
+        ],
+        "relationship_notes": [
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hello",
+            "answer": "I will tell you what I know, but keep my name out of it."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "ok tell me",
+            "answer": "Since you have been kind, I will tell you one more thing."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "ok",
+            "answer": "Since you have been kind, I will tell you one more thing."
+          },
+          {
+            "at_time": "8:45 PM",
+            "question": "Look around",
+            "answer": "Since you have been kind, I will tell you one more thing."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'",
+          "Detective asked: 'ok tell me'",
+          "Detective asked: 'ok'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "victoria1": {
+        "character_id": "victoria1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "olivia2": {
+        "character_id": "olivia2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "freya3": {
+        "character_id": "freya3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "theo4": {
+        "character_id": "theo4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "daniel5": {
+        "character_id": "daniel5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Emma Alcott",
+          "detail": "31, lab scientist. cold and very exact.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victoria Sterling",
+          "detail": "61, security adviser. loud and showy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Olivia Sinclair",
+          "detail": "53, security adviser. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Freya Castellano",
+          "detail": "49, doctor. nervous and talks a lot.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Theo Nakamura",
+          "detail": "64, wine taster. quiet and watchful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Daniel Holloway",
+          "detail": "29, crime teacher. cold and very exact.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "a photo",
+          "detail": "A photo of two guests who say they have never met. (found in The Grand Lobby).",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the loss of a secret new machine.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Victoria Sterling is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Meridian Grand Hotel, the loss of a secret new machine has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Emma Alcott. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Emma Alcott",
+        "text": "I will tell you what I know, but keep my name out of it.",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "ok tell me",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Emma Alcott",
+        "text": "Since you have been kind, I will tell you one more thing.",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "ok",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Emma Alcott",
+        "text": "Since you have been kind, I will tell you one more thing.",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Emma Alcott",
+        "text": "Since you have been kind, I will tell you one more thing.",
+        "kind": "dialogue",
+        "character_id": "emma0"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Hint",
+        "text": "Compare what each guest says about where they were with the clues you have found. The one whose story does not match the main clue, and whose papers look wrong, is the one to watch.",
+        "kind": "system",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "emma0",
+    "hints_used": 1,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

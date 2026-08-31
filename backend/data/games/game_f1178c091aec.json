@@ -1,0 +1,923 @@
+{
+  "case": {
+    "id": "case_632d4b2646ee",
+    "title": "The Mysterious Dinner",
+    "difficulty": "beginner",
+    "location_type": "Hotel",
+    "location_name": "Grand Oak Hotel",
+    "introduction": "It is a rainy night in the Grand Oak Hotel. A famous chef is found dead in the dining room. One guest is not who he says he is.",
+    "crime": "Chef death, suspected poisoning",
+    "target_fake_identity": "Michael Hale",
+    "escape_plan": "The killer plans to leave in the hotel lobby at midnight",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "room1",
+        "name": "Dining Room",
+        "description": "Long table with candles. The chef lies on the floor."
+      },
+      {
+        "id": "room2",
+        "name": "Kitchen",
+        "description": "Busy. Chef used to cook here."
+      },
+      {
+        "id": "room3",
+        "name": "Lobby",
+        "description": "Red carpet. Many guests."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Michael Hale",
+        "age": 34,
+        "gender": "male",
+        "occupation": "Guest",
+        "personality": "Calm",
+        "background": "Travels for work",
+        "secret": "He is actually Mark Jensen",
+        "goal": "Hide identity",
+        "alibi": "In the lobby reading a book",
+        "speaking_style": "Soft voice",
+        "habits": "Sips tea",
+        "fear": "Being caught",
+        "likes": [
+          "tea",
+          "quiet"
+        ],
+        "dislikes": [
+          "noise"
+        ],
+        "intelligence": 70,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "friend",
+            "detail": "They met at a conference"
+          }
+        ],
+        "knowledge": [
+          "Chef was nervous"
+        ],
+        "lies": [
+          "He says he is a hotel guest"
+        ],
+        "inventory": [
+          "Tea cup"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Lisa Grant",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Waitress",
+        "personality": "Talkative",
+        "background": "Local",
+        "secret": "She is good at reading faces",
+        "goal": "Serve guests",
+        "alibi": "Was in kitchen preparing dessert",
+        "speaking_style": "Cheerful",
+        "habits": "Laughs a lot",
+        "fear": "Being late",
+        "likes": [
+          "dessert"
+        ],
+        "dislikes": [
+          "cold weather"
+        ],
+        "intelligence": 65,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "acquaintance",
+            "detail": "Served him last week"
+          }
+        ],
+        "knowledge": [
+          "Chef smelled strange"
+        ],
+        "lies": [],
+        "inventory": [
+          "Plate"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Dr. Alan Reed",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Doctor",
+        "personality": "Calm",
+        "background": "Medical doctor",
+        "secret": "He once treated a famous chef",
+        "goal": "Check on guests",
+        "alibi": "In the lounge reading a book",
+        "speaking_style": "Soft tone",
+        "habits": "Taps fingers",
+        "fear": "Pain",
+        "likes": [
+          "books"
+        ],
+        "dislikes": [
+          "noise"
+        ],
+        "intelligence": 85,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "friend",
+            "detail": "Met at a conference"
+          }
+        ],
+        "knowledge": [
+          "Chef had a health issue"
+        ],
+        "lies": [],
+        "inventory": [
+          "Stethoscope"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Eve Carter",
+        "age": 32,
+        "gender": "nonbinary",
+        "occupation": "Journalist",
+        "personality": "Curious",
+        "background": "Reporter",
+        "secret": "Has a hidden notebook",
+        "goal": "Write story",
+        "alibi": "In the lobby with friends",
+        "speaking_style": "Direct",
+        "habits": "Keeps a notebook",
+        "fear": "Missing a story",
+        "likes": [
+          "notebook"
+        ],
+        "dislikes": [
+          "lies"
+        ],
+        "intelligence": 78,
+        "confidence": 75,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "acquaintance",
+            "detail": "Saw him on the street"
+          }
+        ],
+        "knowledge": [
+          "Chef was nervous"
+        ],
+        "lies": [],
+        "inventory": [
+          "Notebook"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive at hotel",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Dinner begins",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "Chef collapses",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Guests call police",
+        "involved": [
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Poisoned Drink",
+        "description": "Red wine with a faint smell",
+        "location": "Dining Room",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Fingerprints",
+        "description": "Small print on a napkin",
+        "location": "Dining Room",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e3",
+        "name": "Missing Note",
+        "description": "Chef's note about poison",
+        "location": "Kitchen",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e4",
+        "name": "Red Tie",
+        "description": "Tie from lobby",
+        "location": "Lobby",
+        "points_to": "c4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The name Michael Hale is not on hotel records. The real name is Mark Jensen."
+    ],
+    "red_herrings": [
+      "The red tie was found in Eve's bag. It does not link to the crime."
+    ],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "Mark Jensen",
+      "reasoning": "All key evidence points to Michael Hale, but his name is fake. The real name Mark Jensen is hidden. He used the drink to poison the chef.",
+      "key_evidence_ids": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_f1178c091aec",
+    "case_id": "case_632d4b2646ee",
+    "status": "in_progress",
+    "created_at": "2026-08-31T18:43:01.992931+00:00",
+    "updated_at": "2026-08-31T19:24:41.616283+00:00",
+    "minutes_elapsed": 225,
+    "current_location": "Dining Room",
+    "current_objective": "At Grand Oak Hotel tonight, 4 guests are trapped \u2014 and one is lying about who they are. Match the clues to the lies and point out the guilty one behind chef death, suspected poisoning. There are many clues to help you.",
+    "inventory": [],
+    "discovered_evidence": [
+      "e1",
+      "e2"
+    ],
+    "visited_rooms": [
+      "Dining Room"
+    ],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 51,
+        "stress": 20,
+        "suspicion_of_player": 15,
+        "times_questioned": 6,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "where you are in current time",
+          "you know where is dining room",
+          "Look around",
+          "which guests at the tables",
+          "you like to drinking"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hello ",
+            "answer": "Hello. I\u2019m just enjoying my tea. How can I help?"
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "where you are in current time",
+            "answer": "I\u2019m in the lobby, reading a book and sipping tea."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "you know where is dining room",
+            "answer": "I\u2019m not sure. I was in the lobby, not the dining room."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "Look around",
+            "answer": "I look around the lobby. It\u2019s quiet. I see a few guests at the tables. The hallway is dark, but the lights are on. I keep sipping my tea."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "which guests at the tables",
+            "answer": "I don\u2019t see anyone else. Just a few people at the tables. I keep looking, but no one stands out. I\u2019m just sipping my tea."
+          },
+          {
+            "at_time": "9:05 PM",
+            "question": "you like to drinking",
+            "answer": "I do like tea, but I\u2019m not drinking anything right now. I\u2019m just sipping the one I brought."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello '",
+          "Detective asked: 'where you are in current time'",
+          "Detective asked: 'you know where is dining room'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'which guests at the tables'",
+          "Detective asked: 'you like to drinking'"
+        ],
+        "has_met": true
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 48,
+        "stress": 20,
+        "suspicion_of_player": 20,
+        "times_questioned": 7,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hye Lisa",
+          "no the chef is died",
+          "how may distance of dining room from here",
+          "you saw anyone go to that side",
+          "any clue or unusual you see the hole day",
+          "can i search your room one time",
+          "can you look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "9:15 PM",
+            "question": "hye Lisa",
+            "answer": "Hey! How's it going? I just finished prep for dessert. Everything's good!"
+          },
+          {
+            "at_time": "9:25 PM",
+            "question": "no the chef is died",
+            "answer": "Oh no! I\u2019m so sorry. I don\u2019t know what happened to the chef. I was in the kitchen making dessert when it happened. I hope the staff is okay."
+          },
+          {
+            "at_time": "9:35 PM",
+            "question": "how may distance of dining room from here",
+            "answer": "I\u2019m not sure. It\u2019s probably a few feet, maybe a short walk to the dining room."
+          },
+          {
+            "at_time": "9:45 PM",
+            "question": "you saw anyone go to that side",
+            "answer": "I didn\u2019t see anyone heading that way. I was busy with desserts. I laughed, but I\u2019m not sure."
+          },
+          {
+            "at_time": "9:55 PM",
+            "question": "any clue or unusual you see the hole day",
+            "answer": "I didn't see any holes. I was making desserts. No strange thing happened that I noticed."
+          },
+          {
+            "at_time": "10:05 PM",
+            "question": "can i search your room one time",
+            "answer": "I\u2019m sorry, but I can\u2019t let you search my room. I\u2019ve already done everything I can help with."
+          },
+          {
+            "at_time": "10:15 PM",
+            "question": "can you look around",
+            "answer": "Sure, I can look around. I'll check the kitchen and the back hall. I\u2019ll keep an eye on the dessert station, too. Let me know if you see anything."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hye Lisa'",
+          "Detective asked: 'no the chef is died'",
+          "Detective asked: 'how may distance of dining room from here'",
+          "Detective asked: 'you saw anyone go to that side'",
+          "Detective asked: 'any clue or unusual you see the hole day'",
+          "Detective asked: 'can i search your room one time'",
+          "Detective asked: 'can you look around'"
+        ],
+        "has_met": true
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 51,
+        "stress": 20,
+        "suspicion_of_player": 15,
+        "times_questioned": 6,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "i want to know about you",
+          "you like to drink wine",
+          "you know the case in this hotel",
+          "look around you"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "10:40 PM",
+            "question": "hello",
+            "answer": "Hello. How can I help you?"
+          },
+          {
+            "at_time": "10:50 PM",
+            "question": "i want to know about you",
+            "answer": "Hello. I am Dr. Alan Reed. I am 45 years old. I work as a doctor. I like books. I don't like loud noise. I am in the lounge, reading a book. I am here to check on guests."
+          },
+          {
+            "at_time": "11:00 PM",
+            "question": "you like to drink wine",
+            "answer": "I don\u2019t drink wine. I prefer quiet time with a good book."
+          },
+          {
+            "at_time": "11:10 PM",
+            "question": "you know the case in this hotel",
+            "answer": "I don't know about a case. I just read my book and watch guests."
+          },
+          {
+            "at_time": "11:20 PM",
+            "question": "look around you",
+            "answer": "I\u2019m in the lounge. There\u2019s a small table, a lamp, a few chairs. A book lies open on the table. The room is quiet."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'",
+          "Detective asked: 'i want to know about you'",
+          "Detective asked: 'you like to drink wine'",
+          "Detective asked: 'you know the case in this hotel'",
+          "Detective asked: 'look around you'"
+        ],
+        "has_met": true
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Michael Hale",
+          "detail": "34, Guest. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lisa Grant",
+          "detail": "28, Waitress. Talkative.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Dr. Alan Reed",
+          "detail": "45, Doctor. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Eve Carter",
+          "detail": "32, Journalist. Curious.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "Poisoned Drink",
+          "detail": "Red wine with a faint smell (found in Dining Room).",
+          "at_time": "8:50 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "Fingerprints",
+          "detail": "Small print on a napkin (found in Dining Room).",
+          "at_time": "8:50 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive at hotel",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Dinner begins",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "Chef collapses",
+          "at_time": "9:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Guests call police",
+          "at_time": "10:00 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "It is a rainy night in the Grand Oak Hotel. A famous chef is found dead in the dining room. One guest is not who he says he is.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Michael Hale. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hello ",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Michael Hale",
+        "text": "Hello. I\u2019m just enjoying my tea. How can I help?",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "where you are in current time",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Michael Hale",
+        "text": "I\u2019m in the lobby, reading a book and sipping tea.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "you know where is dining room",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Michael Hale",
+        "text": "I\u2019m not sure. I was in the lobby, not the dining room.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Michael Hale",
+        "text": "I look around the lobby. It\u2019s quiet. I see a few guests at the tables. The hallway is dark, but the lights are on. I keep sipping my tea.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "which guests at the tables",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Michael Hale",
+        "text": "I don\u2019t see anyone else. Just a few people at the tables. I keep looking, but no one stands out. I\u2019m just sipping my tea.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Narrator",
+        "text": "You open the door and see the dining room.  \nThe table has a glass with a dark liquid that looks poisoned.  \nFingerprints are on the glass and the chair.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "You",
+        "text": "you like to drinking",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "Michael Hale",
+        "text": "I do like tea, but I\u2019m not drinking anything right now. I\u2019m just sipping the one I brought.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Hint",
+        "text": "Check the stories of the guests you haven\u2019t talked to yet. They might have a clue that fits with the numbers you have.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lisa Grant. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "hye Lisa",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Lisa Grant",
+        "text": "Hey! How's it going? I just finished prep for dessert. Everything's good!",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "no the chef is died",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Lisa Grant",
+        "text": "Oh no! I\u2019m so sorry. I don\u2019t know what happened to the chef. I was in the kitchen making dessert when it happened. I hope the staff is okay.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "You",
+        "text": "how may distance of dining room from here",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "Lisa Grant",
+        "text": "I\u2019m not sure. It\u2019s probably a few feet, maybe a short walk to the dining room.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "You",
+        "text": "you saw anyone go to that side",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "Lisa Grant",
+        "text": "I didn\u2019t see anyone heading that way. I was busy with desserts. I laughed, but I\u2019m not sure.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "You",
+        "text": "any clue or unusual you see the hole day",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "Lisa Grant",
+        "text": "I didn't see any holes. I was making desserts. No strange thing happened that I noticed.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "You",
+        "text": "can i search your room one time",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "Lisa Grant",
+        "text": "I\u2019m sorry, but I can\u2019t let you search my room. I\u2019ve already done everything I can help with.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "You",
+        "text": "can you look around",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Lisa Grant",
+        "text": "Sure, I can look around. I'll check the kitchen and the back hall. I\u2019ll keep an eye on the dessert station, too. Let me know if you see anything.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the dining room of the Grand Oak Hotel.  \nThe table is set, but a chair is pushed back, leaving a small gap.  \nThe air smells faintly of old wood and dust.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Dr. Alan Reed. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "Dr. Alan Reed",
+        "text": "Hello. How can I help you?",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "10:50 PM",
+        "speaker": "You",
+        "text": "i want to know about you",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "10:50 PM",
+        "speaker": "Dr. Alan Reed",
+        "text": "Hello. I am Dr. Alan Reed. I am 45 years old. I work as a doctor. I like books. I don't like loud noise. I am in the lounge, reading a book. I am here to check on guests.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "You",
+        "text": "you like to drink wine",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Dr. Alan Reed",
+        "text": "I don\u2019t drink wine. I prefer quiet time with a good book.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "You",
+        "text": "you know about the case in this hotel",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "You",
+        "text": "you know the case in this hotel",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "Dr. Alan Reed",
+        "text": "I don't know about a case. I just read my book and watch guests.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:20 PM",
+        "speaker": "You",
+        "text": "look around you",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:20 PM",
+        "speaker": "Dr. Alan Reed",
+        "text": "I\u2019m in the lounge. There\u2019s a small table, a lamp, a few chairs. A book lies open on the table. The room is quiet.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "11:30 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:30 PM",
+        "speaker": "Narrator",
+        "text": "You see a polished oak table covered with a white linen tablecloth.  \nThe room smells faintly of old wood and stale air.  \nYou hear the distant hum of the hotel\u2019s heating system.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "c3",
+    "hints_used": 1,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}
