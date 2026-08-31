@@ -1,0 +1,516 @@
+{
+  "case": {
+    "id": "case_e9effb8a5331",
+    "title": "Shadows over the Sunlit Terrace",
+    "difficulty": "normal",
+    "location_type": "Luxury Villa",
+    "location_name": "Villa Aurelia",
+    "introduction": "A glamorous art exhibition is held at the secluded Villa Aurelia, owned by the enigmatic philanthropist Damien Blackwood. Among the guests is a renowned art curator, a stoic security chief, and a talented chef. As the night unfolds, the centerpiece painting disappears, and a web of secrets threatens to unravel the truth.",
+    "crime": "The priceless masterpiece \"Midnight Sun\" vanishes from its sealed display case during a brief power outage, and a shattered glass fragment is found on the Study floor.",
+    "target_fake_identity": "Damien Blackwood, the gracious philanthropist",
+    "escape_plan": "Activate the hidden service elevator to the underground garage, slip into the waiting yacht concealed behind the pier, and sail away under the cover of night.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Terrace",
+        "description": "An open-air terrace overlooking the sea, illuminated by elegant lanterns."
+      },
+      {
+        "id": "R2",
+        "name": "Main Hall",
+        "description": "The grand hall where the exhibition is displayed, with high ceilings and polished marble."
+      },
+      {
+        "id": "R3",
+        "name": "Study",
+        "description": "A quiet library\u2011like room adjacent to the main hall, housing the secure display case."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Elena Marquez",
+        "age": 34,
+        "occupation": "Renowned Art Curator",
+        "personality": "Charismatic and meticulous",
+        "background": "Curated a traveling exhibition, invited to the villa by the host to showcase rare works.",
+        "secret": "Stealing a priceless painting for a private collector",
+        "goal": "Secure the painting before it leaves the country",
+        "alibi": "Was in the Study reviewing the catalog at 9:00\u202fPM",
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "professional",
+            "detail": "Curated exhibition for Damien's collection"
+          },
+          {
+            "with_character": "C2",
+            "kind": "cooperative",
+            "detail": "Works with Victor on event security"
+          }
+        ],
+        "knowledge": [
+          "Location of the painting",
+          "Security system schedule",
+          "Victor's patrol route"
+        ],
+        "lies": [
+          "I was alone in the Study the whole time",
+          "The painting's case was never opened before tonight"
+        ],
+        "inventory": [
+          "Catalog notebook",
+          "Smartphone",
+          "Key to Main Hall"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Victor Hale",
+        "age": 45,
+        "occupation": "Private Security Contractor",
+        "personality": "Stoic, disciplined",
+        "background": "Hired to protect the villa's guests and its valuable artworks.",
+        "secret": "Was hired by a rival collector to sabotage the exhibition",
+        "goal": "Create chaos to devalue the painting",
+        "alibi": "Patrolling the Garden at 9:30\u202fPM",
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "employer",
+            "detail": "Hired by Damien to secure the villa"
+          },
+          {
+            "with_character": "C1",
+            "kind": "colleague",
+            "detail": "Assists Elena with security"
+          }
+        ],
+        "knowledge": [
+          "Security log timestamps",
+          "Service elevator location",
+          "Damien's hidden safe"
+        ],
+        "lies": [
+          "I never left the Garden during the blackout",
+          "The alarm never triggered"
+        ],
+        "inventory": [
+          "Radio walkie",
+          "Flashlight",
+          "Security badge"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Sofia Liang",
+        "age": 28,
+        "occupation": "Chef",
+        "personality": "Warm, witty",
+        "background": "Head chef for the evening, known for her daring culinary flair.",
+        "secret": "Owes a gambling debt to a mob boss",
+        "goal": "Find a way to pay off the debt without drawing attention",
+        "alibi": "In the Kitchen preparing desserts at 8:45\u202fPM",
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "employer",
+            "detail": "Chef for Damien's event"
+          },
+          {
+            "with_character": "C1",
+            "kind": "friend",
+            "detail": "Met at a previous art gala"
+          }
+        ],
+        "knowledge": [
+          "Kitchen layout",
+          "Hidden keycard location",
+          "Damien's schedule"
+        ],
+        "lies": [
+          "I was in the kitchen the whole time",
+          "I didn't see anyone near the Study"
+        ],
+        "inventory": [
+          "Chef's knife",
+          "Apron",
+          "Kitchen key"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Damien Blackwood",
+        "age": 38,
+        "occupation": "Philanthropist",
+        "personality": "Charming, secretive",
+        "background": "Owner of Villa Aurelia, host of the exclusive art gathering.",
+        "secret": "Master art thief known as \"The Raven\", using his philanthropist front to infiltrate high\u2011value collections",
+        "goal": "Steal the masterpiece and escape undetected",
+        "alibi": "Was on the Terrace giving a toast at 9:10\u202fPM",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "client",
+            "detail": "Commissioned Elena for the exhibition"
+          },
+          {
+            "with_character": "C2",
+            "kind": "employer",
+            "detail": "Hired Victor for security"
+          },
+          {
+            "with_character": "C3",
+            "kind": "employer",
+            "detail": "Host to Sofia"
+          }
+        ],
+        "knowledge": [
+          "All room layouts",
+          "Security system backdoor",
+          "Service elevator code"
+        ],
+        "lies": [
+          "I was on the Terrace the whole time, nowhere near the Study",
+          "The painting was never my target"
+        ],
+        "inventory": [
+          "Gold pocket watch",
+          "Access Card to Service Elevator",
+          "Luxury cufflinks"
+        ],
+        "is_target": true
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive at Villa Aurelia, welcome speech by Damien.",
+        "involved": [
+          "C4",
+          "C1",
+          "C2",
+          "C3"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Art exhibition opens in the Main Hall; the painting \"Midnight Sun\" is displayed.",
+        "involved": [
+          "C1",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:45 PM",
+        "description": "Sofia leaves the kitchen to serve appetizers on the Terrace.",
+        "involved": [
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Elena claims she is in the Study reviewing the catalog.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "9:10 PM",
+        "description": "Damien gives a celebratory toast on the Terrace.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Victor patrols the Garden and hears a glass shatter near the Study.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "9:18 PM",
+        "description": "Security system experiences a 5\u2011minute blackout; logs show a manual overwrite.",
+        "involved": [
+          "C2",
+          "C4"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "The painting is discovered missing from its case.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "9:35 PM",
+        "description": "Victor finds a broken glass fragment on the Study floor.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "9:40 PM",
+        "description": "Sofia discovers a hidden service\u2011elevator access card tucked in a kitchen drawer.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Police arrive and begin their investigation.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Broken Glass Fragment",
+        "description": "A small piece of tempered glass matching the display case, found on the Study floor.",
+        "location": "Study",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Security Log Tampering",
+        "description": "Digital log shows a 5\u2011minute gap at 9:18\u202fPM, entry manually overwritten.",
+        "location": "Security Room",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Chef's Apron with Mud",
+        "description": "Apron with soil traces from the garden, found in kitchen trash.",
+        "location": "Kitchen",
+        "points_to": "C3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Fingerprint on Vault Door",
+        "description": "Partial fingerprint matching Victor's left thumb, smudged on the vault door.",
+        "location": "Vault Door",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E5",
+        "name": "Hidden Service Elevator Access Card",
+        "description": "Card bearing Damien's name, grants access to hidden service elevator.",
+        "location": "Underground garage",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      }
+    ],
+    "hidden_clues": [],
+    "red_herrings": [],
+    "solution": {
+      "target_character_id": "C4",
+      "target_true_identity": "The hidden target posing as Damien Blackwood",
+      "reasoning": "The evidence contradicts their alibi and identity.",
+      "key_evidence_ids": []
+    }
+  },
+  "state": {
+    "id": "game_b1808f1b32d9",
+    "case_id": "case_e9effb8a5331",
+    "status": "in_progress",
+    "created_at": "2026-08-31T04:11:22.006938+00:00",
+    "updated_at": "2026-08-31T04:11:28.073985+00:00",
+    "minutes_elapsed": 10,
+    "current_location": "Terrace",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Elena Marquez and ask where they were this evening'"
+        ]
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Elena Marquez",
+          "detail": "34, Renowned Art Curator. Charismatic and meticulous.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victor Hale",
+          "detail": "45, Private Security Contractor. Stoic, disciplined.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Liang",
+          "detail": "28, Chef. Warm, witty.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Damien Blackwood",
+          "detail": "38, Philanthropist. Charming, secretive.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive at Villa Aurelia, welcome speech by Damien.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Art exhibition opens in the Main Hall; the painting \"Midnight Sun\" is displayed.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:45 PM",
+          "detail": "Sofia leaves the kitchen to serve appetizers on the Terrace.",
+          "at_time": "8:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Elena claims she is in the Study reviewing the catalog.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:10 PM",
+          "detail": "Damien gives a celebratory toast on the Terrace.",
+          "at_time": "9:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Victor patrols the Garden and hears a glass shatter near the Study.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:18 PM",
+          "detail": "Security system experiences a 5\u2011minute blackout; logs show a manual overwrite.",
+          "at_time": "9:18 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "The painting is discovered missing from its case.",
+          "at_time": "9:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:35 PM",
+          "detail": "Victor finds a broken glass fragment on the Study floor.",
+          "at_time": "9:35 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:40 PM",
+          "detail": "Sofia discovers a hidden service\u2011elevator access card tucked in a kitchen drawer.",
+          "at_time": "9:40 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Police arrive and begin their investigation.",
+          "at_time": "10:00 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A glamorous art exhibition is held at the secluded Villa Aurelia, owned by the enigmatic philanthropist Damien Blackwood. Among the guests is a renowned art curator, a stoic security chief, and a talented chef. As the night unfolds, the centerpiece painting disappears, and a web of secrets threatens to unravel the truth.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Talk to Elena Marquez and ask where they were this evening",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Elena Marquez",
+        "text": "I spent the evening in the Study, going over the new catalog. I was alone there, focused on the paperwork.",
+        "kind": "dialogue"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

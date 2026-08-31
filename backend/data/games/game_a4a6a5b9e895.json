@@ -1,0 +1,771 @@
+{
+  "case": {
+    "id": "case_19f6709c4d70",
+    "title": "The Train Mystery",
+    "difficulty": "normal",
+    "location_type": "Train",
+    "location_name": "The Continental Express",
+    "introduction": "Tonight at The Continental Express, the evening turned dark. The swap of a famous painting with a fake one has shocked everyone here. The doors are locked, and no one is allowed to leave until the truth comes out. 6 guests are still inside, and every one of them is hiding something. You can search rooms like The Grand Lobby, The Lounge, and The Private Study to find clues. You can talk to each guest to hear their story. But be careful: one guest is not who they say they are. They are using a fake name to hide the truth. Your job is to find that person before they slip away into the night.",
+    "crime": "The swap of a famous painting with a fake one",
+    "target_fake_identity": "Rowan Vance, a retired government worker people trust",
+    "escape_plan": "Rowan Vance plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "julian0",
+        "name": "Julian Holloway",
+        "age": 65,
+        "gender": "male",
+        "occupation": "ship captain",
+        "personality": "loud and showy",
+        "background": "A ship captain with a messy past.",
+        "secret": "Julian was taking money from another guest to keep a secret quiet.",
+        "goal": "Julian wants to keep their good name safe, no matter what.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "short, clipped answers",
+        "habits": "taps the table while thinking",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "fine wine",
+          "old books"
+        ],
+        "dislikes": [
+          "waiting",
+          "surprises"
+        ],
+        "intelligence": 66,
+        "confidence": 65,
+        "relationships": [
+          {
+            "with_character": "Daniel Sterling",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Vance acting strange near The Guest Rooms.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "daniel1",
+        "name": "Daniel Sterling",
+        "age": 61,
+        "gender": "male",
+        "occupation": "ship captain",
+        "personality": "closed off and quick to defend",
+        "background": "A ship captain with a messy past.",
+        "secret": "Daniel took a small thing earlier that night.",
+        "goal": "Daniel wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "cold and precise",
+        "habits": "avoids eye contact",
+        "fear": "their secret coming out",
+        "likes": [
+          "strong coffee",
+          "fine wine"
+        ],
+        "dislikes": [
+          "gossip",
+          "loud people"
+        ],
+        "intelligence": 70,
+        "confidence": 38,
+        "relationships": [
+          {
+            "with_character": "Ronan Petrov",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Vance acting strange near The Grand Lobby.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "ronan2",
+        "name": "Ronan Petrov",
+        "age": 56,
+        "gender": "male",
+        "occupation": "security adviser",
+        "personality": "cold and very exact",
+        "background": "A security adviser with a messy past.",
+        "secret": "Ronan was taking money from another guest to keep a secret quiet.",
+        "goal": "Ronan wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "folds their arms when pushed",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "old books",
+          "control"
+        ],
+        "dislikes": [
+          "being touched",
+          "being rushed"
+        ],
+        "intelligence": 51,
+        "confidence": 81,
+        "relationships": [
+          {
+            "with_character": "Lucas Castellano",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Vance acting strange near The Guest Rooms.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "lucas3",
+        "name": "Lucas Castellano",
+        "age": 35,
+        "gender": "male",
+        "occupation": "ship captain",
+        "personality": "smiles a lot, but always planning",
+        "background": "A ship captain with a messy past.",
+        "secret": "Lucas took a small thing earlier that night.",
+        "goal": "Lucas wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "fidgets with a ring",
+        "fear": "being caught in a lie",
+        "likes": [
+          "being praised",
+          "music"
+        ],
+        "dislikes": [
+          "surprises",
+          "gossip"
+        ],
+        "intelligence": 79,
+        "confidence": 51,
+        "relationships": [
+          {
+            "with_character": "Rowan Vance",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Vance acting strange near The Guest Rooms.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "rowan4",
+        "name": "Rowan Vance",
+        "age": 34,
+        "gender": "nonbinary",
+        "occupation": "retired government worker",
+        "personality": "smiles a lot, but always planning",
+        "background": "A retired government worker with a messy past.",
+        "secret": "Rowan took a small thing earlier that night.",
+        "goal": "Rowan wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Guest Rooms when it happened.",
+        "speaking_style": "calm and polite",
+        "habits": "glances at the door often",
+        "fear": "the dark",
+        "likes": [
+          "being praised",
+          "music"
+        ],
+        "dislikes": [
+          "questions",
+          "gossip"
+        ],
+        "intelligence": 58,
+        "confidence": 50,
+        "relationships": [
+          {
+            "with_character": "Freya Ashford",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "freya5",
+        "name": "Freya Ashford",
+        "age": 41,
+        "gender": "female",
+        "occupation": "news reporter",
+        "personality": "quiet and watchful",
+        "background": "A news reporter with a messy past.",
+        "secret": "Freya was taking money from another guest to keep a secret quiet.",
+        "goal": "Freya wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "avoids eye contact",
+        "fear": "being caught in a lie",
+        "likes": [
+          "the garden",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "surprises",
+          "loud people"
+        ],
+        "intelligence": 89,
+        "confidence": 45,
+        "relationships": [
+          {
+            "with_character": "Julian Holloway",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Vance acting strange near The Guest Rooms.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the swap of a famous painting with a fake one.",
+        "involved": [
+          "Rowan Vance"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Rowan Vance is seen moving toward a side door.",
+        "involved": [
+          "Rowan Vance"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Grand Lobby",
+        "points_to": "Rowan Vance",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Private Study",
+        "points_to": "Rowan Vance",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Guest Rooms",
+        "points_to": "Lucas Castellano",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Guest Rooms",
+        "points_to": "Daniel Sterling",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Grand Lobby",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a page from an account book",
+        "description": "A page of numbers that do not add up.",
+        "location": "The Guest Rooms",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Grand Lobby",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Rowan Vance's story about where they were does not match the a photo.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a cheap phone",
+      "a fake passport"
+    ],
+    "solution": {
+      "target_character_id": "rowan4",
+      "target_true_identity": "A wanted criminal pretending to be a retired government worker",
+      "reasoning": "Rowan Vance is the hidden person. The main clues (a photo, a wine glass) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_a4a6a5b9e895",
+    "case_id": "case_19f6709c4d70",
+    "status": "in_progress",
+    "created_at": "2026-08-31T11:55:22.249437+00:00",
+    "updated_at": "2026-08-31T12:00:54.317327+00:00",
+    "minutes_elapsed": 65,
+    "current_location": "The Grand Lobby",
+    "current_objective": "One of the 6 guests at The Continental Express is using a fake name. Match the clues to the lies and point out the guilty one behind the swap of a famous painting with a fake one. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [
+      "ev0",
+      "ev4",
+      "ev7"
+    ],
+    "visited_rooms": [
+      "The Grand Lobby"
+    ],
+    "npc_states": {
+      "julian0": {
+        "character_id": "julian0",
+        "trust": 44,
+        "stress": 20,
+        "suspicion_of_player": 10,
+        "times_questioned": 5,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii ulian",
+          "what type of voice you here",
+          "what type of voice you heard",
+          "do you saw how have swap the painting or do you suspect anyone",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hii ulian",
+            "answer": "I heard loud voices near the study just before it happened."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "what type of voice you here",
+            "answer": "You asked me about this before. I still say the same thing."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "what type of voice you heard",
+            "answer": "You asked me about this before. I still say the same thing."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "do you saw how have swap the painting or do you suspect anyone",
+            "answer": "You asked me about this before. I still say the same thing."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "Look around",
+            "answer": "You asked me about this before. I still say the same thing."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii ulian'",
+          "Detective asked: 'what type of voice you here'",
+          "Detective asked: 'what type of voice you heard'",
+          "Detective asked: 'do you saw how have swap the painting or do you suspect anyone'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "daniel1": {
+        "character_id": "daniel1",
+        "trust": 42,
+        "stress": 28,
+        "suspicion_of_player": 15,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "ronan2": {
+        "character_id": "ronan2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "lucas3": {
+        "character_id": "lucas3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "rowan4": {
+        "character_id": "rowan4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "freya5": {
+        "character_id": "freya5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Julian Holloway",
+          "detail": "65, ship captain. loud and showy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Daniel Sterling",
+          "detail": "61, ship captain. closed off and quick to defend.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ronan Petrov",
+          "detail": "56, security adviser. cold and very exact.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lucas Castellano",
+          "detail": "35, ship captain. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Rowan Vance",
+          "detail": "34, retired government worker. smiles a lot, but always planning.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Freya Ashford",
+          "detail": "41, news reporter. quiet and watchful.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "a photo",
+          "detail": "A photo of two guests who say they have never met. (found in The Grand Lobby).",
+          "at_time": "8:50 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a cloth with blood on it",
+          "detail": "A fine cloth with two letters sewn on it and a dark stain. (found in The Grand Lobby).",
+          "at_time": "8:50 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a torn train ticket",
+          "detail": "A ticket ripped in two. The time on it is earlier than someone said. (found in The Grand Lobby).",
+          "at_time": "8:50 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the swap of a famous painting with a fake one.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Rowan Vance is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Continental Express, the evening turned dark. The swap of a famous painting with a fake one has shocked everyone here. The doors are locked, and no one is allowed to leave until the truth comes out. 6 guests are still inside, and every one of them is hiding something. You can search rooms like The Grand Lobby, The Lounge, and The Private Study to find clues. You can talk to each guest to hear their story. But be careful: one guest is not who they say they are. They are using a fake name to hide the truth. Your job is to find that person before they slip away into the night.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Julian Holloway. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hii ulian",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Julian Holloway",
+        "text": "I heard loud voices near the study just before it happened.",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "what type of voice you here",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Julian Holloway",
+        "text": "You asked me about this before. I still say the same thing.",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "what type of voice you heard",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Julian Holloway",
+        "text": "You asked me about this before. I still say the same thing.",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Daniel Sterling. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "daniel1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Julian Holloway. You have spoken before.",
+        "kind": "narration",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "do you saw how have swap the painting or do you suspect anyone",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Julian Holloway",
+        "text": "You asked me about this before. I still say the same thing.",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Julian Holloway",
+        "text": "You asked me about this before. I still say the same thing.",
+        "kind": "dialogue",
+        "character_id": "julian0"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Narrator",
+        "text": "You search with care. Something here does not belong.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "julian0",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

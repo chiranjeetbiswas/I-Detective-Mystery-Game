@@ -1,0 +1,1628 @@
+{
+  "case": {
+    "id": "case_84aee8526e4a",
+    "title": "The Missing Heirloom",
+    "difficulty": "beginner",
+    "location_type": "Mansion",
+    "location_name": "Rosewood Manor",
+    "introduction": "A storm rages outside. The guests gather in the dining hall.",
+    "crime": "A priceless necklace is gone. It was on the table at 8:10 PM.",
+    "target_fake_identity": "Mara Whitfield",
+    "escape_plan": "The target will slip out through the back garden after the storm.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Dining Hall",
+        "description": "Large room with a long table."
+      },
+      {
+        "id": "R2",
+        "name": "Library",
+        "description": "Quiet room with many books."
+      },
+      {
+        "id": "R3",
+        "name": "Garden",
+        "description": "Wet grass and a hidden gate."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Evelyn Hart",
+        "age": 34,
+        "gender": "female",
+        "occupation": "Art Curator",
+        "personality": "Calm and observant",
+        "background": "Works at city museum",
+        "secret": "She once stole a small painting years ago.",
+        "goal": "Find the necklace for the owner",
+        "alibi": "She was in the library reading",
+        "speaking_style": "Soft and polite",
+        "habits": "Taps pen when thinking",
+        "fear": "Spiders",
+        "likes": [
+          "books",
+          "tea"
+        ],
+        "dislikes": [
+          "loud music",
+          "crowds"
+        ],
+        "intelligence": 80,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "Met at a gallery"
+          }
+        ],
+        "knowledge": [
+          "history of the necklace",
+          "museum security"
+        ],
+        "lies": [],
+        "inventory": [
+          "notebook",
+          "pen"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Victor Lane",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Businessman",
+        "personality": "Confident and talkative",
+        "background": "Owns a chain of hotels",
+        "secret": "He lost a lot of money in a bad investment.",
+        "goal": "Get a good deal on the necklace",
+        "alibi": "He was in the garden looking at the storm",
+        "speaking_style": "Loud and fast",
+        "habits": "Adjusts his cufflinks",
+        "fear": "Being ignored",
+        "likes": [
+          "wine",
+          "chess"
+        ],
+        "dislikes": [
+          "cold weather",
+          "slow people"
+        ],
+        "intelligence": 70,
+        "confidence": 85,
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "acquaintance",
+            "detail": "Talked about food"
+          }
+        ],
+        "knowledge": [
+          "value of gems"
+        ],
+        "lies": [
+          "He says he was in the dining hall"
+        ],
+        "inventory": [
+          "cigarette case"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Samira Khan",
+        "age": 28,
+        "gender": "nonbinary",
+        "occupation": "Chef",
+        "personality": "Quiet and precise",
+        "background": "Cooks for the manor staff",
+        "secret": "Has a hidden stash of spices she sells",
+        "goal": "Earn a tip from the guests",
+        "alibi": "In the kitchen prepping desserts",
+        "speaking_style": "Monotone and short",
+        "habits": "Wipes hands on apron",
+        "fear": "Fire",
+        "likes": [
+          "cooking",
+          "music"
+        ],
+        "dislikes": [
+          "mess",
+          "late guests"
+        ],
+        "intelligence": 65,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "colleague",
+            "detail": "Works in the same house"
+          }
+        ],
+        "knowledge": [
+          "kitchen layout"
+        ],
+        "lies": [],
+        "inventory": [
+          "knife",
+          "spoon"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Detective Lucas Reed",
+        "age": 38,
+        "gender": "male",
+        "occupation": "Detective",
+        "personality": "Observant and skeptical",
+        "background": "Called for a private security check",
+        "secret": "He once let a suspect go for a bribe",
+        "goal": "Solve the theft quickly",
+        "alibi": "He was in the dining hall watching everyone",
+        "speaking_style": "Direct and brief",
+        "habits": "Rubs his chin",
+        "fear": "Missing a clue",
+        "likes": [
+          "coffee",
+          "puzzles"
+        ],
+        "dislikes": [
+          "lies",
+          "mess"
+        ],
+        "intelligence": 90,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "C5",
+            "kind": "interviewee",
+            "detail": "Questions about the night"
+          }
+        ],
+        "knowledge": [
+          "police procedures"
+        ],
+        "lies": [],
+        "inventory": [
+          "badge",
+          "notebook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C5",
+        "name": "Mara Whitfield",
+        "age": 32,
+        "gender": "female",
+        "occupation": "Guest",
+        "personality": "Charming and nervous",
+        "background": "Invited as a friend of the host",
+        "secret": "She is really Lila Marquez, a former jewel thief",
+        "goal": "Steal the necklace",
+        "alibi": "She was in the garden looking at the storm",
+        "speaking_style": "Friendly and quick",
+        "habits": "Fidgets with her ring",
+        "fear": "Being caught",
+        "likes": [
+          "fashion",
+          "gifts"
+        ],
+        "dislikes": [
+          "police",
+          "tight spaces"
+        ],
+        "intelligence": 85,
+        "confidence": 75,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "acquaintance",
+            "detail": "Met at a charity event"
+          }
+        ],
+        "knowledge": [
+          "how to pick locks"
+        ],
+        "lies": [
+          "She claims she never met the host before"
+        ],
+        "inventory": [
+          "gloves",
+          "small bag"
+        ],
+        "is_target": true
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive and talk",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "8:05 PM",
+        "description": "Storm starts. Lights flicker",
+        "involved": [
+          "C1",
+          "C2",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:10 PM",
+        "description": "Necklace is missing",
+        "involved": [
+          "C1",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:12 PM",
+        "description": "Lightning hits the garden gate",
+        "involved": [
+          "C2",
+          "C5"
+        ]
+      },
+      {
+        "time": "8:20 PM",
+        "description": "Detective questions each guest",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Glove with torn fabric",
+        "description": "A silk glove with a small tear that matches Mara's dress",
+        "location": "Garden",
+        "points_to": "C5",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Lockpick",
+        "description": "A metal pick found near the garden gate",
+        "location": "Garden",
+        "points_to": "C5",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Host diary entry",
+        "description": "Notes about a past meeting with Lila Marquez",
+        "location": "Library",
+        "points_to": "C5",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E4",
+        "name": "Broken vase",
+        "description": "A vase broken near the table with Victor's fingerprint",
+        "location": "Dining Hall",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The storm knocked out the lights at 8:15 PM",
+      "The back garden door was unlocked"
+    ],
+    "red_herrings": [
+      "The cufflink was found near the necklace",
+      "The chef's knife is missing"
+    ],
+    "solution": {
+      "target_character_id": "C5",
+      "target_true_identity": "Lila Marquez",
+      "reasoning": "The glove matches her dress. The lockpick shows she can open the gate. The diary links her past as Lila. These are key evidence. The vase fingerprint is a fake clue.",
+      "key_evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_383b5a661dde",
+    "case_id": "case_84aee8526e4a",
+    "status": "lost",
+    "created_at": "2026-08-31T08:42:08.790452+00:00",
+    "updated_at": "2026-08-31T09:21:36.229684+00:00",
+    "minutes_elapsed": 515,
+    "current_location": "Dining Hall",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [
+      "E4"
+    ],
+    "visited_rooms": [
+      "Dining Hall"
+    ],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 56,
+        "stress": 15,
+        "suspicion_of_player": 20,
+        "times_questioned": 7,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii",
+          "you know about the case",
+          "say how the work",
+          "you know how can take neckles",
+          "how is security gard ?",
+          "ok thankyou'",
+          "Look around"
+        ],
+        "relationship_notes": [
+          "The detective was kind to me."
+        ],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hii ",
+            "answer": "Hello. I was reading in the library. How can I help?"
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "you know about the case",
+            "answer": "Yes, I know about it. I know the necklace\u2019s history. I also know how the museum security works."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "say how the work",
+            "answer": "The work is to catalog the items and check the security logs."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "you know how can take neckles",
+            "answer": "The necklace sits in a locked case. Only someone with the proper key or code can open it. The security log shows when the case is unlocked. If the alarm is turned off, the case can be taken."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "how is security gard ?",
+            "answer": "The guard is very watchful. He checks the case every hour. He seems calm but strict. He does not let anyone near the necklace without permission."
+          },
+          {
+            "at_time": "8:50 PM",
+            "question": "ok thankyou'",
+            "answer": "You're welcome. If you need any more details, just ask. I will keep looking for the necklace."
+          },
+          {
+            "at_time": "2:40 AM",
+            "question": "Look around",
+            "answer": "I look around. I see the display case and the guard nearby. The case is locked and the glass is clean. I hear the low hum of the alarm system."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii '",
+          "Detective asked: 'you know about the case'",
+          "Detective asked: 'say how the work'",
+          "Detective asked: 'you know how can take neckles'",
+          "Detective asked: 'how is security gard ?'",
+          "Detective asked: 'ok thankyou''",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 36,
+        "stress": 20,
+        "suspicion_of_player": 40,
+        "times_questioned": 11,
+        "mood": "suspicious",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "what you doing that time",
+          "and you know about the neckles",
+          "which time light is fliker",
+          "you know samira khan",
+          "you know his behevour which type of person she",
+          "ok..]",
+          "don't worry tall me your self",
+          "if you got a chance to get much more money you do anything",
+          "it means iif the neckles is valueable then you take that",
+          "what are you doing around the table",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "9:00 PM",
+            "question": "what you doing that time",
+            "answer": "I was in the dining hall then."
+          },
+          {
+            "at_time": "9:10 PM",
+            "question": "and you know about the neckles",
+            "answer": "Yes, I know the necklace. It's a fine piece, worth a lot. I want a good deal on it."
+          },
+          {
+            "at_time": "9:20 PM",
+            "question": "which time light is fliker",
+            "answer": "Probably when it gets dark, around eight o\u2019clock. I\u2019m not sure exact."
+          },
+          {
+            "at_time": "9:30 PM",
+            "question": "you know samira khan",
+            "answer": "Yes, I know Samira Khan. She's a client of mine. We talked about a few deals before. She likes fine jewelry, like that necklace."
+          },
+          {
+            "at_time": "9:40 PM",
+            "question": "you know his behevour which type of person she",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "9:50 PM",
+            "question": "ok..]",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "10:00 PM",
+            "question": "don't worry tall me your self ",
+            "answer": "I'm Victor Lane. I'm 45 and I run a business. I love wine, chess and I want a good deal on that necklace. (adjusts cufflinks)"
+          },
+          {
+            "at_time": "10:10 PM",
+            "question": "if you got a chance to get much more money you do anything",
+            "answer": "Sure, I\u2019d grab any chance. I\u2019d do whatever it takes to get that money. Money talks, you know."
+          },
+          {
+            "at_time": "10:20 PM",
+            "question": "it means iif the neckles is valueable then you take that",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "2:05 AM",
+            "question": "what are you doing around the table",
+            "answer": "I'm standing by the table looking at the necklace. I'm trying to see if I can get a good deal on it. (adjusts cufflinks)"
+          },
+          {
+            "at_time": "2:15 AM",
+            "question": "Look around",
+            "answer": "I have nothing to say about that."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'and you know about the neckles'",
+          "Detective asked: 'which time light is fliker'",
+          "Detective asked: 'you know samira khan'",
+          "Detective asked: 'you know his behevour which type of person she'",
+          "Detective asked: 'ok..]'",
+          "Detective asked: 'don't worry tall me your self '",
+          "Detective asked: 'if you got a chance to get much more money you do anything'",
+          "Detective asked: 'it means iif the neckles is valueable then you take that'",
+          "Detective asked: 'what are you doing around the table'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 48,
+        "stress": 20,
+        "suspicion_of_player": 20,
+        "times_questioned": 7,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "samira when the neckles gone where are you that time",
+          "in the dinner what you prepping",
+          "can you say which person take the necklas in your thought",
+          "you was detective what question ask to yourself",
+          "i think you are not take it so relex",
+          "ok do your work",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "10:30 PM",
+            "question": "samira when the neckles gone where are you that time",
+            "answer": "I was in the kitchen. I was prepping desserts."
+          },
+          {
+            "at_time": "10:40 PM",
+            "question": "in the dinner what you prepping",
+            "answer": "I was prepping desserts. Chocolate mousse and fruit tarts."
+          },
+          {
+            "at_time": "10:50 PM",
+            "question": "can you say which person take the necklas in your thought",
+            "answer": "I don't know. I saw no one take it."
+          },
+          {
+            "at_time": "11:00 PM",
+            "question": "you was detective what question ask to yourself",
+            "answer": "I would ask who took the necklace. I would check who was near the kitchen."
+          },
+          {
+            "at_time": "11:10 PM",
+            "question": "i think you are not take it so relex",
+            "answer": "Okay. I didn't take it. I was in the kitchen. I am still prepping desserts."
+          },
+          {
+            "at_time": "11:20 PM",
+            "question": "ok do your work",
+            "answer": "Yes. I will keep prepping."
+          },
+          {
+            "at_time": "3:05 AM",
+            "question": "Look around",
+            "answer": "I look. I see the ovens, the prep tables, the knives, the pantry. All clean. Nothing odd."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'samira when the neckles gone where are you that time'",
+          "Detective asked: 'in the dinner what you prepping'",
+          "Detective asked: 'can you say which person take the necklas in your thought'",
+          "Detective asked: 'you was detective what question ask to yourself'",
+          "Detective asked: 'i think you are not take it so relex'",
+          "Detective asked: 'ok do your work'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 0,
+        "stress": 76,
+        "suspicion_of_player": 100,
+        "times_questioned": 5,
+        "mood": "angry",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "i am not ask for anything which things you nothing to say",
+          "you are not talk with me",
+          "Look around",
+          "why you say nothing"
+        ],
+        "relationship_notes": [
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [
+          {
+            "at_time": "11:30 PM",
+            "question": "hello",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "11:40 PM",
+            "question": "i am not ask for anything which things you nothing to say",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "11:50 PM",
+            "question": "you are not talk with me",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "3:30 AM",
+            "question": "Look around",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "4:10 AM",
+            "question": "why you say nothing",
+            "answer": "I have nothing to say about that."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'",
+          "Detective asked: 'i am not ask for anything which things you nothing to say'",
+          "Detective asked: 'you are not talk with me'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'why you say nothing'"
+        ],
+        "has_met": true
+      },
+      "C5": {
+        "character_id": "C5",
+        "trust": 36,
+        "stress": 20,
+        "suspicion_of_player": 40,
+        "times_questioned": 11,
+        "mood": "suspicious",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii mara",
+          "i want to know about detective lucas",
+          "so tall me your self",
+          "you like neckles",
+          "you want if you got chance",
+          "you know about the case",
+          "we are finding neckles you see",
+          "and at the time neckles gone where are you that time",
+          "yes you was",
+          "how to i know which one take that if you in my place what you do",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "12:00 AM",
+            "question": "hii mara",
+            "answer": "Hi! Nice to see you. How can I help?"
+          },
+          {
+            "at_time": "12:10 AM",
+            "question": "i want to know about detective lucas",
+            "answer": "I don't know Detective Lucas. I haven't met him."
+          },
+          {
+            "at_time": "12:20 AM",
+            "question": "so tall me your self",
+            "answer": "Hi, I\u2019m Mara. I\u2019m 32 and I was a guest at the party. I love fashion and nice gifts. I was in the garden watching the storm."
+          },
+          {
+            "at_time": "12:30 AM",
+            "question": "you like neckles",
+            "answer": "Yes, I love necklaces. They\u2019re beautiful and go great with a dress."
+          },
+          {
+            "at_time": "12:40 AM",
+            "question": "you want if you got chance",
+            "answer": "If I got a chance, I\u2019d love to have that beautiful necklace. It would be a perfect gift."
+          },
+          {
+            "at_time": "12:50 AM",
+            "question": "you know about the case",
+            "answer": "I don\u2019t know anything about the case. I was just a guest"
+          },
+          {
+            "at_time": "1:00 AM",
+            "question": "we are finding neckles you see",
+            "answer": "I saw the necklaces in the display room. They were bright and close to the window. I hope you find them quick."
+          },
+          {
+            "at_time": "1:10 AM",
+            "question": "and at the time neckles gone where are you that time",
+            "answer": "I was"
+          },
+          {
+            "at_time": "1:20 AM",
+            "question": "yes you was",
+            "answer": "Yes, I was in the garden. I was watching the storm. I didn\u2019t see the necklace go."
+          },
+          {
+            "at_time": "1:30 AM",
+            "question": "how to i know which one take that if you in my place what you do",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "1:40 AM",
+            "question": "Look around",
+            "answer": "I look around the garden. The storm is loud. I see rain, trees, and the path. Nothing else catches my eye."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'i want to know about detective lucas'",
+          "Detective asked: 'so tall me your self'",
+          "Detective asked: 'you like neckles'",
+          "Detective asked: 'you want if you got chance'",
+          "Detective asked: 'you know about the case'",
+          "Detective asked: 'we are finding neckles you see'",
+          "Detective asked: 'and at the time neckles gone where are you that time'",
+          "Detective asked: 'yes you was'",
+          "Detective asked: 'how to i know which one take that if you in my place what you do'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Evelyn Hart",
+          "detail": "34, Art Curator. Calm and observant.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victor Lane",
+          "detail": "45, Businessman. Confident and talkative.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Samira Khan",
+          "detail": "28, Chef. Quiet and precise.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Detective Lucas Reed",
+          "detail": "38, Detective. Observant and skeptical.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mara Whitfield",
+          "detail": "32, Guest. Charming and nervous.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "Broken vase",
+          "detail": "A vase broken near the table with Victor's fingerprint (found in Dining Hall).",
+          "at_time": "1:50 AM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive and talk",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:05 PM",
+          "detail": "Storm starts. Lights flicker",
+          "at_time": "8:05 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:10 PM",
+          "detail": "Necklace is missing",
+          "at_time": "8:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:12 PM",
+          "detail": "Lightning hits the garden gate",
+          "at_time": "8:12 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:20 PM",
+          "detail": "Detective questions each guest",
+          "at_time": "8:20 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A storm rages outside. The guests gather in the dining hall.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Evelyn Hart. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hii ",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Evelyn Hart",
+        "text": "Hello. I was reading in the library. How can I help?",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "you know about the case",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Evelyn Hart",
+        "text": "Yes, I know about it. I know the necklace\u2019s history. I also know how the museum security works.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "say how the work",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Evelyn Hart",
+        "text": "The work is to catalog the items and check the security logs.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "you know how can take neckles",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Evelyn Hart",
+        "text": "The necklace sits in a locked case. Only someone with the proper key or code can open it. The security log shows when the case is unlocked. If the alarm is turned off, the case can be taken.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "how is security gard ?",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Evelyn Hart",
+        "text": "The guard is very watchful. He checks the case every hour. He seems calm but strict. He does not let anyone near the necklace without permission.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "ok thankyou'",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Evelyn Hart",
+        "text": "You're welcome. If you need any more details, just ask. I will keep looking for the necklace.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Victor Lane. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "what you doing that time",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Victor Lane",
+        "text": "I was in the dining hall then.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "and you know about the neckles",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Victor Lane",
+        "text": "Yes, I know the necklace. It's a fine piece, worth a lot. I want a good deal on it.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "You",
+        "text": "which time light is fliker",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Victor Lane",
+        "text": "Probably when it gets dark, around eight o\u2019clock. I\u2019m not sure exact.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "You",
+        "text": "you know samira khan",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "Victor Lane",
+        "text": "Yes, I know Samira Khan. She's a client of mine. We talked about a few deals before. She likes fine jewelry, like that necklace.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "You",
+        "text": "you know his behevour which type of person she",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "Victor Lane",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "You",
+        "text": "ok..]",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "Victor Lane",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:00 PM",
+        "speaker": "You",
+        "text": "don't worry tall me your self ",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:00 PM",
+        "speaker": "Victor Lane",
+        "text": "I'm Victor Lane. I'm 45 and I run a business. I love wine, chess and I want a good deal on that necklace. (adjusts cufflinks)",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:10 PM",
+        "speaker": "You",
+        "text": "if you got a chance to get much more money you do anything",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:10 PM",
+        "speaker": "Victor Lane",
+        "text": "Sure, I\u2019d grab any chance. I\u2019d do whatever it takes to get that money. Money talks, you know.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:20 PM",
+        "speaker": "You",
+        "text": "it means iif the neckles is valueable then you take that",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:20 PM",
+        "speaker": "Victor Lane",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Samira Khan. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "You",
+        "text": "samira when the neckles gone where are you that time",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "Samira Khan",
+        "text": "I was in the kitchen. I was prepping desserts.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "You",
+        "text": "in the dinner what you prepping",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:40 PM",
+        "speaker": "Samira Khan",
+        "text": "I was prepping desserts. Chocolate mousse and fruit tarts.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:50 PM",
+        "speaker": "You",
+        "text": "can you say which person take the necklas in your thought",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:50 PM",
+        "speaker": "Samira Khan",
+        "text": "I don't know. I saw no one take it.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "You",
+        "text": "you was detective what question ask to yourself",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Samira Khan",
+        "text": "I would ask who took the necklace. I would check who was near the kitchen.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "You",
+        "text": "i think you are not take it so relex",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "Samira Khan",
+        "text": "Okay. I didn't take it. I was in the kitchen. I am still prepping desserts.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:20 PM",
+        "speaker": "You",
+        "text": "ok do your work",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:20 PM",
+        "speaker": "Samira Khan",
+        "text": "Yes. I will keep prepping.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:30 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Detective Lucas Reed. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:30 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:30 PM",
+        "speaker": "Detective Lucas Reed",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:40 PM",
+        "speaker": "You",
+        "text": "i am not ask for anything which things you nothing to say",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:40 PM",
+        "speaker": "Detective Lucas Reed",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:50 PM",
+        "speaker": "You",
+        "text": "you are not talk with me",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:50 PM",
+        "speaker": "Detective Lucas Reed",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "12:00 AM",
+        "speaker": "Narrator",
+        "text": "You walk over to Mara Whitfield. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:00 AM",
+        "speaker": "You",
+        "text": "hii mara",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:00 AM",
+        "speaker": "Mara Whitfield",
+        "text": "Hi! Nice to see you. How can I help?",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "You",
+        "text": "i want to know about detective lucas",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "Mara Whitfield",
+        "text": "I don't know Detective Lucas. I haven't met him.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "You",
+        "text": "so tall me your self",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "Mara Whitfield",
+        "text": "Hi, I\u2019m Mara. I\u2019m 32 and I was a guest at the party. I love fashion and nice gifts. I was in the garden watching the storm.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "You",
+        "text": "you like neckles",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "Mara Whitfield",
+        "text": "Yes, I love necklaces. They\u2019re beautiful and go great with a dress.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "You",
+        "text": "you want if you got chance",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "Mara Whitfield",
+        "text": "If I got a chance, I\u2019d love to have that beautiful necklace. It would be a perfect gift.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:50 AM",
+        "speaker": "You",
+        "text": "you know about the case",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "12:50 AM",
+        "speaker": "Mara Whitfield",
+        "text": "I don\u2019t know anything about the case. I was just a guest",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:00 AM",
+        "speaker": "You",
+        "text": "we are finding neckles you see",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:00 AM",
+        "speaker": "Mara Whitfield",
+        "text": "I saw the necklaces in the display room. They were bright and close to the window. I hope you find them quick.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:10 AM",
+        "speaker": "You",
+        "text": "and at the time neckles gone where are you that time",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:10 AM",
+        "speaker": "Mara Whitfield",
+        "text": "I was",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:20 AM",
+        "speaker": "You",
+        "text": "yes you was",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:20 AM",
+        "speaker": "Mara Whitfield",
+        "text": "Yes, I was in the garden. I was watching the storm. I didn\u2019t see the necklace go.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:30 AM",
+        "speaker": "You",
+        "text": "how to i know which one take that if you in my place what you do",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:30 AM",
+        "speaker": "Mara Whitfield",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:40 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:40 AM",
+        "speaker": "Mara Whitfield",
+        "text": "I look around the garden. The storm is loud. I see rain, trees, and the path. Nothing else catches my eye.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "1:50 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:50 AM",
+        "speaker": "Narrator",
+        "text": "You look around and find Broken vase.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:05 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Victor Lane. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:05 AM",
+        "speaker": "You",
+        "text": "what are you doing around the table",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:05 AM",
+        "speaker": "Victor Lane",
+        "text": "I'm standing by the table looking at the necklace. I'm trying to see if I can get a good deal on it. (adjusts cufflinks)",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:15 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:15 AM",
+        "speaker": "Victor Lane",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:25 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:25 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dark dining hall. The cold air smells of old wood and faint decay, and",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Evelyn Hart. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Evelyn Hart",
+        "text": "I look around. I see the display case and the guard nearby. The case is locked and the glass is clean. I hear the low hum of the alarm system.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:50 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:50 AM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:05 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Samira Khan. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "3:05 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "3:05 AM",
+        "speaker": "Samira Khan",
+        "text": "I look. I see the ovens, the prep tables, the knives, the pantry. All clean. Nothing odd.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "3:15 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:15 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dining hall. You hear your own footsteps echo on the cold floor. You smell stale wine and dust.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:30 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Detective Lucas Reed. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "3:30 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "3:30 AM",
+        "speaker": "Detective Lucas Reed",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "3:40 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:40 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dark dining hall. You hear your footsteps echo on the cold floor. You smell stale wine and dust in the air.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:55 AM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:55 AM",
+        "speaker": "Narrator",
+        "text": "You stand in the dim dining hall, the candles flicker low. You hear the hollow echo of your steps on the cold stone floor. You smell stale wine and a heavy dust that clings to the air.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "4:10 AM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "4:10 AM",
+        "speaker": "Hint",
+        "text": "Think about the clues you have and how they match the stories you heard. Look for a detail that appears in one story but not in the others.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "4:10 AM",
+        "speaker": "You",
+        "text": "why you say nothing",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "4:10 AM",
+        "speaker": "Detective Lucas Reed",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "4:20 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Mara Whitfield. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "4:20 AM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "4:20 AM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "4:35 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Samira Khan. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "4:35 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Victor Lane. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "4:35 AM",
+        "speaker": "Verdict",
+        "text": "Sorry, you were wrong.  \nThe real culprit is Lila\u202fMarquez.  \nThe glove, the lockpick, and the diary prove it.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "C2",
+    "hints_used": 1,
+    "accusation_made": true,
+    "accused_character_id": "C4"
+  }
+}

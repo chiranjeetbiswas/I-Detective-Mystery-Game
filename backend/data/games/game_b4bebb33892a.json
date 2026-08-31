@@ -1,0 +1,609 @@
+{
+  "case": {
+    "id": "case_6f1d85317078",
+    "title": "The Safe House Mystery",
+    "difficulty": "normal",
+    "location_type": "Safe House",
+    "location_name": "The Ashgrove Safe House",
+    "introduction": "Tonight at The Ashgrove Safe House, the evening turned dark. The sale of government secrets to a buyer from another country has shocked everyone here. The doors are locked, and no one is allowed to leave until the truth comes out. 6 guests are still inside, and every one of them is hiding something. You can search rooms like The Grand Lobby, The Lounge, and The Private Study to find clues. You can talk to each guest to hear their story. But be careful: one guest is not who they say they are. They are using a fake name to hide the truth. Your job is to find that person before they slip away into the night.",
+    "crime": "The sale of government secrets to a buyer from another country",
+    "target_fake_identity": "Diego Alcott, a money investor people trust",
+    "escape_plan": "Diego Alcott plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "diego0",
+        "name": "Diego Alcott",
+        "age": 63,
+        "gender": "male",
+        "occupation": "money investor",
+        "personality": "quiet and watchful",
+        "background": "A money investor with a messy past.",
+        "secret": "Diego was in a secret relationship with the victim.",
+        "goal": "Diego wants to find out who is watching them.",
+        "alibi": "Says they were in The Guest Rooms when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "fidgets with a ring",
+        "fear": "the dark",
+        "likes": [
+          "old books",
+          "the garden"
+        ],
+        "dislikes": [
+          "loud people",
+          "being rushed"
+        ],
+        "intelligence": 42,
+        "confidence": 61,
+        "relationships": [
+          {
+            "with_character": "Idris Reyes",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "idris1",
+        "name": "Idris Reyes",
+        "age": 56,
+        "gender": "male",
+        "occupation": "news reporter",
+        "personality": "nervous and talks a lot",
+        "background": "A news reporter with a messy past.",
+        "secret": "Idris owes a lot of money from betting.",
+        "goal": "Idris wants to find out who is watching them.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "folds their arms when pushed",
+        "fear": "the police",
+        "likes": [
+          "the garden",
+          "music"
+        ],
+        "dislikes": [
+          "surprises",
+          "waiting"
+        ],
+        "intelligence": 42,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "Amara Vance",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Diego Alcott acting strange near The Lounge.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Idris saw something that night and has not told anyone."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "amara2",
+        "name": "Amara Vance",
+        "age": 42,
+        "gender": "female",
+        "occupation": "art expert",
+        "personality": "warm and easy to like",
+        "background": "A art expert with a messy past.",
+        "secret": "Amara saw something that night and has not told anyone.",
+        "goal": "Amara wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "taps the table while thinking",
+        "fear": "an old enemy finding them",
+        "likes": [
+          "the garden",
+          "money"
+        ],
+        "dislikes": [
+          "waiting",
+          "gossip"
+        ],
+        "intelligence": 61,
+        "confidence": 57,
+        "relationships": [
+          {
+            "with_character": "Sofia Sterling",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Diego Alcott acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Amara was in a secret relationship with the victim."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "sofia3",
+        "name": "Sofia Sterling",
+        "age": 57,
+        "gender": "female",
+        "occupation": "wine taster",
+        "personality": "quiet and watchful",
+        "background": "A wine taster with a messy past.",
+        "secret": "Sofia faked part of their papers years ago.",
+        "goal": "Sofia wants to find out who is watching them.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "formal and careful",
+        "habits": "glances at the door often",
+        "fear": "being left alone",
+        "likes": [
+          "the garden",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "being rushed",
+          "the cold"
+        ],
+        "intelligence": 62,
+        "confidence": 82,
+        "relationships": [
+          {
+            "with_character": "Nadia Holloway",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Diego Alcott acting strange near The Grand Lobby.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Sofia saw something that night and has not told anyone."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "nadia4",
+        "name": "Nadia Holloway",
+        "age": 32,
+        "gender": "female",
+        "occupation": "house manager",
+        "personality": "warm and easy to like",
+        "background": "A house manager with a messy past.",
+        "secret": "Nadia took a small thing earlier that night.",
+        "goal": "Nadia wants to find out who is watching them.",
+        "alibi": "Says they were in The Dining Room when it happened.",
+        "speaking_style": "short, clipped answers",
+        "habits": "fidgets with a ring",
+        "fear": "their secret coming out",
+        "likes": [
+          "quiet rooms",
+          "music"
+        ],
+        "dislikes": [
+          "waiting",
+          "being touched"
+        ],
+        "intelligence": 47,
+        "confidence": 56,
+        "relationships": [
+          {
+            "with_character": "Emma Nakamura",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Diego Alcott acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "emma5",
+        "name": "Emma Nakamura",
+        "age": 64,
+        "gender": "female",
+        "occupation": "rich family heir",
+        "personality": "loud and showy",
+        "background": "A rich family heir with a messy past.",
+        "secret": "Emma owes a lot of money from betting.",
+        "goal": "Emma wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "folds their arms when pushed",
+        "fear": "losing their good name",
+        "likes": [
+          "the sea",
+          "strong coffee"
+        ],
+        "dislikes": [
+          "the cold",
+          "being rushed"
+        ],
+        "intelligence": 41,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "Diego Alcott",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Diego Alcott acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Emma took a small thing earlier that night."
+        ],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the sale of government secrets to a buyer from another country.",
+        "involved": [
+          "Diego Alcott"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Diego Alcott is seen moving toward a side door.",
+        "involved": [
+          "Diego Alcott"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Lounge",
+        "points_to": "Diego Alcott",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a page from an account book",
+        "description": "A page of numbers that do not add up.",
+        "location": "The Grand Lobby",
+        "points_to": "Diego Alcott",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Private Study",
+        "points_to": "Emma Nakamura",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Dining Room",
+        "points_to": "Sofia Sterling",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Private Study",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Guest Rooms",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Diego Alcott's story about where they were does not match the a fake passport.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a cloth with blood on it",
+      "muddy shoes"
+    ],
+    "solution": {
+      "target_character_id": "diego0",
+      "target_true_identity": "A wanted criminal pretending to be a money investor",
+      "reasoning": "Diego Alcott is the hidden person. The main clues (a fake passport, a page from an account book) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_b4bebb33892a",
+    "case_id": "case_6f1d85317078",
+    "status": "in_progress",
+    "created_at": "2026-08-31T11:53:14.559229+00:00",
+    "updated_at": "2026-08-31T11:53:14.559255+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "The Grand Lobby",
+    "current_objective": "One of the 6 guests at The Ashgrove Safe House is using a fake name. Look for clues, compare their stories, and unmask the one behind the sale of government secrets to a buyer from another country. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "diego0": {
+        "character_id": "diego0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "idris1": {
+        "character_id": "idris1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "amara2": {
+        "character_id": "amara2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "sofia3": {
+        "character_id": "sofia3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "nadia4": {
+        "character_id": "nadia4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "emma5": {
+        "character_id": "emma5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Diego Alcott",
+          "detail": "63, money investor. quiet and watchful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Idris Reyes",
+          "detail": "56, news reporter. nervous and talks a lot.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Amara Vance",
+          "detail": "42, art expert. warm and easy to like.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Sterling",
+          "detail": "57, wine taster. quiet and watchful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Nadia Holloway",
+          "detail": "32, house manager. warm and easy to like.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Emma Nakamura",
+          "detail": "64, rich family heir. loud and showy.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the sale of government secrets to a buyer from another country.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Diego Alcott is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Ashgrove Safe House, the evening turned dark. The sale of government secrets to a buyer from another country has shocked everyone here. The doors are locked, and no one is allowed to leave until the truth comes out. 6 guests are still inside, and every one of them is hiding something. You can search rooms like The Grand Lobby, The Lounge, and The Private Study to find clues. You can talk to each guest to hear their story. But be careful: one guest is not who they say they are. They are using a fake name to hide the truth. Your job is to find that person before they slip away into the night.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

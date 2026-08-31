@@ -1,0 +1,665 @@
+{
+  "case": {
+    "id": "case_21b5f3d6320b",
+    "title": "Midnight Masquerade at the Alpine Chalet",
+    "difficulty": "beginner",
+    "location_type": "Luxury Villa",
+    "location_name": "Snowcrest Alpine Villa",
+    "introduction": "A glamorous gala is underway at Snowcrest Alpine Villa, perched on a snow\u2011capped mountain. The host proudly displays a priceless sapphire necklace, but as the night deepens the jewel vanishes, and the guests must uncover the thief before the snowstorm seals the mountain pass.",
+    "crime": "The priceless sapphire necklace disappears from its display case during the evening gala.",
+    "target_fake_identity": "Victor Delaney",
+    "escape_plan": "Victor will slip into the hidden ski\u2011lift tunnel behind the library bookshelf and escape to the mountain base before the storm blocks the road.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Lobby",
+        "description": "A grand entry with marble floors, a roaring fireplace and a coat rack where guests leave their outerwear."
+      },
+      {
+        "id": "R2",
+        "name": "Main Hall",
+        "description": "The centerpiece of the villa, illuminated by chandeliers and showcasing the sapphire necklace on a velvet pedestal."
+      },
+      {
+        "id": "R3",
+        "name": "Library",
+        "description": "Shelves of rare books line the walls; a secret passage behind a movable shelf leads to the ski\u2011lift tunnel."
+      },
+      {
+        "id": "R4",
+        "name": "Kitchen",
+        "description": "A bustling professional kitchen filled with gleaming copper pots, a prep island, and a back door to the service alley."
+      },
+      {
+        "id": "R5",
+        "name": "Balcony",
+        "description": "An outdoor balcony overlooking the snowy slopes, equipped with a small table and a smoking area."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Victor Delaney",
+        "age": 38,
+        "occupation": "Wealthy Investor",
+        "personality": "Charismatic and smooth, always with a perfect smile",
+        "background": "Arrived from New York to discuss a joint venture with the villa owner, claiming interest in rare gems",
+        "secret": "He is actually Evan Marsh, a wanted art thief who plans to steal the sapphire necklace",
+        "goal": "Steal the necklace and escape before the storm cuts off all exits",
+        "alibi": "Was in the library reading a book at 9:30 PM",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "colleague",
+            "detail": "Met briefly while discussing the gala menu"
+          },
+          {
+            "with_character": "C3",
+            "kind": "acquaintance",
+            "detail": "Shared investment talk about art"
+          },
+          {
+            "with_character": "C4",
+            "kind": "neutral",
+            "detail": "Exchanged polite greetings"
+          }
+        ],
+        "knowledge": [
+          "Knows the hidden ski\u2011lift tunnel behind the library",
+          "Familiar with security camera blind spots"
+        ],
+        "lies": [
+          "Claims to be a legitimate investor",
+          "Denies any knowledge of the necklace\u2019s location"
+        ],
+        "inventory": [
+          "Black leather gloves",
+          "Small lockpick set",
+          "Disguised staff badge"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C2",
+        "name": "Lena Kovacs",
+        "age": 32,
+        "occupation": "Chef",
+        "personality": "Passionate, meticulous, and fiercely protective of her kitchen",
+        "background": "Head chef hired to prepare a multi\u2011course dinner for the gala",
+        "secret": "Owes a large sum to a former mafia patron who might pressure her",
+        "goal": "Earn a huge tip and keep her reputation spotless",
+        "alibi": "Was in the kitchen prepping desserts at 9:30 PM",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "colleague",
+            "detail": "Served Victor a special amuse\u2011bouche"
+          },
+          {
+            "with_character": "C3",
+            "kind": "friend",
+            "detail": "Exchanged recipes"
+          },
+          {
+            "with_character": "C4",
+            "kind": "neutral",
+            "detail": "Briefly chatted about the storm"
+          }
+        ],
+        "knowledge": [
+          "Saw Victor leave the library clutching a small bag"
+        ],
+        "lies": [
+          "Says she didn\u2019t see anyone near the necklace"
+        ],
+        "inventory": [
+          "Chef's knife",
+          "Recipe notebook",
+          "Torn apron fragment"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Professor Amelia Hart",
+        "age": 45,
+        "occupation": "Art Historian",
+        "personality": "Curious, scholarly, slightly absent\u2011minded",
+        "background": "Invited to speak about the history of the sapphire necklace",
+        "secret": "Had a secret affair with the villa's owner, giving her privileged access to the collection",
+        "goal": "Publish a definitive book on the necklace and its legend",
+        "alibi": "Was in the main hall admiring the necklace at 9:30 PM",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "Appreciated Lena\u2019s dessert"
+          },
+          {
+            "with_character": "C4",
+            "kind": "client",
+            "detail": "James hired her to verify the necklace\u2019s authenticity"
+          }
+        ],
+        "knowledge": [
+          "Knows the exact weight and cut of the sapphire"
+        ],
+        "lies": [
+          "Denies any romantic involvement with the owner"
+        ],
+        "inventory": [
+          "Notebook",
+          "Camera",
+          "Glasses"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "James Whitaker",
+        "age": 50,
+        "occupation": "Private Investigator",
+        "personality": "Observant, skeptical, always questioning",
+        "background": "Hired privately by the villa owner months earlier to look into possible thefts",
+        "secret": "His investigation report implicated a former associate who now works as a security guard elsewhere",
+        "goal": "Uncover the thief during the gala and protect his client\u2019s reputation",
+        "alibi": "Was on the balcony smoking at 9:30 PM",
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "client",
+            "detail": "Consulted Amelia about the necklace\u2019s provenance"
+          },
+          {
+            "with_character": "C1",
+            "kind": "neutral",
+            "detail": "Observed Victor from a distance"
+          }
+        ],
+        "knowledge": [
+          "Noticed a shadow linger near the ski\u2011lift tunnel entrance"
+        ],
+        "lies": [
+          "Claims he saw nothing unusual on the balcony"
+        ],
+        "inventory": [
+          "Binoculars",
+          "Notebook",
+          "Cigarette case"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive and gather in the lobby, cocktail hour begins",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Dinner is served in the main hall; the sapphire necklace is unveiled on a velvet pedestal",
+        "involved": [
+          "C1",
+          "C2",
+          "C3"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Security cameras start rolling; the chandelier lights flicker briefly",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "Lights dim for a brief intermission; each guest claims an alibi",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "9:35 PM",
+        "description": "A guest reports a figure in a black coat slipping out of the library",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "The sapphire necklace is discovered missing; panic spreads",
+        "involved": [
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Investigation begins; characters start questioning each other",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Glove imprint on display case latch",
+        "description": "A clear imprint matching Victor's black leather gloves",
+        "location": "Main Hall",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Security camera footage",
+        "description": "Shows a figure in a black coat exiting the library at 9:32, holding a small bag",
+        "location": "Library",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Torn apron fragment",
+        "description": "A piece of a chef's apron found near the display case; matches Lena's uniform",
+        "location": "Main Hall",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Broken lockpick",
+        "description": "A lockpick snapped in half, discarded in the kitchen trash; similar to Victor's set",
+        "location": "Kitchen",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E5",
+        "name": "Fingerprint on balcony rail",
+        "description": "Partial fingerprint that matches James' notebook cover",
+        "location": "Balcony",
+        "points_to": "C4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The movable bookshelf in the library can be pushed to reveal a narrow tunnel leading to the ski\u2011lift shaft",
+      "A faint draft near the library shelf indicates the tunnel is not sealed"
+    ],
+    "red_herrings": [
+      "Lena's claim that she saw Victor but later admits she was distracted by a kitchen fire",
+      "James' statement that the balcony shadow was just a passing skier\u2019s silhouette"
+    ],
+    "solution": {
+      "target_character_id": "C1",
+      "target_true_identity": "Evan Marsh",
+      "reasoning": "Victor's alibi fails because security footage shows him leaving the library at the crucial moment, and his glove imprint on the case latch directly links him to the theft. The lockpick in the kitchen matches his set, confirming his involvement. The torn apron and balcony fingerprint are decoys designed to mislead, but they do not match any other evidence. Victor planned to use the hidden ski\u2011lift tunnel behind the library to escape, which aligns with his knowledge of the passage and his escape plan.",
+      "key_evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_4e5f7700e675",
+    "case_id": "case_21b5f3d6320b",
+    "status": "lost",
+    "created_at": "2026-08-31T05:22:44.671106+00:00",
+    "updated_at": "2026-08-31T06:45:21.847663+00:00",
+    "minutes_elapsed": 135,
+    "current_location": "Lobby",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 3,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Victor Delaney what are you doing at night'",
+          "Detective said: 'i am addressing victor'",
+          "Detective said: 'you see the Victor Delaney'"
+        ]
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Lena Kovacs'"
+        ]
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Professor Amelia Hart'"
+        ]
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 54,
+        "stress": 20,
+        "suspicion_of_player": 10,
+        "times_questioned": 5,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to James Whitaker what you doing that time'",
+          "Detective said: 'Talk to James Whitaker you see any unusial'",
+          "Detective said: 'Talk to James Whitaker what but'",
+          "Detective said: 'Talk to James Whitaker you see any unusial'",
+          "Detective said: 'Talk to James Whitaker why you angry'"
+        ]
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Victor Delaney",
+          "detail": "38, Wealthy Investor. Charismatic and smooth, always with a perfect smile.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lena Kovacs",
+          "detail": "32, Chef. Passionate, meticulous, and fiercely protective of her kitchen.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Professor Amelia Hart",
+          "detail": "45, Art Historian. Curious, scholarly, slightly absent\u2011minded.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "James Whitaker",
+          "detail": "50, Private Investigator. Observant, skeptical, always questioning.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive and gather in the lobby, cocktail hour begins",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Dinner is served in the main hall; the sapphire necklace is unveiled on a velvet pedestal",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Security cameras start rolling; the chandelier lights flicker briefly",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "Lights dim for a brief intermission; each guest claims an alibi",
+          "at_time": "9:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:35 PM",
+          "detail": "A guest reports a figure in a black coat slipping out of the library",
+          "at_time": "9:35 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "The sapphire necklace is discovered missing; panic spreads",
+          "at_time": "9:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Investigation begins; characters start questioning each other",
+          "at_time": "10:00 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A glamorous gala is underway at Snowcrest Alpine Villa, perched on a snow\u2011capped mountain. The host proudly displays a priceless sapphire necklace, but as the night deepens the jewel vanishes, and the guests must uncover the thief before the snowstorm seals the mountain pass.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Talk to Victor Delaney what are you doing at night",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Victor Delaney",
+        "text": "",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "say whar are you doing at night",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "You aren't sure who you're addressing.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "i am addressing victor",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Victor Delaney",
+        "text": "",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "Talk to Lena Kovacs",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Lena Kovacs",
+        "text": "I\u2019m just wrapping up the dinner rush, but I did see Victor leave the library clutching a small bag.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "and which time you see",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Narrator",
+        "text": "You step into the opulent lobby, its marble floor glinting under the soft glow of a crystal chandelier while frost\u2011etched windows frame the howling alpine night. A polished brass clock on the wall ticks solemnly, its hands frozen at the hour that will soon reveal the truth.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "Talk to Professor Amelia Hart",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Professor Amelia Hart",
+        "text": "Good evening, detective. I was just in the main hall, utterly fascinated by the sapphire's cut and its exact",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "You",
+        "text": "you see the Victor Delaney",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "Victor Delaney",
+        "text": "Ah, you caught me\u2014just winding down with a good book in the library. Nothing more than a quiet night for a weary investor.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "You",
+        "text": "and which book you take from library",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "Narrator",
+        "text": "",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "say",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Narrator",
+        "text": "You aren't sure who you're addressing.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "You",
+        "text": "Talk to James Whitaker what you doing that time",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "James Whitaker",
+        "text": "I stepped out onto the balcony for a smoke around nine",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "You",
+        "text": "Talk to James Whitaker you see any unusial",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "James Whitaker",
+        "text": "I didn\u2019t notice anything out of the ordinary up here on the balcony, but",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "You",
+        "text": "but what",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "Narrator",
+        "text": "You linger in the marble\u2011floored lobby, the glow of crystal chandeliers reflecting off the polished parquet like a frosted sunrise, while the heavy scent of pine and expensive leather lingers in the chilled air. The polished reception desk stands empty, a solitary set of keys glinting beneath a thin layer of snow\u2011soft dust, and the distant howl of the alpine wind presses against the tall glass doors, reminding you that every silent corner may hold the answer you\u2019re still",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "You",
+        "text": "Talk to James Whitaker what but",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "James Whitaker",
+        "text": "I was on the balcony, cigarette in hand,",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "You",
+        "text": "Talk to James Whitaker you see any unusial",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "James Whitaker",
+        "text": "",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "You",
+        "text": "Talk to James Whitaker why you angry",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "James Whitaker",
+        "text": "I'm not angry, just trying to keep my head clear after a long night. The balcony was quiet\u2014nothing out of the ordinary caught my eye. Honestly, I did notice a shadow lingering near the ski\u2011lift",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Verdict",
+        "text": "You watch the courtroom gasp as the gavel falls, the weight of your accusation against James\u202fWhitaker hanging in the stale air\u2014only to be shattered by the cold, undeniable truth. The security footage, the glove imprint, the lockpick\u2014all point inexorably to Victor\u202fDelaney",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": true,
+    "accused_character_id": "C4"
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "case": {
+    "id": "case_d04ccdd74df0",
+    "title": "The Hotel Affair",
+    "difficulty": "normal",
+    "location_type": "Hotel",
+    "location_name": "The Meridian Grand Hotel",
+    "introduction": "Tonight at The Meridian Grand Hotel, the poisoning of the guest of honour has thrown the evening into chaos. No one may leave. 6 guests remain \u2014 each with something to hide. One of them is not who they claim to be. Find them.",
+    "crime": "The poisoning of the guest of honour",
+    "target_fake_identity": "Emma Okafor, respectable criminologist",
+    "escape_plan": "Emma Okafor intends to slip out during the confusion and vanish before the authorities arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A vast marble hall with a sweeping staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Low amber lighting, leather chairs, a jazz record spinning."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table still set for the evening's dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Bookshelves, a heavy desk, a locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Night air, hedges, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Quarters",
+        "description": "A corridor of numbered doors, most left ajar."
+      }
+    ],
+    "characters": [
+      {
+        "id": "emma0",
+        "name": "Emma Okafor",
+        "age": 66,
+        "occupation": "criminologist",
+        "personality": "cheerful yet calculating",
+        "background": "A surgeon with a complicated past.",
+        "secret": "Emma forged part of their credentials years ago.",
+        "goal": "Emma wants to leave before anyone learns the truth.",
+        "alibi": "Claims to have been in the The Grand Lobby around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Ronan Delacroix",
+            "kind": "former business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was carried out."
+        ],
+        "lies": [
+          "Insists they never entered the room where the key evidence was found.",
+          "Claims their documents are entirely genuine."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "ronan1",
+        "name": "Ronan Delacroix",
+        "age": 65,
+        "occupation": "biochemist",
+        "personality": "nervous and talkative",
+        "background": "A art curator with a complicated past.",
+        "secret": "Ronan had a hidden affair with the victim.",
+        "goal": "Ronan wants to leave before anyone learns the truth.",
+        "alibi": "Claims to have been in the The Lounge around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Daniel Vance",
+            "kind": "prot\u00e9g\u00e9",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Okafor acting strangely near the The Private Study.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [
+          "Downplays their own is secretly drowning in gambling debt."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "daniel2",
+        "name": "Daniel Vance",
+        "age": 47,
+        "occupation": "estate manager",
+        "personality": "flamboyant and theatrical",
+        "background": "A surgeon with a complicated past.",
+        "secret": "Daniel is secretly drowning in gambling debt.",
+        "goal": "Daniel wants to appear cooperative while hiding a secret.",
+        "alibi": "Claims to have been in the The Grand Lobby around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Isabella Fenwick",
+            "kind": "secret lover",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Okafor acting strangely near the The Private Study.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "isabella3",
+        "name": "Isabella Fenwick",
+        "age": 44,
+        "occupation": "ship's captain",
+        "personality": "warm and disarming",
+        "background": "A estate manager with a complicated past.",
+        "secret": "Isabella is using a false name for unrelated reasons.",
+        "goal": "Isabella wants to settle an old score quietly.",
+        "alibi": "Claims to have been in the The Grand Lobby around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Victoria Nakamura",
+            "kind": "prot\u00e9g\u00e9",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Okafor acting strangely near the The Grand Lobby.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [
+          "Downplays their own is protecting a family member."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "victoria4",
+        "name": "Victoria Nakamura",
+        "age": 62,
+        "occupation": "art curator",
+        "personality": "charming but evasive",
+        "background": "A biochemist with a complicated past.",
+        "secret": "Victoria is protecting a family member.",
+        "goal": "Victoria wants to find out who is watching them.",
+        "alibi": "Claims to have been in the The Grand Lobby around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Marcus Castellano",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Okafor acting strangely near the The Guest Quarters.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "marcus5",
+        "name": "Marcus Castellano",
+        "age": 34,
+        "occupation": "software magnate",
+        "personality": "charming but evasive",
+        "background": "A retired diplomat with a complicated past.",
+        "secret": "Marcus stole a small item earlier that night.",
+        "goal": "Marcus wants to leave before anyone learns the truth.",
+        "alibi": "Claims to have been in the The Terrace Garden around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Emma Okafor",
+            "kind": "secret lover",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Okafor acting strangely near the The Lounge.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and mingle.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The incident: the poisoning of the guest of honour.",
+        "involved": [
+          "Emma Okafor"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Alarm raised; the site is sealed.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Emma Okafor is seen slipping toward an exit.",
+        "involved": [
+          "Emma Okafor"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "muddy shoes",
+        "description": "Expensive shoes caked with garden mud, though it hasn't rained inside.",
+        "location": "The Grand Lobby",
+        "points_to": "Emma Okafor",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a threatening note",
+        "description": "Block capitals: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Dining Room",
+        "points_to": "Emma Okafor",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a wine glass",
+        "description": "A half-full glass with a faint bitter residue.",
+        "location": "The Grand Lobby",
+        "points_to": "Victoria Nakamura",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a hidden key",
+        "description": "A small brass key taped beneath a drawer.",
+        "location": "The Private Study",
+        "points_to": "Daniel Vance",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a photograph",
+        "description": "A candid photo of two guests who claim never to have met.",
+        "location": "The Grand Lobby",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a forged passport",
+        "description": "A convincing passport with a subtly wrong birth year.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a bloodstained handkerchief",
+        "description": "Fine linen with a monogram and a dark stain.",
+        "location": "The Guest Quarters",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a burner phone",
+        "description": "A cheap phone with a single dialled number.",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Emma Okafor's account of their whereabouts conflicts with the muddy shoes.",
+      "Two guests deny a relationship that a photograph proves."
+    ],
+    "red_herrings": [
+      "a wine glass",
+      "a hidden key"
+    ],
+    "solution": {
+      "target_character_id": "emma0",
+      "target_true_identity": "A wanted operative posing as criminologist",
+      "reasoning": "Emma Okafor is the hidden target: the key evidence (muddy shoes, a threatening note) places them at the scene and contradicts their alibi, while their documents are forged.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_0fa0aa1534bb",
+    "case_id": "case_d04ccdd74df0",
+    "status": "in_progress",
+    "created_at": "2026-08-31T03:55:02.827888+00:00",
+    "updated_at": "2026-08-31T03:55:02.878840+00:00",
+    "minutes_elapsed": 5,
+    "current_location": "The Grand Lobby",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "emma0": {
+        "character_id": "emma0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "ronan1": {
+        "character_id": "ronan1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "daniel2": {
+        "character_id": "daniel2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "isabella3": {
+        "character_id": "isabella3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "victoria4": {
+        "character_id": "victoria4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "marcus5": {
+        "character_id": "marcus5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Emma Okafor",
+          "detail": "66, criminologist. cheerful yet calculating.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ronan Delacroix",
+          "detail": "65, biochemist. nervous and talkative.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Daniel Vance",
+          "detail": "47, estate manager. flamboyant and theatrical.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Isabella Fenwick",
+          "detail": "44, ship's captain. warm and disarming.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victoria Nakamura",
+          "detail": "62, art curator. charming but evasive.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marcus Castellano",
+          "detail": "34, software magnate. charming but evasive.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and mingle.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The incident: the poisoning of the guest of honour.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Alarm raised; the site is sealed.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Emma Okafor is seen slipping toward an exit.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Meridian Grand Hotel, the poisoning of the guest of honour has thrown the evening into chaos. No one may leave. 6 guests remain \u2014 each with something to hide. One of them is not who they claim to be. Find them.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Look around the room",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You search methodically. Something here doesn't belong.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

@@ -1,0 +1,718 @@
+{
+  "case": {
+    "id": "case_6187d6fe0bba",
+    "title": "The Cruise Ship Mystery",
+    "difficulty": "normal",
+    "location_type": "Cruise Ship",
+    "location_name": "The Aurora Voyager",
+    "introduction": "Tonight at The Aurora Voyager, the ruin of the big event of the evening has turned the evening upside down. No one is allowed to leave. 4 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The ruin of the big event of the evening",
+    "target_fake_identity": "Rowan Okafor, a piano player people trust",
+    "escape_plan": "Rowan Okafor plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "rowan0",
+        "name": "Rowan Okafor",
+        "age": 43,
+        "gender": "nonbinary",
+        "occupation": "piano player",
+        "personality": "proud and rude",
+        "background": "A piano player with a messy past.",
+        "secret": "Rowan owes a lot of money from betting.",
+        "goal": "Rowan wants to keep their good name safe, no matter what.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "glances at the door often",
+        "fear": "the police",
+        "likes": [
+          "being praised",
+          "fine wine"
+        ],
+        "dislikes": [
+          "being rushed",
+          "gossip"
+        ],
+        "intelligence": 76,
+        "confidence": 77,
+        "relationships": [
+          {
+            "with_character": "Lucas Reyes",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "lucas1",
+        "name": "Lucas Reyes",
+        "age": 40,
+        "gender": "male",
+        "occupation": "money investor",
+        "personality": "closed off and quick to defend",
+        "background": "A money investor with a messy past.",
+        "secret": "Lucas was taking money from another guest to keep a secret quiet.",
+        "goal": "Lucas wants to find out who is watching them.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "formal and careful",
+        "habits": "folds their arms when pushed",
+        "fear": "the police",
+        "likes": [
+          "money",
+          "music"
+        ],
+        "dislikes": [
+          "cheap things",
+          "loud people"
+        ],
+        "intelligence": 64,
+        "confidence": 81,
+        "relationships": [
+          {
+            "with_character": "Diego Holloway",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Okafor acting strange near The Lounge.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "diego2",
+        "name": "Diego Holloway",
+        "age": 50,
+        "gender": "male",
+        "occupation": "doctor",
+        "personality": "closed off and quick to defend",
+        "background": "A doctor with a messy past.",
+        "secret": "Diego was in a secret relationship with the victim.",
+        "goal": "Diego wants to find out who is watching them.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "calm and polite",
+        "habits": "smiles too much when lying",
+        "fear": "the dark",
+        "likes": [
+          "fine wine",
+          "music"
+        ],
+        "dislikes": [
+          "cheap things",
+          "questions"
+        ],
+        "intelligence": 74,
+        "confidence": 74,
+        "relationships": [
+          {
+            "with_character": "Ronan Novak",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Okafor acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "ronan3",
+        "name": "Ronan Novak",
+        "age": 33,
+        "gender": "male",
+        "occupation": "lab scientist",
+        "personality": "proud and rude",
+        "background": "A lab scientist with a messy past.",
+        "secret": "Ronan was taking money from another guest to keep a secret quiet.",
+        "goal": "Ronan wants to keep their good name safe, no matter what.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "fidgets with a ring",
+        "fear": "being caught in a lie",
+        "likes": [
+          "old books",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "waiting",
+          "questions"
+        ],
+        "intelligence": 43,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "Rowan Okafor",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Rowan Okafor acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Ronan was in a secret relationship with the victim."
+        ],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the ruin of the big event of the evening.",
+        "involved": [
+          "Rowan Okafor"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Rowan Okafor is seen moving toward a side door.",
+        "involved": [
+          "Rowan Okafor"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Grand Lobby",
+        "points_to": "Rowan Okafor",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Lounge",
+        "points_to": "Rowan Okafor",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Private Study",
+        "points_to": "Lucas Reyes",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Grand Lobby",
+        "points_to": "Diego Holloway",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a torn train ticket",
+        "description": "A ticket ripped in two. The time on it is earlier than someone said.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Rowan Okafor's story about where they were does not match the a wine glass.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a fake passport",
+      "a hidden key"
+    ],
+    "solution": {
+      "target_character_id": "rowan0",
+      "target_true_identity": "A wanted criminal pretending to be a piano player",
+      "reasoning": "Rowan Okafor is the hidden person. The main clues (a wine glass, a cloth with blood on it) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_5ac2a3c563e5",
+    "case_id": "case_6187d6fe0bba",
+    "status": "in_progress",
+    "created_at": "2026-08-31T12:02:54.069996+00:00",
+    "updated_at": "2026-08-31T12:13:05.548381+00:00",
+    "minutes_elapsed": 85,
+    "current_location": "The Grand Lobby",
+    "current_objective": "At The Aurora Voyager tonight, 4 guests are trapped \u2014 and one is lying about who they are. Look for clues, compare their stories, and unmask the one behind the ruin of the big event of the evening. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [
+      "ev0",
+      "ev3"
+    ],
+    "visited_rooms": [
+      "The Grand Lobby"
+    ],
+    "npc_states": {
+      "rowan0": {
+        "character_id": "rowan0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 2,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "Look around",
+          "say your story"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "Look around",
+            "answer": "I was in the lounge all evening. Ask anyone."
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "say your story",
+            "answer": "I was in the lounge all evening. Ask anyone."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'Look around'",
+          "Detective asked: 'say your story'"
+        ],
+        "has_met": true
+      },
+      "lucas1": {
+        "character_id": "lucas1",
+        "trust": 44,
+        "stress": 20,
+        "suspicion_of_player": 10,
+        "times_questioned": 5,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "and where you are",
+          "what you saw",
+          "what",
+          "what more thing you want to share",
+          "who drink the wine"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:20 PM",
+            "question": "and where you are",
+            "answer": "Between us? Not everyone here is who they say they are. Watch the quiet one."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "what you saw",
+            "answer": "I already told you my side. But yes, there is more I could share."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "what",
+            "answer": "I already told you my side. But yes, there is more I could share."
+          },
+          {
+            "at_time": "8:50 PM",
+            "question": "what more thing you want to share",
+            "answer": "I already told you my side. But yes, there is more I could share."
+          },
+          {
+            "at_time": "9:15 PM",
+            "question": "who drink the wine",
+            "answer": "I already told you my side. But yes, there is more I could share."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'and where you are'",
+          "Detective asked: 'what you saw'",
+          "Detective asked: 'what'",
+          "Detective asked: 'what more thing you want to share'",
+          "Detective asked: 'who drink the wine'"
+        ],
+        "has_met": true
+      },
+      "diego2": {
+        "character_id": "diego2",
+        "trust": 42,
+        "stress": 28,
+        "suspicion_of_player": 15,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "ronan3": {
+        "character_id": "ronan3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Rowan Okafor",
+          "detail": "43, piano player. proud and rude.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lucas Reyes",
+          "detail": "40, money investor. closed off and quick to defend.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Diego Holloway",
+          "detail": "50, doctor. closed off and quick to defend.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ronan Novak",
+          "detail": "33, lab scientist. proud and rude.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "a wine glass",
+          "detail": "A half-full glass. The drink smells bitter. (found in The Grand Lobby).",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "a hidden key",
+          "detail": "A small brass key taped under a drawer. (found in The Grand Lobby).",
+          "at_time": "9:00 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the ruin of the big event of the evening.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Rowan Okafor is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Aurora Voyager, the ruin of the big event of the evening has turned the evening upside down. No one is allowed to leave. 4 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Rowan Okafor. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Rowan Okafor",
+        "text": "I was in the lounge all evening. Ask anyone.",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "look around you can you see any clue",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Hint",
+        "text": "Compare what each guest says about where they were with the clues you have found. The one whose story does not match the main clue, and whose papers look wrong, is the one to watch.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lucas Reyes. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Rowan Okafor. You have spoken before.",
+        "kind": "narration",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "say your story",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Rowan Okafor",
+        "text": "I was in the lounge all evening. Ask anyone.",
+        "kind": "dialogue",
+        "character_id": "rowan0"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lucas Reyes. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "and where you are",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Lucas Reyes",
+        "text": "Between us? Not everyone here is who they say they are. Watch the quiet one.",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "what you saw",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Lucas Reyes",
+        "text": "I already told you my side. But yes, there is more I could share.",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "what",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Lucas Reyes",
+        "text": "I already told you my side. But yes, there is more I could share.",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "what more thing you want to share",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Lucas Reyes",
+        "text": "I already told you my side. But yes, there is more I could share.",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Narrator",
+        "text": "The room goes quiet while you look around. Every face here hides a story.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "who drink the wine",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Lucas Reyes",
+        "text": "I already told you my side. But yes, there is more I could share.",
+        "kind": "dialogue",
+        "character_id": "lucas1"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Diego Holloway. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "diego2"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Hint",
+        "text": "Compare what each guest says about where they were with the clues you have found. The one whose story does not match the main clue, and whose papers look wrong, is the one to watch.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Ronan Novak. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "ronan3"
+      }
+    ],
+    "active_character_id": "ronan3",
+    "hints_used": 2,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

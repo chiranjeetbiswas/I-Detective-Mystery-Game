@@ -1,0 +1,422 @@
+{
+  "case": {
+    "id": "case_7377ad8704fb",
+    "title": "The Vanishing Heir",
+    "difficulty": "beginner",
+    "location_type": "Luxury Villa",
+    "location_name": "Rosewood Villa",
+    "introduction": "A rich host shows a rare necklace. Guests come for a night. The necklace is gone by midnight.",
+    "crime": "The necklace disappears.",
+    "target_fake_identity": "Journalist",
+    "escape_plan": "She will slip out the garden gate at midnight. A car waits.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Living Room",
+        "description": "A big room with sofas and a fireplace."
+      },
+      {
+        "id": "R2",
+        "name": "Study",
+        "description": "A small room with a desk and books."
+      },
+      {
+        "id": "R3",
+        "name": "Garden",
+        "description": "A quiet area with trees and a gate."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Liam Hart",
+        "age": 35,
+        "occupation": "Chef",
+        "personality": "calm",
+        "background": "Works for the host.",
+        "secret": "He owes money to a loan shark.",
+        "goal": "Find the necklace to pay debt.",
+        "alibi": "He was in the kitchen at the time.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "They talk about food."
+          }
+        ],
+        "knowledge": [
+          "He knows the kitchen layout."
+        ],
+        "lies": [],
+        "inventory": [
+          "Knife",
+          "Apron"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Mia Reed",
+        "age": 28,
+        "occupation": "Artist",
+        "personality": "cheerful",
+        "background": "She paints for fun.",
+        "secret": "She once stole a small item.",
+        "goal": "Get money to pay rent.",
+        "alibi": "She was in the garden painting.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "acquaintance",
+            "detail": "She liked his food."
+          }
+        ],
+        "knowledge": [
+          "She saw the garden gate open."
+        ],
+        "lies": [
+          "She says she saw nothing unusual."
+        ],
+        "inventory": [
+          "Paintbrush"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Victor Hale",
+        "age": 45,
+        "occupation": "Businessman",
+        "personality": "serious",
+        "background": "He is a guest of the host.",
+        "secret": "He is the real heir to the necklace.",
+        "goal": "Find the necklace to claim family right.",
+        "alibi": "He was in the study reading.",
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "rival",
+            "detail": "Both want the necklace."
+          }
+        ],
+        "knowledge": [
+          "He knows the necklace history."
+        ],
+        "lies": [
+          "He says he is only a guest."
+        ],
+        "inventory": [
+          "Briefcase"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Elena Stone",
+        "age": 32,
+        "occupation": "Journalist",
+        "personality": "curious",
+        "background": "She says she writes for a magazine.",
+        "secret": "She is the missing niece, named Sofia. She uses a fake name.",
+        "goal": "Steal the necklace and sell it.",
+        "alibi": "She was in the living room talking.",
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "suspicious",
+            "detail": "They argued about the necklace."
+          }
+        ],
+        "knowledge": [
+          "She knows the garden gate code."
+        ],
+        "lies": [
+          "She says she is a journalist."
+        ],
+        "inventory": [
+          "Notebook",
+          "Lockpick"
+        ],
+        "is_target": true
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive at the villa.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Host shows the necklace in the living room.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Dinner is served in the kitchen.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "Mia paints in the garden.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "10:15 PM",
+        "description": "Victor reads in the study.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "10:45 PM",
+        "description": "Elena writes notes in the living room.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "11:30 PM",
+        "description": "Host finds the necklace missing.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "12:00 AM",
+        "description": "Elena leaves through the garden gate.",
+        "involved": [
+          "C4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Broken glass",
+        "description": "A small piece of glass on the garden floor.",
+        "location": "Garden",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Lockpick set",
+        "description": "A set of lockpicks in a notebook pocket.",
+        "location": "Living Room",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Fingerprints on vase",
+        "description": "Fingerprints on the vase that held the necklace.",
+        "location": "Living Room",
+        "points_to": "C1",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Paint smudge",
+        "description": "A paint smudge on the garden bench.",
+        "location": "Garden",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The lockpick set matches Elena's notebook.",
+      "The broken glass fits a small window in the garden.",
+      "Elena knows the garden gate code."
+    ],
+    "red_herrings": [
+      "Fingerprints on the vase point to Liam.",
+      "Paint smudge points to Mia."
+    ],
+    "solution": {
+      "target_character_id": "C4",
+      "target_true_identity": "Sofia, the missing niece of the host",
+      "reasoning": "The lockpick set and broken glass are found where Elena was. She knows the gate code. The fake clues point to Liam and Mia. Only Elena has all key evidence.",
+      "key_evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_d058cc406790",
+    "case_id": "case_7377ad8704fb",
+    "status": "in_progress",
+    "created_at": "2026-08-31T07:22:37.475385+00:00",
+    "updated_at": "2026-08-31T07:22:38.263515+00:00",
+    "minutes_elapsed": 5,
+    "current_location": "Living Room",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Liam Hart",
+          "detail": "35, Chef. calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mia Reed",
+          "detail": "28, Artist. cheerful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victor Hale",
+          "detail": "45, Businessman. serious.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Elena Stone",
+          "detail": "32, Journalist. curious.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive at the villa.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Host shows the necklace in the living room.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Dinner is served in the kitchen.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "Mia paints in the garden.",
+          "at_time": "9:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:15 PM",
+          "detail": "Victor reads in the study.",
+          "at_time": "10:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:45 PM",
+          "detail": "Elena writes notes in the living room.",
+          "at_time": "10:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:30 PM",
+          "detail": "Host finds the necklace missing.",
+          "at_time": "11:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "12:00 AM",
+          "detail": "Elena leaves through the garden gate.",
+          "at_time": "12:00 AM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A rich host shows a rare necklace. Guests come for a night. The necklace is gone by midnight.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You look around the living room. The dim light catches dust on the rich carpet, and a faint scent of stale perfume hangs in the air.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

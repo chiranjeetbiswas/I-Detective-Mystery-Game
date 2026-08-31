@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark cinematic noir detective theme */
+  --background: 20 14% 6%;
+  --foreground: 40 30% 92%;
+  --card: 20 14% 9%;
+  --card-foreground: 40 30% 92%;
+  --primary: 38 92% 55%;          /* amber/gold */
+  --primary-foreground: 20 14% 8%;
+  --secondary: 20 10% 16%;
+  --secondary-foreground: 40 30% 92%;
+  --muted: 20 10% 14%;
+  --muted-foreground: 40 10% 62%;
+  --accent: 200 30% 30%;
+  --accent-foreground: 40 30% 92%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 40 30% 96%;
+  --border: 30 10% 20%;
+  --input: 30 10% 18%;
+  --ring: 38 92% 55%;
+  --gold: 40 90% 60%;
+  --radius: 0.6rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, hsl(38 40% 20% / 0.25), transparent 70%),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Georgia, Cambria, serif;
+  min-height: 100vh;
+}
+
+.noir-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(hsl(0 0% 100% / 0.02) 1px, transparent 1px);
+  background-size: 3px 3px;
+  z-index: 0;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }

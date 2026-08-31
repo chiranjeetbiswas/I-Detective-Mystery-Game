@@ -1,0 +1,566 @@
+{
+  "case": {
+    "id": "case_974bb41676d3",
+    "title": "Shadows over the Sunset",
+    "difficulty": "normal",
+    "location_type": "Luxury Villa",
+    "location_name": "Villa Aurora",
+    "introduction": "A glamorous charity gala is held at the secluded Villa Aurora. Amidst the clinking glasses and soft jazz, a priceless painting disappears and the host, philanthropist Elias Monroe, is found dead in the garden. Everyone present has something to hide.",
+    "crime": "Murder of Elias Monroe and theft of the famed painting \"Aurora's Dawn\" during the gala.",
+    "target_fake_identity": "Lena Hart, Charity Coordinator",
+    "escape_plan": "A hidden dock on the lake leads to a speedboat pre\u2011loaded with the stolen painting; the boat departs at 9:30\u202fPM under the cover of darkness.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "r1",
+        "name": "Library",
+        "description": "Rows of leather\u2011bound books, a fireplace, and a large desk where speeches are drafted."
+      },
+      {
+        "id": "r2",
+        "name": "Balcony",
+        "description": "Overlooks the garden and lake, decorated with lanterns, the spot where the toast is delivered."
+      },
+      {
+        "id": "r3",
+        "name": "West Wing",
+        "description": "Contains guest rooms and a quiet hallway often used for private conversations."
+      },
+      {
+        "id": "r4",
+        "name": "Study",
+        "description": "A secluded office filled with art catalogs, a safe, and a mahogany desk."
+      },
+      {
+        "id": "r5",
+        "name": "Kitchen",
+        "description": "Bustling with chefs, aromatic dishes, and a pantry where supplies are stored."
+      },
+      {
+        "id": "r6",
+        "name": "Helipad",
+        "description": "A small concrete pad beside the villa, where a private helicopter is parked."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Lena Hart",
+        "age": 38,
+        "occupation": "Charity Coordinator",
+        "personality": "Charming, meticulous, appears self\u2011effacing",
+        "background": "Introduced as a longtime friend of the Monroe family, actually Victor Kline, a notorious black\u2011market art smuggler.",
+        "secret": "True identity is Victor Kline; hired to steal \"Aurora's Dawn\" for a private collector.",
+        "goal": "Obtain the painting and escape via the lake speedboat.",
+        "alibi": "Was in the Library preparing the evening\u2019s speeches and reviewing donor lists.",
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "Friend",
+            "detail": "Grew up with the Monroes; trusted by Elias."
+          },
+          {
+            "with_character": "c5",
+            "kind": "Mentor",
+            "detail": "Guided Mia in event logistics."
+          }
+        ],
+        "knowledge": [
+          "Location of the hidden dock",
+          "Exact time the security guard changes shift"
+        ],
+        "lies": [
+          "She never left the Library before the murder."
+        ],
+        "inventory": [
+          "Blood\u2011stained leather glove",
+          "Small leather ledger",
+          "Key to the Study safe"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Elias Monroe",
+        "age": 45,
+        "occupation": "Philanthropist",
+        "personality": "Generous, pompous, enjoys the spotlight",
+        "background": "Owner of the Villa, known for lavish charity events; secretly deep in gambling debt.",
+        "secret": "Owed a large sum to a loan shark; planning to sell the painting to cover it.",
+        "goal": "Secure a $5\u202fmillion donation for his new arts foundation.",
+        "alibi": "Was on the Balcony delivering the toast at 8:45\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c3",
+            "kind": "Affair",
+            "detail": "Had a secret romance with Sofia."
+          },
+          {
+            "with_character": "c4",
+            "kind": "Professional",
+            "detail": "Commissioned Dr. Patel to authenticate the painting."
+          }
+        ],
+        "knowledge": [
+          "The painting is a forgery."
+        ],
+        "lies": [
+          "He never trusted the security chief."
+        ],
+        "inventory": [
+          "Pocket watch",
+          "Signed donation check"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Sofia Delgado",
+        "age": 32,
+        "occupation": "Security Chief",
+        "personality": "Alert, disciplined, emotionally guarded",
+        "background": "Former police officer hired to oversee security for the gala.",
+        "secret": "Had an affair with Elias; fears scandal would ruin her career.",
+        "goal": "Maintain order and protect her reputation.",
+        "alibi": "Patrolling the West Wing from 8:30\u202fPM to 9:10\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "Affair",
+            "detail": "Secret meetings in the garden."
+          }
+        ],
+        "knowledge": [
+          "The security code for the Study safe."
+        ],
+        "lies": [
+          "She never accessed the Study that night."
+        ],
+        "inventory": [
+          "Radio walkie",
+          "Security badge",
+          "Set of duplicate keys"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Dr. Arun Patel",
+        "age": 50,
+        "occupation": "Museum Curator",
+        "personality": "Intellectual, meticulous, slightly aloof",
+        "background": "Renowned art historian who recently authenticated \"Aurora's Dawn\" for the Monroe collection.",
+        "secret": "Forged parts of the painting to increase its value.",
+        "goal": "Ensure the forgery remains undetected.",
+        "alibi": "In the Study reviewing the inventory list at 9:00\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "Professional",
+            "detail": "Consulted on the painting's provenance."
+          }
+        ],
+        "knowledge": [
+          "The exact location of the hidden ledger."
+        ],
+        "lies": [
+          "He never left the Study after 9:05\u202fPM."
+        ],
+        "inventory": [
+          "Magnifying glass",
+          "Forgery certificate (fake)",
+          "Notebook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c5",
+        "name": "Mia Chen",
+        "age": 27,
+        "occupation": "Junior Assistant",
+        "personality": "Eager, nervous, eager to prove herself",
+        "background": "Recently hired to help with event logistics; stole a keycard earlier to explore the villa.",
+        "secret": "Used the stolen keycard to sneak into the Study and hide a small box.",
+        "goal": "Earn a promotion by impressing the staff.",
+        "alibi": "In the Kitchen coordinating appetizers from 8:15\u202fPM to 9:00\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "Mentor",
+            "detail": "Lena taught her about donor etiquette."
+          }
+        ],
+        "knowledge": [
+          "Where the hidden box is concealed in the Study."
+        ],
+        "lies": [
+          "She never entered the Study."
+        ],
+        "inventory": [
+          "Chef\u2019s knife",
+          "Silver serving tray",
+          "Keycard (borrowed)"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c6",
+        "name": "Jasper Lee",
+        "age": 38,
+        "occupation": "Private Pilot",
+        "personality": "Calm, pragmatic, a bit secretive",
+        "background": "Hired to stand by the helicopter for a possible emergency evacuation.",
+        "secret": "Was paid by Victor to secure a quick exit route via the lake.",
+        "goal": "Complete the job and get paid.",
+        "alibi": "At the Helipad checking the helicopter\u2019s fuel at 8:50\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "Accomplice",
+            "detail": "Co\u2011ordinated the speedboat escape."
+          }
+        ],
+        "knowledge": [
+          "Exact launch time of the speedboat."
+        ],
+        "lies": [
+          "He left the Helipad before 9:20\u202fPM."
+        ],
+        "inventory": [
+          "Flight logbook",
+          "Radio transmitter",
+          "Map of the lake"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests begin to arrive; music starts in the Library.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Sofia patrols the West Wing; Mia prepares appetizers in the Kitchen.",
+        "involved": [
+          "c3",
+          "c5"
+        ]
+      },
+      {
+        "time": "8:45 PM",
+        "description": "Elias delivers a heartfelt toast on the Balcony; crowd applauds.",
+        "involved": [
+          "c2",
+          "c1"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Dr. Patel reviews the inventory in the Study; Lena (c1) checks the ledger on the desk.",
+        "involved": [
+          "c4",
+          "c1"
+        ]
+      },
+      {
+        "time": "9:05 PM",
+        "description": "A scream erupts from the Garden; guests rush to the scene.",
+        "involved": [
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      },
+      {
+        "time": "9:07 PM",
+        "description": "Elias Monroe is found dead, a wound to the chest; the painting is missing.",
+        "involved": [
+          "c2"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Police secure the scene; guests are questioned in the Library and Study.",
+        "involved": [
+          "c1",
+          "c3",
+          "c4",
+          "c5"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "Speedboat departs from the hidden dock, leaving no trace.",
+        "involved": [
+          "c1",
+          "c6"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Blood\u2011stained leather glove",
+        "description": "A left\u2011hand glove with a distinctive tattoo of a black phoenix on the cuff, soaked in blood.",
+        "location": "Library",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Hidden ledger",
+        "description": "A small leather ledger listing art smuggling transactions, dates, and buyer names, tucked inside the Study desk drawer.",
+        "location": "Study",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e3",
+        "name": "Broken vase fragment with fingerprint",
+        "description": "Shards of a porcelain vase from the Balcony, bearing a clear fingerprint matching Victor Kline's records.",
+        "location": "Balcony",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e4",
+        "name": "Forgery certificate",
+        "description": "A certificate claiming the painting is an original, signed by Dr. Patel; analysis shows forged ink.",
+        "location": "Study",
+        "points_to": "c4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e5",
+        "name": "Love letter",
+        "description": "A handwritten love letter addressed to Elias, found in the West Wing desk, signed \"S.\"",
+        "location": "West Wing",
+        "points_to": "c3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e6",
+        "name": "Keycard log",
+        "description": "Electronic log showing the stolen keycard used to access the Study at 8:55\u202fPM.",
+        "location": "Security console",
+        "points_to": "c5",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "A torn page of a shipping manifest with the coordinates of a remote dock.",
+      "A scrap of sailcloth matching the speedboat\u2019s hull found in the Library\u2019s waste bin."
+    ],
+    "red_herrings": [
+      "The forged certificate points suspicion to Dr. Patel.",
+      "The love letter suggests Sofia had a motive to silence Elias."
+    ],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "Victor Kline, Black\u2011market Art Smuggler",
+      "reasoning": "The blood\u2011stained glove with Victor\u2019s phoenix tattoo, the hidden ledger listing his smuggling deals, and the fingerprint on the broken vase all directly link Lena Hart to the murder and theft. These pieces contradict her alibi of staying in the Library. While evidence such as the forged certificate and love letter create plausible alternatives, they are proven red herrings. Victor used the speedboat escape coordinated with Jasper, and the hidden clues (shipping manifest and sailcloth) confirm the planned getaway.",
+      "key_evidence_ids": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_89ae87c212d7",
+    "case_id": "case_974bb41676d3",
+    "status": "in_progress",
+    "created_at": "2026-08-31T04:10:19.428204+00:00",
+    "updated_at": "2026-08-31T04:10:19.428233+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "Library",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c5": {
+        "character_id": "c5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c6": {
+        "character_id": "c6",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Lena Hart",
+          "detail": "38, Charity Coordinator. Charming, meticulous, appears self\u2011effacing.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Elias Monroe",
+          "detail": "45, Philanthropist. Generous, pompous, enjoys the spotlight.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Delgado",
+          "detail": "32, Security Chief. Alert, disciplined, emotionally guarded.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Dr. Arun Patel",
+          "detail": "50, Museum Curator. Intellectual, meticulous, slightly aloof.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mia Chen",
+          "detail": "27, Junior Assistant. Eager, nervous, eager to prove herself.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Jasper Lee",
+          "detail": "38, Private Pilot. Calm, pragmatic, a bit secretive.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests begin to arrive; music starts in the Library.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Sofia patrols the West Wing; Mia prepares appetizers in the Kitchen.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:45 PM",
+          "detail": "Elias delivers a heartfelt toast on the Balcony; crowd applauds.",
+          "at_time": "8:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Dr. Patel reviews the inventory in the Study; Lena (c1) checks the ledger on the desk.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:05 PM",
+          "detail": "A scream erupts from the Garden; guests rush to the scene.",
+          "at_time": "9:05 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:07 PM",
+          "detail": "Elias Monroe is found dead, a wound to the chest; the painting is missing.",
+          "at_time": "9:07 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Police secure the scene; guests are questioned in the Library and Study.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "Speedboat departs from the hidden dock, leaving no trace.",
+          "at_time": "9:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A glamorous charity gala is held at the secluded Villa Aurora. Amidst the clinking glasses and soft jazz, a priceless painting disappears and the host, philanthropist Elias Monroe, is found dead in the garden. Everyone present has something to hide.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

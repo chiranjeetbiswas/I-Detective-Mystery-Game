@@ -1,0 +1,1261 @@
+{
+  "case": {
+    "id": "case_b761905d0dd1",
+    "title": "The Masked Heir",
+    "difficulty": "beginner",
+    "location_type": "Mansion",
+    "location_name": "Ravenwood Estate",
+    "introduction": "A rare painting is missing. Guests are in the mansion. All are nervous.",
+    "crime": "The painting was stolen from the gallery.",
+    "target_fake_identity": "Lord Victor Blackwood",
+    "escape_plan": "A hidden tunnel under the garden leads to a boat.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Grand Hall",
+        "description": "Large room with chandeliers."
+      },
+      {
+        "id": "R2",
+        "name": "Library",
+        "description": "Rows of books and a desk."
+      },
+      {
+        "id": "R3",
+        "name": "Gallery",
+        "description": "Walls with art and the stolen painting."
+      },
+      {
+        "id": "R4",
+        "name": "Kitchen",
+        "description": "Busy kitchen with ovens and a pantry."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Lord Victor Blackwood",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Socialite",
+        "personality": "charming",
+        "background": "Claims to be heir of a noble house.",
+        "secret": "He is not the real heir. He stole the name.",
+        "goal": "Steal the painting and escape.",
+        "alibi": "He was in the library reading.",
+        "speaking_style": "smooth and calm.",
+        "habits": "sips tea slowly.",
+        "fear": "being caught.",
+        "likes": [
+          "fine wine",
+          "chess"
+        ],
+        "dislikes": [
+          "loud noise"
+        ],
+        "intelligence": 80,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "colleague",
+            "detail": "Works together on events."
+          },
+          {
+            "with_character": "C3",
+            "kind": "acquaintance",
+            "detail": "Greets at the door."
+          }
+        ],
+        "knowledge": [
+          "secret tunnel",
+          "painting location"
+        ],
+        "lies": [
+          "He is the true heir."
+        ],
+        "inventory": [
+          "pocket watch",
+          "small key"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C2",
+        "name": "Maya Chen",
+        "age": 30,
+        "gender": "female",
+        "occupation": "Art Curator",
+        "personality": "calm",
+        "background": "Works at the museum and helped set the exhibit.",
+        "secret": "She once stole a sketch for a friend.",
+        "goal": "Protect the painting.",
+        "alibi": "She was in the gallery arranging frames.",
+        "speaking_style": "soft and steady.",
+        "habits": "taps her foot when thinking.",
+        "fear": "spiders.",
+        "likes": [
+          "tea",
+          "plants"
+        ],
+        "dislikes": [
+          "mess"
+        ],
+        "intelligence": 70,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "colleague",
+            "detail": "Trusts his taste in art."
+          },
+          {
+            "with_character": "C3",
+            "kind": "respect",
+            "detail": "Values his security work."
+          }
+        ],
+        "knowledge": [
+          "painting history",
+          "gallery layout"
+        ],
+        "lies": [],
+        "inventory": [
+          "notebook",
+          "gloves"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Thomas Reed",
+        "age": 38,
+        "gender": "male",
+        "occupation": "Security Guard",
+        "personality": "gruff",
+        "background": "Ex\u2011military, hired for the night shift.",
+        "secret": "He owes money to a loan shark.",
+        "goal": "Finish his shift.",
+        "alibi": "He was patrolling the hallway.",
+        "speaking_style": "short and blunt.",
+        "habits": "checks locks often.",
+        "fear": "fire.",
+        "likes": [
+          "coffee",
+          "order"
+        ],
+        "dislikes": [
+          "laziness"
+        ],
+        "intelligence": 60,
+        "confidence": 50,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "respect",
+            "detail": "Keeps her safe."
+          },
+          {
+            "with_character": "C4",
+            "kind": "friend",
+            "detail": "Shares meals."
+          }
+        ],
+        "knowledge": [
+          "security codes",
+          "camera locations"
+        ],
+        "lies": [],
+        "inventory": [
+          "flashlight",
+          "badge"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Lena Ortiz",
+        "age": 27,
+        "gender": "nonbinary",
+        "occupation": "Chef",
+        "personality": "lively",
+        "background": "Runs the kitchen for the estate.",
+        "secret": "Allergic to nuts but hides it.",
+        "goal": "Serve dinner on time.",
+        "alibi": "In the kitchen cooking.",
+        "speaking_style": "chatty and bright.",
+        "habits": "hum while cooking.",
+        "fear": "being late.",
+        "likes": [
+          "spices",
+          "music"
+        ],
+        "dislikes": [
+          "silence"
+        ],
+        "intelligence": 65,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "friend",
+            "detail": "Shares jokes."
+          }
+        ],
+        "knowledge": [
+          "kitchen layout",
+          "hidden pantry door"
+        ],
+        "lies": [],
+        "inventory": [
+          "knife",
+          "spice bag"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive in the Grand Hall.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Maya checks the painting in the Gallery.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Victor says he will see the painting later.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "The painting is found missing.",
+        "involved": []
+      },
+      {
+        "time": "9:05 PM",
+        "description": "Thomas reviews the security footage.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "9:10 PM",
+        "description": "Lena hears a noise in the Kitchen door.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Victor leaves the Library quickly.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "9:20 PM",
+        "description": "Maya calls the police.",
+        "involved": [
+          "C2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Pocket Watch with Key",
+        "description": "A gold watch with a small hidden key inside.",
+        "location": "Library floor near Victor.",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Mud Stains on Kitchen Floor",
+        "description": "Fresh mud footprints leading to the pantry door.",
+        "location": "Kitchen",
+        "points_to": "C4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E3",
+        "name": "Broken Glass in Gallery",
+        "description": "A small shard from a window near the painting.",
+        "location": "Gallery",
+        "points_to": "C2",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Hidden Tunnel Entrance",
+        "description": "A loose stone that opens to a tunnel under the garden.",
+        "location": "Library behind a bookshelf.",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      }
+    ],
+    "hidden_clues": [
+      "Victor's watch has a key that fits the tunnel lock.",
+      "Victor said he was reading, but the book was missing."
+    ],
+    "red_herrings": [
+      "Mud from the kitchen suggests Lena left the scene.",
+      "The broken glass matches Maya's glove."
+    ],
+    "solution": {
+      "target_character_id": "C1",
+      "target_true_identity": "Marco Silva, a known art thief",
+      "reasoning": "The pocket watch key opens the tunnel. Victor's story about the book is false. The tunnel leads out. The mud and glass are planted to blame others.",
+      "key_evidence_ids": [
+        "E1",
+        "E4"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_e9e26273c11b",
+    "case_id": "case_b761905d0dd1",
+    "status": "lost",
+    "created_at": "2026-08-31T09:57:03.661854+00:00",
+    "updated_at": "2026-08-31T10:18:08.837509+00:00",
+    "minutes_elapsed": 385,
+    "current_location": "Grand Hall",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [
+      "Grand Hall"
+    ],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 2,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "in the last night what did you do",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "9:20 PM",
+            "question": "in the last night what did you do",
+            "answer": "I was in my library. I read and sipped tea."
+          },
+          {
+            "at_time": "11:40 PM",
+            "question": "Look around",
+            "answer": "I see the bookshelves and the fire. A portrait hangs on the wall, and my tea is still warm."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'in the last night what did you do'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 51,
+        "stress": 20,
+        "suspicion_of_player": 15,
+        "times_questioned": 6,
+        "mood": "calm",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "in the last night what did you do",
+          "Look around",
+          "any clew or fingerpring of this case",
+          "which time you see",
+          "after that what you do"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "9:30 PM",
+            "question": "in the last night what did you do",
+            "answer": "I was in the gallery. I spent the night arranging the frames. It was quiet."
+          },
+          {
+            "at_time": "10:45 PM",
+            "question": "Look around",
+            "answer": "I look around the gallery. I check the frames and the walls. I see the lights are still on. I notice everything looks as it should."
+          },
+          {
+            "at_time": "12:20 AM",
+            "question": "Look around",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "1:55 AM",
+            "question": "any clew or fingerpring of this case",
+            "answer": "I haven\u2019t seen any clue or fingerprint. Everything looks clean. I only saw the painting and the frames."
+          },
+          {
+            "at_time": "2:05 AM",
+            "question": "which time you see",
+            "answer": "I see the clock says it is 2:05\u202fAM."
+          },
+          {
+            "at_time": "2:15 AM",
+            "question": "after that what you do",
+            "answer": "After that I went back to the painting. I checked it was still in place. Then I made tea and sat by the plants for a few minutes."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'in the last night what did you do'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'any clew or fingerpring of this case'",
+          "Detective asked: 'which time you see'",
+          "Detective asked: 'after that what you do'"
+        ],
+        "has_met": true
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 27,
+        "stress": 35,
+        "suspicion_of_player": 45,
+        "times_questioned": 10,
+        "mood": "suspicious",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hey thomas",
+          "nothing are you free",
+          "ohh looks heavy work",
+          "by the way i need you to return the painting that i give to you",
+          "y you are lying",
+          "ok by the way no need you to hire as a security guard untill you dont give me that painting i am sure you take it from em",
+          "in the last night what did you do",
+          "you know how take the printing",
+          "you find the fingerpring which person fingerprint that",
+          "then how take"
+        ],
+        "relationship_notes": [
+          "The detective spoke to me harshly."
+        ],
+        "exchanges": [
+          {
+            "at_time": "8:20 PM",
+            "question": "hey thomas",
+            "answer": "Hey. What do you want?"
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "nothing are you free",
+            "answer": "I'm on patrol. Got work to finish."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "ohh looks heavy work",
+            "answer": "Just the usual. Need to finish."
+          },
+          {
+            "at_time": "8:50 PM",
+            "question": "by the way i need you to return the painting that i give to you",
+            "answer": "I didn't get a painting. I got no thing to return. I gotta finish my patrol."
+          },
+          {
+            "at_time": "9:00 PM",
+            "question": "y you are lying",
+            "answer": "I ain\u2019t lying. I never got a painting. I\u2019m just on patrol. Let me finish my shift."
+          },
+          {
+            "at_time": "9:10 PM",
+            "question": "ok by the way no need you to hire as a security guard untill you dont give me that painting i am sure you take it from em",
+            "answer": "I didn\u2019t take any painting. I got no art. I\u2019m just on patrol. Let me finish my shift."
+          },
+          {
+            "at_time": "9:40 PM",
+            "question": "in the last night what did you do",
+            "answer": "I was on patrol. I checked the doors. I made sure the locks were good. Nothing else."
+          },
+          {
+            "at_time": "1:25 AM",
+            "question": "you know how take the printing",
+            "answer": "I don't handle printing. I'm just on patrol. Let me finish my shift."
+          },
+          {
+            "at_time": "1:35 AM",
+            "question": "you find the fingerpring which person fingerprint that",
+            "answer": "I ain\u2019t seen any prints. I don\u2019t know whose it is. Let me finish my shift."
+          },
+          {
+            "at_time": "1:45 AM",
+            "question": "then how take",
+            "answer": "I ain\u2019t taking nothing. Let me finish my shift."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hey thomas'",
+          "Detective asked: 'nothing are you free'",
+          "Detective asked: 'ohh looks heavy work'",
+          "Detective asked: 'by the way i need you to return the painting that i give to you'",
+          "Detective asked: 'y you are lying'",
+          "Detective asked: 'ok by the way no need you to hire as a security guard untill you dont give me th'",
+          "Detective asked: 'in the last night what did you do'",
+          "Detective asked: 'you know how take the printing'",
+          "Detective asked: 'you find the fingerpring which person fingerprint that'",
+          "Detective asked: 'then how take'"
+        ],
+        "has_met": true
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 57,
+        "stress": 20,
+        "suspicion_of_player": 5,
+        "times_questioned": 4,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "recently i give you the painting i want you to return it",
+          "yes i am sure you are the one who i give to you and also i see'",
+          "in the last night what did you do",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "recently i give you the painting i want you to return it",
+            "answer": "I\u2019m not sure about a painting. I don\u2019t have one, but I can"
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "yes i am sure you are the one who i give to you and also i see'",
+            "answer": "I\u2019m not sure what you mean. I\u2019m just in the kitchen, humming while I cook. Do you need anything from the pantry?"
+          },
+          {
+            "at_time": "9:50 PM",
+            "question": "in the last night what did you do",
+            "answer": "I was in the kitchen all night. I cooked dinner. I hummed while I worked. I tried to get it ready on time."
+          },
+          {
+            "at_time": "1:15 AM",
+            "question": "Look around",
+            "answer": "I see the stove, the fridge, and the spice rack. The pantry is over there, near the sink. The counters are clean, just waiting for the food."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'recently i give you the painting i want you to return it'",
+          "Detective asked: 'yes i am sure you are the one who i give to you and also i see''",
+          "Detective asked: 'in the last night what did you do'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Lord Victor Blackwood",
+          "detail": "45, Socialite. charming.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Maya Chen",
+          "detail": "30, Art Curator. calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Thomas Reed",
+          "detail": "38, Security Guard. gruff.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lena Ortiz",
+          "detail": "27, Chef. lively.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive in the Grand Hall.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Maya checks the painting in the Gallery.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Victor says he will see the painting later.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "The painting is found missing.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:05 PM",
+          "detail": "Thomas reviews the security footage.",
+          "at_time": "9:05 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:10 PM",
+          "detail": "Lena hears a noise in the Kitchen door.",
+          "at_time": "9:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Victor leaves the Library quickly.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:20 PM",
+          "detail": "Maya calls the police.",
+          "at_time": "9:20 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A rare painting is missing. Guests are in the mansion. All are nervous.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lena Ortiz. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "recently i give you the painting i want you to return it",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Lena Ortiz",
+        "text": "I\u2019m not sure about a painting. I don\u2019t have one, but I can",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "yes i am sure you are the one who i give to you and also i see'",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Lena Ortiz",
+        "text": "I\u2019m not sure what you mean. I\u2019m just in the kitchen, humming while I cook. Do you need anything from the pantry?",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Thomas Reed. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "hey thomas",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Thomas Reed",
+        "text": "Hey. What do you want?",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "nothing are you free",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Thomas Reed",
+        "text": "I'm on patrol. Got work to finish.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "ohh looks heavy work",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Thomas Reed",
+        "text": "Just the usual. Need to finish.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "by the way i need you to return the painting that i give to you",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Thomas Reed",
+        "text": "I didn't get a painting. I got no thing to return. I gotta finish my patrol.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "y you are lying",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Thomas Reed",
+        "text": "I ain\u2019t lying. I never got a painting. I\u2019m just on patrol. Let me finish my shift.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "ok by the way no need you to hire as a security guard untill you dont give me that painting i am sure you take it from em",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Thomas Reed",
+        "text": "I didn\u2019t take any painting. I got no art. I\u2019m just on patrol. Let me finish my shift.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Hint",
+        "text": "Talk to Lord Victor Blackwood and Maya Chen. Compare what each of them says about the night.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lord Victor Blackwood. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "You",
+        "text": "in the last night what did you do",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Lord Victor Blackwood",
+        "text": "I was in my library. I read and sipped tea.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Maya Chen. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "You",
+        "text": "in the last night what did you do",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "Maya Chen",
+        "text": "I was in the gallery. I spent the night arranging the frames. It was quiet.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Thomas Reed. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "You",
+        "text": "in the last night what did you do",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "Thomas Reed",
+        "text": "I was on patrol. I checked the doors. I made sure the locks were good. Nothing else.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Lena Ortiz. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "You",
+        "text": "in the last night what did you do",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "Lena Ortiz",
+        "text": "I was in the kitchen all night. I cooked dinner. I hummed while I worked. I tried to get it ready on time.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "10:00 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:00 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the grand hall of Ravenwood Estate. You hear your footsteps echo on the cold marble floor. You smell old wood and dust in the air.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Narrator",
+        "text": "You step into the Grand",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Thomas Reed. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "Narrator",
+        "text": "You walk into the grand hall. You hear the wind howl through the cracked windows. You smell dust and old wood.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Maya Chen. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "Maya Chen",
+        "text": "I look around the gallery. I check the frames and the walls. I see the lights are still on. I notice everything looks as it should.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "Narrator",
+        "text": "You walk into the Grand Hall. You see dark wood walls, a cold marble floor, and a dim candle flickering. You hear a low wind outside and smell stale perfume.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the grand hall of Ravenwood Estate. You hear the faint creak of old floorboards and feel a cold draft. You smell damp stone and old wood.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:25 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:25 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:40 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Lord Victor Blackwood. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "11:40 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "11:40 PM",
+        "speaker": "Lord Victor Blackwood",
+        "text": "I see the bookshelves and the fire. A portrait hangs on the wall, and my tea is still warm.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "11:50 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:50 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:05 AM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:05 AM",
+        "speaker": "Narrator",
+        "text": "You stand in the dark Grand Hall, the cold stone floor echoing each step. A faint smell of old wood and dust hangs in the air as you look at the empty chairs and the",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Maya Chen. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "Maya Chen",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "Narrator",
+        "text": "You step into the Grand Hall. Cold stone walls loom, and a faint scent of old wood hangs in the stale air. The only sound is a low, echoing creak from the floorboards.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:45 AM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:45 AM",
+        "speaker": "Narrator",
+        "text": "You stand in the Grand Hall of Ravenwood Estate. Cold air brushes your skin, the ticking clock echoes, and dust hangs in the dim light.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:00 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Lena Ortiz. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "1:00 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:00 AM",
+        "speaker": "Narrator",
+        "text": "You step into the Grand Hall, the cold marble floor echoing under your feet. You see a dim chandelier",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:15 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "1:15 AM",
+        "speaker": "Lena Ortiz",
+        "text": "I see the stove, the fridge, and the spice rack. The pantry is over there, near the sink. The counters are clean, just waiting for the food.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "1:25 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Lord Victor Blackwood. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:25 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Thomas Reed. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "1:25 AM",
+        "speaker": "You",
+        "text": "you know how take the printing",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "1:25 AM",
+        "speaker": "Thomas Reed",
+        "text": "I don't handle printing. I'm just on patrol. Let me finish my shift.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "1:35 AM",
+        "speaker": "You",
+        "text": "you find the fingerpring which person fingerprint that",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "1:35 AM",
+        "speaker": "Thomas Reed",
+        "text": "I ain\u2019t seen any prints. I don\u2019t know whose it is. Let me finish my shift.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "1:45 AM",
+        "speaker": "You",
+        "text": "then how take",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "1:45 AM",
+        "speaker": "Thomas Reed",
+        "text": "I ain\u2019t taking nothing. Let me finish my shift.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "1:55 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Maya Chen. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "1:55 AM",
+        "speaker": "You",
+        "text": "any clew or fingerpring of this case",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "1:55 AM",
+        "speaker": "Maya Chen",
+        "text": "I haven\u2019t seen any clue or fingerprint. Everything looks clean. I only saw the painting and the frames.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:05 AM",
+        "speaker": "You",
+        "text": "which time you see",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:05 AM",
+        "speaker": "Maya Chen",
+        "text": "I see the clock says it is 2:05\u202fAM.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:15 AM",
+        "speaker": "You",
+        "text": "after that what you do",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:15 AM",
+        "speaker": "Maya Chen",
+        "text": "After that I went back to the painting. I checked it was still in place. Then I made tea and sat by the plants for a few minutes.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:25 AM",
+        "speaker": "Verdict",
+        "text": "Your guess was wrong.  \nThe secret figure is Lord Victor Blackwood.  \nHe is really Marco Silva, the art thief.  \nHe used the watch key to open the tunnel and set the mud and glass to blame others.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "C2",
+    "hints_used": 1,
+    "accusation_made": true,
+    "accused_character_id": "C3"
+  }
+}

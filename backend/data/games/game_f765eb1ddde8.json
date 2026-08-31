@@ -1,0 +1,616 @@
+{
+  "case": {
+    "id": "case_14de83c7855a",
+    "title": "The Cruise Ship Mystery",
+    "difficulty": "master",
+    "location_type": "Cruise Ship",
+    "location_name": "The Aurora Voyager",
+    "introduction": "Tonight at The Aurora Voyager, the loss of a secret new machine has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The loss of a secret new machine",
+    "target_fake_identity": "Daniel Reyes, a retired government worker people trust",
+    "escape_plan": "Daniel Reyes plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "emma0",
+        "name": "Emma Holloway",
+        "age": 42,
+        "gender": "female",
+        "occupation": "art expert",
+        "personality": "loud and showy",
+        "background": "A art expert with a messy past.",
+        "secret": "Emma was in a secret relationship with the victim.",
+        "goal": "Emma wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "folds their arms when pushed",
+        "fear": "losing their good name",
+        "likes": [
+          "old books",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "cheap things",
+          "surprises"
+        ],
+        "intelligence": 89,
+        "confidence": 58,
+        "relationships": [
+          {
+            "with_character": "Olivia Delacroix",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Daniel Reyes acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Emma is covering for a family member."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "olivia1",
+        "name": "Olivia Delacroix",
+        "age": 45,
+        "gender": "female",
+        "occupation": "ship captain",
+        "personality": "warm and easy to like",
+        "background": "A ship captain with a messy past.",
+        "secret": "Olivia was in a secret relationship with the victim.",
+        "goal": "Olivia wants to find out who is watching them.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "glances at the door often",
+        "fear": "being left alone",
+        "likes": [
+          "the garden",
+          "music"
+        ],
+        "dislikes": [
+          "being touched",
+          "cheap things"
+        ],
+        "intelligence": 77,
+        "confidence": 68,
+        "relationships": [
+          {
+            "with_character": "Victoria Vance",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Daniel Reyes acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Olivia saw something that night and has not told anyone."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "victoria2",
+        "name": "Victoria Vance",
+        "age": 45,
+        "gender": "female",
+        "occupation": "software company owner",
+        "personality": "nervous and talks a lot",
+        "background": "A software company owner with a messy past.",
+        "secret": "Victoria took a small thing earlier that night.",
+        "goal": "Victoria wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "warm and chatty",
+        "habits": "clears their throat before a lie",
+        "fear": "being caught in a lie",
+        "likes": [
+          "fine wine",
+          "money"
+        ],
+        "dislikes": [
+          "waiting",
+          "being rushed"
+        ],
+        "intelligence": 84,
+        "confidence": 45,
+        "relationships": [
+          {
+            "with_character": "Camille Bianchi",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Daniel Reyes acting strange near The Dining Room.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "camille3",
+        "name": "Camille Bianchi",
+        "age": 40,
+        "gender": "female",
+        "occupation": "old furniture seller",
+        "personality": "friendly but hard to pin down",
+        "background": "A old furniture seller with a messy past.",
+        "secret": "Camille was in a secret relationship with the victim.",
+        "goal": "Camille wants to look helpful while hiding a secret.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "gruff and blunt",
+        "habits": "touches their necklace when nervous",
+        "fear": "the police",
+        "likes": [
+          "control",
+          "the garden"
+        ],
+        "dislikes": [
+          "surprises",
+          "questions"
+        ],
+        "intelligence": 64,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "Daniel Reyes",
+            "kind": "secret partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Daniel Reyes acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Camille was in a secret relationship with the victim."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "daniel4",
+        "name": "Daniel Reyes",
+        "age": 41,
+        "gender": "male",
+        "occupation": "retired government worker",
+        "personality": "loud and showy",
+        "background": "A retired government worker with a messy past.",
+        "secret": "Daniel saw something that night and has not told anyone.",
+        "goal": "Daniel wants to get back a letter that would shame them.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "smooth and charming",
+        "habits": "touches their necklace when nervous",
+        "fear": "the dark",
+        "likes": [
+          "strong coffee",
+          "quiet rooms"
+        ],
+        "dislikes": [
+          "being rushed",
+          "cheap things"
+        ],
+        "intelligence": 71,
+        "confidence": 47,
+        "relationships": [
+          {
+            "with_character": "Idris Sinclair",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "idris5",
+        "name": "Idris Sinclair",
+        "age": 38,
+        "gender": "male",
+        "occupation": "art expert",
+        "personality": "friendly but hard to pin down",
+        "background": "A art expert with a messy past.",
+        "secret": "Idris is using a false name, but for a different reason.",
+        "goal": "Idris wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "formal and careful",
+        "habits": "glances at the door often",
+        "fear": "their secret coming out",
+        "likes": [
+          "quiet rooms",
+          "strong coffee"
+        ],
+        "dislikes": [
+          "being touched",
+          "questions"
+        ],
+        "intelligence": 78,
+        "confidence": 42,
+        "relationships": [
+          {
+            "with_character": "Emma Holloway",
+            "kind": "old business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Daniel Reyes acting strange near The Private Study.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the loss of a secret new machine.",
+        "involved": [
+          "Daniel Reyes"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Daniel Reyes is seen moving toward a side door.",
+        "involved": [
+          "Daniel Reyes"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a page from an account book",
+        "description": "A page of numbers that do not add up.",
+        "location": "The Lounge",
+        "points_to": "Daniel Reyes",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Private Study",
+        "points_to": "Daniel Reyes",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Private Study",
+        "points_to": "Idris Sinclair",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Dining Room",
+        "points_to": "Daniel Reyes",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Dining Room",
+        "points_to": "Camille Bianchi",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a fake passport",
+        "description": "It looks real, but the year of birth is a little bit wrong.",
+        "location": "The Guest Rooms",
+        "points_to": "Idris Sinclair",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Guest Rooms",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Daniel Reyes's story about where they were does not match the a page from an account book.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a cloth with blood on it",
+      "a hidden key",
+      "a cheap phone",
+      "a fake passport"
+    ],
+    "solution": {
+      "target_character_id": "daniel4",
+      "target_true_identity": "A wanted criminal pretending to be a retired government worker",
+      "reasoning": "Daniel Reyes is the hidden person. The main clues (a page from an account book, muddy shoes) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_f765eb1ddde8",
+    "case_id": "case_14de83c7855a",
+    "status": "lost",
+    "created_at": "2026-08-31T12:14:17.899706+00:00",
+    "updated_at": "2026-08-31T12:14:42.769150+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "The Grand Lobby",
+    "current_objective": "Among the 6 people at The Aurora Voyager, one is not who they claim to be. Find the clue that breaks their alibi and name the person behind the loss of a secret new machine. No hints here. Trust only the clues that fit together.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "emma0": {
+        "character_id": "emma0",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "olivia1": {
+        "character_id": "olivia1",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "victoria2": {
+        "character_id": "victoria2",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "camille3": {
+        "character_id": "camille3",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "daniel4": {
+        "character_id": "daniel4",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "idris5": {
+        "character_id": "idris5",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Emma Holloway",
+          "detail": "42, art expert. loud and showy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Olivia Delacroix",
+          "detail": "45, ship captain. warm and easy to like.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victoria Vance",
+          "detail": "45, software company owner. nervous and talks a lot.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Camille Bianchi",
+          "detail": "40, old furniture seller. friendly but hard to pin down.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Daniel Reyes",
+          "detail": "41, retired government worker. loud and showy.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Idris Sinclair",
+          "detail": "38, art expert. friendly but hard to pin down.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the loss of a secret new machine.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Daniel Reyes is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Aurora Voyager, the loss of a secret new machine has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Verdict",
+        "text": "You say your case with a strong voice, but the pieces do not fit. The real guilty one walks out into the night. The truth was in front of you the whole time. This one got away.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "",
+    "hints_used": 0,
+    "accusation_made": true,
+    "accused_character_id": "idris5"
+  }
+}

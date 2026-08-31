@@ -1,0 +1,1128 @@
+{
+  "case": {
+    "id": "case_4729c28a04dd",
+    "title": "The Vanishing Heir",
+    "difficulty": "normal",
+    "location_type": "Luxury Villa",
+    "location_name": "Seaside Villa",
+    "introduction": "A rich man is set to give his fortune. He disappears. The guests must find who hid his true name.",
+    "crime": "The heir vanished after dinner. He may have been taken.",
+    "target_fake_identity": "Eliot Marlow",
+    "escape_plan": "Use the service elevator to the garage. Hide in the car. Drive away.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Dining Hall",
+        "description": "Long table with candles."
+      },
+      {
+        "id": "R2",
+        "name": "Library",
+        "description": "Shelves of books and a desk."
+      },
+      {
+        "id": "R3",
+        "name": "Kitchen",
+        "description": "Stove, fridge and a prep area."
+      },
+      {
+        "id": "R4",
+        "name": "Garden",
+        "description": "Paths, plants and a fountain."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Lena Hart",
+        "age": 32,
+        "gender": "female",
+        "occupation": "Event Planner",
+        "personality": "organized",
+        "background": "Works for the family. Plans events.",
+        "secret": "She stole a necklace years ago.",
+        "goal": "Keep her job safe.",
+        "alibi": "She was in the garden.",
+        "speaking_style": "Calm and polite.",
+        "habits": "Taps pen when nervous.",
+        "fear": "Spiders.",
+        "likes": [
+          "tea",
+          "music"
+        ],
+        "dislikes": [
+          "loud noise"
+        ],
+        "intelligence": 75,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "boss",
+            "detail": "Lena is Jordan's boss."
+          }
+        ],
+        "knowledge": [
+          "Villa layout",
+          "guest list"
+        ],
+        "lies": [
+          "I saw the target near the safe."
+        ],
+        "inventory": [
+          "notebook",
+          "pen"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Marco Ruiz",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Chef",
+        "personality": "friendly",
+        "background": "Cooks for the villa events.",
+        "secret": "He owes money to a loan shark.",
+        "goal": "Get a raise.",
+        "alibi": "He was in the kitchen.",
+        "speaking_style": "Chatty and loud.",
+        "habits": "Hums while cooking.",
+        "fear": "Fire.",
+        "likes": [
+          "spices",
+          "cooking"
+        ],
+        "dislikes": [
+          "bland food"
+        ],
+        "intelligence": 65,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "friend",
+            "detail": "Marco and Victor work together."
+          }
+        ],
+        "knowledge": [
+          "Kitchen tricks",
+          "menu plans"
+        ],
+        "lies": [
+          "I heard a scream from the hallway."
+        ],
+        "inventory": [
+          "knife",
+          "recipe book"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Jordan Vale",
+        "age": 28,
+        "gender": "nonbinary",
+        "occupation": "Personal Assistant",
+        "personality": "quiet",
+        "background": "Helps the heir daily.",
+        "secret": "They are the missing heir using the name Eliot Marlow.",
+        "goal": "Claim the inheritance.",
+        "alibi": "Was in the library.",
+        "speaking_style": "Short and calm.",
+        "habits": "Checks phone often.",
+        "fear": "Being caught.",
+        "likes": [
+          "reading",
+          "puzzles"
+        ],
+        "dislikes": [
+          "crowds"
+        ],
+        "intelligence": 85,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "employee",
+            "detail": "Lena is Jordan's boss."
+          }
+        ],
+        "knowledge": [
+          "Family secrets",
+          "Safe code"
+        ],
+        "lies": [
+          "I was with the chef at dinner."
+        ],
+        "inventory": [
+          "keycard",
+          "passport"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C4",
+        "name": "Victor Shaw",
+        "age": 55,
+        "gender": "male",
+        "occupation": "Security Chief",
+        "personality": "stern",
+        "background": "In charge of villa security.",
+        "secret": "He once helped a thief escape.",
+        "goal": "Keep his reputation.",
+        "alibi": "Patrolling the hallway.",
+        "speaking_style": "Blunt and brief.",
+        "habits": "Checks watch often.",
+        "fear": "Losing his job.",
+        "likes": [
+          "order",
+          "coffee"
+        ],
+        "dislikes": [
+          "chaos"
+        ],
+        "intelligence": 78,
+        "confidence": 85,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "Victor and Marco trust each other."
+          }
+        ],
+        "knowledge": [
+          "Alarm codes",
+          "camera feeds"
+        ],
+        "lies": [
+          "I saw the assistant near the safe."
+        ],
+        "inventory": [
+          "flashlight",
+          "radio"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Dinner starts in the dining hall.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:05 PM",
+        "description": "Lights flicker in the villa.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "8:10 PM",
+        "description": "A loud crash is heard in the library.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "8:12 PM",
+        "description": "The heir is reported missing.",
+        "involved": [
+          "C1",
+          "C2"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Security checks the rooms.",
+        "involved": [
+          "C4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Library keycard",
+        "description": "Keycard found on a desk in the library.",
+        "location": "Library",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Chef's knife",
+        "description": "Knife with fingerprints on it.",
+        "location": "Kitchen",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E3",
+        "name": "Garden camera clip",
+        "description": "Clip shows a figure in the garden at 8:05 PM.",
+        "location": "Garden camera",
+        "points_to": "C1",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Fake passport",
+        "description": "Passport with name Eliot Marlow.",
+        "location": "Assistant's bag",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      }
+    ],
+    "hidden_clues": [
+      "The assistant used a keycard at 8:10 PM.",
+      "The fake passport matches the missing heir's birthdate."
+    ],
+    "red_herrings": [
+      "Chef was seen near the safe.",
+      "Security chief said he saw the planner near the safe."
+    ],
+    "solution": {
+      "target_character_id": "C3",
+      "target_true_identity": "Alex Hartman",
+      "reasoning": "Keycard and passport point to Jordan. The fake name matches the heir. Lies from others point elsewhere but are false.",
+      "key_evidence_ids": [
+        "E1",
+        "E4"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_d37c81a4dc9a",
+    "case_id": "case_4729c28a04dd",
+    "status": "lost",
+    "created_at": "2026-08-31T10:19:16.974989+00:00",
+    "updated_at": "2026-08-31T10:38:55.043365+00:00",
+    "minutes_elapsed": 325,
+    "current_location": "Dining Hall",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [
+      "Dining Hall"
+    ],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 41,
+        "stress": 20,
+        "suspicion_of_player": 15,
+        "times_questioned": 6,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii",
+          "what you see tall me evrything",
+          "but why",
+          "i am asking you you know about that fortune",
+          "Look around",
+          "what is the clue"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:45 PM",
+            "question": "hii",
+            "answer": "Hello. How can I help?"
+          },
+          {
+            "at_time": "8:55 PM",
+            "question": "what you see tall me evrything ",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "9:05 PM",
+            "question": "but why",
+            "answer": "I don't have any details to share. I saw nothing that could help. That's all I"
+          },
+          {
+            "at_time": "9:15 PM",
+            "question": "i am asking you you know about that fortune",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "9:55 PM",
+            "question": "Look around",
+            "answer": "I see the garden. There are many flowers, a few benches, and the path to the villa. The fountain is near the back. That's all I notice."
+          },
+          {
+            "at_time": "12:15 AM",
+            "question": "what is the clue",
+            "answer": "I think the clue is the garden path by the fountain. It leads to the back of the villa. That part of the layout looks important."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii'",
+          "Detective asked: 'what you see tall me evrything '",
+          "Detective asked: 'but why'",
+          "Detective asked: 'i am asking you you know about that fortune'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'what is the clue'"
+        ],
+        "has_met": true
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "what about your family"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "11:15 PM",
+            "question": "what about your family",
+            "answer": "I have a wife and two kids. They love when I cook. I try to make them happy every day."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'what about your family'"
+        ],
+        "has_met": true
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 43,
+        "stress": 15,
+        "suspicion_of_player": 25,
+        "times_questioned": 8,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "what you see tall me eveything",
+          "you know about fortune",
+          "the fortune is missing you know",
+          "why you near the safe",
+          "can you find anything incorrect",
+          "what is the clue",
+          "so how hide old paper"
+        ],
+        "relationship_notes": [
+          "The detective was kind to me."
+        ],
+        "exchanges": [
+          {
+            "at_time": "10:05 PM",
+            "question": "hello",
+            "answer": "Hello."
+          },
+          {
+            "at_time": "10:15 PM",
+            "question": "what you see tall me eveything",
+            "answer": "I see a small room. I see a book on a table. I read and think."
+          },
+          {
+            "at_time": "10:25 PM",
+            "question": "you know about fortune",
+            "answer": "I know about the family fortune. It is part of my work."
+          },
+          {
+            "at_time": "10:35 PM",
+            "question": "the fortune is missing you know",
+            "answer": "Yes, I know. I\u2019m checking the papers now. I\u2019ll find where it went."
+          },
+          {
+            "at_time": "11:35 PM",
+            "question": "why you near the safe",
+            "answer": "I needed to check the papers for the inheritance. The safe holds the documents. I was just making sure everything is correct."
+          },
+          {
+            "at_time": "11:45 PM",
+            "question": "can you find anything incorrect",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "11:55 PM",
+            "question": "what is the clue",
+            "answer": "The clue is the old paper hidden in the library."
+          },
+          {
+            "at_time": "12:05 AM",
+            "question": "so how hide old paper",
+            "answer": "I slipped it into a hollowed book on the top shelf. No one looks there. It stays safe."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'",
+          "Detective asked: 'what you see tall me eveything'",
+          "Detective asked: 'you know about fortune'",
+          "Detective asked: 'the fortune is missing you know'",
+          "Detective asked: 'why you near the safe'",
+          "Detective asked: 'can you find anything incorrect'",
+          "Detective asked: 'what is the clue'",
+          "Detective asked: 'so how hide old paper'"
+        ],
+        "has_met": true
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [
+          "I saw the assistant near the safe."
+        ],
+        "asked_questions": [
+          "what you saw"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "11:25 PM",
+            "question": "what you saw",
+            "answer": "I saw the assistant near the safe."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'what you saw'"
+        ],
+        "has_met": true
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Lena Hart",
+          "detail": "32, Event Planner. organized.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marco Ruiz",
+          "detail": "45, Chef. friendly.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Jordan Vale",
+          "detail": "28, Personal Assistant. quiet.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victor Shaw",
+          "detail": "55, Security Chief. stern.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Dinner starts in the dining hall.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:05 PM",
+          "detail": "Lights flicker in the villa.",
+          "at_time": "8:05 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:10 PM",
+          "detail": "A loud crash is heard in the library.",
+          "at_time": "8:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:12 PM",
+          "detail": "The heir is reported missing.",
+          "at_time": "8:12 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Security checks the rooms.",
+          "at_time": "8:15 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A rich man is set to give his fortune. He disappears. The guests must find who hid his true name.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You stand in a grand dining hall, the walls lined with dark wood and dim candles flickering. You hear the distant crash of waves and smell faint sea salt in the cool air.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "You",
+        "text": "what is the story line",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "Narrator",
+        "text": "You step into the dining hall, the dim light flickers over a long oak table set with cracked china. You hear the distant crash of waves and smell salt mixed with stale perfume.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lena Hart. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Lena Hart",
+        "text": "Hello. How can I help?",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "You",
+        "text": "what you see tall me evrything ",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "Lena Hart",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "You",
+        "text": "but why",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "Lena Hart",
+        "text": "I don't have any details to share. I saw nothing that could help. That's all I",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "i am asking you you know about that fortune",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Lena Hart",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Narrator",
+        "text": "You see a",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "Narrator",
+        "text": "You step into the dining hall. You hear the distant crash of waves and feel a cold draft sweep through the empty room.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "Lena Hart",
+        "text": "I see the garden. There are many flowers, a few benches, and the path to the villa. The fountain is near the back. That's all I notice.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Jordan Vale. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "Jordan Vale",
+        "text": "Hello.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "You",
+        "text": "what you see tall me eveything",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Jordan Vale",
+        "text": "I see a small room. I see a book on a table. I read and think.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "You",
+        "text": "you know about fortune",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "Jordan Vale",
+        "text": "I know about the family fortune. It is part of my work.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:35 PM",
+        "speaker": "You",
+        "text": "the fortune is missing you know",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:35 PM",
+        "speaker": "Jordan Vale",
+        "text": "Yes, I know. I\u2019m checking the papers now. I\u2019ll find where it went.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "You",
+        "text": "search the room any suspect find",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the dark dining hall of the seaside villa. You hear the wind howl against the tall windows. You smell salty sea air mixed with stale perfume.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Hint",
+        "text": "Talk to Marco Ruiz and see if his story fits the clues you already have.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Victor Shaw. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Narrator",
+        "text": "You step into the dim dining hall, the polished table glinting under the low lamps. You hear the soft creak of floorboards and smell a faint hint of sea salt drifting in.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "Hint",
+        "text": "Talk to Marco Ruiz and compare his story with the clues you already have. His details might match something you missed.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Marco Ruiz. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "Hint",
+        "text": "Try asking Marco Ruiz about his family. See if his story matches any clues you already have.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "You",
+        "text": "what about your family",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "Marco Ruiz",
+        "text": "I have a wife and two kids. They love when I cook. I try to make them happy every day.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:25 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Victor Shaw. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:25 PM",
+        "speaker": "You",
+        "text": "what you saw",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:25 PM",
+        "speaker": "Victor Shaw",
+        "text": "I saw the assistant near the safe.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "11:35 PM",
+        "speaker": "Narrator",
+        "text": "You turn to Jordan Vale. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:35 PM",
+        "speaker": "You",
+        "text": "why you near the safe",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:35 PM",
+        "speaker": "Jordan Vale",
+        "text": "I needed to check the papers for the inheritance. The safe holds the documents. I was just making sure everything is correct.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:45 PM",
+        "speaker": "You",
+        "text": "can you find anything incorrect",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:45 PM",
+        "speaker": "Jordan Vale",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:55 PM",
+        "speaker": "You",
+        "text": "what is the clue",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:55 PM",
+        "speaker": "Jordan Vale",
+        "text": "The clue is the old paper hidden in the library.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "12:05 AM",
+        "speaker": "You",
+        "text": "so how hide old paper",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "12:05 AM",
+        "speaker": "Jordan Vale",
+        "text": "I slipped it into a hollowed book on the top shelf. No one looks there. It stays safe.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "12:15 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Marco Ruiz. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:15 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Lena Hart. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "12:15 AM",
+        "speaker": "You",
+        "text": "what is the clue",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "12:15 AM",
+        "speaker": "Lena Hart",
+        "text": "I think the clue is the garden path by the fountain. It leads to the back of the villa. That part of the layout looks important.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "12:25 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:25 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dining hall. The room is dim and the air smells of salt and old wood. You hear the distant crash of waves against the shore.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Marco Ruiz. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dark dining hall. You see a long table, empty chairs, and a shattered glass vase on the floor. You hear the low crash of waves against the shore and the faint drip of water from a cracked pipe.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:55 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Jordan Vale. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "12:55 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:55 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dim dining hall of the seaside villa. The cold sea wind whistles through the cracked window, and the smell of salt and old wood hangs heavy in the air.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:10 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Victor Shaw. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "1:10 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:10 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dark dining hall of the seaside villa. The salty air mixes with the smell of old wood, and you hear the distant crash of waves against the shore.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:25 AM",
+        "speaker": "Verdict",
+        "text": "You were wrong.  \nThe real culprit is Jordan Vale, who is really Alex\u202fHartman.  \nThe keycard and passport point to him.  \nAll the other clues were tricks.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "C4",
+    "hints_used": 3,
+    "accusation_made": true,
+    "accused_character_id": "C4"
+  }
+}

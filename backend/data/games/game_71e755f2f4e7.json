@@ -1,0 +1,733 @@
+{
+  "case": {
+    "id": "case_ae63d83a6213",
+    "title": "The Villa Jewel Heist",
+    "difficulty": "beginner",
+    "location_type": "Luxury Villa",
+    "location_name": "Sunset Villa",
+    "introduction": "Eight guests arrive at Sunset Villa. They all meet in the lounge. A rare jewel is on display.",
+    "crime": "The jewel is stolen during the night.",
+    "target_fake_identity": "James \"Jax\" Miller",
+    "escape_plan": "He will hide the jewel in a suitcase. He will leave in the car at midnight. He will use a secret tunnel.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Study",
+        "description": "A quiet room with a desk and a safe."
+      },
+      {
+        "id": "R2",
+        "name": "Garden",
+        "description": "A large garden with a fountain."
+      },
+      {
+        "id": "R3",
+        "name": "Kitchen",
+        "description": "A busy kitchen with a big oven."
+      },
+      {
+        "id": "R4",
+        "name": "Gallery",
+        "description": "A room with paintings and the jewel display."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Lena Hart",
+        "age": 28,
+        "occupation": "Travel Blogger",
+        "personality": "Friendly",
+        "background": "She writes about trips.",
+        "secret": "She once stole a cheap watch.",
+        "goal": "Find the jewel to sell.",
+        "alibi": "She was in the garden at 9:30 PM.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "Met at a food fair."
+          },
+          {
+            "with_character": "C3",
+            "kind": "rival",
+            "detail": "Competes for story ideas."
+          }
+        ],
+        "knowledge": [
+          "She knows the villa layout."
+        ],
+        "lies": [],
+        "inventory": [
+          "Camera",
+          "Notebook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Marco Ruiz",
+        "age": 35,
+        "occupation": "Chef",
+        "personality": "Calm",
+        "background": "Works in the villa kitchen.",
+        "secret": "He owes money to a loan shark.",
+        "goal": "Finish his dinner service.",
+        "alibi": "He was in the kitchen at 9:45 PM.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "friend",
+            "detail": "Served her breakfast."
+          },
+          {
+            "with_character": "C3",
+            "kind": "colleague",
+            "detail": "Both work for the host."
+          }
+        ],
+        "knowledge": [
+          "He knows about the safe."
+        ],
+        "lies": [
+          "He saw a shadow in the study at 9:00 PM."
+        ],
+        "inventory": [
+          "Knife",
+          "Apron"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Sofia Patel",
+        "age": 30,
+        "occupation": "Art Curator",
+        "personality": "Sharp",
+        "background": "She is here to view a painting.",
+        "secret": "She is actually a police informant.",
+        "goal": "Get the painting for her museum.",
+        "alibi": "She was in the gallery at 9:20 PM.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "colleague",
+            "detail": "Both help the host."
+          },
+          {
+            "with_character": "C4",
+            "kind": "sister",
+            "detail": "They grew up together."
+          }
+        ],
+        "knowledge": [
+          "She knows about the jewel."
+        ],
+        "lies": [
+          "She heard the safe click at 9:10 PM."
+        ],
+        "inventory": [
+          "Glasses",
+          "Sketchbook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "James \"Jax\" Miller",
+        "age": 40,
+        "occupation": "Businessman",
+        "personality": "Charming",
+        "background": "He says he is an investor.",
+        "secret": "He is the thief using a fake name.",
+        "goal": "Escape with the jewel.",
+        "alibi": "He was in the study reading at 9:05 PM.",
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "brother",
+            "detail": "They share a past."
+          },
+          {
+            "with_character": "C1",
+            "kind": "acquaintance",
+            "detail": "Met at a gala."
+          }
+        ],
+        "knowledge": [
+          "He knows the vault code."
+        ],
+        "lies": [
+          "He never left the study after 9:00 PM."
+        ],
+        "inventory": [
+          "Suitcase",
+          "Keycard"
+        ],
+        "is_target": true
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive and mingle.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Lights dim. Jewel display is lit.",
+        "involved": []
+      },
+      {
+        "time": "9:05 PM",
+        "description": "C4 sits in the study with a book.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "9:10 PM",
+        "description": "A soft click is heard near the safe.",
+        "involved": []
+      },
+      {
+        "time": "9:20 PM",
+        "description": "C3 checks the painting in the gallery.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "C1 walks to the garden for fresh air.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "C2 cooks dinner in the kitchen.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "The jewel is found missing.",
+        "involved": []
+      },
+      {
+        "time": "10:05 PM",
+        "description": "C4 rushes out of the study.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "10:10 PM",
+        "description": "C4 hides the jewel in his suitcase.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "10:15 PM",
+        "description": "Guests gather to discuss the loss.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "11:55 PM",
+        "description": "C4 leaves the villa in a car.",
+        "involved": [
+          "C4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Keycard",
+        "description": "A keycard with the study lock code.",
+        "location": "C4's suitcase",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Fingerprint on Safe",
+        "description": "A fresh fingerprint on the safe door.",
+        "location": "Study safe",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Broken Garden Glass",
+        "description": "A small piece of glass on the garden path.",
+        "location": "Garden",
+        "points_to": "C1",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "CCTV Footage",
+        "description": "Footage shows a man in a suit leaving the study.",
+        "location": "Security room",
+        "points_to": "C4",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E5",
+        "name": "Torn Fabric",
+        "description": "A piece of cloth found in the kitchen.",
+        "location": "Kitchen",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The keycard matches the study lock.",
+      "The suitcase has a hidden compartment."
+    ],
+    "red_herrings": [
+      "The garden glass points to Lena but she did not touch the safe.",
+      "The torn fabric points to Marco but it is from a chef apron."
+    ],
+    "solution": {
+      "target_character_id": "C4",
+      "target_true_identity": "Victor Kane, international jewel thief",
+      "reasoning": "Keycard and fingerprint are on C4. CCTV shows him leaving. He had a secret plan and a hidden compartment. Fake clues point to Lena and Marco.",
+      "key_evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_71e755f2f4e7",
+    "case_id": "case_ae63d83a6213",
+    "status": "won",
+    "created_at": "2026-08-31T07:23:37.466741+00:00",
+    "updated_at": "2026-08-31T07:38:31.902760+00:00",
+    "minutes_elapsed": 155,
+    "current_location": "Study",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 2,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Lena Hart what you are doing'",
+          "Detective said: 'Talk to Lena Hart  you know where is jewel gone'"
+        ]
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Marco Ruiz what you doing'"
+        ]
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Sofia Patel what you are doing'"
+        ]
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 45,
+        "stress": 20,
+        "suspicion_of_player": 25,
+        "times_questioned": 8,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to James \"Jax\" Miller what you doing'",
+          "Detective said: 'Talk to James \"Jax\" Miller why you rin'",
+          "Detective said: 'Talk to James \"Jax\" Miller what you hides the sutecase'",
+          "Detective said: 'Talk to James \"Jax\" Miller i saw you are hide something in the sutecase'",
+          "Detective said: 'Talk to James \"Jax\" Miller why you rush out from the study'",
+          "Detective said: 'Talk to James \"Jax\" Miller what you see on the kichen and who on the kichen that'",
+          "Detective said: 'Talk to James \"Jax\" Miller so why you say i am went to the kichen for a glass of'",
+          "Detective said: 'Talk to James \"Jax\" Miller currently you say i go for kichen so why you lie'"
+        ]
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Lena Hart",
+          "detail": "28, Travel Blogger. Friendly.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marco Ruiz",
+          "detail": "35, Chef. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Patel",
+          "detail": "30, Art Curator. Sharp.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "James \"Jax\" Miller",
+          "detail": "40, Businessman. Charming.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive and mingle.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Lights dim. Jewel display is lit.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:05 PM",
+          "detail": "C4 sits in the study with a book.",
+          "at_time": "9:05 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:10 PM",
+          "detail": "A soft click is heard near the safe.",
+          "at_time": "9:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:20 PM",
+          "detail": "C3 checks the painting in the gallery.",
+          "at_time": "9:20 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "C1 walks to the garden for fresh air.",
+          "at_time": "9:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "C2 cooks dinner in the kitchen.",
+          "at_time": "9:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "The jewel is found missing.",
+          "at_time": "10:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:05 PM",
+          "detail": "C4 rushes out of the study.",
+          "at_time": "10:05 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:10 PM",
+          "detail": "C4 hides the jewel in his suitcase.",
+          "at_time": "10:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:15 PM",
+          "detail": "Guests gather to discuss the loss.",
+          "at_time": "10:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:55 PM",
+          "detail": "C4 leaves the villa in a car.",
+          "at_time": "11:55 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Eight guests arrive at Sunset Villa. They all meet in the lounge. A rare jewel is on display.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "who is C4",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You stand in a dim study, the sunset casting long shadows across polished wood and a thick rug. You hear the soft tick of a clock and smell old leather and faint incense.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "You",
+        "text": "Talk to Lena Hart what you are doing",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "Lena Hart",
+        "text": "I am in the garden now. I\u2019m writing notes for my travel blog. I like the fresh air. I hope to find something special here.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "You",
+        "text": "you know where is jewel gone",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "Talk to Lena Hart  you know where is jewel gone",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Lena Hart",
+        "text": "I was in the garden at nine thirty. I didn\u2019t see the jewel. I only know the rooms in the villa.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "Talk to Marco Ruiz what you doing",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Marco Ruiz",
+        "text": "I am in the kitchen. I\u2019m cooking dinner. It\u2019s almost time for the service. I\u2019m busy right now.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "Talk to Sofia Patel what you are doing",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Sofia Patel",
+        "text": "I'm at the gallery right now. I'm looking at the new painting. I want it for my museum.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller what you doing",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I'm just reading in the study. Just some papers. Nothing else.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "why you run",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller why you rin",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:05 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I wasn\u2019t running. I was just reading in the study. I stayed here after nine.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller what you hides the sutecase",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I was just reading in the study. I didn\u2019t leave after nine. The case is just some papers, nothing important.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "i saw you are hide something in the sutecase",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Narrator",
+        "text": "You see",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller i saw you are hide something in the sutecase",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:30 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I didn't put anything in that case. I was just reading in the study. Maybe you should check the other rooms.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller why you rush out from the study",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:40 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I got a call at nine. I went to the kitchen for a glass of water. I wasn\u2019t in any rush.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "You",
+        "text": "what you see on the kichen and who on the kichen that time",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:50 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller what you see on the kichen and who on the kichen that time",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I stayed in the study. I didn\u2019t",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "You",
+        "text": "so why you say i am went to the kichen for a glass of water",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "Narrator",
+        "text": "You are not sure who you are talking to.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller so why you say i am went to the kichen for a glass of water",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I was just in the study. I didn't see you go to the kitchen. I was reading.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "You",
+        "text": "Talk to James \"Jax\" Miller currently you say i go for kichen so why you lie",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "James \"Jax\" Miller",
+        "text": "I was just in the study. I read some papers. I didn\u2019t go to the kitchen.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "10:35 PM",
+        "speaker": "Verdict",
+        "text": "You nailed it.  \nJames \u201cJax\u201d Miller is really Victor Kane, the jewel thief.  \nThe keycard, the fingerprint on the C4, and the CCTV all point to him.  \nAll the fake clues were just tricks to hide the truth.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": true,
+    "accused_character_id": "C4"
+  }
+}

@@ -1,0 +1,1035 @@
+{
+  "case": {
+    "id": "case_22dfaf223273",
+    "title": "The Vanishing Guest",
+    "difficulty": "normal",
+    "location_type": "Hotel",
+    "location_name": "Grand Oak Hotel",
+    "introduction": "A gala ends. One guest is gone. No body is found.",
+    "crime": "A guest vanished after the gala. He left no trace.",
+    "target_fake_identity": "Mr. Julian Hart",
+    "escape_plan": "He will use the service elevator at midnight. He has a hidden keycard for the back door.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Lobby",
+        "description": "A bright hall with a big desk."
+      },
+      {
+        "id": "R2",
+        "name": "Suite 101",
+        "description": "A fancy room with a balcony."
+      },
+      {
+        "id": "R3",
+        "name": "Kitchen",
+        "description": "A busy place with many pots."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Anna Lee",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Chef",
+        "personality": "Calm",
+        "background": "Works in the hotel kitchen.",
+        "secret": "She stole a rare spice.",
+        "goal": "Keep her job.",
+        "alibi": "She was prepping dinner.",
+        "speaking_style": "Short and sweet.",
+        "habits": "Taps spoon while she talks.",
+        "fear": "Fire.",
+        "likes": [
+          "Cooking",
+          "Music"
+        ],
+        "dislikes": [
+          "Mess"
+        ],
+        "intelligence": 70,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "colleague",
+            "detail": "Works together in night shift"
+          }
+        ],
+        "knowledge": [
+          "Kitchen layout"
+        ],
+        "lies": [
+          "She said she was in the lobby at 9 PM."
+        ],
+        "inventory": [
+          "Knife",
+          "Spice bag"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Mark Daniels",
+        "age": 35,
+        "gender": "male",
+        "occupation": "Security guard",
+        "personality": "Watchful",
+        "background": "Patrols the hotel corridors.",
+        "secret": "He took a bribe once.",
+        "goal": "Get a promotion.",
+        "alibi": "He patrolled the hallway.",
+        "speaking_style": "Gruff.",
+        "habits": "Checks his badge often.",
+        "fear": "Dark.",
+        "likes": [
+          "Order",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Noise"
+        ],
+        "intelligence": 65,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "colleague",
+            "detail": "Talks at break"
+          }
+        ],
+        "knowledge": [
+          "Security cameras"
+        ],
+        "lies": [
+          "He said he saw no one in the corridor at 9:30 PM."
+        ],
+        "inventory": [
+          "Radio",
+          "Flashlight"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Sofia Martinez",
+        "age": 30,
+        "gender": "female",
+        "occupation": "Event planner",
+        "personality": "Charming",
+        "background": "Plans big hotel events.",
+        "secret": "She uses a fake name to hide past fraud.",
+        "goal": "Escape with stolen jewels.",
+        "alibi": "She was arranging tables.",
+        "speaking_style": "Polite and bright.",
+        "habits": "Smooths her hair when she talks.",
+        "fear": "Being caught.",
+        "likes": [
+          "Flowers",
+          "Champagne"
+        ],
+        "dislikes": [
+          "Chaos"
+        ],
+        "intelligence": 85,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "ex-partner",
+            "detail": "They broke up last year"
+          }
+        ],
+        "knowledge": [
+          "Guest list"
+        ],
+        "lies": [
+          "She said she arrived at 7 PM."
+        ],
+        "inventory": [
+          "Fake passport",
+          "Keycard"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C4",
+        "name": "Elliot Gray",
+        "age": 40,
+        "gender": "nonbinary",
+        "occupation": "Travel blogger",
+        "personality": "Curious",
+        "background": "Makes videos about hotels.",
+        "secret": "They are a private detective hired by a rival hotel.",
+        "goal": "Find proof of fraud.",
+        "alibi": "Was filming in the lobby.",
+        "speaking_style": "Observant, asks questions.",
+        "habits": "Taps phone while thinking.",
+        "fear": "Losing reputation.",
+        "likes": [
+          "Cameras",
+          "Stories"
+        ],
+        "dislikes": [
+          "Boredom"
+        ],
+        "intelligence": 90,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "former partner",
+            "detail": "They still meet sometimes"
+          }
+        ],
+        "knowledge": [
+          "Hotel contracts"
+        ],
+        "lies": [
+          "They said they left early at 10 PM."
+        ],
+        "inventory": [
+          "Camera",
+          "Notebook"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive for gala.",
+        "involved": [
+          "C3",
+          "C4",
+          "C2"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Dinner served in suite.",
+        "involved": [
+          "C1",
+          "C3"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Lights flicker. A scream heard.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "10:30 PM",
+        "description": "Guest named Mr. Julian Hart is missing.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "11:45 PM",
+        "description": "Security checks cameras.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "12:00 AM",
+        "description": "Service elevator opens for staff only.",
+        "involved": [
+          "C3"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Keycard swipe log",
+        "description": "Shows a swipe at 12:02 AM from suite to service elevator.",
+        "location": "Security office",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Fake passport",
+        "description": "Has name Mr. Julian Hart but photo of Sofia.",
+        "location": "Sofia's bag",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Broken vase",
+        "description": "Found in lobby with glass shards.",
+        "location": "Lobby",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Spice bag label",
+        "description": "Shows rare spice missing from kitchen inventory.",
+        "location": "Kitchen",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "A note with the name Julian Hart was found in Suite 101."
+    ],
+    "red_herrings": [
+      "A loud crash was heard from the kitchen at 9:45 PM."
+    ],
+    "solution": {
+      "target_character_id": "C3",
+      "target_true_identity": "Sofia Martinez is actually Julian Hart, a jewel thief.",
+      "reasoning": "Keycard log shows she used the service elevator after midnight. The fake passport matches the name Julian Hart. The hidden note links the name to the suite. Lies about arrival time hide her plan.",
+      "key_evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_8089d37693e2",
+    "case_id": "case_22dfaf223273",
+    "status": "won",
+    "created_at": "2026-08-31T10:44:02.410673+00:00",
+    "updated_at": "2026-08-31T11:26:13.387542+00:00",
+    "minutes_elapsed": 265,
+    "current_location": "Lobby",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [
+      "E3"
+    ],
+    "visited_rooms": [
+      "Lobby"
+    ],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 44,
+        "stress": 20,
+        "suspicion_of_player": 10,
+        "times_questioned": 5,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello Anna lee",
+          "you know about mr. julian",
+          "today he is come or not",
+          "last time you see him which is the time",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:05 PM",
+            "question": "hello Anna lee",
+            "answer": "Hello. How can I help?"
+          },
+          {
+            "at_time": "8:15 PM",
+            "question": "you know about mr. julian",
+            "answer": "I know he comes in for the night shift sometimes. That's all."
+          },
+          {
+            "at_time": "8:25 PM",
+            "question": "today he is come or not",
+            "answer": "I don't know if he's here today. I haven't seen him."
+          },
+          {
+            "at_time": "8:35 PM",
+            "question": "last time you see him which is the time",
+            "answer": "I last saw him at about seven o\u2019clock. I was finishing the"
+          },
+          {
+            "at_time": "8:45 PM",
+            "question": "Look around",
+            "answer": "I see the stove, the fridge, the prep tables. All is clean."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello Anna lee'",
+          "Detective asked: 'you know about mr. julian'",
+          "Detective asked: 'today he is come or not'",
+          "Detective asked: 'last time you see him which is the time'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 20,
+        "stress": 20,
+        "suspicion_of_player": 50,
+        "times_questioned": 13,
+        "mood": "suspicious",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii mark",
+          "i wnat to know about your family",
+          "why not say about your family",
+          "of",
+          "i need hint for finding",
+          "how to i look cameras",
+          "i want to see footage of east-wing cameras",
+          "which time",
+          "hii",
+          "i need you",
+          "i mean i need to talk to you",
+          "which place you patrol",
+          "you see mr. julian"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "9:25 PM",
+            "question": "hii mark",
+            "answer": "Evening. What do you need?"
+          },
+          {
+            "at_time": "9:35 PM",
+            "question": "i wnat to know about your family",
+            "answer": "I have nothing to say about that."
+          },
+          {
+            "at_time": "9:45 PM",
+            "question": "why not say about your family",
+            "answer": "My family is private. Not part of my work."
+          },
+          {
+            "at_time": "9:55 PM",
+            "question": "of",
+            "answer": "What do you mean?"
+          },
+          {
+            "at_time": "10:05 PM",
+            "question": "i need hint for finding",
+            "answer": "Look at the cameras near the east wing. They caught most moves. Check the footage."
+          },
+          {
+            "at_time": "10:15 PM",
+            "question": "how to i look cameras",
+            "answer": "Head to the security office. Log in, pick the east\u2011wing cameras, and watch the footage."
+          },
+          {
+            "at_time": "10:25 PM",
+            "question": "i want to see footage of east-wing cameras",
+            "answer": "Sure. Meet me at the security office and I\u2019ll pull the east\u2011wing footage up for you."
+          },
+          {
+            "at_time": "10:35 PM",
+            "question": "which time",
+            "answer": "I told you it was 9:30\u202fPM. That\u2019s the time to check."
+          },
+          {
+            "at_time": "11:00 PM",
+            "question": "hii",
+            "answer": "What do you need?"
+          },
+          {
+            "at_time": "11:10 PM",
+            "question": "i need you",
+            "answer": "What do you need, detective? I'm here. My badge's on my chest."
+          },
+          {
+            "at_time": "11:20 PM",
+            "question": "i mean i need to talk to you",
+            "answer": "What do you want to talk about? I'm on patrol. My badge's on."
+          },
+          {
+            "at_time": "11:30 PM",
+            "question": "which place you patrol",
+            "answer": "I patrol the hallway. Mostly the east\u2011wing corridor. My badge\u2019s on."
+          },
+          {
+            "at_time": "11:40 PM",
+            "question": "you see mr. julian",
+            "answer": "I have nothing to say about that."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'of'",
+          "Detective asked: 'i need hint for finding'",
+          "Detective asked: 'how to i look cameras'",
+          "Detective asked: 'i want to see footage of east-wing cameras'",
+          "Detective asked: 'which time'",
+          "Detective asked: 'hii'",
+          "Detective asked: 'i need you'",
+          "Detective asked: 'i mean i need to talk to you'",
+          "Detective asked: 'which place you patrol'",
+          "Detective asked: 'you see mr. julian'"
+        ],
+        "has_met": true
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 2,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hiii",
+          "how to finnd clue"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "11:50 PM",
+            "question": "hiii",
+            "answer": "Hello! So nice to see you. How can I help?"
+          },
+          {
+            "at_time": "12:00 AM",
+            "question": "how to finnd clue",
+            "answer": "I have nothing to say about that."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hiii'",
+          "Detective asked: 'how to finnd clue'"
+        ],
+        "has_met": true
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 18,
+        "stress": 52,
+        "suspicion_of_player": 60,
+        "times_questioned": 0,
+        "mood": "angry",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me.",
+          "The detective searched a room close to me."
+        ],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Anna Lee",
+          "detail": "28, Chef. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mark Daniels",
+          "detail": "35, Security guard. Watchful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Martinez",
+          "detail": "30, Event planner. Charming.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Elliot Gray",
+          "detail": "40, Travel blogger. Curious.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "Broken vase",
+          "detail": "Found in lobby with glass shards. (found in Lobby).",
+          "at_time": "8:55 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive for gala.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Dinner served in suite.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Lights flicker. A scream heard.",
+          "at_time": "10:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:30 PM",
+          "detail": "Guest named Mr. Julian Hart is missing.",
+          "at_time": "10:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:45 PM",
+          "detail": "Security checks cameras.",
+          "at_time": "11:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "12:00 AM",
+          "detail": "Service elevator opens for staff only.",
+          "at_time": "12:00 AM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A gala ends. One guest is gone. No body is found.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the dark lobby.  \nThe dim light makes long shadows on the marble floor.  \nYou hear a low hum",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Anna Lee. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "You",
+        "text": "hello Anna lee",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:05 PM",
+        "speaker": "Anna Lee",
+        "text": "Hello. How can I help?",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "You",
+        "text": "you know about mr. julian",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "Anna Lee",
+        "text": "I know he comes in for the night shift sometimes. That's all.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:25 PM",
+        "speaker": "You",
+        "text": "today he is come or not",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:25 PM",
+        "speaker": "Anna Lee",
+        "text": "I don't know if he's here today. I haven't seen him.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "You",
+        "text": "last time you see him which is the time",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "Anna Lee",
+        "text": "I last saw him at about seven o\u2019clock. I was finishing the",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Anna Lee",
+        "text": "I see the stove, the fridge, the prep tables. All is clean.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "Narrator",
+        "text": "You look around and find Broken vase.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the lobby. You hear a low hum from the old air vents. You smell stale perfume and dust.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Hint",
+        "text": "Try asking Mark Daniels about his family history; his story may match a clue you heard from another guest.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Mark Daniels. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "hii mark",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Mark Daniels",
+        "text": "Evening. What do you need?",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "You",
+        "text": "i wnat to know about your family",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "Mark Daniels",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "You",
+        "text": "why not say about your family",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "Mark Daniels",
+        "text": "My family is private. Not part of my work.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "You",
+        "text": "of",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "Mark Daniels",
+        "text": "What do you mean?",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "You",
+        "text": "i need hint for finding",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "Mark Daniels",
+        "text": "Look at the cameras near the east wing. They caught most moves. Check the footage.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "You",
+        "text": "how to i look cameras",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:15 PM",
+        "speaker": "Mark Daniels",
+        "text": "Head to the security office. Log in, pick the east\u2011wing cameras, and watch the footage.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "You",
+        "text": "i want to see footage of east-wing cameras",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:25 PM",
+        "speaker": "Mark Daniels",
+        "text": "Sure. Meet me at the security office and I\u2019ll pull the east\u2011wing footage up for you.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:35 PM",
+        "speaker": "You",
+        "text": "which time",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:35 PM",
+        "speaker": "Mark Daniels",
+        "text": "I told you it was 9:30\u202fPM. That\u2019s the time to check.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "You",
+        "text": "check the footage and tall anything you see",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Hint",
+        "text": "Try talking to Sofia Martinez and see if her story matches any of the clues you have. Compare what she says with the details you already know.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:00 PM",
+        "speaker": "Mark Daniels",
+        "text": "What do you need?",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "You",
+        "text": "i need you",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:10 PM",
+        "speaker": "Mark Daniels",
+        "text": "What do you need, detective? I'm here. My badge's on my chest.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:20 PM",
+        "speaker": "You",
+        "text": "i mean i need to talk to you",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:20 PM",
+        "speaker": "Mark Daniels",
+        "text": "What do you want to talk about? I'm on patrol. My badge's on.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:30 PM",
+        "speaker": "You",
+        "text": "which place you patrol",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:30 PM",
+        "speaker": "Mark Daniels",
+        "text": "I patrol the hallway. Mostly the east\u2011wing corridor. My badge\u2019s on.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:40 PM",
+        "speaker": "You",
+        "text": "you see mr. julian",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:40 PM",
+        "speaker": "Mark Daniels",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "11:50 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Sofia Martinez. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:50 PM",
+        "speaker": "You",
+        "text": "hiii",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "11:50 PM",
+        "speaker": "Sofia Martinez",
+        "text": "Hello! So nice to see you. How can I help?",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "12:00 AM",
+        "speaker": "You",
+        "text": "how to finnd clue",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "12:00 AM",
+        "speaker": "Sofia Martinez",
+        "text": "I have nothing to say about that.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "Narrator",
+        "text": "You step into the lobby. You see a dim chandelier flicker over a worn carpet and a closed door. You hear a low hum from the air vents.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:25 AM",
+        "speaker": "Verdict",
+        "text": "You were right. Sofia Martinez is really Julian Hart, the jewel thief. The clues proved it, and his plan is over.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "C3",
+    "hints_used": 2,
+    "accusation_made": true,
+    "accused_character_id": "C3"
+  }
+}

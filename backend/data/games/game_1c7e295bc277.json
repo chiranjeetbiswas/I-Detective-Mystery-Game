@@ -1,0 +1,457 @@
+{
+  "case": {
+    "id": "case_aab3564ca3eb",
+    "title": "Midnight Masquerade Murder",
+    "difficulty": "beginner",
+    "location_type": "Luxury Villa",
+    "location_name": "Villa Aurora",
+    "introduction": "A glittering charity gala is underway at Villa Aurora. The elite mingle under chandeliers, unaware that a deadly secret lurks behind the masks.",
+    "crime": "At 9:10\u202fPM, the philanthropist host, Gregory Hart, is found dead in the private study, a decorative letter\u2011opener driven into his back.",
+    "target_fake_identity": "Sophia Delacroix",
+    "escape_plan": "The murderer slips through a concealed door behind the library bookshelf, leading to an underground tunnel that exits near the garden fountain.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "r1",
+        "name": "Grand Hall",
+        "description": "A lavish ballroom with crystal chandeliers, where the gala takes place."
+      },
+      {
+        "id": "r2",
+        "name": "Study",
+        "description": "A quiet library\u2011styled room with a mahogany desk, where the victim was found."
+      },
+      {
+        "id": "r3",
+        "name": "Garden",
+        "description": "Moonlit terraces and a fountain, connected to a hidden service tunnel."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Sophia Delacroix",
+        "age": 32,
+        "occupation": "Art Dealer (actually Victor Kline)",
+        "personality": "Charismatic, poised, slightly evasive",
+        "background": "Arrived in town a month ago, claiming to represent a European gallery.",
+        "secret": "Is actually Victor Kline, a disgraced former business partner of the victim seeking revenge.",
+        "goal": "Exact revenge on Gregory Hart and vanish without a trace.",
+        "alibi": "Was mingling in the Grand Hall, chatting with guests, until 9:00\u202fPM when she stepped away to the balcony for fresh air.",
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "Professional",
+            "detail": "Hired as Gregory's personal assistant."
+          },
+          {
+            "with_character": "c3",
+            "kind": "Acquaintance",
+            "detail": "Met during a charity concert."
+          },
+          {
+            "with_character": "c4",
+            "kind": "Colleague",
+            "detail": "Discussed security arrangements before the gala."
+          }
+        ],
+        "knowledge": [
+          "The study contains a hidden door",
+          "Gregory's diary mentions a betrayal"
+        ],
+        "lies": [
+          "She never saw the victim after the performance",
+          "She was not near the balcony at 9:00\u202fPM"
+        ],
+        "inventory": [
+          "Elegant clutch",
+          "Silver decorative letter\u2011opener (duplicate)",
+          "Fake passport"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Ethan Hart",
+        "age": 28,
+        "occupation": "Personal Assistant to Gregory Hart",
+        "personality": "Diligent, nervous, loyal",
+        "background": "Worked for Gregory for five years, knows his schedule intimately.",
+        "secret": "Owes a small debt to a loan shark, but kept it hidden.",
+        "goal": "Protect Gregory's reputation and secure his own promotion.",
+        "alibi": "Was in the Grand Hall serving drinks until 9:05\u202fPM, then went to the kitchen to restock.",
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "Professional",
+            "detail": "Assisted Sophia with coat check."
+          },
+          {
+            "with_character": "c3",
+            "kind": "Friend",
+            "detail": "Met at previous charity events."
+          },
+          {
+            "with_character": "c4",
+            "kind": "Supervisor",
+            "detail": "Reports to Carlos for security matters."
+          }
+        ],
+        "knowledge": [
+          "The letter\u2011opener is part of the decorative set on the desk",
+          "The study's window was locked from inside"
+        ],
+        "lies": [
+          "He saw Sophia enter the study after 9:10\u202fPM"
+        ],
+        "inventory": [
+          "Set of keys",
+          "Pocket notebook",
+          "Mobile phone"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Maya Liu",
+        "age": 26,
+        "occupation": "Violinist",
+        "personality": "Passionate, temperamental, sincere",
+        "background": "International violinist invited to perform at the gala.",
+        "secret": "Had a public dispute with Gregory over a contested charity fund donation.",
+        "goal": "Deliver a flawless performance and restore her reputation.",
+        "alibi": "On stage in the Grand Hall from 8:45\u202fPM to 9:05\u202fPM, then returned to the Green Room.",
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "Acquaintance",
+            "detail": "Briefly chatted about art after the performance."
+          },
+          {
+            "with_character": "c2",
+            "kind": "Colleague",
+            "detail": "Ethan handed her water during the set."
+          },
+          {
+            "with_character": "c4",
+            "kind": "Security clearance",
+            "detail": "Carlos escorted her to the stage."
+          }
+        ],
+        "knowledge": [
+          "A shattered champagne glass with her fingerprint was found near the study",
+          "She noticed a hidden door while walking backstage"
+        ],
+        "lies": [
+          "She never entered the study that night"
+        ],
+        "inventory": [
+          "Violin case",
+          "Performance program",
+          "A small bottle of water"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Carlos Mendoza",
+        "age": 45,
+        "occupation": "Head of Security",
+        "personality": "Stoic, observant, protective",
+        "background": "Veteran security chief hired to oversee the gala\u2019s safety.",
+        "secret": "Harbors an unrequited love for Gregory, which clouds his judgment.",
+        "goal": "Ensure the event runs without incident and keep Gregory safe.",
+        "alibi": "Patrolled the perimeter from 8:30\u202fPM to 9:15\u202fPM, checking cameras and doors.",
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "Colleague",
+            "detail": "Discussed security protocols before the event."
+          },
+          {
+            "with_character": "c2",
+            "kind": "Supervisor",
+            "detail": "Ethan reports to him on logistics."
+          },
+          {
+            "with_character": "c3",
+            "kind": "Guardian",
+            "detail": "Ensured Maya\u2019s safe passage to the stage."
+          }
+        ],
+        "knowledge": [
+          "The security camera in the hallway malfunctioned briefly at 9:08\u202fPM",
+          "The garden tunnel exit is concealed behind a hedge."
+        ],
+        "lies": [
+          "He was in the hallway at 9:10\u202fPM when the murder occurred"
+        ],
+        "inventory": [
+          "Radio walkie",
+          "Security badge",
+          "Flashlight"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive, masks and champagne are served in the Grand Hall.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      {
+        "time": "8:45 PM",
+        "description": "Maya Liu begins her violin performance on the stage.",
+        "involved": [
+          "c3"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Sophia steps onto the balcony for fresh air; Carlos continues his patrol; Ethan returns to the kitchen.",
+        "involved": [
+          "c1",
+          "c4",
+          "c2"
+        ]
+      },
+      {
+        "time": "9:08 PM",
+        "description": "Security camera in the hallway glitches; a faint sound is heard near the study.",
+        "involved": []
+      },
+      {
+        "time": "9:10 PM",
+        "description": "A scream echoes; Gregory Hart is found dead in the Study.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Police are called; guests are confined to the Grand Hall while investigation begins.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "Detective discovers a torn cufflink and a blood\u2011stained letter\u2011opener near the body.",
+        "involved": [
+          "c2",
+          "c4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Torn Silver Cufflink",
+        "description": "A cufflink matching the set Gregory always wore, torn in half and found under the study desk.",
+        "location": "Study (under desk)",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Blood\u2011Stained Letter\u2011Opener",
+        "description": "The decorative letter\u2011opener, identical to one in Sophia's clutch, covered in the victim's blood.",
+        "location": "Study (on floor)",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e3",
+        "name": "Shattered Champagne Glass",
+        "description": "A glass broken near the hallway, bearing Maya's fingerprints.",
+        "location": "Hallway outside Study",
+        "points_to": "c3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e4",
+        "name": "Security Camera Glitch Log",
+        "description": "Log shows the hallway camera offline for 12 seconds at 9:08\u202fPM.",
+        "location": "Security Office",
+        "points_to": "c4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Gregory's diary entry dated two weeks ago mentions a betrayal by 'V.K.'",
+      "A hidden latch behind the library bookshelf reveals a tunnel leading to the garden.",
+      "Sophia's clutch contains a duplicate of the decorative letter\u2011opener."
+    ],
+    "red_herrings": [
+      "Maya's broken glass suggests she may have been near the murder scene.",
+      "Carlos's patrol route places him near the hallway during the camera glitch."
+    ],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "Victor Kline",
+      "reasoning": "The torn cufflink (e1) and the blood\u2011stained letter\u2011opener (e2) both match items owned by Sophia, yet her alibi places her on the balcony at the time of the murder. The hidden tunnel behind the bookshelf (revealed in hidden clues) provides a means for her to slip from the balcony to the study unnoticed. Gregory's diary mentions 'V.K.', the initials of Victor Kline, confirming the motive of revenge. All other evidence either points to innocent guests or serves as red herrings.",
+      "key_evidence_ids": [
+        "e1",
+        "e2"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_1c7e295bc277",
+    "case_id": "case_aab3564ca3eb",
+    "status": "in_progress",
+    "created_at": "2026-08-31T04:10:11.386195+00:00",
+    "updated_at": "2026-08-31T04:10:11.386223+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "Grand Hall",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Sophia Delacroix",
+          "detail": "32, Art Dealer (actually Victor Kline). Charismatic, poised, slightly evasive.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ethan Hart",
+          "detail": "28, Personal Assistant to Gregory Hart. Diligent, nervous, loyal.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Maya Liu",
+          "detail": "26, Violinist. Passionate, temperamental, sincere.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Carlos Mendoza",
+          "detail": "45, Head of Security. Stoic, observant, protective.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive, masks and champagne are served in the Grand Hall.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:45 PM",
+          "detail": "Maya Liu begins her violin performance on the stage.",
+          "at_time": "8:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Sophia steps onto the balcony for fresh air; Carlos continues his patrol; Ethan returns to the kitchen.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:08 PM",
+          "detail": "Security camera in the hallway glitches; a faint sound is heard near the study.",
+          "at_time": "9:08 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:10 PM",
+          "detail": "A scream echoes; Gregory Hart is found dead in the Study.",
+          "at_time": "9:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Police are called; guests are confined to the Grand Hall while investigation begins.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "Detective discovers a torn cufflink and a blood\u2011stained letter\u2011opener near the body.",
+          "at_time": "9:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A glittering charity gala is underway at Villa Aurora. The elite mingle under chandeliers, unaware that a deadly secret lurks behind the masks.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

@@ -1,0 +1,631 @@
+{
+  "case": {
+    "id": "case_dcb5391cb67d",
+    "title": "The Hidden Guest",
+    "difficulty": "normal",
+    "location_type": "Luxury Villa",
+    "location_name": "Sea Breeze Villa",
+    "introduction": "A storm hits the villa. Guests are locked inside. A secret plan unfolds.",
+    "crime": "A rare jewel is gone. A fake name was used to hide the thief.",
+    "target_fake_identity": "Elliot Gray",
+    "escape_plan": "A tunnel in the library leads to a boat. The thief will use it.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "r1",
+        "name": "Study",
+        "description": "A quiet room with books and a desk."
+      },
+      {
+        "id": "r2",
+        "name": "Living Room",
+        "description": "Large sofa and a fireplace."
+      },
+      {
+        "id": "r3",
+        "name": "Kitchen",
+        "description": "Busy kitchen with many knives."
+      },
+      {
+        "id": "r4",
+        "name": "Music Room",
+        "description": "A piano and a guitar."
+      },
+      {
+        "id": "r5",
+        "name": "Hallway",
+        "description": "Long hallway with portraits."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Mia Torres",
+        "age": 29,
+        "gender": "female",
+        "occupation": "Chef",
+        "personality": "Calm",
+        "background": "Works in the villa kitchen.",
+        "secret": "She once stole a recipe.",
+        "goal": "Get a raise.",
+        "alibi": "She was in the kitchen at the time.",
+        "speaking_style": "Short and clear.",
+        "habits": "Taps spoon often.",
+        "fear": "Fire",
+        "likes": [
+          "Cooking",
+          "Chocolate"
+        ],
+        "dislikes": [
+          "Loud noise",
+          "Mess"
+        ],
+        "intelligence": 70,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "c4",
+            "kind": "friend",
+            "detail": "They share meals."
+          }
+        ],
+        "knowledge": [
+          "Kitchen layout",
+          "Staff schedule"
+        ],
+        "lies": [],
+        "inventory": [
+          "Knife",
+          "Notebook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c2",
+        "name": "Liam Reed",
+        "age": 35,
+        "gender": "male",
+        "occupation": "Travel Blogger",
+        "personality": "Chatty",
+        "background": "Writes about places.",
+        "secret": "He is broke.",
+        "goal": "Find a big story.",
+        "alibi": "He was on the balcony when lights went out.",
+        "speaking_style": "Talks fast.",
+        "habits": "Clicks camera often.",
+        "fear": "Being ignored",
+        "likes": [
+          "Photos",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Crowds",
+          "Rain"
+        ],
+        "intelligence": 65,
+        "confidence": 55,
+        "relationships": [
+          {
+            "with_character": "c6",
+            "kind": "acquaintance",
+            "detail": "Met at a bar."
+          }
+        ],
+        "knowledge": [
+          "Villa history",
+          "Guest list"
+        ],
+        "lies": [
+          "He has a huge following."
+        ],
+        "inventory": [
+          "Camera",
+          "Phone"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Ava Patel",
+        "age": 42,
+        "gender": "female",
+        "occupation": "Businesswoman",
+        "personality": "Formal",
+        "background": "Leads a tech firm.",
+        "secret": "She is under police watch.",
+        "goal": "Close a big deal.",
+        "alibi": "She was in the living room reading.",
+        "speaking_style": "Formal tone.",
+        "habits": "Checks watch often.",
+        "fear": "Arrest",
+        "likes": [
+          "Wine",
+          "Silk"
+        ],
+        "dislikes": [
+          "Noise",
+          "Late"
+        ],
+        "intelligence": 80,
+        "confidence": 85,
+        "relationships": [
+          {
+            "with_character": "c5",
+            "kind": "partner",
+            "detail": "They discuss the deal."
+          }
+        ],
+        "knowledge": [
+          "Deal contacts",
+          "Security system"
+        ],
+        "lies": [
+          "She owns the villa."
+        ],
+        "inventory": [
+          "Laptop",
+          "Wine glass"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Noah Kim",
+        "age": 28,
+        "gender": "male",
+        "occupation": "Musician",
+        "personality": "Poetic",
+        "background": "Plays in bands.",
+        "secret": "He stole a song once.",
+        "goal": "Get a record deal.",
+        "alibi": "He was in the music room tuning his guitar.",
+        "speaking_style": "Soft and lyrical.",
+        "habits": "Strums guitar when thinking.",
+        "fear": "Stage fail",
+        "likes": [
+          "Guitar",
+          "Cats"
+        ],
+        "dislikes": [
+          "Silence",
+          "Noise"
+        ],
+        "intelligence": 60,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "friend",
+            "detail": "Shares food."
+          }
+        ],
+        "knowledge": [
+          "Music room layout"
+        ],
+        "lies": [],
+        "inventory": [
+          "Guitar",
+          "Sheet music"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c5",
+        "name": "Jordan Lee",
+        "age": 31,
+        "gender": "nonbinary",
+        "occupation": "Security Guard",
+        "personality": "Blunt",
+        "background": "Works night shifts.",
+        "secret": "They are a thief, not a guard.",
+        "goal": "Steal the jewel and run.",
+        "alibi": "Patrolling the hallway during the blackout.",
+        "speaking_style": "Short and blunt.",
+        "habits": "Checks badge often.",
+        "fear": "Being caught",
+        "likes": [
+          "Order",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Chaos",
+          "Late"
+        ],
+        "intelligence": 75,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "c3",
+            "kind": "associate",
+            "detail": "They share a contact."
+          }
+        ],
+        "knowledge": [
+          "Security codes",
+          "Vault location"
+        ],
+        "lies": [
+          "They have five years experience."
+        ],
+        "inventory": [
+          "Keycard",
+          "Flashlight"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c6",
+        "name": "Elliot Gray",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Investor",
+        "personality": "Smooth",
+        "background": "Arrives with a briefcase.",
+        "secret": "He is a con man. Real name Victor Sloane.",
+        "goal": "Escape with the jewel and a secret file.",
+        "alibi": "He was in the study reading papers.",
+        "speaking_style": "Calm and smooth.",
+        "habits": "Adjusts his tie often.",
+        "fear": "Being caught",
+        "likes": [
+          "Fine wine",
+          "Chess"
+        ],
+        "dislikes": [
+          "Police",
+          "Noise"
+        ],
+        "intelligence": 85,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "acquaintance",
+            "detail": "Met at a bar."
+          }
+        ],
+        "knowledge": [
+          "Financial records",
+          "Secret passage"
+        ],
+        "lies": [
+          "He is a real investor."
+        ],
+        "inventory": [
+          "Briefcase",
+          "Key"
+        ],
+        "is_target": true
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests eat dinner in the living room.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Lights flicker and go out.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      },
+      {
+        "time": "8:20 PM",
+        "description": "A scream is heard from the study.",
+        "involved": [
+          "c6"
+        ]
+      },
+      {
+        "time": "8:25 PM",
+        "description": "The jewel is found missing.",
+        "involved": [
+          "c5"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Security guard checks hallway.",
+        "involved": [
+          "c5"
+        ]
+      },
+      {
+        "time": "8:35 PM",
+        "description": "Camera shows a figure leaving the balcony.",
+        "involved": [
+          "c2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Broken window",
+        "description": "A glass pane broken in the study.",
+        "location": "Study",
+        "points_to": "c6",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Fingerprint on safe",
+        "description": "Print matches c5's keycard.",
+        "location": "Hallway",
+        "points_to": "c5",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e3",
+        "name": "Hidden keycard",
+        "description": "Keycard left on kitchen counter.",
+        "location": "Kitchen",
+        "points_to": "c5",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e4",
+        "name": "Missing diary",
+        "description": "Diary with code to secret passage is gone.",
+        "location": "Study",
+        "points_to": "c6",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e5",
+        "name": "Balcony footage",
+        "description": "Shows c2 walking away from balcony.",
+        "location": "Living Room",
+        "points_to": "c2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The safe code is 4-2-6.",
+      "The secret passage is behind the bookshelf in the study."
+    ],
+    "red_herrings": [
+      "A broken vase in the music room."
+    ],
+    "solution": {
+      "target_character_id": "c6",
+      "target_true_identity": "Victor Sloane",
+      "reasoning": "The broken window and missing diary point to the study. The diary had the passage code. Only c6 knew the code. He used the fake name. The key evidence e1 and e4 prove it. Other clues point to c2 and c5 but they are false.",
+      "key_evidence_ids": [
+        "e1",
+        "e4"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_613291e4746e",
+    "case_id": "case_dcb5391cb67d",
+    "status": "in_progress",
+    "created_at": "2026-08-31T11:38:49.319754+00:00",
+    "updated_at": "2026-08-31T11:38:49.319785+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "Study",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c5": {
+        "character_id": "c5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c6": {
+        "character_id": "c6",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Mia Torres",
+          "detail": "29, Chef. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Liam Reed",
+          "detail": "35, Travel Blogger. Chatty.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Ava Patel",
+          "detail": "42, Businesswoman. Formal.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Noah Kim",
+          "detail": "28, Musician. Poetic.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Jordan Lee",
+          "detail": "31, Security Guard. Blunt.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Elliot Gray",
+          "detail": "45, Investor. Smooth.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests eat dinner in the living room.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Lights flicker and go out.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:20 PM",
+          "detail": "A scream is heard from the study.",
+          "at_time": "8:20 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:25 PM",
+          "detail": "The jewel is found missing.",
+          "at_time": "8:25 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Security guard checks hallway.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:35 PM",
+          "detail": "Camera shows a figure leaving the balcony.",
+          "at_time": "8:35 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A storm hits the villa. Guests are locked inside. A secret plan unfolds.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

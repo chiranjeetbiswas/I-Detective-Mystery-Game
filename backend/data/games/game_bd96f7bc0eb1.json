@@ -1,0 +1,596 @@
+{
+  "case": {
+    "id": "case_3ffb387471f5",
+    "title": "The Stolen Sunset",
+    "difficulty": "normal",
+    "location_type": "Mansion",
+    "location_name": "Rosewood Manor",
+    "introduction": "You are at Rosewood Manor. The night is cold. A storm roars outside.",
+    "crime": "A rare painting called Sunset has been stolen.",
+    "target_fake_identity": "Liam Hart",
+    "escape_plan": "The thief will use the secret tunnel under the garden.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Grand Hall",
+        "description": "Large hall with many guests."
+      },
+      {
+        "id": "R2",
+        "name": "Library",
+        "description": "Quiet room with old books."
+      },
+      {
+        "id": "R3",
+        "name": "Garden Tunnel",
+        "description": "Hidden path under the garden."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Liam Hart",
+        "age": 34,
+        "occupation": "Art Dealer",
+        "personality": "charming",
+        "background": "He says he came from Paris to view the art.",
+        "secret": "He is actually Marco Ruiz, a thief from Italy.",
+        "goal": "Steal the Sunset.",
+        "alibi": "He says he was in the Grand Hall talking to the host.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "colleague",
+            "detail": "worked on a piece together"
+          }
+        ],
+        "knowledge": [
+          "knows where the painting was hung",
+          "knows about the secret tunnel"
+        ],
+        "lies": [
+          "He never met the host before",
+          "He did not have a key to the tunnel"
+        ],
+        "inventory": [
+          "small lockpick",
+          "gloves"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C2",
+        "name": "Emily Stone",
+        "age": 28,
+        "occupation": "Journalist",
+        "personality": "curious",
+        "background": "She writes about art.",
+        "secret": "She once stole a photo for a story.",
+        "goal": "Get a big scoop.",
+        "alibi": "She was in the Library reading notes.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "colleague",
+            "detail": "met at a gallery"
+          }
+        ],
+        "knowledge": [
+          "heard the host argue about the painting"
+        ],
+        "lies": [
+          "She says she never saw the painting"
+        ],
+        "inventory": [
+          "notebook",
+          "pen"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Victor Gray",
+        "age": 45,
+        "occupation": "Host",
+        "personality": "proud",
+        "background": "Owner of Rosewood Manor.",
+        "secret": "He is in debt to a loan shark.",
+        "goal": "Keep his reputation.",
+        "alibi": "He was in the Garden checking the lights.",
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "brother",
+            "detail": "they argue about money"
+          }
+        ],
+        "knowledge": [
+          "knows the painting's value"
+        ],
+        "lies": [
+          "He says the tunnel is sealed"
+        ],
+        "inventory": [
+          "keys",
+          "flashlight"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Sofia Delgado",
+        "age": 32,
+        "occupation": "Chef",
+        "personality": "quiet",
+        "background": "She cooks for the manor.",
+        "secret": "She loves rare art.",
+        "goal": "See the Sunset up close.",
+        "alibi": "She was in the Kitchen preparing dinner.",
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "employer",
+            "detail": "works for him"
+          }
+        ],
+        "knowledge": [
+          "knew the painting was moved earlier"
+        ],
+        "lies": [
+          "She says she never entered the Library"
+        ],
+        "inventory": [
+          "knife",
+          "recipe book"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C5",
+        "name": "Tom Reed",
+        "age": 40,
+        "occupation": "Security Guard",
+        "personality": "stern",
+        "background": "He watches the manor.",
+        "secret": "He took a bribe to ignore the tunnel.",
+        "goal": "Earn extra cash.",
+        "alibi": "He was on patrol in the Hall.",
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "employee",
+            "detail": "reports to him"
+          }
+        ],
+        "knowledge": [
+          "saw Liam near the tunnel"
+        ],
+        "lies": [
+          "He says he never left his post"
+        ],
+        "inventory": [
+          "radio",
+          "flashlight"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive. Storm roars.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Lights flicker. Music stops.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Liam leaves Grand Hall and heads to Garden.",
+        "involved": [
+          "C1",
+          "C5"
+        ]
+      },
+      {
+        "time": "8:45 PM",
+        "description": "Victor finds the Sunset missing.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Tom finds a broken lock on the Garden Tunnel.",
+        "involved": [
+          "C5"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Emily sees a torn piece of canvas in Library.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "Sofia hears footsteps in the Kitchen.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "Liam is seen running toward the tunnel exit.",
+        "involved": [
+          "C1",
+          "C5"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Small lockpick",
+        "description": "A tiny metal pick on the floor near the Hall.",
+        "location": "Grand Hall",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Broken tunnel lock",
+        "description": "A lock with a fresh cut.",
+        "location": "Garden Tunnel",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Footprint in mud",
+        "description": "A boot print leading to the tunnel exit.",
+        "location": "Garden",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E4",
+        "name": "Torn canvas piece",
+        "description": "A small piece of the Sunset painting.",
+        "location": "Library",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E5",
+        "name": "Chef's knife with paint",
+        "description": "A knife with orange paint on the blade.",
+        "location": "Kitchen",
+        "points_to": "C4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Liam knows the tunnel code.",
+      "Victor said the tunnel was sealed but the lock was open."
+    ],
+    "red_herrings": [
+      "Emily's notebook has a sketch of the Sunset.",
+      "Sofia's knife has paint on it."
+    ],
+    "solution": {
+      "target_character_id": "C1",
+      "target_true_identity": "Marco Ruiz",
+      "reasoning": "Lockpick, broken lock and footprint match Liam. He lied about meeting the host. He knows the tunnel code. He used the tunnel to run away.",
+      "key_evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_bd96f7bc0eb1",
+    "case_id": "case_3ffb387471f5",
+    "status": "in_progress",
+    "created_at": "2026-08-31T07:19:30.159071+00:00",
+    "updated_at": "2026-08-31T07:21:14.921745+00:00",
+    "minutes_elapsed": 85,
+    "current_location": "Grand Hall",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [
+      "E1",
+      "E4"
+    ],
+    "visited_rooms": [
+      "Grand Hall",
+      "Library"
+    ],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 26,
+        "stress": 44,
+        "suspicion_of_player": 45,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Liam about the painting'"
+        ]
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 30,
+        "stress": 43,
+        "suspicion_of_player": 25,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Tell Emily she is a liar'"
+        ]
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C5": {
+        "character_id": "C5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Liam Hart",
+          "detail": "34, Art Dealer. charming.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Emily Stone",
+          "detail": "28, Journalist. curious.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victor Gray",
+          "detail": "45, Host. proud.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Delgado",
+          "detail": "32, Chef. quiet.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Tom Reed",
+          "detail": "40, Security Guard. stern.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "Small lockpick",
+          "detail": "A tiny metal pick on the floor near the Hall. (found in Grand Hall).",
+          "at_time": "8:10 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "Torn canvas piece",
+          "detail": "A small piece of the Sunset painting. (found in Library).",
+          "at_time": "8:40 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive. Storm roars.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Lights flicker. Music stops.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Liam leaves Grand Hall and heads to Garden.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:45 PM",
+          "detail": "Victor finds the Sunset missing.",
+          "at_time": "8:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Tom finds a broken lock on the Garden Tunnel.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Emily sees a torn piece of canvas in Library.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "Sofia hears footsteps in the Kitchen.",
+          "at_time": "9:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "Liam is seen running toward the tunnel exit.",
+          "at_time": "9:45 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You are at Rosewood Manor. The night is cold. A storm roars outside.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Hint",
+        "text": "Try comparing what each guest says about the night\u2019s weather. Ask a guest you haven\u2019t spoken to yet, like Victor Gray, and see if his story matches the others.",
+        "kind": "system"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Talk to Liam about the painting",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Liam Hart",
+        "text": "I saw the Sunset hanging by the big window in the east wing. It was right next to the marble statue.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "Search the study",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:25 PM",
+        "speaker": "You",
+        "text": "Tell Emily she is a liar",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:25 PM",
+        "speaker": "Emily Stone",
+        "text": "I\u2019m not a liar. I just tell what I saw. I read notes in the library. That\u2019s all.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the grand hall. You hear the wind sigh through cracked windows. You smell dust and old wood.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "Search the library",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Narrator",
+        "text": "You move through the library, the air thick with old paper and dust. You see a torn canvas piece lying on the floor, its edges jagged in the dim light.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "You",
+        "text": "Search the kitchen",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "Narrator",
+        "text": "You step into the kitchen. The room is dark, the air smells of old food and cold metal.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "Search the east wing",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Narrator",
+        "text": "You step into the east wing of the grand hall. The air smells of old wood and dust, and a faint creak echoes in the dark hallway.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 1,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

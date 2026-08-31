@@ -1,0 +1,513 @@
+{
+  "case": {
+    "id": "case_3e65e2e17b74",
+    "title": "Midnight Masquerade Murder",
+    "difficulty": "beginner",
+    "location_type": "Mansion",
+    "location_name": "Whitmore Estate",
+    "introduction": "A lavish masquerade ball unfolds at the Whitmore Estate, where the charismatic host Lord Sebastian Whitmore is found dead in the library, a letter opener plunged into his heart. The guests must uncover the murderer before the night ends.",
+    "crime": "Lord Sebastian Whitmore was murdered in the library at 9:45 PM; the weapon was a silver letter opener.",
+    "target_fake_identity": "Lydia Sinclair (the shy gardener)",
+    "escape_plan": "After committing the murder, the culprit slipped through a hidden passage behind the library bookshelf, emerged in the garden, and fled the estate via the stables at midnight.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Ballroom",
+        "description": "A grand hall filled with chandeliers, where the masquerade dance is in full swing."
+      },
+      {
+        "id": "R2",
+        "name": "Library",
+        "description": "Walls lined with leather-bound books, a fireplace, and a large oak desk; the crime scene."
+      },
+      {
+        "id": "R3",
+        "name": "Kitchen",
+        "description": "A bustling area where Chef Marcus prepares gourmet dishes."
+      },
+      {
+        "id": "R4",
+        "name": "Garden",
+        "description": "Manicured hedges and a rose maze; Lydia's domain."
+      },
+      {
+        "id": "R5",
+        "name": "Secret Passage",
+        "description": "A concealed corridor behind a sliding bookshelf in the library, leading to the garden."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Evelyn Hart",
+        "age": 38,
+        "occupation": "Socialite",
+        "personality": "Charismatic and observant",
+        "background": "Wealthy heiress known for her lavish parties.",
+        "secret": "Owes a massive gambling debt to an underground lender.",
+        "goal": "Secure a favorable share of Lord Whitmore's estate before it's fully distributed.",
+        "alibi": "Was dancing in the Ballroom from 8:30 PM to 9:50 PM.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "acquaintance",
+            "detail": "Met through mutual friends."
+          },
+          {
+            "with_character": "C3",
+            "kind": "rival",
+            "detail": "Competes for Lord Whitmore's attention."
+          },
+          {
+            "with_character": "C4",
+            "kind": "friend",
+            "detail": "Longtime confidante of the host."
+          }
+        ],
+        "knowledge": [
+          "Knows about Lord Whitmore's will and potential inheritance changes."
+        ],
+        "lies": [
+          "Denies her gambling debt when asked."
+        ],
+        "inventory": [
+          "Champagne flute",
+          "Masquerade mask",
+          "Invitation card"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Marcus Vale",
+        "age": 45,
+        "occupation": "Renowned Chef",
+        "personality": "Meticulous and proud",
+        "background": "Famous chef hired to cater the event.",
+        "secret": "Stole signature recipes from a rival chef years ago.",
+        "goal": "Impress the host to secure a permanent position at the estate.",
+        "alibi": "Was in the Kitchen preparing appetizers from 8:00 PM to 9:30 PM.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "acquaintance",
+            "detail": "Exchanged pleasantries during the cocktail hour."
+          },
+          {
+            "with_character": "C3",
+            "kind": "colleague",
+            "detail": "Works together on garden vegetable supplies."
+          },
+          {
+            "with_character": "C4",
+            "kind": "employee",
+            "detail": "Serves as the estate's head chef."
+          }
+        ],
+        "knowledge": [
+          "Has access to all kitchen knives and knows where the letter opener is kept."
+        ],
+        "lies": [
+          "Claims he never entered the Library during the evening."
+        ],
+        "inventory": [
+          "Chef's knife",
+          "Apron",
+          "Recipe notebook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Lydia Sinclair",
+        "age": 32,
+        "occupation": "Gardener",
+        "personality": "Shy and soft\u2011spoken",
+        "background": "Appears as the estate's gardener, but is actually Victor Lang in disguise.",
+        "secret": "Victor Lang, a disgraced former CEO, seeks revenge on Lord Whitmore for ruining his company.",
+        "goal": "Kill Lord Whitmore and escape before the police arrive.",
+        "alibi": "Was pruning roses in the Garden from 8:15 PM to 9:40 PM.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "admiring",
+            "detail": "Evelyn praised Lydia's flower arrangements."
+          },
+          {
+            "with_character": "C2",
+            "kind": "friendly",
+            "detail": "Often chats about herbs with Marcus."
+          },
+          {
+            "with_character": "C4",
+            "kind": "employee",
+            "detail": "Officially employed as the estate's gardener."
+          }
+        ],
+        "knowledge": [
+          "Knows about the secret passage behind the Library bookshelf."
+        ],
+        "lies": [
+          "Denies any knowledge of the hidden passage or the host's enemies."
+        ],
+        "inventory": [
+          "Gardening gloves",
+          "Small trowel",
+          "Rose pruning shears"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C4",
+        "name": "Lord Sebastian Whitmore",
+        "age": 55,
+        "occupation": "Philanthropist & Host",
+        "personality": "Charismatic and authoritative",
+        "background": "Wealthy philanthropist who owns the Whitmore Estate.",
+        "secret": "Keeps blackmail material on several influential guests.",
+        "goal": "Ensure his legacy and protect his secrets.",
+        "alibi": "Was found dead in the Library at 9:45 PM.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "friend",
+            "detail": "Longtime confidante."
+          },
+          {
+            "with_character": "C2",
+            "kind": "employer",
+            "detail": "Hired Marcus as his personal chef."
+          },
+          {
+            "with_character": "C3",
+            "kind": "employer",
+            "detail": "Employs Lydia as the gardener."
+          }
+        ],
+        "knowledge": [
+          "Aware of Evelyn's debt, Marcus's stolen recipes, and Victor's true identity."
+        ],
+        "lies": [],
+        "inventory": [
+          "Silver letter opener",
+          "Pocket watch",
+          "Old diary"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests begin to arrive; the masquerade mask contest starts.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Lydia (C3) heads to the Garden to tend the roses.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Evelyn (C1) joins the ballroom dance floor.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "8:45 PM",
+        "description": "Marcus (C2) starts plating appetizers in the Kitchen.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "Marcus steps out of the Kitchen to check on the Library door, notices it slightly ajar.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "9:40 PM",
+        "description": "Lydia returns from the Garden, wipes her gloves on a towel, heads toward the Library.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "Lord Whitmore is found dead in the Library, letter opener in his chest.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "9:55 PM",
+        "description": "Evelyn discovers the body while heading to the bar for a drink.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Marcus reports the missing chef's knife to the guests.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "10:15 PM",
+        "description": "Guests begin to suspect each other; the investigation starts.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Bloodied Gardener Glove",
+        "description": "A single leather glove with fresh blood, matching the size of the gardener's gloves.",
+        "location": "Library",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Torn Host Coat Sleeve",
+        "description": "A piece of Lord Whitmore's coat caught on the latch of the hidden bookshelf door.",
+        "location": "Secret Passage",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Fingerprint on Letter Opener",
+        "description": "Partial fingerprint belonging to the gardener found on the murder weapon.",
+        "location": "Library",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E4",
+        "name": "Champagne Glass with Evelyn's Fingerprints",
+        "description": "A shattered glass with Evelyn's fingerprints, but no blood.",
+        "location": "Ballroom",
+        "points_to": "C1",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E5",
+        "name": "Missing Chef's Knife",
+        "description": "Chef's primary knife missing from the Kitchen; could have been used as a weapon.",
+        "location": "Kitchen",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E6",
+        "name": "Gambling Debt Ledger",
+        "description": "Ledger showing Evelyn's massive gambling debts, suggesting a motive for theft.",
+        "location": "Study",
+        "points_to": "C1",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "A faint scent of rosemary lingers on the letter opener, a herb Lydia often uses in the garden.",
+      "Footprints of garden boots lead from the Garden to the Library doorway."
+    ],
+    "red_herrings": [
+      "The champagne glass suggests Evelyn might have been drinking when the murder occurred, but it contains no blood.",
+      "The missing chef's knife points suspicion toward Marcus, yet the murder weapon was a letter opener.",
+      "The gambling debt ledger gives Evelyn a possible motive, yet she was seen dancing the entire evening."
+    ],
+    "solution": {
+      "target_character_id": "C3",
+      "target_true_identity": "Victor Lang, former CEO of Lang Industries",
+      "reasoning": "The bloodied gardener glove, torn coat sleeve caught on the secret passage, and the gardener's fingerprint on the letter opener directly link Lydia Sinclair to the murder. Her alibi fails because the hidden passage allows her to move from the Garden to the Library unnoticed, and the scent of rosemary confirms her presence. All red\u2011herring evidence points elsewhere but lacks blood or direct connection.",
+      "key_evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_b38c25146b0c",
+    "case_id": "case_3e65e2e17b74",
+    "status": "in_progress",
+    "created_at": "2026-08-31T06:45:49.200560+00:00",
+    "updated_at": "2026-08-31T06:45:49.200588+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "Ballroom",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Evelyn Hart",
+          "detail": "38, Socialite. Charismatic and observant.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marcus Vale",
+          "detail": "45, Renowned Chef. Meticulous and proud.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lydia Sinclair",
+          "detail": "32, Gardener. Shy and soft\u2011spoken.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lord Sebastian Whitmore",
+          "detail": "55, Philanthropist & Host. Charismatic and authoritative.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests begin to arrive; the masquerade mask contest starts.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Lydia (C3) heads to the Garden to tend the roses.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Evelyn (C1) joins the ballroom dance floor.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:45 PM",
+          "detail": "Marcus (C2) starts plating appetizers in the Kitchen.",
+          "at_time": "8:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "Marcus steps out of the Kitchen to check on the Library door, notices it slightly ajar.",
+          "at_time": "9:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:40 PM",
+          "detail": "Lydia returns from the Garden, wipes her gloves on a towel, heads toward the Library.",
+          "at_time": "9:40 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "Lord Whitmore is found dead in the Library, letter opener in his chest.",
+          "at_time": "9:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:55 PM",
+          "detail": "Evelyn discovers the body while heading to the bar for a drink.",
+          "at_time": "9:55 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Marcus reports the missing chef's knife to the guests.",
+          "at_time": "10:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:15 PM",
+          "detail": "Guests begin to suspect each other; the investigation starts.",
+          "at_time": "10:15 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A lavish masquerade ball unfolds at the Whitmore Estate, where the charismatic host Lord Sebastian Whitmore is found dead in the library, a letter opener plunged into his heart. The guests must uncover the murderer before the night ends.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

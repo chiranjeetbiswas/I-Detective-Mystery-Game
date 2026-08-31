@@ -1,0 +1,605 @@
+{
+  "case": {
+    "id": "case_85aea49ad445",
+    "title": "The Research Facility Mystery",
+    "difficulty": "normal",
+    "location_type": "Research Facility",
+    "location_name": "The Helix Research Institute",
+    "introduction": "Tonight at The Helix Research Institute, the theft of a very costly diamond called the Midnight Star has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+    "crime": "The theft of a very costly diamond called the midnight star",
+    "target_fake_identity": "Emma Castellano, a doctor people trust",
+    "escape_plan": "Emma Castellano plans to sneak out while everyone is confused, and be gone before the police arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A huge hall with stone floors and a wide staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Soft yellow light, leather chairs, and slow music playing."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table, still set for dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Book shelves, a heavy desk, and one locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Cool night air, tall bushes, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Rooms",
+        "description": "A hallway of numbered doors. Most are half open."
+      }
+    ],
+    "characters": [
+      {
+        "id": "nadia0",
+        "name": "Nadia Novak",
+        "age": 33,
+        "gender": "female",
+        "occupation": "retired government worker",
+        "personality": "cold and very exact",
+        "background": "A retired government worker with a messy past.",
+        "secret": "Nadia owes a lot of money from betting.",
+        "goal": "Nadia wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "cold and precise",
+        "habits": "fidgets with a ring",
+        "fear": "prison",
+        "likes": [
+          "quiet rooms",
+          "strong coffee"
+        ],
+        "dislikes": [
+          "cheap things",
+          "gossip"
+        ],
+        "intelligence": 62,
+        "confidence": 62,
+        "relationships": [
+          {
+            "with_character": "Emma Castellano",
+            "kind": "old rival",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Castellano acting strange near The Grand Lobby.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Nadia owes a lot of money from betting."
+        ],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "emma1",
+        "name": "Emma Castellano",
+        "age": 56,
+        "gender": "female",
+        "occupation": "doctor",
+        "personality": "warm and easy to like",
+        "background": "A doctor with a messy past.",
+        "secret": "Emma is using a false name, but for a different reason.",
+        "goal": "Emma wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Terrace Garden when it happened.",
+        "speaking_style": "cold and precise",
+        "habits": "folds their arms when pushed",
+        "fear": "losing their good name",
+        "likes": [
+          "fine wine",
+          "being praised"
+        ],
+        "dislikes": [
+          "loud people",
+          "questions"
+        ],
+        "intelligence": 56,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "Nathan Okafor",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was done."
+        ],
+        "lies": [
+          "Says they never went into the room where the main clue was found.",
+          "Says all their papers are real."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "nathan2",
+        "name": "Nathan Okafor",
+        "age": 63,
+        "gender": "male",
+        "occupation": "art expert",
+        "personality": "friendly but hard to pin down",
+        "background": "A art expert with a messy past.",
+        "secret": "Nathan is covering for a family member.",
+        "goal": "Nathan wants to leave before anyone finds out the truth.",
+        "alibi": "Says they were in The Grand Lobby when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "taps the table while thinking",
+        "fear": "prison",
+        "likes": [
+          "the sea",
+          "fine wine"
+        ],
+        "dislikes": [
+          "cheap things",
+          "being rushed"
+        ],
+        "intelligence": 46,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "Freya Reyes",
+            "kind": "student",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Castellano acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "freya3",
+        "name": "Freya Reyes",
+        "age": 52,
+        "gender": "female",
+        "occupation": "security adviser",
+        "personality": "proud and rude",
+        "background": "A security adviser with a messy past.",
+        "secret": "Freya owes a lot of money from betting.",
+        "goal": "Freya wants to keep their good name safe, no matter what.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "nervous, rambling",
+        "habits": "smiles too much when lying",
+        "fear": "the dark",
+        "likes": [
+          "strong coffee",
+          "old books"
+        ],
+        "dislikes": [
+          "the cold",
+          "gossip"
+        ],
+        "intelligence": 88,
+        "confidence": 35,
+        "relationships": [
+          {
+            "with_character": "Sofia Vance",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Castellano acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "sofia4",
+        "name": "Sofia Vance",
+        "age": 48,
+        "gender": "female",
+        "occupation": "lab scientist",
+        "personality": "friendly but hard to pin down",
+        "background": "A lab scientist with a messy past.",
+        "secret": "Sofia owes a lot of money from betting.",
+        "goal": "Sofia wants to pay someone back for an old wrong, quietly.",
+        "alibi": "Says they were in The Private Study when it happened.",
+        "speaking_style": "calm and polite",
+        "habits": "folds their arms when pushed",
+        "fear": "their secret coming out",
+        "likes": [
+          "money",
+          "being praised"
+        ],
+        "dislikes": [
+          "being rushed",
+          "the cold"
+        ],
+        "intelligence": 50,
+        "confidence": 45,
+        "relationships": [
+          {
+            "with_character": "Julian Sterling",
+            "kind": "brother or sister who no longer speaks to them",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Castellano acting strange near The Terrace Garden.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "julian5",
+        "name": "Julian Sterling",
+        "age": 61,
+        "gender": "male",
+        "occupation": "retired government worker",
+        "personality": "closed off and quick to defend",
+        "background": "A retired government worker with a messy past.",
+        "secret": "Julian saw something that night and has not told anyone.",
+        "goal": "Julian wants to find out who is watching them.",
+        "alibi": "Says they were in The Lounge when it happened.",
+        "speaking_style": "formal and careful",
+        "habits": "smiles too much when lying",
+        "fear": "prison",
+        "likes": [
+          "strong coffee",
+          "the garden"
+        ],
+        "dislikes": [
+          "being touched",
+          "gossip"
+        ],
+        "intelligence": 72,
+        "confidence": 88,
+        "relationships": [
+          {
+            "with_character": "Nadia Novak",
+            "kind": "person they owe money to",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Emma Castellano acting strange near The Lounge.",
+          "Heard an angry argument earlier that night."
+        ],
+        "lies": [
+          "Hides one thing: Julian saw something that night and has not told anyone."
+        ],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and start talking.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The crime happens: the theft of a very costly diamond called the Midnight Star.",
+        "involved": [
+          "Emma Castellano"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "The alarm goes off. No one may leave.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Emma Castellano is seen moving toward a side door.",
+        "involved": [
+          "Emma Castellano"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a wine glass",
+        "description": "A half-full glass. The drink smells bitter.",
+        "location": "The Lounge",
+        "points_to": "Emma Castellano",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a cheap phone",
+        "description": "A cheap phone with only one number called.",
+        "location": "The Terrace Garden",
+        "points_to": "Emma Castellano",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a scary note",
+        "description": "Big letters: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Lounge",
+        "points_to": "Freya Reyes",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "muddy shoes",
+        "description": "Costly shoes covered in garden mud, but it has not rained inside.",
+        "location": "The Guest Rooms",
+        "points_to": "Sofia Vance",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a photo",
+        "description": "A photo of two guests who say they have never met.",
+        "location": "The Grand Lobby",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a hidden key",
+        "description": "A small brass key taped under a drawer.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a page from an account book",
+        "description": "A page of numbers that do not add up.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev7",
+        "name": "a cloth with blood on it",
+        "description": "A fine cloth with two letters sewn on it and a dark stain.",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Emma Castellano's story about where they were does not match the a wine glass.",
+      "Two guests say they have never met, but a photo shows they have."
+    ],
+    "red_herrings": [
+      "a scary note",
+      "muddy shoes"
+    ],
+    "solution": {
+      "target_character_id": "emma1",
+      "target_true_identity": "A wanted criminal pretending to be a doctor",
+      "reasoning": "Emma Castellano is the hidden person. The main clues (a wine glass, a cheap phone) put them at the scene and show their story is not true. Their papers are fake too.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_379f3056f10e",
+    "case_id": "case_85aea49ad445",
+    "status": "in_progress",
+    "created_at": "2026-08-31T12:02:24.594088+00:00",
+    "updated_at": "2026-08-31T12:02:24.594113+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "The Grand Lobby",
+    "current_objective": "6 guests. One fake identity. It happened at The Helix Research Institute. Search the rooms, talk to everyone, and find the person behind the theft of a very costly diamond called the midnight star. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "nadia0": {
+        "character_id": "nadia0",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "emma1": {
+        "character_id": "emma1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "nathan2": {
+        "character_id": "nathan2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "freya3": {
+        "character_id": "freya3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "sofia4": {
+        "character_id": "sofia4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "julian5": {
+        "character_id": "julian5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Nadia Novak",
+          "detail": "33, retired government worker. cold and very exact.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Emma Castellano",
+          "detail": "56, doctor. warm and easy to like.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Nathan Okafor",
+          "detail": "63, art expert. friendly but hard to pin down.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Freya Reyes",
+          "detail": "52, security adviser. proud and rude.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Vance",
+          "detail": "48, lab scientist. friendly but hard to pin down.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Julian Sterling",
+          "detail": "61, retired government worker. closed off and quick to defend.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and start talking.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The crime happens: the theft of a very costly diamond called the Midnight Star.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "The alarm goes off. No one may leave.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Emma Castellano is seen moving toward a side door.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Helix Research Institute, the theft of a very costly diamond called the Midnight Star has turned the evening upside down. No one is allowed to leave. 6 guests are still here, and each one is hiding something. One of them is not who they say they are. Find that person.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

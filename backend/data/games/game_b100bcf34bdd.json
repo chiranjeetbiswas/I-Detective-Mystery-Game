@@ -1,0 +1,493 @@
+{
+  "case": {
+    "id": "case_b047afdd3512",
+    "title": "Midnight Masquerade",
+    "difficulty": "beginner",
+    "location_type": "Luxury Villa",
+    "location_name": "Villa Aurora",
+    "introduction": "A glittering charity gala is underway at the opulent Villa Aurora. Amid champagne and music, the priceless Blue Orchid necklace is to be unveiled, but when the lights dim, the jewel vanishes, and suspicion falls on everyone present.",
+    "crime": "The priceless Blue Orchid necklace is stolen during the gala unveiling.",
+    "target_fake_identity": "Sophia Laurent, the charity gala coordinator",
+    "escape_plan": "The culprit slips out through the service elevator after swapping the necklace with a replica, then boards a waiting car in the villa's underground garage.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Ballroom",
+        "description": "Grand hall with crystal chandeliers, where the Blue Orchid is displayed on a velvet pedestal."
+      },
+      {
+        "id": "R2",
+        "name": "Library",
+        "description": "Cozy room lined with books, where Dr. Hale gives his talk."
+      },
+      {
+        "id": "R3",
+        "name": "Garden Terrace",
+        "description": "Open terrace with marble statues and a sea view, used for a cocktail hour."
+      },
+      {
+        "id": "R4",
+        "name": "Kitchen",
+        "description": "Bustling area behind the scenes where catering staff prepares dishes."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Lord Adrian Whitmore",
+        "age": 58,
+        "occupation": "Noble philanthropist",
+        "personality": "Charismatic and proud",
+        "background": "Owner of Villa Aurora, hosts charity gala to raise funds for the arts.",
+        "secret": "He once used his influence to hide a scandalous affair.",
+        "goal": "Ensure the gala runs flawlessly and raise a record amount.",
+        "alibi": "Was greeting guests in the Ballroom.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "employer",
+            "detail": "Hired Sophia to run the gala."
+          },
+          {
+            "with_character": "C3",
+            "kind": "friend",
+            "detail": "Long-time acquaintance from art circles."
+          },
+          {
+            "with_character": "C4",
+            "kind": "employer",
+            "detail": "Isla serves as his personal assistant."
+          }
+        ],
+        "knowledge": [
+          "knows the location of the Blue Orchid",
+          "aware of security systems"
+        ],
+        "lies": [
+          "claims he never attended previous galas"
+        ],
+        "inventory": [
+          "gold cufflink",
+          "pocket watch"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Sophia Laurent",
+        "age": 34,
+        "occupation": "Charity Gala Coordinator",
+        "personality": "Meticulous and charming",
+        "background": "Hired to organize the event, appears to have connections in high society.",
+        "secret": "She is Evelyn Drake, a notorious jewel thief, assuming this identity.",
+        "goal": "Steal the Blue Orchid and sell it on the black market.",
+        "alibi": "Was overseeing the kitchen staff during the time of theft.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "employer",
+            "detail": "Works for Lord Whitmore."
+          },
+          {
+            "with_character": "C3",
+            "kind": "colleague",
+            "detail": "Coordinated Dr. Hale's lecture."
+          },
+          {
+            "with_character": "C4",
+            "kind": "rival",
+            "detail": "Competes for Lord Whitmore's trust."
+          }
+        ],
+        "knowledge": [
+          "knows the exact time the necklace will be displayed",
+          "has access to security codes"
+        ],
+        "lies": [
+          "insists she was in the kitchen the whole time"
+        ],
+        "inventory": [
+          "silver serving tray",
+          "glove with monogram S.L."
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C3",
+        "name": "Dr. Marcus Hale",
+        "age": 45,
+        "occupation": "Art Historian",
+        "personality": "Curious and absent-minded",
+        "background": "Invited as expert speaker on historical jewels.",
+        "secret": "He once replaced a museum piece with a replica.",
+        "goal": "Gain recognition for his research.",
+        "alibi": "Was delivering his lecture in the Library.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "friend",
+            "detail": "Shares interest in historical artifacts."
+          },
+          {
+            "with_character": "C2",
+            "kind": "colleague",
+            "detail": "Assisted with event logistics."
+          },
+          {
+            "with_character": "C4",
+            "kind": "mentor",
+            "detail": "Guides Isla in research methods."
+          }
+        ],
+        "knowledge": [
+          "knows details about the Blue Orchid's provenance",
+          "aware of the alarm schedule"
+        ],
+        "lies": [
+          "claims he never touched the necklace"
+        ],
+        "inventory": [
+          "notebook",
+          "pair of spectacles"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Isla Moreno",
+        "age": 29,
+        "occupation": "Personal Assistant",
+        "personality": "Loyal but anxious",
+        "background": "Works for Lord Whitmore, handles schedules.",
+        "secret": "She is deeply in debt to a loan shark.",
+        "goal": "Find a quick cash solution.",
+        "alibi": "Was tending the garden terrace, arranging flowers.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "employer",
+            "detail": "Answers directly to Lord Whitmore."
+          },
+          {
+            "with_character": "C2",
+            "kind": "rival",
+            "detail": "Distrustful of Sophia's influence."
+          },
+          {
+            "with_character": "C3",
+            "kind": "mentor",
+            "detail": "Learns from Dr. Hale's expertise."
+          }
+        ],
+        "knowledge": [
+          "knows the schedule of the gala",
+          "noticed a missing glove earlier"
+        ],
+        "lies": [
+          "says she never saw anyone near the safe"
+        ],
+        "inventory": [
+          "garden shears",
+          "notebook with passwords"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive; Lord Whitmore greets them in the Ballroom.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Sophia checks kitchen prep and assures staff.",
+        "involved": [
+          "C2"
+        ]
+      }
+    ],
+    "evidence": [],
+    "hidden_clues": [],
+    "red_herrings": [],
+    "solution": {
+      "target_character_id": "C2",
+      "target_true_identity": "The hidden target posing as Sophia Laurent",
+      "reasoning": "The evidence contradicts their alibi and identity.",
+      "key_evidence_ids": []
+    }
+  },
+  "state": {
+    "id": "game_b100bcf34bdd",
+    "case_id": "case_b047afdd3512",
+    "status": "lost",
+    "created_at": "2026-08-31T04:12:10.483027+00:00",
+    "updated_at": "2026-08-31T04:22:26.803691+00:00",
+    "minutes_elapsed": 80,
+    "current_location": "Ballroom",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Sophia Laurent'"
+        ]
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 2,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'hii dr. Marcus'",
+          "Detective said: 'Talk to Dr. Marcus Hale'"
+        ]
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 2,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'hii Isla'",
+          "Detective said: 'Talk to Isla Moreno'"
+        ]
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Lord Adrian Whitmore",
+          "detail": "58, Noble philanthropist. Charismatic and proud.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sophia Laurent",
+          "detail": "34, Charity Gala Coordinator. Meticulous and charming.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Dr. Marcus Hale",
+          "detail": "45, Art Historian. Curious and absent-minded.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Isla Moreno",
+          "detail": "29, Personal Assistant. Loyal but anxious.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive; Lord Whitmore greets them in the Ballroom.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Sophia checks kitchen prep and assures staff.",
+          "at_time": "8:15 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A glittering charity gala is underway at the opulent Villa Aurora. Amid champagne and music, the priceless Blue Orchid necklace is to be unveiled, but when the lights dim, the jewel vanishes, and suspicion falls on everyone present.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hii Isla",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Isla Moreno",
+        "text": "Hi there! I'm just finishing up the garden terrace\u2014what can I do for you?",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "You sweep the grand ballroom, the crystal chandeliers scattering fractured light across the marble floor like a constellation of secrets, while velvet drapes cling to the walls in heavy silence and the faint echo of a distant waltz lingers in the perfumed air.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "You",
+        "text": "Compare their statements",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "Narrator",
+        "text": "You spread the crisp statements across the polished mahogany table, the soft glow of crystal chandeliers casting long shadows that flicker like doubts across the parchment; the perfume of fresh roses mingles with the faint scent of cigar smoke, and the ballroom\u2019s echoing hush seems to listen, waiting for the contradictions to surface.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Hint",
+        "text": "Consider how each suspect\u2019s alibi lines up with the timeline of the missing evidence\u2014especially the one whose whereabouts haven\u2019t been cross\u2011checked yet. Comparing those details may reveal the overlooked connection.",
+        "kind": "system"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "Talk to Isla Moreno",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Isla Moreno",
+        "text": "Oh, hi! I was just finishing up the terrace, arranging the flowers. I know the gala runs from seven to eleven, and I did see",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "what is the evidence",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the vaulted ballroom of Villa Aurora, the crystal chandeliers casting fragmented light over polished marble and gilt-edged mirrors, while a faint echo of a waltz lingers in the air, reminding you that the room once held secrets now shrouded in silence. The polished floor reflects the faint imprint of a single high\u2011",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "You",
+        "text": "hii dr. Marcus",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "Dr. Marcus Hale",
+        "text": "",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "Talk to Dr. Marcus Hale",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Dr. Marcus Hale",
+        "text": "Ah, hello! I was just finishing up a lecture on Baroque portraiture in the library\u2014do you happen to need any insight on the Blue Orchid's provenance? I\u2019m happy to help, though I must admit I\u2019ve never actually handled the necklace myself.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "You",
+        "text": "Compare their statements",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:55 PM",
+        "speaker": "Narrator",
+        "text": "You stand amid the opulent ballroom, crystal chandeliers casting fragmented light across polished marble as the echo of whispered alibis swirls like perfume in the stale air, each statement a thin veneer over the glittering veneer of Villa Aurora. The polished mahogany bar gleams beneath the hush, and the soft rustle of silk gowns becomes a backdrop to the careful comparison of words that may hide a darker truth. In this gilded silence, every detail feels both magnified and obscured, like shadows dancing on",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "Talk to Sophia Laurent",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Sophia Laurent",
+        "text": "Good evening",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "You",
+        "text": "what are you doing that time",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:10 PM",
+        "speaker": "Narrator",
+        "text": "The crystal chandeliers cast a cold, glittering haze over the polished parquet as you step into the ballroom,",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "where is latter",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Narrator",
+        "text": "You step into the ballroom, its crystal chandeliers casting fractured light across polished marble as a faint perfume of wilted roses lingers in the stale air, and the echo of distant footsteps whispers through the gilded arches, leaving you wondering where the elusive latter might have vanished.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "9:20 PM",
+        "speaker": "Verdict",
+        "text": "Your accusation rings out, but the truth shatters it like glass\u2014Dr. Marcus Hale steps back, bewildered, as the real mastermind steps from the shadows. The hidden target, masquerading flawlessly as Sophia Laurent, smiles coldly, her carefully forged alibi crumbling under the weight of the evidence you missed. In the flicker of the dying lights, you realize the case slips through your fingers, and the true culprit vanishes into the night, leaving only the echo of your misstep.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 1,
+    "accusation_made": true,
+    "accused_character_id": "C3"
+  }
+}

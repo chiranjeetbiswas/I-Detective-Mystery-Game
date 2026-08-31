@@ -1,0 +1,582 @@
+{
+  "case": {
+    "id": "case_5759eaf75c7d",
+    "title": "Midnight Tide",
+    "difficulty": "expert",
+    "location_type": "Cruise Ship",
+    "location_name": "The Aurora",
+    "introduction": "A stormy night on the luxury liner The Aurora. Billionaire philanthropist Victor Caldwell is found dead in his VIP suite, his throat slit. The ship is isolated, the crew and guests become suspects, and one of them wears a perfect disguise.",
+    "crime": "Victor Caldwell, a billionaire philanthropist, was murdered in his VIP suite at 10:27\u202fPM. The cause of death was a single precise slash to the throat, indicating a professional assassin.",
+    "target_fake_identity": "Dr. Elena Voss, Marine Biologist",
+    "escape_plan": "Silhouette will hijack a lifeboat disguised as crew, disable the ship's communications from the engine room, and rendezvous with a fast motorboat waiting beyond the storm line.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "r1",
+        "name": "Bridge",
+        "description": "Command center with panoramic windows and navigation consoles."
+      },
+      {
+        "id": "r2",
+        "name": "Laboratory",
+        "description": "Marine research lab with microscopes, water tanks, and a locked storage cabinet."
+      },
+      {
+        "id": "r3",
+        "name": "Engine Room",
+        "description": "Noisy powerhouse housing the main turbine and maintenance tools."
+      },
+      {
+        "id": "r4",
+        "name": "Grand Ballroom",
+        "description": "Opulent hall where the ship's gala is underway, filled with guests and a live band."
+      },
+      {
+        "id": "r5",
+        "name": "VIP Suite",
+        "description": "Victor Caldwell's private suite, luxuriously appointed with a balcony overlooking the sea."
+      },
+      {
+        "id": "r6",
+        "name": "Lounge",
+        "description": "Quiet area with leather chairs, a bar, and a large screen showing the storm outside."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Captain Marcus Reed",
+        "age": 52,
+        "occupation": "Captain",
+        "personality": "Stoic and authoritative",
+        "background": "Former navy officer, promoted after a daring rescue two years ago.",
+        "secret": "Diverts a small percentage of the ship's operating funds into a private offshore account.",
+        "goal": "Preserve his reputation and keep the ship afloat financially.",
+        "alibi": "On the Bridge overseeing navigation from 9:45\u202fPM to 10:45\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "supervisor",
+            "detail": "Recruited Dr. Voss for the research program."
+          },
+          {
+            "with_character": "c3",
+            "kind": "colleague",
+            "detail": "Works closely with the chief engineer on maintenance."
+          }
+        ],
+        "knowledge": [
+          "Victim was planning to expose the ship's financial irregularities",
+          "The lifeboat drills were postponed."
+        ],
+        "lies": [
+          "He never authorized the diversion of funds."
+        ],
+        "inventory": [
+          "Captain's logbook",
+          "Sidearm (holstered)"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c2",
+        "name": "Dr. Elena Voss",
+        "age": 38,
+        "occupation": "Marine Biologist",
+        "personality": "Charming, inquisitive, seemingly naive",
+        "background": "PhD in marine ecology, hired to study deep\u2011sea specimens for the cruise's scientific program.",
+        "secret": "True identity is \"Silhouette\", a world\u2011renowned contract killer.",
+        "goal": "Eliminate Victor Caldwell and escape undetected.",
+        "alibi": "In the Laboratory analyzing water samples from 9:30\u202fPM to 10:20\u202fPM; the lab door was logged as locked.",
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "supervisor",
+            "detail": "Captain recruited her for the scientific outreach."
+          },
+          {
+            "with_character": "c5",
+            "kind": "informant",
+            "detail": "Shared a forged research grant with the private investigator."
+          }
+        ],
+        "knowledge": [
+          "The VIP Suite's security code",
+          "The exact time the victim will be alone in his suite."
+        ],
+        "lies": [
+          "She was alone in the lab the entire time; she never left the room."
+        ],
+        "inventory": [
+          "Blood\u2011stained leather glove (size 9)",
+          "Disguised crew uniform (lifeboat)",
+          "Compact lockpick set"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c3",
+        "name": "Amir Patel",
+        "age": 44,
+        "occupation": "Chief Engineer",
+        "personality": "Pragmatic, meticulous",
+        "background": "Spent 20 years in shipyards; promoted after fixing a critical turbine failure.",
+        "secret": "Had a heated argument with Victor Caldwell over a costly retrofit the billionaire demanded.",
+        "goal": "Secure a promotion by proving his indispensable value.",
+        "alibi": "In the Engine Room performing routine checks from 9:55\u202fPM to 10:35\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "subordinate",
+            "detail": "Reports directly to the Captain."
+          }
+        ],
+        "knowledge": [
+          "The lifeboat launch controls are manually overridable."
+        ],
+        "lies": [
+          "Engine logs show he was present, but the logs were forged."
+        ],
+        "inventory": [
+          "Multi\u2011tool wrench",
+          "Engine schematics (sealed)"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Sophia Marlowe",
+        "age": 31,
+        "occupation": "Luxury Suite Guest",
+        "personality": "Flamboyant, persuasive",
+        "background": "Socialite and influencer, known for extravagant parties.",
+        "secret": "Owes $2\u202fmillion to Victor Caldwell after a failed venture; she planned to blackmail him.",
+        "goal": "Recover her money by any means, even if it means silencing Victor.",
+        "alibi": "Dancing at the Grand Ballroom during the murder; security footage shows her on the floor from 10:00\u202fPM to 11:00\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c5",
+            "kind": "client",
+            "detail": "Hired the private investigator to watch the victim."
+          }
+        ],
+        "knowledge": [
+          "Victor kept a hidden safe in his suite containing valuable artwork."
+        ],
+        "lies": [
+          "She never met Victor alone; all interactions were in public."
+        ],
+        "inventory": [
+          "Designer clutch (contains a small knife)",
+          "Encrypted phone"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c5",
+        "name": "Harold Finch",
+        "age": 58,
+        "occupation": "Private Investigator",
+        "personality": "Methodical, world\u2011weary",
+        "background": "Retired police detective, now hired by wealthy families to investigate discreetly.",
+        "secret": "Was paid $150,000 by an unknown third party to steer suspicion away from the real killer.",
+        "goal": "Complete his contract without exposing the hidden payment.",
+        "alibi": "Interviewing crew members in the Lounge from 9:50\u202fPM to 10:40\u202fPM.",
+        "relationships": [
+          {
+            "with_character": "c4",
+            "kind": "client",
+            "detail": "Investigating her claims against Victor."
+          }
+        ],
+        "knowledge": [
+          "The lifeboat's emergency radio frequencies are disabled at 10:15\u202fPM."
+        ],
+        "lies": [
+          "His notebook contains the full transcript of his interviews; it is actually missing."
+        ],
+        "inventory": [
+          "Leather notebook (empty)",
+          "Voice recorder"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests board the Aurora; the gala begins in the Grand Ballroom.",
+        "involved": [
+          "c4"
+        ]
+      },
+      {
+        "time": "9:30 PM",
+        "description": "Dr. Voss enters the Laboratory to begin water analysis.",
+        "involved": [
+          "c2"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "Captain Reed takes command on the Bridge as the storm approaches.",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "9:55 PM",
+        "description": "Chief Engineer Patel heads to the Engine Room for scheduled maintenance.",
+        "involved": [
+          "c3"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Sophia Marlowe is seen dancing in the Ballroom; Harold Finch moves to the Lounge for interviews.",
+        "involved": [
+          "c4",
+          "c5"
+        ]
+      },
+      {
+        "time": "10:15 PM",
+        "description": "The ship's communication system is briefly disabled; a lifeboat alarm is triggered falsely.",
+        "involved": [
+          "c3"
+        ]
+      },
+      {
+        "time": "10:20 PM",
+        "description": "Laboratory door logs show it was locked; a faint metallic clang is heard from the corridor.",
+        "involved": [
+          "c2"
+        ]
+      },
+      {
+        "time": "10:25 PM",
+        "description": "Victor Caldwell enters his VIP Suite alone, locks the door.",
+        "involved": []
+      },
+      {
+        "time": "10:27 PM",
+        "description": "Victor Caldwell is found dead in his VIP Suite; throat slit with a single clean cut.",
+        "involved": []
+      },
+      {
+        "time": "10:35 PM",
+        "description": "Captain Reed returns from the Bridge, orders an emergency sweep.",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "10:40 PM",
+        "description": "Harold Finch discovers his notebook missing and reports it.",
+        "involved": [
+          "c5"
+        ]
+      },
+      {
+        "time": "11:00 PM",
+        "description": "Sophia Marlowe leaves the Ballroom, appears agitated.",
+        "involved": [
+          "c4"
+        ]
+      },
+      {
+        "time": "11:15 PM",
+        "description": "Chief Engineer Patel reports a malfunction in the lifeboat release mechanism.",
+        "involved": [
+          "c3"
+        ]
+      },
+      {
+        "time": "11:30 PM",
+        "description": "All suspects are gathered in the Lounge for preliminary questioning.",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Blood\u2011stained leather glove",
+        "description": "A size\u20119 leather glove with Victor's blood; fibers match the material of the crew uniform worn by Dr. Voss.",
+        "location": "Laboratory locker",
+        "points_to": "c2",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Surveillance still frame",
+        "description": "Security camera captures a silhouette entering the VIP Suite at 10:22\u202fPM; the figure wears a lab coat similar to Dr. Voss's.",
+        "location": "Bridge security console",
+        "points_to": "c2",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e3",
+        "name": "Torn fabric piece",
+        "description": "A rag of dark navy fabric found in Victor's suite; matches the inner lining of the lifeboat crew uniform.",
+        "location": "VIP Suite floor",
+        "points_to": "c2",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e4",
+        "name": "Cigar stub",
+        "description": "A premium cigar stub with the captain's initials burned out; found in the Lounge near the lifeboat controls.",
+        "location": "Lounge",
+        "points_to": "c1",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e5",
+        "name": "Broken watch",
+        "description": "A cracked chronograph stopped at 10:27\u202fPM; engraved with the engineer's name.",
+        "location": "Engine Room",
+        "points_to": "c3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "e6",
+        "name": "Empty wallet",
+        "description": "Victor's wallet found open with a $150,000 check made out to an unknown entity.",
+        "location": "VIP Suite nightstand",
+        "points_to": "c5",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The ship's log shows the lifeboat release code was entered twice at 10:16\u202fPM.",
+      "A faint residue of a rare South\u2011American poison is detected on the knife in Sophia's clutch."
+    ],
+    "red_herrings": [
+      "Captain Reed's cigar stub suggests he was near the scene.",
+      "Engineer Patel's broken watch aligns with the murder time.",
+      "The missing notebook hints at Finch covering something."
+    ],
+    "solution": {
+      "target_character_id": "c2",
+      "target_true_identity": "Silhouette, an internationally contracted assassin known for clean kills.",
+      "reasoning": "Key evidence e1, e2, and e3 directly tie Dr. Voss to the murder scene despite her lab alibi. The laboratory door log was forged, and the lifeboat crew uniform she kept concealed matches the torn fabric in the suite. Red herrings (cigar stub, broken watch, empty wallet) were planted to divert suspicion toward the captain, engineer, and investigator. The hidden clues about the lifeboat release code and the secret payment to Finch confirm the target's escape plan and the cover\u2011up.",
+      "key_evidence_ids": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_05fcaa4a7445",
+    "case_id": "case_5759eaf75c7d",
+    "status": "in_progress",
+    "created_at": "2026-08-31T04:10:48.319001+00:00",
+    "updated_at": "2026-08-31T04:10:48.319029+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "Bridge",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "c5": {
+        "character_id": "c5",
+        "trust": 42,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Captain Marcus Reed",
+          "detail": "52, Captain. Stoic and authoritative.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Dr. Elena Voss",
+          "detail": "38, Marine Biologist. Charming, inquisitive, seemingly naive.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Amir Patel",
+          "detail": "44, Chief Engineer. Pragmatic, meticulous.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sophia Marlowe",
+          "detail": "31, Luxury Suite Guest. Flamboyant, persuasive.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Harold Finch",
+          "detail": "58, Private Investigator. Methodical, world\u2011weary.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests board the Aurora; the gala begins in the Grand Ballroom.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:30 PM",
+          "detail": "Dr. Voss enters the Laboratory to begin water analysis.",
+          "at_time": "9:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "Captain Reed takes command on the Bridge as the storm approaches.",
+          "at_time": "9:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:55 PM",
+          "detail": "Chief Engineer Patel heads to the Engine Room for scheduled maintenance.",
+          "at_time": "9:55 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Sophia Marlowe is seen dancing in the Ballroom; Harold Finch moves to the Lounge for interviews.",
+          "at_time": "10:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:15 PM",
+          "detail": "The ship's communication system is briefly disabled; a lifeboat alarm is triggered falsely.",
+          "at_time": "10:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:20 PM",
+          "detail": "Laboratory door logs show it was locked; a faint metallic clang is heard from the corridor.",
+          "at_time": "10:20 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:25 PM",
+          "detail": "Victor Caldwell enters his VIP Suite alone, locks the door.",
+          "at_time": "10:25 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:27 PM",
+          "detail": "Victor Caldwell is found dead in his VIP Suite; throat slit with a single clean cut.",
+          "at_time": "10:27 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:35 PM",
+          "detail": "Captain Reed returns from the Bridge, orders an emergency sweep.",
+          "at_time": "10:35 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:40 PM",
+          "detail": "Harold Finch discovers his notebook missing and reports it.",
+          "at_time": "10:40 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:00 PM",
+          "detail": "Sophia Marlowe leaves the Ballroom, appears agitated.",
+          "at_time": "11:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:15 PM",
+          "detail": "Chief Engineer Patel reports a malfunction in the lifeboat release mechanism.",
+          "at_time": "11:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "11:30 PM",
+          "detail": "All suspects are gathered in the Lounge for preliminary questioning.",
+          "at_time": "11:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A stormy night on the luxury liner The Aurora. Billionaire philanthropist Victor Caldwell is found dead in his VIP suite, his throat slit. The ship is isolated, the crew and guests become suspects, and one of them wears a perfect disguise.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "case": {
+    "id": "case_36f7930084cb",
+    "title": "The Safe House Affair",
+    "difficulty": "beginner",
+    "location_type": "Safe House",
+    "location_name": "The Ashgrove Safe House",
+    "introduction": "Tonight at The Ashgrove Safe House, the forgery and swap of a masterpiece painting has thrown the evening into chaos. No one may leave. 5 guests remain \u2014 each with something to hide. One of them is not who they claim to be. Find them.",
+    "crime": "The forgery and swap of a masterpiece painting",
+    "target_fake_identity": "Isabella Marchetti, respectable security consultant",
+    "escape_plan": "Isabella Marchetti intends to slip out during the confusion and vanish before the authorities arrive.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "lobby",
+        "name": "The Grand Lobby",
+        "description": "A vast marble hall with a sweeping staircase."
+      },
+      {
+        "id": "lounge",
+        "name": "The Lounge",
+        "description": "Low amber lighting, leather chairs, a jazz record spinning."
+      },
+      {
+        "id": "dining",
+        "name": "The Dining Room",
+        "description": "A long table still set for the evening's dinner."
+      },
+      {
+        "id": "study",
+        "name": "The Private Study",
+        "description": "Bookshelves, a heavy desk, a locked drawer."
+      },
+      {
+        "id": "garden",
+        "name": "The Terrace Garden",
+        "description": "Night air, hedges, and a view of the water."
+      },
+      {
+        "id": "cabins",
+        "name": "The Guest Quarters",
+        "description": "A corridor of numbered doors, most left ajar."
+      }
+    ],
+    "characters": [
+      {
+        "id": "rowan0",
+        "name": "Rowan Petrov",
+        "age": 48,
+        "occupation": "estate manager",
+        "personality": "cold and precise",
+        "background": "A biochemist with a complicated past.",
+        "secret": "Rowan stole a small item earlier that night.",
+        "goal": "Rowan wants to appear cooperative while hiding a secret.",
+        "alibi": "Claims to have been in the The Dining Room around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Isabella Marchetti",
+            "kind": "secret lover",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Marchetti acting strangely near the The Grand Lobby.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "isabella1",
+        "name": "Isabella Marchetti",
+        "age": 29,
+        "occupation": "security consultant",
+        "personality": "charming but evasive",
+        "background": "A retired diplomat with a complicated past.",
+        "secret": "Isabella is protecting a family member.",
+        "goal": "Isabella wants to find out who is watching them.",
+        "alibi": "Claims to have been in the The Dining Room around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Victoria Fenwick",
+            "kind": "estranged sibling",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Knows exactly how the crime was carried out."
+        ],
+        "lies": [
+          "Insists they never entered the room where the key evidence was found."
+        ],
+        "inventory": [],
+        "is_target": true
+      },
+      {
+        "id": "victoria2",
+        "name": "Victoria Fenwick",
+        "age": 49,
+        "occupation": "art curator",
+        "personality": "cold and precise",
+        "background": "A biochemist with a complicated past.",
+        "secret": "Victoria is using a false name for unrelated reasons.",
+        "goal": "Victoria wants to recover a compromising letter.",
+        "alibi": "Claims to have been in the The Lounge around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Emma Ashford",
+            "kind": "secret lover",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Marchetti acting strangely near the The Guest Quarters.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "emma3",
+        "name": "Emma Ashford",
+        "age": 38,
+        "occupation": "criminologist",
+        "personality": "guarded and defensive",
+        "background": "A concert pianist with a complicated past.",
+        "secret": "Emma is using a false name for unrelated reasons.",
+        "goal": "Emma wants to find out who is watching them.",
+        "alibi": "Claims to have been in the The Terrace Garden around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Theo Vance",
+            "kind": "former business partner",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Marchetti acting strangely near the The Private Study.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      },
+      {
+        "id": "theo4",
+        "name": "Theo Vance",
+        "age": 39,
+        "occupation": "heiress",
+        "personality": "cheerful yet calculating",
+        "background": "A retired diplomat with a complicated past.",
+        "secret": "Theo is using a false name for unrelated reasons.",
+        "goal": "Theo wants to find out who is watching them.",
+        "alibi": "Claims to have been in the The Lounge around the time of the incident.",
+        "relationships": [
+          {
+            "with_character": "Rowan Petrov",
+            "kind": "estranged sibling",
+            "detail": ""
+          }
+        ],
+        "knowledge": [
+          "Saw Isabella Marchetti acting strangely near the The Private Study.",
+          "Overheard a tense argument earlier in the evening."
+        ],
+        "lies": [],
+        "inventory": [],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "7:30 PM",
+        "description": "Guests arrive and mingle.",
+        "involved": []
+      },
+      {
+        "time": "8:00 PM",
+        "description": "The incident: the forgery and swap of a masterpiece painting.",
+        "involved": [
+          "Isabella Marchetti"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Alarm raised; the site is sealed.",
+        "involved": []
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Isabella Marchetti is seen slipping toward an exit.",
+        "involved": [
+          "Isabella Marchetti"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev0",
+        "name": "a ledger page",
+        "description": "A page of figures that don't add up.",
+        "location": "The Terrace Garden",
+        "points_to": "Isabella Marchetti",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev1",
+        "name": "a forged passport",
+        "description": "A convincing passport with a subtly wrong birth year.",
+        "location": "The Private Study",
+        "points_to": "Isabella Marchetti",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "ev2",
+        "name": "a hidden key",
+        "description": "A small brass key taped beneath a drawer.",
+        "location": "The Lounge",
+        "points_to": "Emma Ashford",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev3",
+        "name": "a photograph",
+        "description": "A candid photo of two guests who claim never to have met.",
+        "location": "The Lounge",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev4",
+        "name": "a torn train ticket",
+        "description": "A ticket stub torn in half, timestamped earlier than claimed.",
+        "location": "The Grand Lobby",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev5",
+        "name": "a threatening note",
+        "description": "Block capitals: 'THEY KNOW. LEAVE TONIGHT.'",
+        "location": "The Terrace Garden",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      },
+      {
+        "id": "ev6",
+        "name": "a bloodstained handkerchief",
+        "description": "Fine linen with a monogram and a dark stain.",
+        "location": "The Dining Room",
+        "points_to": "",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "Isabella Marchetti's account of their whereabouts conflicts with the a ledger page.",
+      "Two guests deny a relationship that a photograph proves."
+    ],
+    "red_herrings": [
+      "a hidden key"
+    ],
+    "solution": {
+      "target_character_id": "isabella1",
+      "target_true_identity": "A wanted operative posing as security consultant",
+      "reasoning": "Isabella Marchetti is the hidden target: the key evidence (a ledger page, a forged passport) places them at the scene and contradicts their alibi, while their documents are forged.",
+      "key_evidence_ids": [
+        "ev0",
+        "ev1"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_59c808327b3f",
+    "case_id": "case_36f7930084cb",
+    "status": "in_progress",
+    "created_at": "2026-08-31T03:57:11.590322+00:00",
+    "updated_at": "2026-08-31T03:59:54.458680+00:00",
+    "minutes_elapsed": 20,
+    "current_location": "The Grand Lobby",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "rowan0": {
+        "character_id": "rowan0",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Rowan Petrov'"
+        ]
+      },
+      "isabella1": {
+        "character_id": "isabella1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "victoria2": {
+        "character_id": "victoria2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "emma3": {
+        "character_id": "emma3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 1,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'hii Emma'"
+        ]
+      },
+      "theo4": {
+        "character_id": "theo4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Rowan Petrov",
+          "detail": "48, estate manager. cold and precise.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Isabella Marchetti",
+          "detail": "29, security consultant. charming but evasive.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victoria Fenwick",
+          "detail": "49, art curator. cold and precise.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Emma Ashford",
+          "detail": "38, criminologist. guarded and defensive.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Theo Vance",
+          "detail": "39, heiress. cheerful yet calculating.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "7:30 PM",
+          "detail": "Guests arrive and mingle.",
+          "at_time": "7:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "The incident: the forgery and swap of a masterpiece painting.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Alarm raised; the site is sealed.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Isabella Marchetti is seen slipping toward an exit.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "Tonight at The Ashgrove Safe House, the forgery and swap of a masterpiece painting has thrown the evening into chaos. No one may leave. 5 guests remain \u2014 each with something to hide. One of them is not who they claim to be. Find them.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Talk to Rowan Petrov",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Rowan Petrov",
+        "text": "That's my business, not yours.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "hii Emma",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Emma Ashford",
+        "text": "Why should I tell you anything? Prove I can trust you first.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Hint",
+        "text": "Compare each suspect's stated alibi against the physical evidence you've found. The person whose story contradicts the key evidence \u2014 and whose documents don't quite add up \u2014 is the one to watch.",
+        "kind": "system"
+      }
+    ],
+    "hints_used": 1,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

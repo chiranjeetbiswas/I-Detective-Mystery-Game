@@ -1,0 +1,492 @@
+{
+  "case": {
+    "id": "case_5dd600b6d87a",
+    "title": "Shadows over the Sea",
+    "difficulty": "normal",
+    "location_type": "Luxury Villa",
+    "location_name": "Marina View Villa",
+    "introduction": "A glittering gala is hosted at the secluded Marina View Villa, where the world\u2019s elite gather to celebrate the unveiling of a priceless painting. Amidst champagne and whispers, the villa\u2019s owner is found dead, and the guests must uncover the murderer before the night ends.",
+    "crime": "Victor Hale, the wealthy art collector, is discovered stabbed to death in his private Study during the gala.",
+    "target_fake_identity": "Sofia Marquez, celebrated philanthropist",
+    "escape_plan": "Board the private helicopter on the rooftop helipad at midnight and fly to an undisclosed location.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Grand Hall",
+        "description": "The opulent main ballroom filled with chandeliers, a stage for the unveiling, and a sea\u2011view terrace."
+      },
+      {
+        "id": "R2",
+        "name": "Library",
+        "description": "A quiet room lined with rare books and a hidden safe behind a movable bookshelf."
+      },
+      {
+        "id": "R3",
+        "name": "Garden Terrace",
+        "description": "An outdoor lounge with a fountain, surrounded by hedges that conceal a service entrance."
+      },
+      {
+        "id": "R4",
+        "name": "Study",
+        "description": "Victor's private office, a heavy oak desk, a locked safe, and a wall of priceless artwork."
+      },
+      {
+        "id": "R5",
+        "name": "Helipad",
+        "description": "A rooftop landing pad with a small private helicopter and a panoramic view of the coastline."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Victor Hale",
+        "age": 55,
+        "occupation": "Art Collector",
+        "personality": "Charismatic and commanding",
+        "background": "Owner of Marina View Villa, built his fortune on art deals, secretly siphoning insurance money after a fire years ago.",
+        "secret": "Embezzling insurance funds from a past fire at the villa",
+        "goal": "Secure his legacy and ensure his family inherits the estate",
+        "alibi": "Was in the Study reviewing documents until the power flicker",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "sibling",
+            "detail": "Estranged brother over inheritance"
+          },
+          {
+            "with_character": "C3",
+            "kind": "admiration",
+            "detail": "Invited Sofia to the gala as a guest of honor"
+          }
+        ],
+        "knowledge": [
+          "Location of the safe in the Library",
+          "C5\u2019s security schedule"
+        ],
+        "lies": [
+          "I was in the Study the whole time",
+          "I never argued with my brother"
+        ],
+        "inventory": [
+          "golden cufflink",
+          "ledger book"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C2",
+        "name": "Eleanor Hale",
+        "age": 48,
+        "occupation": "Lawyer",
+        "personality": "Meticulous and poised",
+        "background": "Victor\u2019s younger sister, manages the family\u2019s legal affairs, hides an affair with the villa\u2019s chef to fund her own investments.",
+        "secret": "Having an affair with Chef Damien Ortiz",
+        "goal": "Protect the family\u2019s reputation and keep Victor\u2019s crimes hidden",
+        "alibi": "Was on the Garden Terrace speaking with guests after the unveiling",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "sibling",
+            "detail": "Constant power struggle over the estate"
+          },
+          {
+            "with_character": "C4",
+            "kind": "lover",
+            "detail": "Secret meetings in the Kitchen"
+          }
+        ],
+        "knowledge": [
+          "Victor\u2019s embezzlement",
+          "C5\u2019s altered security logs"
+        ],
+        "lies": [
+          "I was never close to Damien"
+        ],
+        "inventory": [
+          "tablet",
+          "wine glass"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Sofia Marquez",
+        "age": 34,
+        "occupation": "Philanthropist",
+        "personality": "Charming and disarmingly sincere",
+        "background": "Appears as a benefactor, but is actually Lara Voss, a renowned art thief planning to steal the newly unveiled painting.",
+        "secret": "Mastermind behind the theft of the painting and Victor\u2019s murder",
+        "goal": "Steal the painting and escape via helicopter",
+        "alibi": "Was on the Helipad arranging a charity helicopter ride for a children\u2019s hospital",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "admiration",
+            "detail": "Victor invited her as a guest of honor"
+          },
+          {
+            "with_character": "C5",
+            "kind": "friend",
+            "detail": "Mira trusts Sofia and often shares security updates"
+          }
+        ],
+        "knowledge": [
+          "Location of the safe and its combination",
+          "Helipad flight schedule"
+        ],
+        "lies": [
+          "I never entered the Study",
+          "I was alone on the Helipad at 8:30 PM"
+        ],
+        "inventory": [
+          "designer clutch",
+          "small lockpick set"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C4",
+        "name": "Damien Ortiz",
+        "age": 40,
+        "occupation": "Chef",
+        "personality": "Hot\u2011tempered but proud of his cuisine",
+        "background": "Head chef of the villa\u2019s kitchen, deep in gambling debts, hopes a big payout will clear them.",
+        "secret": "Owes a dangerous loan shark money he can\u2019t repay",
+        "goal": "Find a quick way to get cash, possibly by exploiting the chaos",
+        "alibi": "Was in the Kitchen preparing desserts for the after\u2011party",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "lover",
+            "detail": "Secret affair in the pantry"
+          },
+          {
+            "with_character": "C1",
+            "kind": "employee",
+            "detail": "Respects Victor\u2019s taste in art"
+          }
+        ],
+        "knowledge": [
+          "The kitchen\u2019s back door leads to the Garden Terrace"
+        ],
+        "lies": [],
+        "inventory": [
+          "chef\u2019s knife",
+          "recipe book"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C5",
+        "name": "Mira Patel",
+        "age": 38,
+        "occupation": "Head of Security",
+        "personality": "Observant and methodical",
+        "background": "Oversees villa security, once falsified logs to cover a breach, now fears exposure.",
+        "secret": "Altered security footage timestamps to hide a gap during the murder",
+        "goal": "Maintain her spotless record and prevent any scandal from reaching the press",
+        "alibi": "Patrolling the perimeter, checking cameras, and later supervising the crime scene",
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "friend",
+            "detail": "Trusts Sofia\u2019s charitable intentions"
+          },
+          {
+            "with_character": "C1",
+            "kind": "colleague",
+            "detail": "Works closely on security protocols"
+          }
+        ],
+        "knowledge": [
+          "Exact location of the hidden safe",
+          "The helicopter\u2019s departure time"
+        ],
+        "lies": [
+          "I saw Sofia near the Helipad at 8:30 PM",
+          "The footage from 9:00\u20119:05 PM is intact"
+        ],
+        "inventory": [
+          "radio",
+          "security badge"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive, mingling in the Grand Hall; introductions are made.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "Victor announces the unveiling of the painting \u201cThe Siren\u201d.",
+        "involved": [
+          "C1",
+          "C3"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "A brief power flicker darkens the Villa for about one minute; guests gasp as lights return.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:02 PM",
+        "description": "A scream echoes; Victor is found dead in the Study, a deep stab wound to the chest.",
+        "involved": [
+          "C1",
+          "C3",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:10 PM",
+        "description": "Mira seals all exits, begins interviewing guests; Eleanor claims she was on the Garden Terrace; Damien says he was in the Kitchen.",
+        "involved": [
+          "C2",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "Forensic team collects evidence; the designer clutch is discovered near the Study entrance.",
+        "involved": [
+          "C3"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Lockpick Set",
+        "description": "A set of finely crafted lockpicks hidden in Sofia\u2019s clutch, matching the marks on the Library safe\u2019s lock.",
+        "location": "Grand Hall (found near Study entrance)",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Bloodied Chef\u2019s Knife",
+        "description": "A chef\u2019s knife with Victor\u2019s blood; the knife bears a discreet engraving belonging to the villa\u2019s kitchen staff.",
+        "location": "Study",
+        "points_to": "C4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E3",
+        "name": "Security Footage Gap",
+        "description": "Missing footage from 9:00\u20119:05 PM; timestamps show deliberate deletion.",
+        "location": "Security Room",
+        "points_to": "C5",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E4",
+        "name": "Phone Record",
+        "description": "Victor\u2019s phone shows an outgoing call at 9:02 PM to an unknown number registered to Lara Voss\u2019s alias.",
+        "location": "Study (phone log)",
+        "points_to": "C3",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E5",
+        "name": "Cufflink with Blood",
+        "description": "Victor\u2019s golden cufflink found on the floor beside the body, smeared with his own blood; it was planted after the murder.",
+        "location": "Study",
+        "points_to": "C1",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "A torn piece of a map with helipad coordinates tucked inside a book in the Library",
+      "Sofia\u2019s clutch contains a hidden compartment holding a microfilm of the painting\u2019s security code"
+    ],
+    "red_herrings": [
+      "The missing security footage suggests an insider sabotage",
+      "The chef\u2019s debt gives him a clear motive to eliminate Victor",
+      "Victor\u2019s embezzlement could have provoked a family revenge"
+    ],
+    "solution": {
+      "target_character_id": "C3",
+      "target_true_identity": "Lara Voss, internationally known art thief",
+      "reasoning": "The lockpick set and the phone record directly link Sofia to the safe and to a call made at the exact moment of Victor\u2019s death, contradicting her alibi on the Helipad. The cufflink and chef\u2019s knife were planted to mislead, while Mira\u2019s altered footage was an attempt to hide the brief window when the murderer escaped. Combined with the hidden map and microfilm, the evidence points unequivocally to Sofia\u2019s true identity as Lara Voss, who staged the murder to obtain the painting and flee via helicopter.",
+      "key_evidence_ids": [
+        "E1",
+        "E4"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_7b8c57276a9d",
+    "case_id": "case_5dd600b6d87a",
+    "status": "in_progress",
+    "created_at": "2026-08-31T04:07:33.050638+00:00",
+    "updated_at": "2026-08-31T04:07:33.050662+00:00",
+    "minutes_elapsed": 0,
+    "current_location": "Grand Hall",
+    "current_objective": "Identify the hidden target among the suspects.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C5": {
+        "character_id": "C5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Victor Hale",
+          "detail": "55, Art Collector. Charismatic and commanding.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Eleanor Hale",
+          "detail": "48, Lawyer. Meticulous and poised.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Marquez",
+          "detail": "34, Philanthropist. Charming and disarmingly sincere.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Damien Ortiz",
+          "detail": "40, Chef. Hot\u2011tempered but proud of his cuisine.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Mira Patel",
+          "detail": "38, Head of Security. Observant and methodical.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive, mingling in the Grand Hall; introductions are made.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "Victor announces the unveiling of the painting \u201cThe Siren\u201d.",
+          "at_time": "8:30 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "A brief power flicker darkens the Villa for about one minute; guests gasp as lights return.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:02 PM",
+          "detail": "A scream echoes; Victor is found dead in the Study, a deep stab wound to the chest.",
+          "at_time": "9:02 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:10 PM",
+          "detail": "Mira seals all exits, begins interviewing guests; Eleanor claims she was on the Garden Terrace; Damien says he was in the Kitchen.",
+          "at_time": "9:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "Forensic team collects evidence; the designer clutch is discovered near the Study entrance.",
+          "at_time": "9:45 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A glittering gala is hosted at the secluded Marina View Villa, where the world\u2019s elite gather to celebrate the unveiling of a priceless painting. Amidst champagne and whispers, the villa\u2019s owner is found dead, and the guests must uncover the murderer before the night ends.",
+        "kind": "narration"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "case": {
+    "id": "case_a406f6c29d89",
+    "title": "The Vanishing Heir",
+    "difficulty": "beginner",
+    "location_type": "Luxury Villa",
+    "location_name": "Seaside Villa",
+    "introduction": "A rich host has a famous necklace. It is gone at night. Six guests are in the villa.",
+    "crime": "The necklace is missing.",
+    "target_fake_identity": "Liam Hart, a guest",
+    "escape_plan": "He will hide in a service tunnel and leave by the lake boat at midnight.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Main Hall",
+        "description": "Large hall with a chandelier."
+      },
+      {
+        "id": "R2",
+        "name": "Garden",
+        "description": "Quiet garden with a fountain."
+      },
+      {
+        "id": "R3",
+        "name": "Study",
+        "description": "Room with a safe and a desk."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Liam Hart",
+        "age": 30,
+        "occupation": "Businessman",
+        "personality": "Calm",
+        "background": "He says he is a guest from out of town.",
+        "secret": "He is actually Marco Rossi, a thief.",
+        "goal": "Steal the necklace.",
+        "alibi": "He says he was in the garden at 8:15 PM.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "They talk about food."
+          },
+          {
+            "with_character": "C3",
+            "kind": "rival",
+            "detail": "They disagree on security."
+          }
+        ],
+        "knowledge": [
+          "He knows where the safe is."
+        ],
+        "lies": [
+          "He says he is a businessman."
+        ],
+        "inventory": [
+          "Keycard",
+          "Pocket knife"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C2",
+        "name": "Evelyn Park",
+        "age": 28,
+        "occupation": "Chef",
+        "personality": "Friendly",
+        "background": "She works in the villa kitchen.",
+        "secret": "She once stole a recipe.",
+        "goal": "Keep her job.",
+        "alibi": "She was in the kitchen at 8:10 PM.",
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "colleague",
+            "detail": "She serves him food."
+          },
+          {
+            "with_character": "C5",
+            "kind": "friend",
+            "detail": "They share jokes."
+          }
+        ],
+        "knowledge": [
+          "She saw C1 go to the study."
+        ],
+        "lies": [],
+        "inventory": [
+          "Chef knife",
+          "Apron"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Victor Hale",
+        "age": 45,
+        "occupation": "Security Guard",
+        "personality": "Serious",
+        "background": "He monitors the villa.",
+        "secret": "He owes money to a gang.",
+        "goal": "Earn extra cash.",
+        "alibi": "He was on patrol in the hall at 8:05 PM.",
+        "relationships": [
+          {
+            "with_character": "C4",
+            "kind": "partner",
+            "detail": "They share shifts."
+          }
+        ],
+        "knowledge": [
+          "He heard a door lock click."
+        ],
+        "lies": [
+          "He says he heard nothing."
+        ],
+        "inventory": [
+          "Walkie talkie",
+          "Flashlight"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Sofia Delgado",
+        "age": 33,
+        "occupation": "Art Curator",
+        "personality": "Elegant",
+        "background": "She is invited to view a painting.",
+        "secret": "She hid a fake painting.",
+        "goal": "Swap the real painting for a fake.",
+        "alibi": "She was in the study at 8:20 PM.",
+        "relationships": [
+          {
+            "with_character": "C3",
+            "kind": "colleague",
+            "detail": "They discuss security."
+          }
+        ],
+        "knowledge": [
+          "She knows the safe code."
+        ],
+        "lies": [
+          "She says she never touched the safe."
+        ],
+        "inventory": [
+          "Sketchbook",
+          "Gloves"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C5",
+        "name": "Tommy Nguyen",
+        "age": 22,
+        "occupation": "Bellhop",
+        "personality": "Cheerful",
+        "background": "He runs the luggage service.",
+        "secret": "He once helped a thief.",
+        "goal": "Make extra tips.",
+        "alibi": "He was at the front door at 8:00 PM.",
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "They joke about food."
+          },
+          {
+            "with_character": "C6",
+            "kind": "acquaintance",
+            "detail": "They share a shift."
+          }
+        ],
+        "knowledge": [
+          "He saw C1 hide something."
+        ],
+        "lies": [
+          "He says he did not see anything."
+        ],
+        "inventory": [
+          "Luggage cart",
+          "Key ring"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C6",
+        "name": "Dr. Maya Singh",
+        "age": 38,
+        "occupation": "Philanthropist",
+        "personality": "Kind",
+        "background": "She is a donor to the villa owner.",
+        "secret": "She has a hidden safe.",
+        "goal": "Find the necklace for herself.",
+        "alibi": "She was in the garden at 8:12 PM.",
+        "relationships": [
+          {
+            "with_character": "C5",
+            "kind": "acquaintance",
+            "detail": "She greets him at the door."
+          }
+        ],
+        "knowledge": [
+          "She knows the necklace history."
+        ],
+        "lies": [],
+        "inventory": [
+          "Notebook",
+          "Pen"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive at the villa.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5",
+          "C6"
+        ]
+      },
+      {
+        "time": "8:05 PM",
+        "description": "Victor patrols the hall.",
+        "involved": [
+          "C3"
+        ]
+      },
+      {
+        "time": "8:10 PM",
+        "description": "Evelyn works in the kitchen.",
+        "involved": [
+          "C2"
+        ]
+      },
+      {
+        "time": "8:12 PM",
+        "description": "Maya walks in the garden.",
+        "involved": [
+          "C6"
+        ]
+      },
+      {
+        "time": "8:15 PM",
+        "description": "Liam says he is in the garden.",
+        "involved": [
+          "C1"
+        ]
+      },
+      {
+        "time": "8:20 PM",
+        "description": "Sofia stays in the study.",
+        "involved": [
+          "C4"
+        ]
+      },
+      {
+        "time": "8:30 PM",
+        "description": "The necklace is found missing.",
+        "involved": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Fingerprint on safe door",
+        "description": "A clear print on the safe door.",
+        "location": "Study",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Security camera clip",
+        "description": "Shows a man in a black coat entering study.",
+        "location": "Hall camera",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E3",
+        "name": "Pocket knife",
+        "description": "A small knife found in a trash bin.",
+        "location": "Garden trash",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E4",
+        "name": "Torn dress fabric",
+        "description": "A piece of silk near the safe.",
+        "location": "Study",
+        "points_to": "C4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E5",
+        "name": "Old recipe note",
+        "description": "Paper with stolen recipe.",
+        "location": "Kitchen",
+        "points_to": "C2",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The safe code 3-1-4 matches Liam's birthday.",
+      "Liam's passport shows a different name.",
+      "Liam's luggage has a hidden compartment."
+    ],
+    "red_herrings": [
+      "The silk fabric points to Sofia but she was in the study.",
+      "The recipe note points to Evelyn but she did not touch the safe."
+    ],
+    "solution": {
+      "target_character_id": "C1",
+      "target_true_identity": "Marco Rossi",
+      "reasoning": "Fingerprint, camera, and knife all point to Liam. His fake ID and hidden compartment show he is a thief. Other clues are false.",
+      "key_evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_431fdab755e4",
+    "case_id": "case_a406f6c29d89",
+    "status": "in_progress",
+    "created_at": "2026-08-31T07:39:10.627751+00:00",
+    "updated_at": "2026-08-31T07:42:54.752984+00:00",
+    "minutes_elapsed": 40,
+    "current_location": "Main Hall",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 3,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": [
+          "Detective said: 'Talk to Liam Hart what you doing when necklace has gone'",
+          "Detective said: 'Talk to Liam Hart who is with you'",
+          "Detective said: 'Talk to Liam Hart hii'"
+        ]
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C5": {
+        "character_id": "C5",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      },
+      "C6": {
+        "character_id": "C6",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "memory": []
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Liam Hart",
+          "detail": "30, Businessman. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Evelyn Park",
+          "detail": "28, Chef. Friendly.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Victor Hale",
+          "detail": "45, Security Guard. Serious.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Sofia Delgado",
+          "detail": "33, Art Curator. Elegant.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Tommy Nguyen",
+          "detail": "22, Bellhop. Cheerful.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Dr. Maya Singh",
+          "detail": "38, Philanthropist. Kind.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive at the villa.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:05 PM",
+          "detail": "Victor patrols the hall.",
+          "at_time": "8:05 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:10 PM",
+          "detail": "Evelyn works in the kitchen.",
+          "at_time": "8:10 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:12 PM",
+          "detail": "Maya walks in the garden.",
+          "at_time": "8:12 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:15 PM",
+          "detail": "Liam says he is in the garden.",
+          "at_time": "8:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:20 PM",
+          "detail": "Sofia stays in the study.",
+          "at_time": "8:20 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "8:30 PM",
+          "detail": "The necklace is found missing.",
+          "at_time": "8:30 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "A rich host has a famous necklace. It is gone at night. Six guests are in the villa.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Talk to Liam Hart what you doing when necklace has gone",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Liam Hart",
+        "text": "I was in the garden. It was about eight fifteen. I was just walking and looking at the flowers. I didn\u2019t see anything wrong.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "who is with you",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Narrator",
+        "text": "You look around, but nothing stands out.",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "You",
+        "text": "Talk to Liam Hart who is with you",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:15 PM",
+        "speaker": "Liam Hart",
+        "text": "I was just out in the garden. I was looking at the roses. Nothing else.",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:25 PM",
+        "speaker": "You",
+        "text": "and anythig you see else",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:25 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the main hall, the marble cold beneath your feet and the lights flickering low. You hear the distant crash of waves and smell a thin trace of salt on the stale",
+        "kind": "narration"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "Talk to Liam Hart hii",
+        "kind": "dialogue"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Liam Hart",
+        "text": "I was in the garden at eight fifteen. I was alone, just looking at the plants. Nothing else was happening.",
+        "kind": "dialogue"
+      }
+    ],
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}
