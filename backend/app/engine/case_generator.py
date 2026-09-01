@@ -17,7 +17,35 @@ log = get_logger(__name__)
 
 
 def generate_case(num_characters: int, difficulty: Difficulty) -> Case:
+    """Generate an immutable Case.
+
+    Tries the configured provider first. If it fails at runtime (bad API key,
+    decommissioned model, rate limit, network error, malformed JSON, ...), fall
+    back to the offline MockProvider so a game is always created. This prevents
+    an unhandled 500 on POST /api/games (which would also strip CORS headers).
+    """
     provider: LLMProvider = get_provider()
+    try:
+        return _build_case(provider, num_characters, difficulty)
+    except Exception as exc:
+        # Only worth retrying with mock if we weren't already using it.
+        if getattr(provider, "name", "") == "mock":
+            log.error("Case generation failed with mock provider: %s", exc)
+            raise
+        from ..llm.mock_provider import MockProvider
+
+        log.warning(
+            "Case generation failed with provider '%s' (%s); "
+            "falling back to MockProvider.",
+            getattr(provider, "name", "?"),
+            exc,
+        )
+        return _build_case(MockProvider(), num_characters, difficulty)
+
+
+def _build_case(
+    provider: LLMProvider, num_characters: int, difficulty: Difficulty
+) -> Case:
     system, user = build_case_generator_messages(num_characters, difficulty)
     raw = provider.complete(
         [LLMMessage("system", system), LLMMessage("user", user)],

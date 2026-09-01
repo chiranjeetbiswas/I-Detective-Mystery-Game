@@ -7,7 +7,9 @@ import type {
   Statistics,
 } from "./types";
 
-const BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Strip any trailing slash so `${BASE}/api...` never produces a double slash
+// (e.g. when NEXT_PUBLIC_API_URL is set to "https://host/" on the deploy host).
+const BASE = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}/api${path}`, {

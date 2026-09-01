@@ -12,14 +12,23 @@ class Settings(BaseSettings):
     )
 
     groq_api_key: str = ""
-    groq_model: str = "llama-3.3-70b-versatile"
+    groq_model: str = "openai/gpt-oss-20b"
     llm_provider: str = "auto"  # auto | groq | mock
     data_dir: str = "./data"
     cors_origins: str = "http://localhost:3000"
+    # Optional regex to allow origins by pattern (e.g. all Render preview URLs).
+    cors_origin_regex: str = ""
 
     @property
     def cors_origin_list(self) -> list[str]:
-        return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+        # Normalize: trim whitespace and strip any trailing slash so an origin
+        # configured as "https://app.onrender.com/" still matches the browser's
+        # "https://app.onrender.com" Origin header.
+        return [
+            o.strip().rstrip("/")
+            for o in self.cors_origins.split(",")
+            if o.strip()
+        ]
 
     @property
     def resolved_provider(self) -> str:

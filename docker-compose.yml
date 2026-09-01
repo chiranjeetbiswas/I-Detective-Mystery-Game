@@ -9,7 +9,7 @@ services:
       - "${BACKEND_PORT:-8000}:8000"
     environment:
       - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.3-70b-versatile}
+      - GROQ_MODEL=${GROQ_MODEL:-openai/gpt-oss-20b}
       - LLM_PROVIDER=${LLM_PROVIDER:-auto}
       - DATA_DIR=/app/data
       - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}

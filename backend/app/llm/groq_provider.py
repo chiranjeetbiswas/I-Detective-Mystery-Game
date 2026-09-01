@@ -35,9 +35,31 @@ class GroqProvider(LLMProvider):
         # gpt-oss models are reasoning models: without a low reasoning effort they
         # spend the whole token budget on internal reasoning and return empty
         # content. Keep reasoning minimal so the model produces actual answers.
-        if "gpt-oss" in self._model:
+        # Only send it when the installed SDK actually supports the parameter --
+        # older groq versions raise TypeError on unknown keyword arguments.
+        if "gpt-oss" in self._model and self._supports_reasoning_effort():
             kwargs["reasoning_effort"] = "low"
         if json_mode:
             kwargs["response_format"] = {"type": "json_object"}
-        resp = self._client.chat.completions.create(**kwargs)
+        try:
+            resp = self._client.chat.completions.create(**kwargs)
+        except TypeError as exc:
+            # Defensive: an SDK mismatch should degrade, not crash the request.
+            if "reasoning_effort" not in str(exc):
+                raise
+            log.warning("SDK rejected reasoning_effort (%s); retrying without it.", exc)
+            kwargs.pop("reasoning_effort", None)
+            resp = self._client.chat.completions.create(**kwargs)
         return resp.choices[0].message.content or ""
+
+    @staticmethod
+    def _supports_reasoning_effort() -> bool:
+        """True if the installed groq SDK accepts `reasoning_effort`."""
+        try:
+            import inspect
+
+            from groq.resources.chat.completions import Completions
+
+            return "reasoning_effort" in inspect.signature(Completions.create).parameters
+        except Exception:  # pragma: no cover - unknown SDK layout
+            return False
