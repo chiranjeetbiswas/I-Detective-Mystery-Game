@@ -42,6 +42,34 @@ Mystery Game/
 
 ## Quick start
 
+### With Docker (One-Command Startup)
+
+The easiest way to run the full application (both frontend and backend):
+
+```bash
+# Optional: customize Groq API key (defaults to offline Mock Provider if unset)
+cp .env.example .env
+
+# Build and start both services
+docker compose up --build
+```
+
+- **Frontend App**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Docs (Swagger)**: http://localhost:8000/docs
+
+To run in the background:
+```bash
+docker compose up -d
+```
+
+To stop:
+```bash
+docker compose down
+```
+
+### Manual Setup (Without Docker)
+
 ### Backend
 ```bash
 cd backend

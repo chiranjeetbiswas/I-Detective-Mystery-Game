@@ -1,0 +1,679 @@
+{
+  "case": {
+    "id": "case_9c034d940a38",
+    "title": "The Midnight Heist",
+    "difficulty": "normal",
+    "location_type": "Mansion",
+    "location_name": "Ashcroft Hall",
+    "introduction": "The night was dark at Ashcroft Hall. A priceless gem vanished from the vault. One guest hides a fake name. You must find the thief.",
+    "crime": "The diamond was stolen from the vault.",
+    "target_fake_identity": "Ethan Blake",
+    "escape_plan": "The thief will use the secret tunnel to leave the hall. They will meet a contact outside the gate at sunrise.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Entrance Hall",
+        "description": "The main hall. A big staircase. Portraits on the walls."
+      },
+      {
+        "id": "R2",
+        "name": "Vault",
+        "description": "A dark room with a safe. Heavy metal door."
+      },
+      {
+        "id": "R3",
+        "name": "Library",
+        "description": "Rows of books. A secret lever in the desk."
+      },
+      {
+        "id": "R4",
+        "name": "Garden",
+        "description": "Night garden with a stone path. A hidden gate."
+      },
+      {
+        "id": "R5",
+        "name": "Trophy Room",
+        "description": "Paintings and trophies. A locked cabinet."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Ethan Blake",
+        "age": 34,
+        "gender": "male",
+        "occupation": "Businessman",
+        "personality": "Quiet and calm",
+        "background": "He moved to the city a year ago. He likes to talk about travel. He has no family here. He is nervous about meeting strangers.",
+        "secret": "He is not really Ethan Blake. His real name is Marcus Lee.",
+        "goal": "Hide his identity and keep the gem.",
+        "alibi": "He says he was in the library reading. He was alone.",
+        "speaking_style": "Soft voice. He speaks slowly.",
+        "habits": "He likes to chew gum. He watches the clock often.",
+        "fear": "He fears being caught by the police.",
+        "likes": [
+          "Travel",
+          "Gum"
+        ],
+        "dislikes": [
+          "Loud noise"
+        ],
+        "intelligence": 88,
+        "confidence": 72,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "They met at a conference."
+          },
+          {
+            "with_character": "C3",
+            "kind": "rival",
+            "detail": "They disagree on business."
+          }
+        ],
+        "knowledge": [
+          "He knows the lock of the vault. He knows the tunnel."
+        ],
+        "lies": [
+          "He says he was alone in the library."
+        ],
+        "inventory": [
+          "Business card",
+          "Map of the house"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C2",
+        "name": "Lila Grant",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Artist",
+        "personality": "Bright and chatty",
+        "background": "She is a local painter. She loves animals. She has a pet cat.",
+        "secret": "She has a tattoo of a rose on her wrist that she hides from others.",
+        "goal": "Finish her art. Keep her privacy.",
+        "alibi": "She says she was in the garden painting. She was alone.",
+        "speaking_style": "Fast voice. She talks a lot.",
+        "habits": "She taps her fingers. She always checks her phone.",
+        "fear": "She fears her art will be stolen.",
+        "likes": [
+          "Animals",
+          "Painting"
+        ],
+        "dislikes": [
+          "Crowded places"
+        ],
+        "intelligence": 75,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "acquaintance",
+            "detail": "They saw each other at a gallery."
+          },
+          {
+            "with_character": "C4",
+            "kind": "friend",
+            "detail": "They went on hikes."
+          }
+        ],
+        "knowledge": [
+          "She knows the layout of the garden. She knows about the secret gate."
+        ],
+        "lies": [
+          "She says she was alone in the garden."
+        ],
+        "inventory": [
+          "Brush set",
+          "Sketchbook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Marcus Lee",
+        "age": 42,
+        "gender": "male",
+        "occupation": "Chef",
+        "personality": "Kind and patient",
+        "background": "He runs a small restaurant. He loves cooking. He has a small family.",
+        "secret": "He knows the vault key. He has a secret recipe.",
+        "goal": "Win a culinary award. Keep his restaurant popular.",
+        "alibi": "He says he was cooking in the kitchen. He was alone.",
+        "speaking_style": "Slow voice. He speaks gently.",
+        "habits": "He wears a chef's hat. He hums while cooking.",
+        "fear": "He fears losing his restaurant.",
+        "likes": [
+          "Cooking",
+          "Music"
+        ],
+        "dislikes": [
+          "Rudeness"
+        ],
+        "intelligence": 82,
+        "confidence": 68,
+        "relationships": [
+          {
+            "with_character": "C5",
+            "kind": "sibling",
+            "detail": "They share a kitchen."
+          },
+          {
+            "with_character": "C1",
+            "kind": "business partner",
+            "detail": "They plan a menu."
+          }
+        ],
+        "knowledge": [
+          "He knows the safe's code. He knows how to open it."
+        ],
+        "lies": [
+          "He says he was alone in the kitchen."
+        ],
+        "inventory": [
+          "Chef's knife",
+          "Recipe book"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Nina Patel",
+        "age": 36,
+        "gender": "female",
+        "occupation": "Detective",
+        "personality": "Sharp and calm",
+        "background": "She works for the city. She loves puzzles. She has a badge.",
+        "secret": "She hides a scar on her cheek.",
+        "goal": "Solve the case. Keep the city safe.",
+        "alibi": "She says she was in the trophy room looking at paintings. She was alone.",
+        "speaking_style": "Direct voice. She speaks clearly.",
+        "habits": "She always keeps her notebook. She checks her watch often.",
+        "fear": "She fears losing evidence.",
+        "likes": [
+          "Puzzles",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Loud noises"
+        ],
+        "intelligence": 95,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "C5",
+            "kind": "friend",
+            "detail": "They study cases."
+          },
+          {
+            "with_character": "C2",
+            "kind": "acquaintance",
+            "detail": "They met at a charity."
+          }
+        ],
+        "knowledge": [
+          "She knows the layout of the trophy room. She knows how to trace fingerprints."
+        ],
+        "lies": [
+          "She says she was alone in the trophy room."
+        ],
+        "inventory": [
+          "Badge",
+          "Notepad"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C5",
+        "name": "Tom Ruiz",
+        "age": 30,
+        "gender": "male",
+        "occupation": "Mechanic",
+        "personality": "Hard and loud",
+        "background": "He fixes cars. He likes to talk. He has a friend group.",
+        "secret": "He has a secret stash of tools hidden in his toolbox.",
+        "goal": "Make money. Keep his tools safe.",
+        "alibi": "He says he was in the garage fixing a bike. He was alone.",
+        "speaking_style": "Gravelly voice. He speaks quickly.",
+        "habits": "He always carries a wrench. He talks loudly.",
+        "fear": "He fears losing his tools.",
+        "likes": [
+          "Cars",
+          "Music"
+        ],
+        "dislikes": [
+          "Quiet"
+        ],
+        "intelligence": 65,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "neighbor",
+            "detail": "They share the building."
+          },
+          {
+            "with_character": "C3",
+            "kind": "colleague",
+            "detail": "They fix engines."
+          }
+        ],
+        "knowledge": [
+          "He knows how to open the garage door. He knows where the tools are."
+        ],
+        "lies": [
+          "He says he was alone in the garage."
+        ],
+        "inventory": [
+          "Wrench set",
+          "Toolbox"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive. The gem is shown in the vault.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "The gem disappears. Alarm triggers.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Guests search the vault.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Guests leave the hall.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Broken Key",
+        "description": "A key that was broken in half. It was in the vault door. It looks new.",
+        "location": "Vault",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Footprints",
+        "description": "Small footprints on the stone path. They match a shoe size 9.",
+        "location": "Garden",
+        "points_to": "C3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E3",
+        "name": "Gum Wrapper",
+        "description": "A wrapper from a gum pack. It was left in the library.",
+        "location": "Library",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E4",
+        "name": "Tattoo",
+        "description": "A small rose on a wrist. It is hidden under a long sleeve.",
+        "location": "C2",
+        "points_to": "C2",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The broken key is too new. The gum wrapper is from the same brand the thief likes.",
+      "The footprints are from a size that no guest owns."
+    ],
+    "red_herrings": [
+      "Footprints point to C3. The rose tattoo is a clue for C2."
+    ],
+    "solution": {
+      "target_character_id": "C1",
+      "target_true_identity": "Marcus Lee",
+      "reasoning": "The gum wrapper shows C1 likes gum. The broken key is new and in the vault. The real Marcus Lee knows the key and the vault. C1 is the fake name Ethan Blake.",
+      "key_evidence_ids": [
+        "E1",
+        "E3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_ba62960d7d8f",
+    "case_id": "case_9c034d940a38",
+    "status": "in_progress",
+    "created_at": "2026-09-01T05:22:06.635063+00:00",
+    "updated_at": "2026-09-01T05:24:13.485594+00:00",
+    "minutes_elapsed": 70,
+    "current_location": "Entrance Hall",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [
+      "Entrance Hall"
+    ],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 47,
+        "stress": 20,
+        "suspicion_of_player": 5,
+        "times_questioned": 4,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "you know the vault",
+          "Look around",
+          "why the key is here"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hello",
+            "answer": "Hello. How can I help?"
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "you know the vault ",
+            "answer": "I don't know what you mean. I was just in the library."
+          },
+          {
+            "at_time": "8:35 PM",
+            "question": "Look around",
+            "answer": "I\u2019m in the library. I\u2019m just reading. I don\u2019t see anything else."
+          },
+          {
+            "at_time": "9:00 PM",
+            "question": "why the key is here",
+            "answer": "I\u2019m not sure. I was just reading in the library. I don\u2019t see a key. Maybe it was left by someone else."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'",
+          "Detective asked: 'you know the vault '",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'why the key is here'"
+        ],
+        "has_met": true
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "C5": {
+        "character_id": "C5",
+        "trust": 50,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Ethan Blake",
+          "detail": "34, Businessman. Quiet and calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lila Grant",
+          "detail": "28, Artist. Bright and chatty.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marcus Lee",
+          "detail": "42, Chef. Kind and patient.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Nina Patel",
+          "detail": "36, Detective. Sharp and calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Tom Ruiz",
+          "detail": "30, Mechanic. Hard and loud.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive. The gem is shown in the vault.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "The gem disappears. Alarm triggers.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Guests search the vault.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Guests leave the hall.",
+          "at_time": "10:00 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "The night was dark at Ashcroft Hall. A priceless gem vanished from the vault. One guest hides a fake name. You must find the thief.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Ethan Blake. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Ethan Blake",
+        "text": "Hello. How can I help?",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "you know the vault ",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Ethan Blake",
+        "text": "I don't know what you mean. I was just in the library.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the dim entrance hall, the floorboards creak under your boots. The air smells of dust and old perfume. You search the room, looking for any clue that might point to the killer.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:35 PM",
+        "speaker": "Ethan Blake",
+        "text": "I\u2019m in the library. I\u2019m just reading. I don\u2019t see anything else.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:45 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the entrance hall of Ashcroft Hall.  \nYou hear a faint creak from the stairs.  \nYou look for any signs that the stories of the guests are true.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "why the key is here",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Ethan Blake",
+        "text": "I\u2019m not sure. I was just reading in the library. I don\u2019t see a key. Maybe it was left by someone else.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      }
+    ],
+    "active_character_id": "C1",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

@@ -280,10 +280,10 @@
   "state": {
     "id": "game_f1178c091aec",
     "case_id": "case_632d4b2646ee",
-    "status": "in_progress",
+    "status": "lost",
     "created_at": "2026-08-31T18:43:01.992931+00:00",
-    "updated_at": "2026-08-31T19:24:41.616283+00:00",
-    "minutes_elapsed": 225,
+    "updated_at": "2026-08-31T20:04:53.928109+00:00",
+    "minutes_elapsed": 725,
     "current_location": "Dining Room",
     "current_objective": "At Grand Oak Hotel tonight, 4 guests are trapped \u2014 and one is lying about who they are. Match the clues to the lies and point out the guilty one behind chef death, suspected poisoning. There are many clues to help you.",
     "inventory": [],
@@ -297,10 +297,10 @@
     "npc_states": {
       "c1": {
         "character_id": "c1",
-        "trust": 51,
+        "trust": 42,
         "stress": 20,
-        "suspicion_of_player": 15,
-        "times_questioned": 6,
+        "suspicion_of_player": 30,
+        "times_questioned": 9,
         "mood": "confident",
         "status": "available",
         "evidence_shown": [],
@@ -312,7 +312,10 @@
           "you know where is dining room",
           "Look around",
           "which guests at the tables",
-          "you like to drinking"
+          "you like to drinking",
+          "michael last time you see the chef",
+          "but the kitchen is near you he is come why not you see",
+          "at the time 2 to 3 what you doing"
         ],
         "relationship_notes": [],
         "exchanges": [
@@ -345,6 +348,21 @@
             "at_time": "9:05 PM",
             "question": "you like to drinking",
             "answer": "I do like tea, but I\u2019m not drinking anything right now. I\u2019m just sipping the one I brought."
+          },
+          {
+            "at_time": "4:20 AM",
+            "question": "michael last time you see the chef",
+            "answer": "I was just in the lobby. I didn't see the chef. I\u2019m only sipping tea. I don\u2019t know where he was."
+          },
+          {
+            "at_time": "4:30 AM",
+            "question": "but the kitchen is near you he is come why not you see",
+            "answer": "I\u2019m not seeing anyone from the kitchen. I was in the lobby, sipping tea. I didn\u2019t spot the chef at all."
+          },
+          {
+            "at_time": "4:40 AM",
+            "question": "at the time 2 to 3 what you doing",
+            "answer": "I was in the lobby, reading a book. I kept quiet and sipped tea. I didn\u2019t notice anything else."
           }
         ],
         "memory": [
@@ -353,18 +371,21 @@
           "Detective asked: 'you know where is dining room'",
           "Detective asked: 'Look around'",
           "Detective asked: 'which guests at the tables'",
-          "Detective asked: 'you like to drinking'"
+          "Detective asked: 'you like to drinking'",
+          "Detective asked: 'michael last time you see the chef'",
+          "Detective asked: 'but the kitchen is near you he is come why not you see'",
+          "Detective asked: 'at the time 2 to 3 what you doing'"
         ],
         "has_met": true
       },
       "c2": {
         "character_id": "c2",
-        "trust": 48,
-        "stress": 20,
-        "suspicion_of_player": 20,
-        "times_questioned": 7,
-        "mood": "calm",
-        "status": "available",
+        "trust": 10,
+        "stress": 10,
+        "suspicion_of_player": 100,
+        "times_questioned": 25,
+        "mood": "suspicious",
+        "status": "talking",
         "evidence_shown": [],
         "revealed_knowledge": [],
         "lies_told": [],
@@ -375,9 +396,30 @@
           "you saw anyone go to that side",
           "any clue or unusual you see the hole day",
           "can i search your room one time",
-          "can you look around"
+          "can you look around",
+          "hello i want to ask question again",
+          "last time you see the chef",
+          "and which time he come",
+          "and what he making",
+          "and after that where he gone you know",
+          "ok thanks",
+          "in the morning what you are doing an time",
+          "why you always tidy",
+          "provide me some hint",
+          "which type of bottle",
+          "and which counter",
+          "how to you know that was wine",
+          "you like wine",
+          "any time you drink wine with chef",
+          "because in this room we find wine",
+          "why you so hasitate",
+          "anything you want to say to me",
+          "ok thankyou"
         ],
-        "relationship_notes": [],
+        "relationship_notes": [
+          "The detective was kind to me.",
+          "The detective was kind to me."
+        ],
         "exchanges": [
           {
             "at_time": "9:15 PM",
@@ -413,27 +455,120 @@
             "at_time": "10:15 PM",
             "question": "can you look around",
             "answer": "Sure, I can look around. I'll check the kitchen and the back hall. I\u2019ll keep an eye on the dessert station, too. Let me know if you see anything."
+          },
+          {
+            "at_time": "3:20 AM",
+            "question": "hello i want to ask question again",
+            "answer": "Hi! Sure, go ahead. I\u2019m in the kitchen right now, making dessert. What do you want to know?"
+          },
+          {
+            "at_time": "3:30 AM",
+            "question": "last time you see the chef",
+            "answer": "I saw the chef earlier. He was in the kitchen making dessert, just like me. I laughed when he said the sugar was too sweet. I didn\u2019t see him go anywhere else."
+          },
+          {
+            "at_time": "3:40 AM",
+            "question": "and which time he come",
+            "answer": "I don\u2019t know the exact time. He was in the kitchen around three in the morning, but I didn\u2019t see him leave until after I finished the desserts."
+          },
+          {
+            "at_time": "3:50 AM",
+            "question": "and what he making",
+            "answer": "I\u2019m not sure, but he was mixing the sugar and flour for the dessert. I saw him stir it a lot. I didn\u2019t hear anything else."
+          },
+          {
+            "at_time": "4:00 AM",
+            "question": "and after that where he gone you know",
+            "answer": "I didn\u2019t see him leave the kitchen. He stayed until the desserts were done. After that he just walked out the back door. I didn\u2019t catch where he went next."
+          },
+          {
+            "at_time": "4:10 AM",
+            "question": "ok thanks",
+            "answer": "You're welcome. Let me know if you need anything else."
+          },
+          {
+            "at_time": "6:05 AM",
+            "question": "in the morning what you are doing an time",
+            "answer": "I was in the kitchen making dessert. I started around two\u2011o\u2019clock. I laughed a lot while stirring. I finished by three\u2011ten, then left the kitchen."
+          },
+          {
+            "at_time": "6:15 AM",
+            "question": "why you always tidy",
+            "answer": "I always tidy because I like things neat. It keeps the kitchen calm and I don\u2019t feel late. Plus, a tidy space makes it easier to serve guests fast."
+          },
+          {
+            "at_time": "6:25 AM",
+            "question": "provide me some hint",
+            "answer": "I\u2019m not sure what you need, but if you\u2019re looking for clues, maybe check the back door. The chef left through that way, and I saw him put a weird bottle on the counter before he left. It smelled odd."
+          },
+          {
+            "at_time": "6:35 AM",
+            "question": "which type of bottle",
+            "answer": "It was a little bottle of wine, I think. I saw it on the counter before he left."
+          },
+          {
+            "at_time": "6:45 AM",
+            "question": "and which counter",
+            "answer": "It was on the prep counter next to the stove. The little bottle was right there, on the glass table."
+          },
+          {
+            "at_time": "6:55 AM",
+            "question": "how to you know that was wine",
+            "answer": "I saw it with my own eyes. The bottle had a red label and the smell was like grape juice. I tasted a tiny drop when I was making dessert. That's why I know it was wine."
+          },
+          {
+            "at_time": "7:05 AM",
+            "question": "you like wine",
+            "answer": "Yeah, I do like wine. It\u2019s good for dessert, and I\u2019ve had it with a few customers before. I just love the taste."
+          },
+          {
+            "at_time": "7:15 AM",
+            "question": "any time you drink wine with chef",
+            "answer": "I don\u2019t drink wine with anyone. I only serve it to customers. The chef? He\u2019s not my friend. I\u2019m not sure why you ask."
+          },
+          {
+            "at_time": "7:25 AM",
+            "question": "because in this room we find wine",
+            "answer": "I didn\u2019t bring wine in. I only had the little bottle on the prep counter. It was there before the chef left. I didn\u2019t touch it."
+          },
+          {
+            "at_time": "7:35 AM",
+            "question": "why you so hasitate",
+            "answer": "I\u2019m not sure. Maybe I\u2019m just worried I\u2019ll be late for work. That\u2019s the only thing that makes me jump."
+          },
+          {
+            "at_time": "7:45 AM",
+            "question": "anything you want to say to me",
+            "answer": "I don\u2019t have anything else. Just keep asking."
+          },
+          {
+            "at_time": "7:55 AM",
+            "question": "ok thankyou",
+            "answer": "Thanks. I\u2019m just happy I could help. Let me know if you need anything else. I\u2019ll keep serving the guests on time."
           }
         ],
         "memory": [
-          "Detective asked: 'hye Lisa'",
-          "Detective asked: 'no the chef is died'",
-          "Detective asked: 'how may distance of dining room from here'",
-          "Detective asked: 'you saw anyone go to that side'",
-          "Detective asked: 'any clue or unusual you see the hole day'",
-          "Detective asked: 'can i search your room one time'",
-          "Detective asked: 'can you look around'"
+          "Detective asked: 'provide me some hint'",
+          "Detective asked: 'which type of bottle'",
+          "Detective asked: 'and which counter'",
+          "Detective asked: 'how to you know that was wine'",
+          "Detective asked: 'you like wine'",
+          "Detective asked: 'any time you drink wine with chef'",
+          "Detective asked: 'because in this room we find wine'",
+          "Detective asked: 'why you so hasitate'",
+          "Detective asked: 'anything you want to say to me'",
+          "Detective asked: 'ok thankyou'"
         ],
         "has_met": true
       },
       "c3": {
         "character_id": "c3",
-        "trust": 51,
-        "stress": 20,
-        "suspicion_of_player": 15,
-        "times_questioned": 6,
-        "mood": "confident",
-        "status": "talking",
+        "trust": 35,
+        "stress": 15,
+        "suspicion_of_player": 55,
+        "times_questioned": 14,
+        "mood": "suspicious",
+        "status": "available",
         "evidence_shown": [],
         "revealed_knowledge": [],
         "lies_told": [],
@@ -442,9 +577,19 @@
           "i want to know about you",
           "you like to drink wine",
           "you know the case in this hotel",
-          "look around you"
+          "look around you",
+          "can you know any clue",
+          "thanks to giving time",
+          "hii",
+          "which time you see the chef",
+          "and what he doing",
+          "you the last person saw the chef",
+          "you find any unusal",
+          "who is live near dining room"
         ],
-        "relationship_notes": [],
+        "relationship_notes": [
+          "The detective was kind to me."
+        ],
         "exchanges": [
           {
             "at_time": "10:40 PM",
@@ -470,33 +615,181 @@
             "at_time": "11:20 PM",
             "question": "look around you",
             "answer": "I\u2019m in the lounge. There\u2019s a small table, a lamp, a few chairs. A book lies open on the table. The room is quiet."
+          },
+          {
+            "at_time": "12:00 AM",
+            "question": "can you know any clue",
+            "answer": "I don\u2019t have any clues. I\u2019m just reading here."
+          },
+          {
+            "at_time": "12:10 AM",
+            "question": "thanks to giving time ",
+            "answer": "You're welcome. I hope I'm helpful."
+          },
+          {
+            "at_time": "5:05 AM",
+            "question": "hii",
+            "answer": "Hi. I\u2019m still here, just reading."
+          },
+          {
+            "at_time": "5:15 AM",
+            "question": "which time you see the chef",
+            "answer": "I saw the chef around 4:30 this morning."
+          },
+          {
+            "at_time": "5:25 AM",
+            "question": "and what he doing",
+            "answer": "He was standing near the kitchen window. He looked out, then turned back and stared at the books on the shelf. He didn\u2019t say anything. I\u2019m not sure why he was there."
+          },
+          {
+            "at_time": "5:35 AM",
+            "question": "you the last person saw the chef",
+            "answer": "Yes, I was the last one who saw him. I saw him near the kitchen window at about 4:30 this morning. I didn't see anything else."
+          },
+          {
+            "at_time": "5:45 AM",
+            "question": "you find any unusal",
+            "answer": "I didn\u2019t see anything odd. Just the chef near the window, like before. No strange sounds or people. Nothing else unusual."
+          },
+          {
+            "at_time": "5:55 AM",
+            "question": "who is live near dining room",
+            "answer": "I think it\u2019s the housekeeper. She\u2019s usually near the dining room, always tidy. I saw her moving around there earlier."
           }
         ],
         "memory": [
-          "Detective asked: 'hello'",
-          "Detective asked: 'i want to know about you'",
-          "Detective asked: 'you like to drink wine'",
           "Detective asked: 'you know the case in this hotel'",
-          "Detective asked: 'look around you'"
+          "Detective asked: 'look around you'",
+          "Detective asked: 'can you know any clue'",
+          "Detective asked: 'thanks to giving time '",
+          "Detective asked: 'hii'",
+          "Detective asked: 'which time you see the chef'",
+          "Detective asked: 'and what he doing'",
+          "Detective asked: 'you the last person saw the chef'",
+          "Detective asked: 'you find any unusal'",
+          "Detective asked: 'who is live near dining room'"
         ],
         "has_met": true
       },
       "c4": {
         "character_id": "c4",
-        "trust": 60,
+        "trust": 24,
         "stress": 20,
-        "suspicion_of_player": 0,
-        "times_questioned": 0,
-        "mood": "confident",
+        "suspicion_of_player": 60,
+        "times_questioned": 15,
+        "mood": "suspicious",
         "status": "available",
         "evidence_shown": [],
         "revealed_knowledge": [],
         "lies_told": [],
-        "asked_questions": [],
+        "asked_questions": [
+          "hello mr.",
+          "i want to know what are you doing \\",
+          "you know in this room what happend",
+          "the chef is die",
+          "how say chef is nervous",
+          "who is chef very close",
+          "anythik you see unusual in this days",
+          "Look around",
+          "you use napkin",
+          "you like wine",
+          "you see in this room anyone drinking wine",
+          "i want to know more yourself",
+          "which day you come in this hotel",
+          "and which time you see chef",
+          "and what he doing that time"
+        ],
         "relationship_notes": [],
-        "exchanges": [],
-        "memory": [],
-        "has_met": false
+        "exchanges": [
+          {
+            "at_time": "12:20 AM",
+            "question": "hello mr.",
+            "answer": "Hi. I'm Eve Carter. What do you need?"
+          },
+          {
+            "at_time": "12:30 AM",
+            "question": "i want to know what are you doing \\",
+            "answer": "I\u2019m in the lobby, talking with some friends. I\u2019m just waiting for the next interview."
+          },
+          {
+            "at_time": "12:40 AM",
+            "question": "you know in this room what happend",
+            "answer": "I\u2019m not sure what you mean. I was in the lobby with friends, waiting for an interview. I don't remember anything else."
+          },
+          {
+            "at_time": "12:50 AM",
+            "question": "the chef is die",
+            "answer": "I heard the chef was nervous. I\u2019m not sure why he died. I was in the lobby, just talking with friends, waiting for my next interview."
+          },
+          {
+            "at_time": "1:00 AM",
+            "question": "how say chef is nervous",
+            "answer": "I heard the chef was nervous. I didn\u2019t see it myself, just heard a rumor."
+          },
+          {
+            "at_time": "1:10 AM",
+            "question": "who is chef very close",
+            "answer": "I don't know who the chef was close to. I only heard he was nervous. I didn't see any close friends. I\u2019m not sure who he liked."
+          },
+          {
+            "at_time": "1:20 AM",
+            "question": "anythik you see unusual in this days",
+            "answer": "I saw nothing weird. Just the usual crowd in the lobby, people talking, the lights flickering a bit. No one seemed off."
+          },
+          {
+            "at_time": "1:30 AM",
+            "question": "Look around",
+            "answer": "I\u2019m standing in the lobby with my friends. The lights flicker a little. Everyone is just talking. Nothing out of the ordinary."
+          },
+          {
+            "at_time": "1:55 AM",
+            "question": "you use napkin",
+            "answer": "I don't see how that matters. I\u2019m just here with my notebook and friends in the lobby."
+          },
+          {
+            "at_time": "2:05 AM",
+            "question": "you like wine",
+            "answer": "I don't like wine. I prefer coffee."
+          },
+          {
+            "at_time": "2:15 AM",
+            "question": "you see in this room anyone drinking wine",
+            "answer": "I don\u2019t see anyone drinking wine. Just people talking and a few glasses of water. No wine."
+          },
+          {
+            "at_time": "2:40 AM",
+            "question": "i want to know more yourself",
+            "answer": "I\u2019m just a reporter. I\u2019m writing a story, nothing else. My notebook is all I need."
+          },
+          {
+            "at_time": "2:50 AM",
+            "question": "which day you come in this hotel",
+            "answer": "I came in on Thursday. I\u2019m just here to write."
+          },
+          {
+            "at_time": "3:00 AM",
+            "question": "and which time you see chef",
+            "answer": "I saw the chef at about 2:30 a.m., just before the lights went out."
+          },
+          {
+            "at_time": "3:10 AM",
+            "question": "and what he doing that time",
+            "answer": "He was standing by the kitchen door, looking at the lights. I didn\u2019t see him doing anything else."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'who is chef very close'",
+          "Detective asked: 'anythik you see unusual in this days'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'you use napkin'",
+          "Detective asked: 'you like wine'",
+          "Detective asked: 'you see in this room anyone drinking wine'",
+          "Detective asked: 'i want to know more yourself'",
+          "Detective asked: 'which day you come in this hotel'",
+          "Detective asked: 'and which time you see chef'",
+          "Detective asked: 'and what he doing that time'"
+        ],
+        "has_met": true
       }
     },
     "notebook": {
@@ -913,11 +1206,767 @@
         "text": "You see a polished oak table covered with a white linen tablecloth.  \nThe room smells faintly of old wood and stale air.  \nYou hear the distant hum of the hotel\u2019s heating system.",
         "kind": "narration",
         "character_id": ""
+      },
+      {
+        "at_time": "11:45 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:45 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the dining room of the Grand Oak Hotel.  \nYou listen for any clues that might show if their stories match.  \nYou keep your eyes open for small details that could prove a lie.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:00 AM",
+        "speaker": "You",
+        "text": "can you know any clue",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "12:00 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "I don\u2019t have any clues. I\u2019m just reading here.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "You",
+        "text": "thanks to giving time ",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "You're welcome. I hope I'm helpful.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "Narrator",
+        "text": "You walk over to Eve Carter. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "You",
+        "text": "hello mr.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "Eve Carter",
+        "text": "Hi. I'm Eve Carter. What do you need?",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "You",
+        "text": "i want to know what are you doing \\",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "Eve Carter",
+        "text": "I\u2019m in the lobby, talking with some friends. I\u2019m just waiting for the next interview.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "You",
+        "text": "you know in this room what happend",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "Eve Carter",
+        "text": "I\u2019m not sure what you mean. I was in the lobby with friends, waiting for an interview. I don't remember anything else.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:50 AM",
+        "speaker": "You",
+        "text": "the chef is die",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "12:50 AM",
+        "speaker": "Eve Carter",
+        "text": "I heard the chef was nervous. I\u2019m not sure why he died. I was in the lobby, just talking with friends, waiting for my next interview.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:00 AM",
+        "speaker": "You",
+        "text": "how say chef is nervous",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:00 AM",
+        "speaker": "Eve Carter",
+        "text": "I heard the chef was nervous. I didn\u2019t see it myself, just heard a rumor.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:10 AM",
+        "speaker": "You",
+        "text": "who is chef very close",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:10 AM",
+        "speaker": "Eve Carter",
+        "text": "I don't know who the chef was close to. I only heard he was nervous. I didn't see any close friends. I\u2019m not sure who he liked.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:20 AM",
+        "speaker": "You",
+        "text": "anythik you see unusual in this days",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:20 AM",
+        "speaker": "Eve Carter",
+        "text": "I saw nothing weird. Just the usual crowd in the lobby, people talking, the lights flickering a bit. No one seemed off.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:30 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:30 AM",
+        "speaker": "Eve Carter",
+        "text": "I\u2019m standing in the lobby with my friends. The lights flicker a little. Everyone is just talking. Nothing out of the ordinary.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:40 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:40 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dining room, the heavy oak table in the center.  \nThe air smells of old wood and faint smoke.  \nYou scan the room, looking for anything that might point to the killer.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:55 AM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:55 AM",
+        "speaker": "Hint",
+        "text": "Look at the two clues again. See if they match or if one fits one story better. Think about how each clue could point to a different person.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:55 AM",
+        "speaker": "You",
+        "text": "you use napkin",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "1:55 AM",
+        "speaker": "Eve Carter",
+        "text": "I don't see how that matters. I\u2019m just here with my notebook and friends in the lobby.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:05 AM",
+        "speaker": "You",
+        "text": "you like wine",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:05 AM",
+        "speaker": "Eve Carter",
+        "text": "I don't like wine. I prefer coffee.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:15 AM",
+        "speaker": "You",
+        "text": "you see in this room anyone drinking wine",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:15 AM",
+        "speaker": "Eve Carter",
+        "text": "I don\u2019t see anyone drinking wine. Just people talking and a few glasses of water. No wine.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:25 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:25 AM",
+        "speaker": "Narrator",
+        "text": "You see a dusty table with a broken vase.  \nYou hear a faint creak from the hallway.  \nYou smell stale coffee on the carpet.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Hint",
+        "text": "Check the stories the guests told. Look for any small detail that fits with the other clues you have.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Lisa Grant. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Eve Carter. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "You",
+        "text": "i want to know more yourself",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Eve Carter",
+        "text": "I\u2019m just a reporter. I\u2019m writing a story, nothing else. My notebook is all I need.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:50 AM",
+        "speaker": "You",
+        "text": "which day you come in this hotel",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "2:50 AM",
+        "speaker": "Eve Carter",
+        "text": "I came in on Thursday. I\u2019m just here to write.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "3:00 AM",
+        "speaker": "You",
+        "text": "and which time you see chef",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "3:00 AM",
+        "speaker": "Eve Carter",
+        "text": "I saw the chef at about 2:30 a.m., just before the lights went out.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "3:10 AM",
+        "speaker": "You",
+        "text": "and what he doing that time",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "3:10 AM",
+        "speaker": "Eve Carter",
+        "text": "He was standing by the kitchen door, looking at the lights. I didn\u2019t see him doing anything else.",
+        "kind": "dialogue",
+        "character_id": "c4"
+      },
+      {
+        "at_time": "3:20 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Lisa Grant. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:20 AM",
+        "speaker": "You",
+        "text": "hello i want to ask question again",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:20 AM",
+        "speaker": "Lisa Grant",
+        "text": "Hi! Sure, go ahead. I\u2019m in the kitchen right now, making dessert. What do you want to know?",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:30 AM",
+        "speaker": "You",
+        "text": "last time you see the chef",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:30 AM",
+        "speaker": "Lisa Grant",
+        "text": "I saw the chef earlier. He was in the kitchen making dessert, just like me. I laughed when he said the sugar was too sweet. I didn\u2019t see him go anywhere else.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:40 AM",
+        "speaker": "You",
+        "text": "and which time he come",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:40 AM",
+        "speaker": "Lisa Grant",
+        "text": "I don\u2019t know the exact time. He was in the kitchen around three in the morning, but I didn\u2019t see him leave until after I finished the desserts.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:50 AM",
+        "speaker": "You",
+        "text": "and what he making",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "3:50 AM",
+        "speaker": "Lisa Grant",
+        "text": "I\u2019m not sure, but he was mixing the sugar and flour for the dessert. I saw him stir it a lot. I didn\u2019t hear anything else.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "4:00 AM",
+        "speaker": "You",
+        "text": "and after that where he gone you know",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "4:00 AM",
+        "speaker": "Lisa Grant",
+        "text": "I didn\u2019t see him leave the kitchen. He stayed until the desserts were done. After that he just walked out the back door. I didn\u2019t catch where he went next.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "4:10 AM",
+        "speaker": "You",
+        "text": "ok thanks",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "4:10 AM",
+        "speaker": "Lisa Grant",
+        "text": "You're welcome. Let me know if you need anything else.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "4:20 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Michael Hale. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "4:20 AM",
+        "speaker": "You",
+        "text": "michael last time you see the chef",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "4:20 AM",
+        "speaker": "Michael Hale",
+        "text": "I was just in the lobby. I didn't see the chef. I\u2019m only sipping tea. I don\u2019t know where he was.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "4:30 AM",
+        "speaker": "You",
+        "text": "but the kitchen is near you he is come why not you see",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "4:30 AM",
+        "speaker": "Michael Hale",
+        "text": "I\u2019m not seeing anyone from the kitchen. I was in the lobby, sipping tea. I didn\u2019t spot the chef at all.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "4:40 AM",
+        "speaker": "You",
+        "text": "at the time 2 to 3 what you doing",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "4:40 AM",
+        "speaker": "Michael Hale",
+        "text": "I was in the lobby, reading a book. I kept quiet and sipped tea. I didn\u2019t notice anything else.",
+        "kind": "dialogue",
+        "character_id": "c1"
+      },
+      {
+        "at_time": "4:50 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "4:50 AM",
+        "speaker": "Narrator",
+        "text": "You step into the dining room of the Grand Oak Hotel. The light is dim and the table is covered with a single white napkin. You look around, searching for anything that could explain the crime.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "5:05 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Dr. Alan Reed. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:05 AM",
+        "speaker": "You",
+        "text": "hii",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:05 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "Hi. I\u2019m still here, just reading.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:15 AM",
+        "speaker": "You",
+        "text": "which time you see the chef",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:15 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "I saw the chef around 4:30 this morning.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:25 AM",
+        "speaker": "You",
+        "text": "and what he doing",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:25 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "He was standing near the kitchen window. He looked out, then turned back and stared at the books on the shelf. He didn\u2019t say anything. I\u2019m not sure why he was there.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:35 AM",
+        "speaker": "You",
+        "text": "you the last person saw the chef",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:35 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "Yes, I was the last one who saw him. I saw him near the kitchen window at about 4:30 this morning. I didn't see anything else.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:45 AM",
+        "speaker": "You",
+        "text": "you find any unusal",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:45 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "I didn\u2019t see anything odd. Just the chef near the window, like before. No strange sounds or people. Nothing else unusual.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:55 AM",
+        "speaker": "You",
+        "text": "who is live near dining room",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "5:55 AM",
+        "speaker": "Dr. Alan Reed",
+        "text": "I think it\u2019s the housekeeper. She\u2019s usually near the dining room, always tidy. I saw her moving around there earlier.",
+        "kind": "dialogue",
+        "character_id": "c3"
+      },
+      {
+        "at_time": "6:05 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Lisa Grant. You have spoken before.",
+        "kind": "narration",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:05 AM",
+        "speaker": "You",
+        "text": "in the morning what you are doing an time",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:05 AM",
+        "speaker": "Lisa Grant",
+        "text": "I was in the kitchen making dessert. I started around two\u2011o\u2019clock. I laughed a lot while stirring. I finished by three\u2011ten, then left the kitchen.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:15 AM",
+        "speaker": "You",
+        "text": "why you always tidy",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:15 AM",
+        "speaker": "Lisa Grant",
+        "text": "I always tidy because I like things neat. It keeps the kitchen calm and I don\u2019t feel late. Plus, a tidy space makes it easier to serve guests fast.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:25 AM",
+        "speaker": "You",
+        "text": "provide me some hint",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:25 AM",
+        "speaker": "Lisa Grant",
+        "text": "I\u2019m not sure what you need, but if you\u2019re looking for clues, maybe check the back door. The chef left through that way, and I saw him put a weird bottle on the counter before he left. It smelled odd.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:35 AM",
+        "speaker": "You",
+        "text": "which type of bottle",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:35 AM",
+        "speaker": "Lisa Grant",
+        "text": "It was a little bottle of wine, I think. I saw it on the counter before he left.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:45 AM",
+        "speaker": "You",
+        "text": "and which counter",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:45 AM",
+        "speaker": "Lisa Grant",
+        "text": "It was on the prep counter next to the stove. The little bottle was right there, on the glass table.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:55 AM",
+        "speaker": "You",
+        "text": "how to you know that was wine",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "6:55 AM",
+        "speaker": "Lisa Grant",
+        "text": "I saw it with my own eyes. The bottle had a red label and the smell was like grape juice. I tasted a tiny drop when I was making dessert. That's why I know it was wine.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:05 AM",
+        "speaker": "You",
+        "text": "you like wine",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:05 AM",
+        "speaker": "Lisa Grant",
+        "text": "Yeah, I do like wine. It\u2019s good for dessert, and I\u2019ve had it with a few customers before. I just love the taste.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:15 AM",
+        "speaker": "You",
+        "text": "any time you drink wine with chef",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:15 AM",
+        "speaker": "Lisa Grant",
+        "text": "I don\u2019t drink wine with anyone. I only serve it to customers. The chef? He\u2019s not my friend. I\u2019m not sure why you ask.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:25 AM",
+        "speaker": "You",
+        "text": "because in this room we find wine",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:25 AM",
+        "speaker": "Lisa Grant",
+        "text": "I didn\u2019t bring wine in. I only had the little bottle on the prep counter. It was there before the chef left. I didn\u2019t touch it.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:35 AM",
+        "speaker": "You",
+        "text": "why you so hasitate",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:35 AM",
+        "speaker": "Lisa Grant",
+        "text": "I\u2019m not sure. Maybe I\u2019m just worried I\u2019ll be late for work. That\u2019s the only thing that makes me jump.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:45 AM",
+        "speaker": "You",
+        "text": "anything you want to say to me",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:45 AM",
+        "speaker": "Lisa Grant",
+        "text": "I don\u2019t have anything else. Just keep asking.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:55 AM",
+        "speaker": "You",
+        "text": "ok thankyou",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "7:55 AM",
+        "speaker": "Lisa Grant",
+        "text": "Thanks. I\u2019m just happy I could help. Let me know if you need anything else. I\u2019ll keep serving the guests on time.",
+        "kind": "dialogue",
+        "character_id": "c2"
+      },
+      {
+        "at_time": "8:05 AM",
+        "speaker": "Verdict",
+        "text": "You are wrong.  \nThe real culprit is Mark Jensen, not Lisa Grant.  \nAll the evidence shows he used the drink to poison the chef.  \nHe hid his true name and made you doubt the real killer.",
+        "kind": "narration",
+        "character_id": ""
       }
     ],
-    "active_character_id": "c3",
-    "hints_used": 1,
-    "accusation_made": false,
-    "accused_character_id": ""
+    "active_character_id": "c2",
+    "hints_used": 3,
+    "accusation_made": true,
+    "accused_character_id": "c2"
   }
 }

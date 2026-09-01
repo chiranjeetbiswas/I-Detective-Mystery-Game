@@ -1,0 +1,466 @@
+{
+  "case": {
+    "id": "case_632d4b2646ee",
+    "title": "The Mysterious Dinner",
+    "difficulty": "beginner",
+    "location_type": "Hotel",
+    "location_name": "Grand Oak Hotel",
+    "introduction": "It is a rainy night in the Grand Oak Hotel. A famous chef is found dead in the dining room. One guest is not who he says he is.",
+    "crime": "Chef death, suspected poisoning",
+    "target_fake_identity": "Michael Hale",
+    "escape_plan": "The killer plans to leave in the hotel lobby at midnight",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "room1",
+        "name": "Dining Room",
+        "description": "Long table with candles. The chef lies on the floor."
+      },
+      {
+        "id": "room2",
+        "name": "Kitchen",
+        "description": "Busy. Chef used to cook here."
+      },
+      {
+        "id": "room3",
+        "name": "Lobby",
+        "description": "Red carpet. Many guests."
+      }
+    ],
+    "characters": [
+      {
+        "id": "c1",
+        "name": "Michael Hale",
+        "age": 34,
+        "gender": "male",
+        "occupation": "Guest",
+        "personality": "Calm",
+        "background": "Travels for work",
+        "secret": "He is actually Mark Jensen",
+        "goal": "Hide identity",
+        "alibi": "In the lobby reading a book",
+        "speaking_style": "Soft voice",
+        "habits": "Sips tea",
+        "fear": "Being caught",
+        "likes": [
+          "tea",
+          "quiet"
+        ],
+        "dislikes": [
+          "noise"
+        ],
+        "intelligence": 70,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "c2",
+            "kind": "friend",
+            "detail": "They met at a conference"
+          }
+        ],
+        "knowledge": [
+          "Chef was nervous"
+        ],
+        "lies": [
+          "He says he is a hotel guest"
+        ],
+        "inventory": [
+          "Tea cup"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "c2",
+        "name": "Lisa Grant",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Waitress",
+        "personality": "Talkative",
+        "background": "Local",
+        "secret": "She is good at reading faces",
+        "goal": "Serve guests",
+        "alibi": "Was in kitchen preparing dessert",
+        "speaking_style": "Cheerful",
+        "habits": "Laughs a lot",
+        "fear": "Being late",
+        "likes": [
+          "dessert"
+        ],
+        "dislikes": [
+          "cold weather"
+        ],
+        "intelligence": 65,
+        "confidence": 60,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "acquaintance",
+            "detail": "Served him last week"
+          }
+        ],
+        "knowledge": [
+          "Chef smelled strange"
+        ],
+        "lies": [],
+        "inventory": [
+          "Plate"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c3",
+        "name": "Dr. Alan Reed",
+        "age": 45,
+        "gender": "male",
+        "occupation": "Doctor",
+        "personality": "Calm",
+        "background": "Medical doctor",
+        "secret": "He once treated a famous chef",
+        "goal": "Check on guests",
+        "alibi": "In the lounge reading a book",
+        "speaking_style": "Soft tone",
+        "habits": "Taps fingers",
+        "fear": "Pain",
+        "likes": [
+          "books"
+        ],
+        "dislikes": [
+          "noise"
+        ],
+        "intelligence": 85,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "friend",
+            "detail": "Met at a conference"
+          }
+        ],
+        "knowledge": [
+          "Chef had a health issue"
+        ],
+        "lies": [],
+        "inventory": [
+          "Stethoscope"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "c4",
+        "name": "Eve Carter",
+        "age": 32,
+        "gender": "nonbinary",
+        "occupation": "Journalist",
+        "personality": "Curious",
+        "background": "Reporter",
+        "secret": "Has a hidden notebook",
+        "goal": "Write story",
+        "alibi": "In the lobby with friends",
+        "speaking_style": "Direct",
+        "habits": "Keeps a notebook",
+        "fear": "Missing a story",
+        "likes": [
+          "notebook"
+        ],
+        "dislikes": [
+          "lies"
+        ],
+        "intelligence": 78,
+        "confidence": 75,
+        "relationships": [
+          {
+            "with_character": "c1",
+            "kind": "acquaintance",
+            "detail": "Saw him on the street"
+          }
+        ],
+        "knowledge": [
+          "Chef was nervous"
+        ],
+        "lies": [],
+        "inventory": [
+          "Notebook"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive at hotel",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "Dinner begins",
+        "involved": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      {
+        "time": "9:45 PM",
+        "description": "Chef collapses",
+        "involved": [
+          "c1"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Guests call police",
+        "involved": [
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e1",
+        "name": "Poisoned Drink",
+        "description": "Red wine with a faint smell",
+        "location": "Dining Room",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e2",
+        "name": "Fingerprints",
+        "description": "Small print on a napkin",
+        "location": "Dining Room",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e3",
+        "name": "Missing Note",
+        "description": "Chef's note about poison",
+        "location": "Kitchen",
+        "points_to": "c1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "e4",
+        "name": "Red Tie",
+        "description": "Tie from lobby",
+        "location": "Lobby",
+        "points_to": "c4",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The name Michael Hale is not on hotel records. The real name is Mark Jensen."
+    ],
+    "red_herrings": [
+      "The red tie was found in Eve's bag. It does not link to the crime."
+    ],
+    "solution": {
+      "target_character_id": "c1",
+      "target_true_identity": "Mark Jensen",
+      "reasoning": "All key evidence points to Michael Hale, but his name is fake. The real name Mark Jensen is hidden. He used the drink to poison the chef.",
+      "key_evidence_ids": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_8fd6f08c48cc",
+    "case_id": "case_632d4b2646ee",
+    "status": "in_progress",
+    "created_at": "2026-08-31T20:06:56.250088+00:00",
+    "updated_at": "2026-08-31T20:07:08.954125+00:00",
+    "minutes_elapsed": 15,
+    "current_location": "Dining Room",
+    "current_objective": "Find out which guest is not who they say they are.",
+    "inventory": [],
+    "discovered_evidence": [
+      "e1",
+      "e2"
+    ],
+    "visited_rooms": [
+      "Dining Room"
+    ],
+    "npc_states": {
+      "c1": {
+        "character_id": "c1",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c2": {
+        "character_id": "c2",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c3": {
+        "character_id": "c3",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      },
+      "c4": {
+        "character_id": "c4",
+        "trust": 60,
+        "stress": 20,
+        "suspicion_of_player": 0,
+        "times_questioned": 0,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [],
+        "relationship_notes": [],
+        "exchanges": [],
+        "memory": [],
+        "has_met": false
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Michael Hale",
+          "detail": "34, Guest. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lisa Grant",
+          "detail": "28, Waitress. Talkative.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Dr. Alan Reed",
+          "detail": "45, Doctor. Calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Eve Carter",
+          "detail": "32, Journalist. Curious.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "evidence",
+          "title": "Poisoned Drink",
+          "detail": "Red wine with a faint smell (found in Dining Room).",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "evidence",
+          "title": "Fingerprints",
+          "detail": "Small print on a napkin (found in Dining Room).",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive at hotel",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "Dinner begins",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:45 PM",
+          "detail": "Chef collapses",
+          "at_time": "9:45 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Guests call police",
+          "at_time": "10:00 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "It is a rainy night in the Grand Oak Hotel. A famous chef is found dead in the dining room. One guest is not who he says he is.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You see a glass on the table that is half full of a dark liquid.  \nYou notice faint fingerprints on the rim of the glass, as if someone had just held it.  \nThe air smells faintly of bitter medicine.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "",
+    "hints_used": 0,
+    "accusation_made": false,
+    "accused_character_id": ""
+  }
+}

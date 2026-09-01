@@ -1,0 +1,1536 @@
+{
+  "case": {
+    "id": "case_9c034d940a38",
+    "title": "The Midnight Heist",
+    "difficulty": "normal",
+    "location_type": "Mansion",
+    "location_name": "Ashcroft Hall",
+    "introduction": "The night was dark at Ashcroft Hall. A priceless gem vanished from the vault. One guest hides a fake name. You must find the thief.",
+    "crime": "The diamond was stolen from the vault.",
+    "target_fake_identity": "Ethan Blake",
+    "escape_plan": "The thief will use the secret tunnel to leave the hall. They will meet a contact outside the gate at sunrise.",
+    "start_time": "8:00 PM",
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Entrance Hall",
+        "description": "The main hall. A big staircase. Portraits on the walls."
+      },
+      {
+        "id": "R2",
+        "name": "Vault",
+        "description": "A dark room with a safe. Heavy metal door."
+      },
+      {
+        "id": "R3",
+        "name": "Library",
+        "description": "Rows of books. A secret lever in the desk."
+      },
+      {
+        "id": "R4",
+        "name": "Garden",
+        "description": "Night garden with a stone path. A hidden gate."
+      },
+      {
+        "id": "R5",
+        "name": "Trophy Room",
+        "description": "Paintings and trophies. A locked cabinet."
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "Ethan Blake",
+        "age": 34,
+        "gender": "male",
+        "occupation": "Businessman",
+        "personality": "Quiet and calm",
+        "background": "He moved to the city a year ago. He likes to talk about travel. He has no family here. He is nervous about meeting strangers.",
+        "secret": "He is not really Ethan Blake. His real name is Marcus Lee.",
+        "goal": "Hide his identity and keep the gem.",
+        "alibi": "He says he was in the library reading. He was alone.",
+        "speaking_style": "Soft voice. He speaks slowly.",
+        "habits": "He likes to chew gum. He watches the clock often.",
+        "fear": "He fears being caught by the police.",
+        "likes": [
+          "Travel",
+          "Gum"
+        ],
+        "dislikes": [
+          "Loud noise"
+        ],
+        "intelligence": 88,
+        "confidence": 72,
+        "relationships": [
+          {
+            "with_character": "C2",
+            "kind": "friend",
+            "detail": "They met at a conference."
+          },
+          {
+            "with_character": "C3",
+            "kind": "rival",
+            "detail": "They disagree on business."
+          }
+        ],
+        "knowledge": [
+          "He knows the lock of the vault. He knows the tunnel."
+        ],
+        "lies": [
+          "He says he was alone in the library."
+        ],
+        "inventory": [
+          "Business card",
+          "Map of the house"
+        ],
+        "is_target": true
+      },
+      {
+        "id": "C2",
+        "name": "Lila Grant",
+        "age": 28,
+        "gender": "female",
+        "occupation": "Artist",
+        "personality": "Bright and chatty",
+        "background": "She is a local painter. She loves animals. She has a pet cat.",
+        "secret": "She has a tattoo of a rose on her wrist that she hides from others.",
+        "goal": "Finish her art. Keep her privacy.",
+        "alibi": "She says she was in the garden painting. She was alone.",
+        "speaking_style": "Fast voice. She talks a lot.",
+        "habits": "She taps her fingers. She always checks her phone.",
+        "fear": "She fears her art will be stolen.",
+        "likes": [
+          "Animals",
+          "Painting"
+        ],
+        "dislikes": [
+          "Crowded places"
+        ],
+        "intelligence": 75,
+        "confidence": 80,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "acquaintance",
+            "detail": "They saw each other at a gallery."
+          },
+          {
+            "with_character": "C4",
+            "kind": "friend",
+            "detail": "They went on hikes."
+          }
+        ],
+        "knowledge": [
+          "She knows the layout of the garden. She knows about the secret gate."
+        ],
+        "lies": [
+          "She says she was alone in the garden."
+        ],
+        "inventory": [
+          "Brush set",
+          "Sketchbook"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C3",
+        "name": "Marcus Lee",
+        "age": 42,
+        "gender": "male",
+        "occupation": "Chef",
+        "personality": "Kind and patient",
+        "background": "He runs a small restaurant. He loves cooking. He has a small family.",
+        "secret": "He knows the vault key. He has a secret recipe.",
+        "goal": "Win a culinary award. Keep his restaurant popular.",
+        "alibi": "He says he was cooking in the kitchen. He was alone.",
+        "speaking_style": "Slow voice. He speaks gently.",
+        "habits": "He wears a chef's hat. He hums while cooking.",
+        "fear": "He fears losing his restaurant.",
+        "likes": [
+          "Cooking",
+          "Music"
+        ],
+        "dislikes": [
+          "Rudeness"
+        ],
+        "intelligence": 82,
+        "confidence": 68,
+        "relationships": [
+          {
+            "with_character": "C5",
+            "kind": "sibling",
+            "detail": "They share a kitchen."
+          },
+          {
+            "with_character": "C1",
+            "kind": "business partner",
+            "detail": "They plan a menu."
+          }
+        ],
+        "knowledge": [
+          "He knows the safe's code. He knows how to open it."
+        ],
+        "lies": [
+          "He says he was alone in the kitchen."
+        ],
+        "inventory": [
+          "Chef's knife",
+          "Recipe book"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C4",
+        "name": "Nina Patel",
+        "age": 36,
+        "gender": "female",
+        "occupation": "Detective",
+        "personality": "Sharp and calm",
+        "background": "She works for the city. She loves puzzles. She has a badge.",
+        "secret": "She hides a scar on her cheek.",
+        "goal": "Solve the case. Keep the city safe.",
+        "alibi": "She says she was in the trophy room looking at paintings. She was alone.",
+        "speaking_style": "Direct voice. She speaks clearly.",
+        "habits": "She always keeps her notebook. She checks her watch often.",
+        "fear": "She fears losing evidence.",
+        "likes": [
+          "Puzzles",
+          "Coffee"
+        ],
+        "dislikes": [
+          "Loud noises"
+        ],
+        "intelligence": 95,
+        "confidence": 90,
+        "relationships": [
+          {
+            "with_character": "C5",
+            "kind": "friend",
+            "detail": "They study cases."
+          },
+          {
+            "with_character": "C2",
+            "kind": "acquaintance",
+            "detail": "They met at a charity."
+          }
+        ],
+        "knowledge": [
+          "She knows the layout of the trophy room. She knows how to trace fingerprints."
+        ],
+        "lies": [
+          "She says she was alone in the trophy room."
+        ],
+        "inventory": [
+          "Badge",
+          "Notepad"
+        ],
+        "is_target": false
+      },
+      {
+        "id": "C5",
+        "name": "Tom Ruiz",
+        "age": 30,
+        "gender": "male",
+        "occupation": "Mechanic",
+        "personality": "Hard and loud",
+        "background": "He fixes cars. He likes to talk. He has a friend group.",
+        "secret": "He has a secret stash of tools hidden in his toolbox.",
+        "goal": "Make money. Keep his tools safe.",
+        "alibi": "He says he was in the garage fixing a bike. He was alone.",
+        "speaking_style": "Gravelly voice. He speaks quickly.",
+        "habits": "He always carries a wrench. He talks loudly.",
+        "fear": "He fears losing his tools.",
+        "likes": [
+          "Cars",
+          "Music"
+        ],
+        "dislikes": [
+          "Quiet"
+        ],
+        "intelligence": 65,
+        "confidence": 70,
+        "relationships": [
+          {
+            "with_character": "C1",
+            "kind": "neighbor",
+            "detail": "They share the building."
+          },
+          {
+            "with_character": "C3",
+            "kind": "colleague",
+            "detail": "They fix engines."
+          }
+        ],
+        "knowledge": [
+          "He knows how to open the garage door. He knows where the tools are."
+        ],
+        "lies": [
+          "He says he was alone in the garage."
+        ],
+        "inventory": [
+          "Wrench set",
+          "Toolbox"
+        ],
+        "is_target": false
+      }
+    ],
+    "timeline": [
+      {
+        "time": "8:00 PM",
+        "description": "Guests arrive. The gem is shown in the vault.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:00 PM",
+        "description": "The gem disappears. Alarm triggers.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "9:15 PM",
+        "description": "Guests search the vault.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "time": "10:00 PM",
+        "description": "Guests leave the hall.",
+        "involved": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "name": "Broken Key",
+        "description": "A key that was broken in half. It was in the vault door. It looks new.",
+        "location": "Vault",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E2",
+        "name": "Footprints",
+        "description": "Small footprints on the stone path. They match a shoe size 9.",
+        "location": "Garden",
+        "points_to": "C3",
+        "is_red_herring": true,
+        "is_key_evidence": false
+      },
+      {
+        "id": "E3",
+        "name": "Gum Wrapper",
+        "description": "A wrapper from a gum pack. It was left in the library.",
+        "location": "Library",
+        "points_to": "C1",
+        "is_red_herring": false,
+        "is_key_evidence": true
+      },
+      {
+        "id": "E4",
+        "name": "Tattoo",
+        "description": "A small rose on a wrist. It is hidden under a long sleeve.",
+        "location": "C2",
+        "points_to": "C2",
+        "is_red_herring": false,
+        "is_key_evidence": false
+      }
+    ],
+    "hidden_clues": [
+      "The broken key is too new. The gum wrapper is from the same brand the thief likes.",
+      "The footprints are from a size that no guest owns."
+    ],
+    "red_herrings": [
+      "Footprints point to C3. The rose tattoo is a clue for C2."
+    ],
+    "solution": {
+      "target_character_id": "C1",
+      "target_true_identity": "Marcus Lee",
+      "reasoning": "The gum wrapper shows C1 likes gum. The broken key is new and in the vault. The real Marcus Lee knows the key and the vault. C1 is the fake name Ethan Blake.",
+      "key_evidence_ids": [
+        "E1",
+        "E3"
+      ]
+    }
+  },
+  "state": {
+    "id": "game_8a5a1653717b",
+    "case_id": "case_9c034d940a38",
+    "status": "won",
+    "created_at": "2026-09-01T04:56:11.246055+00:00",
+    "updated_at": "2026-09-01T05:20:52.784721+00:00",
+    "minutes_elapsed": 495,
+    "current_location": "Entrance Hall",
+    "current_objective": "5 guests. One fake identity. It happened at Ashcroft Hall. Search the rooms, talk to everyone, and find the person behind the diamond was stolen from the vault. Some guests lie. Check their stories carefully.",
+    "inventory": [],
+    "discovered_evidence": [],
+    "visited_rooms": [
+      "Entrance Hall"
+    ],
+    "npc_states": {
+      "C1": {
+        "character_id": "C1",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 25,
+        "times_questioned": 8,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "you know about the gem",
+          "which is the last time you see the gem",
+          "lila saspect you are stolen",
+          "Look around",
+          "any clue you want to give",
+          "what is your name",
+          "age",
+          "profasion"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "1:05 AM",
+            "question": "you know about the gem",
+            "answer": "I don't know what you mean. The gem isn\u2019t part of my business. I was in the library, reading."
+          },
+          {
+            "at_time": "1:15 AM",
+            "question": "which is the last time you see the gem",
+            "answer": "I don\u2019t remember. I was alone in the library, reading. I had no idea about that gem."
+          },
+          {
+            "at_time": "1:25 AM",
+            "question": "lila saspect you are stolen",
+            "answer": "I\u2019m not a thief. I was in the library, reading all night. The gem? I\u2019ve never seen it."
+          },
+          {
+            "at_time": "1:35 AM",
+            "question": "Look around",
+            "answer": "I look at the shelves. I see the clock. I see my gum. Nothing else."
+          },
+          {
+            "at_time": "2:00 AM",
+            "question": "any clue you want to give",
+            "answer": "I don\u2019t have any clue. I was just in the library, reading."
+          },
+          {
+            "at_time": "2:10 AM",
+            "question": "what is your name",
+            "answer": "My name is Ethan Blake."
+          },
+          {
+            "at_time": "2:20 AM",
+            "question": "age",
+            "answer": "I am 34."
+          },
+          {
+            "at_time": "2:30 AM",
+            "question": "profasion",
+            "answer": "My job is business. I run a small company. I stay quiet in meetings."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'you know about the gem'",
+          "Detective asked: 'which is the last time you see the gem'",
+          "Detective asked: 'lila saspect you are stolen'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'any clue you want to give'",
+          "Detective asked: 'what is your name'",
+          "Detective asked: 'age'",
+          "Detective asked: 'profasion'"
+        ],
+        "has_met": true
+      },
+      "C2": {
+        "character_id": "C2",
+        "trust": 47,
+        "stress": 20,
+        "suspicion_of_player": 5,
+        "times_questioned": 4,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello",
+          "i want to know where is the gem",
+          "someone says that he is saspect you",
+          "you see anything unusual"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "12:10 AM",
+            "question": "hello",
+            "answer": "Hi! I'm Lila. How can I help?"
+          },
+          {
+            "at_time": "12:20 AM",
+            "question": "i want to know where is the gem",
+            "answer": "I\u2019m not sure what gem you\u2019re talking about. I\u2019ve just been working on my painting in the garden. Maybe you\u2019re looking in the wrong place?"
+          },
+          {
+            "at_time": "12:30 AM",
+            "question": "someone says that he is saspect you",
+            "answer": "I don't know who that is. I was in the garden all night, painting. No one else was there. I'm just here, working on my art."
+          },
+          {
+            "at_time": "12:40 AM",
+            "question": "you see anything unusual",
+            "answer": "I didn\u2019t see anything strange. I was just painting, alone, in the garden. Nothing out of the ordinary."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello'",
+          "Detective asked: 'i want to know where is the gem'",
+          "Detective asked: 'someone says that he is saspect you'",
+          "Detective asked: 'you see anything unusual'"
+        ],
+        "has_met": true
+      },
+      "C3": {
+        "character_id": "C3",
+        "trust": 38,
+        "stress": 20,
+        "suspicion_of_player": 20,
+        "times_questioned": 7,
+        "mood": "calm",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello marcus",
+          "you are chef ?",
+          "tell me what happend in this place",
+          "a valueable gem is gone you know",
+          "look around you any unusual find",
+          "anything you hide from me",
+          "what is the last time you saw the priceless gem that are vanish now"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "8:00 PM",
+            "question": "hello marcus",
+            "answer": "Hello. How can I help you?"
+          },
+          {
+            "at_time": "8:10 PM",
+            "question": "you are chef ?",
+            "answer": "Yes, I am a chef. I run a small restaurant here."
+          },
+          {
+            "at_time": "8:20 PM",
+            "question": "tell me what happend in this place",
+            "answer": "I was in the kitchen, cooking. I was alone. Nothing else happened."
+          },
+          {
+            "at_time": "8:30 PM",
+            "question": "a valueable gem is gone you know",
+            "answer": "I don't know anything about a gem. I was just cooking in the kitchen."
+          },
+          {
+            "at_time": "8:40 PM",
+            "question": "look around you any unusual find",
+            "answer": "Nothing strange. Just pots, pans, and the stove. I see no broken glass or hidden boxes. All is quiet."
+          },
+          {
+            "at_time": "8:50 PM",
+            "question": "anything you hide from me",
+            "answer": "I don't think I hide anything."
+          },
+          {
+            "at_time": "9:15 PM",
+            "question": "what is the last time you saw the priceless gem that are vanish now",
+            "answer": "I never saw that gem. I was alone in the kitchen, cooking. I don't know when it disappeared."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello marcus'",
+          "Detective asked: 'you are chef ?'",
+          "Detective asked: 'tell me what happend in this place'",
+          "Detective asked: 'a valueable gem is gone you know'",
+          "Detective asked: 'look around you any unusual find'",
+          "Detective asked: 'anything you hide from me'",
+          "Detective asked: 'what is the last time you saw the priceless gem that are vanish now'"
+        ],
+        "has_met": true
+      },
+      "C4": {
+        "character_id": "C4",
+        "trust": 41,
+        "stress": 20,
+        "suspicion_of_player": 15,
+        "times_questioned": 6,
+        "mood": "confident",
+        "status": "talking",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hii detective",
+          "i am also a detective",
+          "i want to know you know about the gem is not in the valt",
+          "which type of fingerprints you saw on the door",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "9:25 PM",
+            "question": "hii detective",
+            "answer": "Hey. What do you want to know?"
+          },
+          {
+            "at_time": "9:35 PM",
+            "question": "i am also a detective",
+            "answer": "Nice to meet a fellow detective. We both know how to read clues. Keep your notebook ready; we might need to cross\u2011check notes. Anything specific you want to discuss?"
+          },
+          {
+            "at_time": "9:45 PM",
+            "question": "i want to know you know about the gem is not in the valt",
+            "answer": "I don't see any gem in the vault. The vault is empty. The only thing I noticed was the fingerprints on the door. No gem."
+          },
+          {
+            "at_time": "9:55 PM",
+            "question": "which type of fingerprints you saw on the door",
+            "answer": "The prints were latent, dry prints. I traced the ridges and saw a clear pattern. No fresh or wet prints."
+          },
+          {
+            "at_time": "10:20 PM",
+            "question": "Look around",
+            "answer": "I scan the room. The trophies are lined up, the paintings hang straight. My notebook stays open; I jot the layout. No hidden gem, just the usual."
+          },
+          {
+            "at_time": "4:05 AM",
+            "question": "Look around",
+            "answer": "I scan the room. The trophies are lined up. The paintings hang straight. My notebook stays open; I jot the layout. No hidden gem, just the usual."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hii detective'",
+          "Detective asked: 'i am also a detective'",
+          "Detective asked: 'i want to know you know about the gem is not in the valt'",
+          "Detective asked: 'which type of fingerprints you saw on the door'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      },
+      "C5": {
+        "character_id": "C5",
+        "trust": 35,
+        "stress": 20,
+        "suspicion_of_player": 25,
+        "times_questioned": 8,
+        "mood": "confident",
+        "status": "available",
+        "evidence_shown": [],
+        "revealed_knowledge": [],
+        "lies_told": [],
+        "asked_questions": [
+          "hello tom",
+          "i want to know that who is stolen gem",
+          "you saw the gem any time",
+          "did you suspect anyone",
+          "is there anyone ohter than u",
+          "who were present near the ge,",
+          "Look around"
+        ],
+        "relationship_notes": [],
+        "exchanges": [
+          {
+            "at_time": "10:45 PM",
+            "question": "hello tom",
+            "answer": "Hey. I\u2019m Tom. What do you want?"
+          },
+          {
+            "at_time": "10:55 PM",
+            "question": "i want to know that who is stolen gem",
+            "answer": "I don't know who took the gem. I was fixing a bike in my garage. I had no time to watch anyone else."
+          },
+          {
+            "at_time": "11:05 PM",
+            "question": "you saw the gem any time",
+            "answer": "I ain't seen it. I was in the garage, wrench in hand, fixing that bike. No one else around."
+          },
+          {
+            "at_time": "11:15 PM",
+            "question": "did you suspect anyone",
+            "answer": "Nah. I don't suspect anyone. I was just in my garage, working on a bike."
+          },
+          {
+            "at_time": "11:25 PM",
+            "question": "is there anyone ohter than u",
+            "answer": "No, nobody else was there. I was alone, fixing the bike. I don't know who took the gem."
+          },
+          {
+            "at_time": "11:35 PM",
+            "question": "who were present near the ge,",
+            "answer": "Only me. I was alone in my garage, wrench in hand, fixing the bike. No one else was near the gem."
+          },
+          {
+            "at_time": "11:45 PM",
+            "question": "Look around",
+            "answer": "I ain't lookin' at nothing. My garage's tight. No one else in here."
+          },
+          {
+            "at_time": "3:55 AM",
+            "question": "Look around",
+            "answer": "I ain't lookin' at nothing. My garage's tight. No one else in here."
+          }
+        ],
+        "memory": [
+          "Detective asked: 'hello tom'",
+          "Detective asked: 'i want to know that who is stolen gem'",
+          "Detective asked: 'you saw the gem any time'",
+          "Detective asked: 'did you suspect anyone'",
+          "Detective asked: 'is there anyone ohter than u'",
+          "Detective asked: 'who were present near the ge,'",
+          "Detective asked: 'Look around'",
+          "Detective asked: 'Look around'"
+        ],
+        "has_met": true
+      }
+    },
+    "notebook": {
+      "characters": [
+        {
+          "kind": "character",
+          "title": "Ethan Blake",
+          "detail": "34, Businessman. Quiet and calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Lila Grant",
+          "detail": "28, Artist. Bright and chatty.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Marcus Lee",
+          "detail": "42, Chef. Kind and patient.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Nina Patel",
+          "detail": "36, Detective. Sharp and calm.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "character",
+          "title": "Tom Ruiz",
+          "detail": "30, Mechanic. Hard and loud.",
+          "at_time": "8:00 PM"
+        }
+      ],
+      "evidence": [],
+      "contradictions": [],
+      "timeline": [
+        {
+          "kind": "timeline",
+          "title": "8:00 PM",
+          "detail": "Guests arrive. The gem is shown in the vault.",
+          "at_time": "8:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:00 PM",
+          "detail": "The gem disappears. Alarm triggers.",
+          "at_time": "9:00 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "9:15 PM",
+          "detail": "Guests search the vault.",
+          "at_time": "9:15 PM"
+        },
+        {
+          "kind": "timeline",
+          "title": "10:00 PM",
+          "detail": "Guests leave the hall.",
+          "at_time": "10:00 PM"
+        }
+      ],
+      "secrets": [],
+      "open_questions": []
+    },
+    "transcript": [
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "The night was dark at Ashcroft Hall. A priceless gem vanished from the vault. One guest hides a fake name. You must find the thief.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Marcus Lee. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "You",
+        "text": "hello marcus",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:00 PM",
+        "speaker": "Marcus Lee",
+        "text": "Hello. How can I help you?",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "You",
+        "text": "you are chef ?",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:10 PM",
+        "speaker": "Marcus Lee",
+        "text": "Yes, I am a chef. I run a small restaurant here.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "You",
+        "text": "tell me what happend in this place",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:20 PM",
+        "speaker": "Marcus Lee",
+        "text": "I was in the kitchen, cooking. I was alone. Nothing else happened.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "You",
+        "text": "a valueable gem is gone you know",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:30 PM",
+        "speaker": "Marcus Lee",
+        "text": "I don't know anything about a gem. I was just cooking in the kitchen.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "You",
+        "text": "look around you any unusual find",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:40 PM",
+        "speaker": "Marcus Lee",
+        "text": "Nothing strange. Just pots, pans, and the stove. I see no broken glass or hidden boxes. All is quiet.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "You",
+        "text": "anything you hide from me",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "8:50 PM",
+        "speaker": "Marcus Lee",
+        "text": "I don't think I hide anything.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "You",
+        "text": "search your room one time",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:00 PM",
+        "speaker": "Narrator",
+        "text": "You are in the entrance hall of Ashcroft Hall.  \nThe floor is dusty.  \nYou smell old wood and a hint of mothballs.  \nYou hear a faint creak from the staircase.  \nYou see a heavy coat hanging by the door.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "You",
+        "text": "what is the last time you saw the priceless gem that are vanish now",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:15 PM",
+        "speaker": "Marcus Lee",
+        "text": "I never saw that gem. I was alone in the kitchen, cooking. I don't know when it disappeared.",
+        "kind": "dialogue",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Nina Patel. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "You",
+        "text": "hii detective",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:25 PM",
+        "speaker": "Nina Patel",
+        "text": "Hey. What do you want to know?",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "You",
+        "text": "i am also a detective",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:35 PM",
+        "speaker": "Nina Patel",
+        "text": "Nice to meet a fellow detective. We both know how to read clues. Keep your notebook ready; we might need to cross\u2011check notes. Anything specific you want to discuss?",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "You",
+        "text": "i want to know you know about the gem is not in the valt",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:45 PM",
+        "speaker": "Nina Patel",
+        "text": "I don't see any gem in the vault. The vault is empty. The only thing I noticed was the fingerprints on the door. No gem.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "You",
+        "text": "which type of fingerprints you saw on the door",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "9:55 PM",
+        "speaker": "Nina Patel",
+        "text": "The prints were latent, dry prints. I traced the ridges and saw a clear pattern. No fresh or wet prints.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:05 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the dim entrance hall of Ashcroft Hall.  \nThe air smells of dust and old wood.  \nYou look around for anything that might show who is inside.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:20 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "10:20 PM",
+        "speaker": "Nina Patel",
+        "text": "I scan the room. The trophies are lined up, the paintings hang straight. My notebook stays open; I jot the layout. No hidden gem, just the usual.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:30 PM",
+        "speaker": "Narrator",
+        "text": "You stand in the dim entrance hall of Ashcroft Hall.  \nYou listen for any sound that might prove a story is false.  \nYou look around for a small detail that will show the truth.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "Hint",
+        "text": "Check the stories of the guests you have not asked yet. Compare what each one says with the clues you have. Look for a match that fits all clues.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "Narrator",
+        "text": "You walk over to Tom Ruiz. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "You",
+        "text": "hello tom",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "10:45 PM",
+        "speaker": "Tom Ruiz",
+        "text": "Hey. I\u2019m Tom. What do you want?",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "You",
+        "text": "i want to know that who is stolen gem",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "10:55 PM",
+        "speaker": "Tom Ruiz",
+        "text": "I don't know who took the gem. I was fixing a bike in my garage. I had no time to watch anyone else.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:05 PM",
+        "speaker": "You",
+        "text": "you saw the gem any time",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:05 PM",
+        "speaker": "Tom Ruiz",
+        "text": "I ain't seen it. I was in the garage, wrench in hand, fixing that bike. No one else around.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "You",
+        "text": "did you suspect anyone",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:15 PM",
+        "speaker": "Tom Ruiz",
+        "text": "Nah. I don't suspect anyone. I was just in my garage, working on a bike.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:25 PM",
+        "speaker": "You",
+        "text": "is there anyone ohter than u",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:25 PM",
+        "speaker": "Tom Ruiz",
+        "text": "No, nobody else was there. I was alone, fixing the bike. I don't know who took the gem.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:35 PM",
+        "speaker": "You",
+        "text": "who were present near the ge,",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:35 PM",
+        "speaker": "Tom Ruiz",
+        "text": "Only me. I was alone in my garage, wrench in hand, fixing the bike. No one else was near the gem.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:45 PM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:45 PM",
+        "speaker": "Tom Ruiz",
+        "text": "I ain't lookin' at nothing. My garage's tight. No one else in here.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "11:55 PM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "11:55 PM",
+        "speaker": "Narrator",
+        "text": "You step into the entrance hall and see a long, dusty hallway with faded wallpaper. You hear the faint echo of a distant footstep and smell stale air. You notice a faint smear of blood on the floor near the door.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "Narrator",
+        "text": "You walk over to Lila Grant. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "You",
+        "text": "hello",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:10 AM",
+        "speaker": "Lila Grant",
+        "text": "Hi! I'm Lila. How can I help?",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "You",
+        "text": "i want to know where is the gem",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:20 AM",
+        "speaker": "Lila Grant",
+        "text": "I\u2019m not sure what gem you\u2019re talking about. I\u2019ve just been working on my painting in the garden. Maybe you\u2019re looking in the wrong place?",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "You",
+        "text": "someone says that he is saspect you",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:30 AM",
+        "speaker": "Lila Grant",
+        "text": "I don't know who that is. I was in the garden all night, painting. No one else was there. I'm just here, working on my art.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "You",
+        "text": "you see anything unusual",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:40 AM",
+        "speaker": "Lila Grant",
+        "text": "I didn\u2019t see anything strange. I was just painting, alone, in the garden. Nothing out of the ordinary.",
+        "kind": "dialogue",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "12:50 AM",
+        "speaker": "You",
+        "text": "search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "12:50 AM",
+        "speaker": "Narrator",
+        "text": "You look around the entrance hall.  \nYou hear a faint creak from the floorboards.  \nYou smell old dust and a hint of mildew.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:05 AM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:05 AM",
+        "speaker": "Hint",
+        "text": "Talk to Ethan Blake. He may remember something that fits the clues.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:05 AM",
+        "speaker": "Narrator",
+        "text": "You walk over to Ethan Blake. You have not spoken yet.",
+        "kind": "narration",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:05 AM",
+        "speaker": "You",
+        "text": "you know about the gem",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:05 AM",
+        "speaker": "Ethan Blake",
+        "text": "I don't know what you mean. The gem isn\u2019t part of my business. I was in the library, reading.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:15 AM",
+        "speaker": "You",
+        "text": "which is the last time you see the gem",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:15 AM",
+        "speaker": "Ethan Blake",
+        "text": "I don\u2019t remember. I was alone in the library, reading. I had no idea about that gem.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:25 AM",
+        "speaker": "You",
+        "text": "lila saspect you are stolen",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:25 AM",
+        "speaker": "Ethan Blake",
+        "text": "I\u2019m not a thief. I was in the library, reading all night. The gem? I\u2019ve never seen it.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:35 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:35 AM",
+        "speaker": "Ethan Blake",
+        "text": "I look at the shelves. I see the clock. I see my gum. Nothing else.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "1:45 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "1:45 AM",
+        "speaker": "Narrator",
+        "text": "You enter the hallway of Ashcroft Hall. The air smells of old dust and cold stone. You look around, noting every shadow and flicker of light.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:00 AM",
+        "speaker": "You",
+        "text": "give me a hint",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:00 AM",
+        "speaker": "Hint",
+        "text": "Check the four clues you have. Look for one that is different from the others and think about what it shows about the person.",
+        "kind": "system",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:00 AM",
+        "speaker": "You",
+        "text": "any clue you want to give",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:00 AM",
+        "speaker": "Ethan Blake",
+        "text": "I don\u2019t have any clue. I was just in the library, reading.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:10 AM",
+        "speaker": "You",
+        "text": "what is your name",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:10 AM",
+        "speaker": "Ethan Blake",
+        "text": "My name is Ethan Blake.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:20 AM",
+        "speaker": "You",
+        "text": "age",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:20 AM",
+        "speaker": "Ethan Blake",
+        "text": "I am 34.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:30 AM",
+        "speaker": "You",
+        "text": "profasion",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:30 AM",
+        "speaker": "Ethan Blake",
+        "text": "My job is business. I run a small company. I stay quiet in meetings.",
+        "kind": "dialogue",
+        "character_id": "C1"
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Lila Grant. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C2"
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:40 AM",
+        "speaker": "Narrator",
+        "text": "You step into the grand entrance hall of Ashcroft Hall.  \nThe air smells of dust and old wood.  \nYou see a faded portrait on the wall and a dusty chandelier hanging above.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:55 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Marcus Lee. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C3"
+      },
+      {
+        "at_time": "2:55 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "2:55 AM",
+        "speaker": "Narrator",
+        "text": "You search the entrance hall.  \nThe hallway is wide and dim.  \nYou see a dusty coat rack, a cracked chandelier, and a faint smell of old paper.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:10 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Nina Patel. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "3:10 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:10 AM",
+        "speaker": "Narrator",
+        "text": "You stand in the cold, dim hall.  \nYou hear a faint creak from the old staircase.  \nYou smell the dry dust of an abandoned house.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:25 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Tom Ruiz. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "3:25 AM",
+        "speaker": "You",
+        "text": "Search the room",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:25 AM",
+        "speaker": "Narrator",
+        "text": "You walk into the dim Entrance Hall.  \nYou see the old wallpaper peeling and a dusty chandelier.  \nYou smell a faint scent of old wood and cold air.",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:40 AM",
+        "speaker": "You",
+        "text": "Check if their stories match",
+        "kind": "dialogue",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:40 AM",
+        "speaker": "Narrator",
+        "text": "You stand in the entrance hall. The hallway is dark and the air smells of old wood. You look at the guests and think, \u201cDo their stories fit together?\u201d",
+        "kind": "narration",
+        "character_id": ""
+      },
+      {
+        "at_time": "3:55 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "3:55 AM",
+        "speaker": "Tom Ruiz",
+        "text": "I ain't lookin' at nothing. My garage's tight. No one else in here.",
+        "kind": "dialogue",
+        "character_id": "C5"
+      },
+      {
+        "at_time": "4:05 AM",
+        "speaker": "Narrator",
+        "text": "You turn to Nina Patel. You have spoken before.",
+        "kind": "narration",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "4:05 AM",
+        "speaker": "You",
+        "text": "Look around",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "4:05 AM",
+        "speaker": "Nina Patel",
+        "text": "I scan the room. The trophies are lined up. The paintings hang straight. My notebook stays open; I jot the layout. No hidden gem, just the usual.",
+        "kind": "dialogue",
+        "character_id": "C4"
+      },
+      {
+        "at_time": "4:15 AM",
+        "speaker": "Verdict",
+        "text": "You are right. Ethan Blake did it. He was the one who hid the key. The real Marcus Lee was only a cover.",
+        "kind": "narration",
+        "character_id": ""
+      }
+    ],
+    "active_character_id": "C4",
+    "hints_used": 3,
+    "accusation_made": true,
+    "accused_character_id": "C1"
+  }
+}
