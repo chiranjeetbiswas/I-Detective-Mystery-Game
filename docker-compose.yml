@@ -8,9 +8,10 @@ services:
     ports:
       - "${BACKEND_PORT:-8000}:8000"
     environment:
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-openai/gpt-oss-20b}
-      - LLM_PROVIDER=${LLM_PROVIDER:-auto}
+      # NOTE: values listed here override env_file entries. Keep only
+      # container-specific settings, so GROQ_API_KEY / GROQ_MODEL /
+      # LLM_PROVIDER can come from .env or backend/.env below (with the
+      # defaults in app/core/config.py as the final fallback).
       - DATA_DIR=/app/data
       - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
     env_file:
