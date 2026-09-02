@@ -39,6 +39,13 @@ class CharacterProfile(BaseModel):
         "", description="Physical tells, e.g. touches necklace when nervous"
     )
     fear: str = Field("", description="What this person is afraid of")
+    weakness: str = Field(
+        "",
+        description=(
+            "A personality weakness the player can use as a lever to get clues, "
+            "e.g. 'Short temper', 'Seeks attention', 'Trusts strangers too easily'."
+        ),
+    )
     likes: list[str] = Field(default_factory=list)
     dislikes: list[str] = Field(default_factory=list)
     intelligence: int = Field(

@@ -41,6 +41,7 @@ def public_characters(case: Case, state: GameState) -> list[dict]:
             "personality": c.personality,
             "speaking_style": c.speaking_style,
             "habits": c.habits,
+            "weakness": c.weakness,
             # avatar_seed lets the client render a stable gender-based avatar
             "avatar_seed": c.id,
             "trust": npc.trust if npc else 50,

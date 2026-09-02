@@ -81,6 +81,12 @@ _FEARS = [
     "the dark", "being left alone", "an old enemy finding them",
     "prison", "their secret coming out",
 ]
+_WEAKNESSES = [
+    "Easily frightened", "Short temper", "Overconfident", "Greedy", "Jealous",
+    "Gullible", "Impatient", "Stubborn", "Naive", "Prideful",
+    "Trusts strangers too easily", "Hates being questioned", "Seeks attention",
+    "Easily embarrassed", "Can't keep secrets",
+]
 _LIKES = [
     "quiet rooms", "old books", "strong coffee", "fine wine", "music",
     "money", "control", "being praised", "the garden", "the sea",
@@ -235,6 +241,7 @@ class MockProvider(LLMProvider):
                     "speaking_style": rng.choice(_SPEAKING_STYLES),
                     "habits": rng.choice(_HABITS),
                     "fear": rng.choice(_FEARS),
+                    "weakness": _WEAKNESSES[i % len(_WEAKNESSES)],
                     "likes": rng.sample(_LIKES, 2),
                     "dislikes": rng.sample(_DISLIKES, 2),
                     "intelligence": rng.randint(40, 90),
@@ -258,8 +265,17 @@ class MockProvider(LLMProvider):
                  "secret partner", "person they owe money to", "student"]
         for i, c in enumerate(chars):
             other = chars[(i + 1) % num]
+            kind = rng.choice(kinds)
             c["relationships"].append(
-                {"with_character": other["name"], "kind": rng.choice(kinds), "detail": ""}
+                {
+                    "with_character": other["name"],
+                    "kind": kind,
+                    "detail": f"{c['name']} knows {other['name']} as their {kind}.",
+                }
+            )
+            # a true fact so the link is useful when questioned
+            c["knowledge"].append(
+                f"{other['name']} was near {rng.choice(_ROOMS)[1]} earlier tonight."
             )
 
         # rooms

@@ -19,7 +19,7 @@ Mystery Game/
 │   ├── app/
 │   │   ├── core/       config, logging
 │   │   ├── models/     Pydantic domain models (Case, Character, GameState, ...)
-│   │   ├── llm/        adapter pattern (base, groq, mock) + factory
+│   │   ├── llm/        adapter pattern (base, agentrouter, mock) + factory
 │   │   ├── prompts/    separate prompts (case gen, NPC, narrator, hint, ending)
 │   │   ├── engine/     game engine: generation, trust/suspicion/time, action routing
 │   │   ├── services/   save + statistics (JSON store)
@@ -36,7 +36,7 @@ Mystery Game/
 - **One case per game.** Generated once, stored as structured JSON, immutable.
 - **No full-conversation replay.** Structured game state is maintained; only the
   minimal relevant context is sent to the LLM each turn.
-- **Provider adapter pattern.** Swap Groq for any provider by implementing the
+- **Provider adapter pattern.** Swap AgentRouter for any provider by implementing the
   `LLMProvider` interface. A `MockProvider` lets the whole game run with **no API key**.
 - **Separate prompt modules** — never one giant prompt.
 
@@ -47,7 +47,7 @@ Mystery Game/
 The easiest way to run the full application (both frontend and backend):
 
 ```bash
-# Optional: customize Groq API key (defaults to offline Mock Provider if unset)
+# Optional: customize AgentRouter API key (defaults to offline Mock Provider if unset)
 cp .env.example .env
 
 # Build and start both services
@@ -75,12 +75,12 @@ docker compose down
 cd backend
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env      # add GROQ_API_KEY (optional; mock provider works without it)
+cp .env.example .env      # add AGENTROUTER_API_KEY (optional; mock provider works without it)
 uvicorn app.main:app --reload --port 8000
 ```
 Docs: http://localhost:8000/docs
 
-If `GROQ_API_KEY` is unset, the backend uses the built-in **mock provider** so the
+If `AGENTROUTER_API_KEY` is unset, the backend uses the built-in **mock provider** so the
 game is fully playable offline.
 
 ### Frontend

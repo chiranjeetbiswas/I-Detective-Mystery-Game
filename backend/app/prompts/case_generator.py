@@ -36,6 +36,19 @@ CASE_GENERATOR_SYSTEM = (
     "style, a habit or tell, a fear, likes and dislikes, and set their "
     "intelligence and confidence. Pick a gender for each (female, male, or "
     "nonbinary). "
+    "RELATIONSHIP RULE: every character must KNOW at least one other guest — "
+    "give each person at least one relationship (with_character must be another "
+    "guest's exact name) and at least one true fact in their 'knowledge' about "
+    "someone else. This makes it easier to follow who knows who. "
+    "WEAKNESS RULE: give every character a 'weakness' — one clear personality "
+    "flaw the player can use as a lever in conversation to get clues more easily. "
+    "Choose from: Easily frightened, Short temper, Overconfident, Greedy, Jealous, "
+    "Gullible, Impatient, Stubborn, Naive, Prideful, Trusts strangers too easily, "
+    "Hates being questioned, Seeks attention, Easily embarrassed, Can't keep "
+    "secrets. If the player talks to a person in a way that pokes their weakness "
+    "(flatter someone who seeks attention, stay calm with a short-tempered person, "
+    "press someone who can't keep secrets), that person should slip and share a "
+    "real clue. "
     f"{SIMPLE_ENGLISH_RULE} "
     "Do not add any comments — output ONLY valid JSON."
 )
@@ -47,7 +60,7 @@ Return JSON with EXACTLY this shape:
 {
   "title": str,
   "difficulty": "beginner|normal|expert|master",
-  "location_type": one of ["Hotel","Mansion","Cruise Ship","Airport Lounge","Luxury Villa","Train","Safe House","Museum","Private Island","Research Facility"],
+  "location_type": one of ["Hotel","Mansion","Cruise Ship","Airport Lounge","Luxury Villa","Train","Safe House","Museum","Private Island","Research Facility","Library","Art Gallery","Theater","Cinema","Casino","Nightclub","Restaurant","Cafe","Bank","Jewelry Store","Shopping Mall","University","School","Hospital","Laboratory","Old Mill","Lighthouse","Forest Cabin","Farmhouse","Ski Lodge","Beach Resort","Harbor","Train Station","Theme Park","Winery","Penthouse","Apartment Building","Office Tower","Castle","Opera House","Observatory"],
   "location_name": str,
   "introduction": str,
   "crime": str,
@@ -61,6 +74,7 @@ Return JSON with EXACTLY this shape:
     "occupation": str, "personality": str,
     "background": str, "secret": str, "goal": str, "alibi": str,
     "speaking_style": str, "habits": str, "fear": str,
+    "weakness": str,
     "likes": [str], "dislikes": [str],
     "intelligence": int (0-100), "confidence": int (0-100),
     "relationships": [{"with_character": str, "kind": str, "detail": str}],
@@ -80,6 +94,8 @@ Return JSON with EXACTLY this shape:
         f"difficulty: {difficulty.value}. Guidance: {_DIFFICULTY_GUIDANCE[difficulty]} "
         f"Make it exciting, but write every line in very simple English with short "
         f"sentences. Never repeat an old story.\n"
+        f"Pick a FRESH, interesting 'location_type' from the allowed list — vary it "
+        f"from common ones like Hotel/Mansion so games feel different each time.\n"
         f"Keep the 'introduction' SHORT: 3 to 4 short sentences. Say the place, "
         f"the crime, that one guest is using a fake name, and that the player must "
         f"find that person.\n{schema}"

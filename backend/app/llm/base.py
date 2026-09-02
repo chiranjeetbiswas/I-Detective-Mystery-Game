@@ -1,6 +1,6 @@
 """LLM provider interface — adapter pattern.
 
-Implement ``LLMProvider`` for any backend (Groq, OpenAI, local, ...). The rest
+Implement ``LLMProvider`` for any backend (AgentRouter, OpenAI, local, ...). The rest
 of the app depends only on this interface, never on a concrete SDK.
 """
 from __future__ import annotations

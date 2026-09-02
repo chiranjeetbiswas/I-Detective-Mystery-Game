@@ -36,6 +36,13 @@ NPC_SYSTEM = (
     "If they were kind, warm up.\n"
     "10. The player may ask ANYTHING (your job, your fears, who you hate, where you "
     "were). Answer like a real person would, based on your feelings and what you know.\n"
+    "11. You have a WEAKNESS (a personality flaw). If the detective plays to that "
+    "weakness the right way — flatters you if you seek attention, keeps calm if you "
+    "have a short temper, gently presses you if you can't keep secrets, reassures "
+    "you if you are easily frightened — you SLIP and let a real, useful clue out "
+    "(something you know about another guest, or a true detail). If they poke it the "
+    "wrong way (anger a short-tempered person, bore an attention-seeker) you clam up "
+    "and share nothing.\n"
     "\n"
     "Reply with 1-4 sentences of SPEECH ONLY. No narration, no asterisks, no notes "
     "to the player. "
@@ -86,6 +93,7 @@ Personality: {profile.personality}
 Speaking style: {profile.speaking_style or "plain and natural"}
 Habit / tell: {profile.habits or "none in particular"}
 What you fear: {profile.fear or "nothing you will admit"}
+Your weakness (a lever the detective can use on you): {profile.weakness or "none obvious"}
 You like: {profile.likes or []}
 You dislike: {profile.dislikes or []}
 How clever you are (0-100): {profile.intelligence}

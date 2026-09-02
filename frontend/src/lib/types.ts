@@ -46,6 +46,7 @@ export interface CharacterView {
   personality: string;
   speaking_style: string;
   habits: string;
+  weakness?: string;
   avatar_seed: string;
   trust: number;
   stress: number;

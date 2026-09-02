@@ -131,6 +131,18 @@ export function CharacterCard({
       {/* gilt hairline separating identity from statistics */}
       <div className="rule-gold my-2.5 opacity-40" />
 
+      {/* weakness — the lever the detective can use to loosen this suspect */}
+      {c.weakness && (
+        <div className="mb-2 flex items-center gap-1.5">
+          <span className="text-[0.625rem] font-semibold uppercase tracking-[0.08em] text-ink-subtle/80">
+            Weakness
+          </span>
+          <span className="rounded-full border border-amber-400/40 bg-amber-400/10 px-1.5 py-[1px] text-[0.625rem] font-semibold text-amber-300">
+            {c.weakness}
+          </span>
+        </div>
+      )}
+
       {/* stat block */}
       <div className="relative space-y-1.5">
         <Meter label="Trust" value={c.trust} tone="trust" />

@@ -60,6 +60,7 @@ def _build_case(
     data.setdefault("difficulty", difficulty.value)
     _ensure_ids(data)
     _normalize(data, num_characters)
+    _ensure_relationships_and_weakness(data)
     _ensure_single_target(data)
     case = Case.model_validate(data)
     log.info(
@@ -172,6 +173,7 @@ def _normalize(data: dict, num_characters: int) -> None:
         c.setdefault("speaking_style", "plain and natural")
         c.setdefault("habits", "")
         c.setdefault("fear", "")
+        c["weakness"] = str(c.get("weakness") or "").strip()
         c["likes"] = [str(x) for x in _as_list(c.get("likes"))]
         c["dislikes"] = [str(x) for x in _as_list(c.get("dislikes"))]
         c["intelligence"] = max(0, min(100, _as_int(c.get("intelligence"), 60)))
@@ -215,6 +217,47 @@ def _normalize(data: dict, num_characters: int) -> None:
     sol = data.setdefault("solution", {})
     sol.setdefault("reasoning", "The clues do not match their story or their name.")
     sol.setdefault("key_evidence_ids", [])
+
+
+WEAKNESS_POOL = [
+    "Easily frightened", "Short temper", "Overconfident", "Greedy", "Jealous",
+    "Gullible", "Impatient", "Stubborn", "Naive", "Prideful",
+    "Trusts strangers too easily", "Hates being questioned", "Seeks attention",
+    "Easily embarrassed", "Can't keep secrets",
+]
+
+
+def _ensure_relationships_and_weakness(data: dict) -> None:
+    """Guarantee every character has a weakness and knows at least one other
+    guest. LLM/mock output may miss these; this makes the rules hold every game
+    so the investigation stays learnable.
+    """
+    chars = data.get("characters", [])
+    names = [c.get("name", "") for c in chars]
+    for i, c in enumerate(chars):
+        # weakness: assign a deterministic one from the pool if missing
+        if not str(c.get("weakness") or "").strip():
+            c["weakness"] = WEAKNESS_POOL[i % len(WEAKNESS_POOL)]
+
+        # relationships: ensure at least one link to ANOTHER guest
+        rels = [
+            r for r in _as_list(c.get("relationships"))
+            if isinstance(r, dict) and r.get("with_character")
+            and r.get("with_character") != c.get("name")
+            and r.get("with_character") in names
+        ]
+        if not rels and len(chars) > 1:
+            other = chars[(i + 1) % len(chars)]
+            rels = [{
+                "with_character": other.get("name", ""),
+                "kind": "acquaintance",
+                "detail": f"{c.get('name')} has met {other.get('name')} before tonight.",
+            }]
+            # give them a true fact to share so the link is useful in play
+            know = _as_list(c.get("knowledge"))
+            know.append(f"{other.get('name')} was also here tonight.")
+            c["knowledge"] = [str(k) for k in know]
+        c["relationships"] = rels
 
 
 def _ensure_single_target(data: dict) -> None:

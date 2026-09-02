@@ -76,7 +76,7 @@ export default function SettingsPage() {
               LLM provider
             </span>
             {provider ? (
-              <Badge variant={provider === "groq" ? "gold" : "outline"}>
+              <Badge variant={provider === "agentrouter" ? "gold" : "outline"}>
                 {provider}
               </Badge>
             ) : (
@@ -87,13 +87,13 @@ export default function SettingsPage() {
           <p className="text-ui leading-relaxed text-ink-muted">
             Put{" "}
             <code className="rounded bg-surface-3/70 px-1 py-0.5 font-mono text-micro text-gold/90">
-              GROQ_API_KEY
+              AGENTROUTER_API_KEY
             </code>{" "}
             in the backend{" "}
             <code className="rounded bg-surface-3/70 px-1 py-0.5 font-mono text-micro text-gold/90">
               .env
             </code>{" "}
-            file to use Groq. With no key, the built-in mock provider runs the
+            file to use AgentRouter. With no key, the built-in mock provider runs the
             whole game offline.
           </p>
         </CardContent>
