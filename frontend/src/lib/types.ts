@@ -64,6 +64,77 @@ export interface EvidenceView {
   location: string;
 }
 
+// ---- AI detective team ----
+export type DetectiveSpecialty = "psychology" | "logic";
+export type DetectiveStatus =
+  | "idle"
+  | "listening"
+  | "analyzing"
+  | "investigating"
+  | "returning"
+  | "writing_report";
+
+export interface DetectiveView {
+  detective_id: string;
+  name: string;
+  specialty: DetectiveSpecialty;
+  tagline: string;
+  avatar_seed: string;
+  gender: Gender;
+  status: DetectiveStatus;
+  assignment: string;
+  progress: number;
+  confidence: number;
+  interviews_done: number;
+  last_report: string;
+}
+
+export interface InterviewLine {
+  speaker: string;
+  text: string;
+}
+
+/** Result of POST /detectives/message. */
+export interface DetectiveMessageResult {
+  mode: "chat" | "interview";
+  detective_id: string;
+  detective_name: string;
+  reply?: string;
+  target_character_id?: string;
+  target_name?: string;
+  reason?: string;
+}
+
+export interface DetectiveMessageResponse {
+  result: DetectiveMessageResult;
+  state: GameStateView;
+  detectives: DetectiveView[];
+  characters: CharacterView[];
+  transcript: TranscriptLine[];
+}
+
+/** Result of POST /detectives/interview. */
+export interface DetectiveInterviewResult {
+  detective_id: string;
+  detective_name: string;
+  target_character_id: string;
+  target_name: string;
+  opening: string;
+  goal: string;
+  lines: InterviewLine[];
+  report: string;
+  error?: string;
+}
+
+export interface DetectiveInterviewResponse {
+  result: DetectiveInterviewResult;
+  state: GameStateView;
+  detectives: DetectiveView[];
+  characters: CharacterView[];
+  notebook: Notebook;
+  transcript: TranscriptLine[];
+}
+
 export interface GameStateView {
   game_id: string;
   case_id: string;
@@ -119,6 +190,7 @@ export interface Snapshot {
   transcript: TranscriptLine[];
   rooms: Room[];
   solution?: Solution;
+  detectives: DetectiveView[];
 }
 
 export interface ActionResult {

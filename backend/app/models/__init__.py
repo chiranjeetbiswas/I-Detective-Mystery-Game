@@ -1,6 +1,8 @@
 """Domain models package."""
 from .enums import (
     ActionType,
+    DetectiveSpecialty,
+    DetectiveStatus,
     Difficulty,
     Gender,
     GameStatus,
@@ -18,12 +20,15 @@ from .case import (
     TimelineEvent,
 )
 from .game_state import (
+    DetectiveChatLine,
+    DetectiveState,
     GameState,
     Notebook,
     NotebookEntry,
     NPCState,
     QAExchange,
     TranscriptLine,
+    build_detective_roster,
 )
 from .dto import (
     AccuseRequest,
@@ -31,6 +36,9 @@ from .dto import (
     Achievement,
     ActionRequest,
     ActionResponse,
+    DetectiveInterviewRequest,
+    DetectiveMessageRequest,
+    DetectiveSettleRequest,
     HintRequest,
     NewGameRequest,
     SelectCharacterRequest,
@@ -40,6 +48,8 @@ from .dto import (
 
 __all__ = [
     "ActionType",
+    "DetectiveSpecialty",
+    "DetectiveStatus",
     "Difficulty",
     "Gender",
     "GameStatus",
@@ -53,17 +63,23 @@ __all__ = [
     "Room",
     "Solution",
     "TimelineEvent",
+    "DetectiveChatLine",
+    "DetectiveState",
     "GameState",
     "Notebook",
     "NotebookEntry",
     "NPCState",
     "QAExchange",
     "TranscriptLine",
+    "build_detective_roster",
     "AccuseRequest",
     "AccuseResponse",
     "Achievement",
     "ActionRequest",
     "ActionResponse",
+    "DetectiveInterviewRequest",
+    "DetectiveMessageRequest",
+    "DetectiveSettleRequest",
     "HintRequest",
     "NewGameRequest",
     "SelectCharacterRequest",

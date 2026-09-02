@@ -107,3 +107,20 @@ export function moodMeta(mood: Mood): MoodMeta {
 export function statusMeta(status: NPCStatus): StatusMeta {
   return STATUS_META[status] ?? STATUS_META.available;
 }
+
+// ---- AI detective team status presentation ----
+import type { DetectiveStatus } from "@/lib/types";
+import { Ear, Brain, Search, Undo2, FileText, Pause } from "lucide-react";
+
+export const DETECTIVE_STATUS_META: Record<DetectiveStatus, StatusMeta> = {
+  idle: { label: "Idle", color: "hsl(214 15% 62%)", Icon: Pause },
+  listening: { label: "Listening", color: "hsl(199 62% 72%)", Icon: Ear },
+  analyzing: { label: "Analyzing", color: "hsl(268 58% 78%)", Icon: Brain },
+  investigating: { label: "Investigating", color: "hsl(43 66% 68%)", Icon: Search },
+  returning: { label: "Returning", color: "hsl(152 48% 66%)", Icon: Undo2 },
+  writing_report: { label: "Writing Report", color: "hsl(36 82% 68%)", Icon: FileText },
+};
+
+export function detectiveStatusMeta(status: DetectiveStatus): StatusMeta {
+  return DETECTIVE_STATUS_META[status] ?? DETECTIVE_STATUS_META.idle;
+}

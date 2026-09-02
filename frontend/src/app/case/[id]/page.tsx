@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { CharacterCard } from "@/components/game/character-card";
+import { DetectiveCard } from "@/components/game/detective-card";
 import { NotebookPanel } from "@/components/game/notebook-panel";
 import { Transcript } from "@/components/game/transcript";
 import { Avatar } from "@/components/game/avatar";
@@ -27,7 +28,13 @@ import { cn } from "@/lib/utils";
 import { moodMeta } from "@/lib/mood";
 import { api } from "@/lib/api";
 import { setActiveGame } from "@/lib/session";
-import type { CharacterView, Snapshot, TranscriptLine } from "@/lib/types";
+import type {
+  CharacterView,
+  DetectiveView,
+  Snapshot,
+  TranscriptLine,
+} from "@/lib/types";
+import { Users } from "lucide-react";
 
 type Tab = "characters" | "evidence" | "notebook";
 
@@ -117,6 +124,11 @@ export default function InvestigationPage() {
   const router = useRouter();
   const [snap, setSnap] = useState<Snapshot | null>(null);
   const [transcript, setTranscript] = useState<TranscriptLine[]>([]);
+  const [detectives, setDetectives] = useState<DetectiveView[]>([]);
+  // the AI detective the player is currently talking to (like an active suspect)
+  const [activeDetectiveId, setActiveDetectiveId] = useState<string>("");
+  // which right-rail tab is showing: the case readout, or the detective team
+  const [rightTab, setRightTab] = useState<"case" | "team">("case");
   const [tab, setTab] = useState<Tab>("characters");
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -127,6 +139,9 @@ export default function InvestigationPage() {
   const activeChar: CharacterView | undefined = snap?.characters.find(
     (c) => c.id === activeCharId
   );
+  const activeDetective: DetectiveView | undefined = detectives.find(
+    (d) => d.detective_id === activeDetectiveId
+  );
 
   useEffect(() => {
     setActiveGame(id);
@@ -135,6 +150,7 @@ export default function InvestigationPage() {
       .then((s) => {
         setSnap(s);
         setTranscript(s.transcript);
+        setDetectives(s.detectives ?? []);
         if (s.state.status !== "in_progress") router.replace(`/result/${id}`);
       })
       .catch(() => setSnap(null));
@@ -163,10 +179,11 @@ export default function InvestigationPage() {
     if (res.state.status !== "in_progress") router.replace(`/result/${id}`);
   }
 
-  /** Select a character as the active conversation target. */
+  /** Select a suspect as the active conversation target. */
   async function selectCharacter(cid: string) {
-    if (busy || cid === activeCharId) return;
+    if (busy || (cid === activeCharId && !activeDetectiveId)) return;
     setBusy(true);
+    setActiveDetectiveId(""); // talking to a suspect leaves any team chat
     try {
       const res = await api.selectCharacter(id, cid);
       applyResponse(res);
@@ -176,20 +193,106 @@ export default function InvestigationPage() {
     }
   }
 
-  /** Send a message. If an active character is set and the text looks like
-   *  conversation, use the /talk endpoint. Otherwise fall back to /action. */
+  /** Select an AI detective as the active conversation target — exactly like
+   *  clicking a suspect. Messages then go to that detective. */
+  function selectDetective(detId: string) {
+    if (busy) return;
+    setActiveDetectiveId((cur) => (cur === detId ? "" : detId));
+    inputRef.current?.focus();
+  }
+
+  /** Push a single transcript line locally (used for detective chat + streaming). */
+  function pushLine(line: TranscriptLine) {
+    setTranscript((prev) => [...prev, line]);
+  }
+
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+  /** Stream an autonomous interview into the transcript with typing delays,
+   *  while the detective's live status/progress updates on the card. */
+  async function streamInterview(detectiveId: string, characterId: string) {
+    const clock = snap?.state.clock ?? "";
+    try {
+      const res = await api.detectiveInterview(id, detectiveId, characterId);
+      const r = res.result;
+      if (r.error) {
+        pushLine({ at_time: clock, speaker: "Narrator", text: "That interview could not start.", kind: "narration" });
+        setDetectives(res.detectives);
+        return;
+      }
+      // reflect INVESTIGATING state immediately
+      setDetectives(res.detectives);
+      pushLine({
+        at_time: clock,
+        speaker: "Narrator",
+        text: `${r.detective_name} steps aside to question ${r.target_name}…`,
+        kind: "narration",
+      });
+      // stream each line with a natural typing delay
+      for (const line of r.lines) {
+        await sleep(700 + Math.min(1600, line.text.length * 22));
+        pushLine({ at_time: clock, speaker: line.speaker, text: line.text, kind: "dialogue" });
+      }
+      // the report comes back last
+      await sleep(900);
+      pushLine({
+        at_time: clock,
+        speaker: r.detective_name,
+        text: r.report,
+        kind: "system",
+      });
+      // detective returns to the team
+      const settled = await api.detectiveSettle(id, detectiveId);
+      setDetectives(settled.detectives);
+      // refresh notebook/state from the interview response
+      setSnap((prev) =>
+        prev ? { ...prev, state: res.state, characters: res.characters, notebook: res.notebook } : prev
+      );
+    } catch {
+      pushLine({ at_time: clock, speaker: "Narrator", text: "The interview was interrupted.", kind: "narration" });
+    }
+  }
+
+  /** Send a message to the active detective. The backend LLM decides whether to
+   *  chat or to start an autonomous interview. */
+  async function sendToTeam(text: string) {
+    const clock = snap?.state.clock ?? "";
+    pushLine({ at_time: clock, speaker: "You", text, kind: "dialogue" });
+    const res = await api.detectiveMessage(id, text);
+    setDetectives(res.detectives);
+    setSnap((prev) => (prev ? { ...prev, state: res.state, characters: res.characters } : prev));
+    const r = res.result;
+    // keep the conversation focused on whoever actually answered
+    if (r.detective_id) setActiveDetectiveId(r.detective_id);
+    if (r.mode === "interview" && r.detective_id && r.target_character_id) {
+      pushLine({
+        at_time: clock,
+        speaker: r.detective_name,
+        text: `On it — I'll go question ${r.target_name}.`,
+        kind: "dialogue",
+      });
+      await streamInterview(r.detective_id, r.target_character_id);
+    } else {
+      pushLine({ at_time: clock, speaker: r.detective_name, text: r.reply ?? "", kind: "dialogue" });
+    }
+  }
+
+  /** Send a message. Routes to the active detective when one is selected;
+   *  otherwise talks to the active suspect (or runs a general action). */
   async function send(text: string) {
     if (!text.trim() || busy) return;
     setBusy(true);
     setInput("");
     try {
-      let res;
-      if (activeCharId && !isNonTalkAction(text)) {
-        res = await api.talk(id, text);
+      if (activeDetectiveId) {
+        await sendToTeam(text);
+      } else if (activeCharId && !isNonTalkAction(text)) {
+        const res = await api.talk(id, text);
+        applyResponse(res);
       } else {
-        res = await api.action(id, text);
+        const res = await api.action(id, text);
+        applyResponse(res);
       }
-      applyResponse(res);
     } finally {
       setBusy(false);
       inputRef.current?.focus();
@@ -396,23 +499,65 @@ export default function InvestigationPage() {
             </div>
           )}
 
-          {!activeChar && (
+          {/* active detective header (talking to a teammate) */}
+          {activeDetective && !activeChar && (
+            <div className="glass flex items-center gap-3 border-b px-5 py-3">
+              <Avatar
+                seed={activeDetective.avatar_seed || activeDetective.detective_id}
+                gender={activeDetective.gender}
+                mood={busy ? "thinking" : "confident"}
+                name={activeDetective.name}
+                size="md"
+                ring="hsl(190 60% 56%)"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="text-[0.5625rem] font-bold uppercase tracking-[0.18em] text-ink-subtle/80">
+                  Talking With Your Teammate
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="truncate font-display text-[1.0625rem] font-bold text-gilt">
+                    {activeDetective.name}
+                  </span>
+                  <span className="shrink-0 text-micro text-ink-subtle capitalize">
+                    {activeDetective.specialty}
+                  </span>
+                </div>
+                <div className="mt-0.5 text-[0.625rem] text-ink-subtle/85">
+                  {activeDetective.tagline}
+                </div>
+              </div>
+              <ArrowLeftRight
+                className="h-4 w-4 shrink-0 text-ink-subtle/60"
+                aria-hidden
+              />
+            </div>
+          )}
+
+          {!activeChar && !activeDetective && (
             <div className="glass border-b px-5 py-3 text-center">
               <p className="text-ui leading-relaxed text-ink-muted">
-                Click a guest on the left to start talking. Every message you send
-                will go to the person you pick.
+                Click a guest on the left to start talking, or open the Team tab on
+                the right to talk with a detective.
               </p>
             </div>
           )}
 
           {/* transcript */}
           <div className="min-h-0 flex-1 overflow-y-auto px-5 py-7">
-            <Transcript lines={transcript} characters={characters} />
+            <Transcript
+              lines={transcript}
+              characters={characters}
+              detectiveNames={detectives.map((d) => d.name)}
+            />
             {busy && (
               <div className="mt-5 flex items-center gap-2.5 pl-1">
                 <ThinkingDots />
                 <span className="text-micro italic text-ink-subtle">
-                  {activeChar ? `${activeChar.name} is thinking` : "Working"}
+                  {activeDetective
+                    ? `${activeDetective.name} is thinking`
+                    : activeChar
+                    ? `${activeChar.name} is thinking`
+                    : "Working"}
                 </span>
               </div>
             )}
@@ -463,7 +608,9 @@ export default function InvestigationPage() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={
-                  activeChar
+                  activeDetective
+                    ? `Talk to ${activeDetective.name} — ask, or send them to interview…`
+                    : activeChar
                     ? `Say something to ${activeChar.name}…`
                     : "Pick a guest first, or search a room…"
                 }
@@ -477,66 +624,118 @@ export default function InvestigationPage() {
           </div>
         </section>
 
-        {/* ══ RIGHT: clock, location, objective, inventory, progress ══ */}
-        <aside className="hidden min-h-0 flex-col gap-2.5 overflow-y-auto border-l border-hairline bg-gradient-to-b from-surface/50 to-canvas/40 p-3 lg:flex">
-          {/* the clock is the hero of this rail: every action spends it */}
-          <div className="relative overflow-hidden rounded-lg border border-gold/25 bg-gradient-to-b from-gold/[0.09] to-surface/50 p-3 text-center shadow-[0_6px_20px_-10px_hsl(43_60%_30%/0.55),inset_0_1px_0_0_hsl(45_80%_80%/0.12)]">
-            <Clock className="mx-auto mb-1 h-4 w-4 text-gold/90" aria-hidden strokeWidth={2.2} />
-            <div className="type-num text-[1.625rem] font-bold leading-none text-gilt">
-              {state.clock}
-            </div>
-            <div className="mt-1.5 text-[0.5625rem] font-bold uppercase tracking-[0.16em] text-ink-subtle">
-              {state.minutes_elapsed} minutes gone
-            </div>
+        {/* ══ RIGHT: tabbed — Case readout / Detective Team ══ */}
+        <aside className="hidden min-h-0 flex-col overflow-hidden border-l border-hairline bg-gradient-to-b from-surface/50 to-canvas/40 lg:flex">
+          {/* right-rail tab bar */}
+          <div className="flex border-b border-hairline">
+            {(["case", "team"] as const).map((t) => (
+              <button
+                key={t}
+                onClick={() => setRightTab(t)}
+                aria-pressed={rightTab === t}
+                className={cn(
+                  "relative flex-1 py-2.5 text-[0.6875rem] font-bold uppercase tracking-[0.12em] transition-colors duration-200",
+                  rightTab === t ? "text-gold" : "text-ink-subtle hover:text-ink"
+                )}
+              >
+                {t === "case" ? "Case" : "Team"}
+                {rightTab === t && (
+                  <motion.span
+                    layoutId="right-tab-underline"
+                    className="absolute inset-x-2 -bottom-px h-[2px] rounded-full bg-gradient-to-r from-transparent via-gold to-transparent"
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  />
+                )}
+              </button>
+            ))}
           </div>
 
-          <HudPanel icon={MapPin} label="Where you are">
-            <div className="text-ui font-medium text-ink">
-              {state.current_location || brief.location_name}
-            </div>
-          </HudPanel>
+          <div className="min-h-0 flex-1 overflow-y-auto p-3">
+            {/* ── CASE tab: clock, location, objective, inventory, progress ── */}
+            {rightTab === "case" && (
+              <div className="flex flex-col gap-2.5">
+                {/* the clock is the hero of this rail: every action spends it */}
+                <div className="relative overflow-hidden rounded-lg border border-gold/25 bg-gradient-to-b from-gold/[0.09] to-surface/50 p-3 text-center shadow-[0_6px_20px_-10px_hsl(43_60%_30%/0.55),inset_0_1px_0_0_hsl(45_80%_80%/0.12)]">
+                  <Clock className="mx-auto mb-1 h-4 w-4 text-gold/90" aria-hidden strokeWidth={2.2} />
+                  <div className="type-num text-[1.625rem] font-bold leading-none text-gilt">
+                    {state.clock}
+                  </div>
+                  <div className="mt-1.5 text-[0.5625rem] font-bold uppercase tracking-[0.16em] text-ink-subtle">
+                    {state.minutes_elapsed} minutes gone
+                  </div>
+                </div>
 
-          <HudPanel icon={Target} label="Your job">
-            <div className="text-ui leading-relaxed text-ink-muted">
-              {state.current_objective}
-            </div>
-          </HudPanel>
+                <HudPanel icon={MapPin} label="Where you are">
+                  <div className="text-ui font-medium text-ink">
+                    {state.current_location || brief.location_name}
+                  </div>
+                </HudPanel>
 
-          <HudPanel icon={Package} label="What you carry">
-            {state.inventory.length ? (
-              <ul className="space-y-0.5 text-ui text-ink-muted">
-                {state.inventory.map((i) => (
-                  <li key={i} className="flex gap-1.5">
-                    <span className="text-gold/70">·</span>
-                    {i}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <div className="text-ui italic text-ink-subtle">Nothing</div>
+                <HudPanel icon={Target} label="Your job">
+                  <div className="text-ui leading-relaxed text-ink-muted">
+                    {state.current_objective}
+                  </div>
+                </HudPanel>
+
+                <HudPanel icon={Package} label="What you carry">
+                  {state.inventory.length ? (
+                    <ul className="space-y-0.5 text-ui text-ink-muted">
+                      {state.inventory.map((i) => (
+                        <li key={i} className="flex gap-1.5">
+                          <span className="text-gold/70">·</span>
+                          {i}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div className="text-ui italic text-ink-subtle">Nothing</div>
+                  )}
+                </HudPanel>
+
+                <HudPanel icon={BookOpen} label="How you are doing">
+                  <div className="flex items-baseline gap-4">
+                    <div>
+                      <div className="type-num text-[1.125rem] font-bold text-ink">
+                        {state.discovered_evidence_count}
+                      </div>
+                      <div className="text-[0.5625rem] uppercase tracking-[0.12em] text-ink-subtle">
+                        clues
+                      </div>
+                    </div>
+                    <div>
+                      <div className="type-num text-[1.125rem] font-bold text-ink">
+                        {state.hints_used}
+                      </div>
+                      <div className="text-[0.5625rem] uppercase tracking-[0.12em] text-ink-subtle">
+                        hints
+                      </div>
+                    </div>
+                  </div>
+                </HudPanel>
+              </div>
             )}
-          </HudPanel>
 
-          <HudPanel icon={BookOpen} label="How you are doing">
-            <div className="flex items-baseline gap-4">
-              <div>
-                <div className="type-num text-[1.125rem] font-bold text-ink">
-                  {state.discovered_evidence_count}
+            {/* ── TEAM tab: click a detective to talk to them, like a guest ── */}
+            {rightTab === "team" && (
+              <div className="space-y-2">
+                <div className="mb-1 flex items-center gap-1.5 px-0.5 text-[0.625rem] font-bold uppercase tracking-[0.13em] text-ink-subtle">
+                  <Users className="h-3 w-3 text-gold/90" aria-hidden strokeWidth={2.4} />
+                  Detective Team
                 </div>
-                <div className="text-[0.5625rem] uppercase tracking-[0.12em] text-ink-subtle">
-                  clues
-                </div>
+                <p className="px-0.5 pb-1 text-micro leading-relaxed text-ink-subtle">
+                  Click a detective to talk with them, just like a guest.
+                </p>
+                {detectives.map((d) => (
+                  <DetectiveCard
+                    key={d.detective_id}
+                    d={d}
+                    active={d.detective_id === activeDetectiveId}
+                    onSelect={() => selectDetective(d.detective_id)}
+                  />
+                ))}
               </div>
-              <div>
-                <div className="type-num text-[1.125rem] font-bold text-ink">
-                  {state.hints_used}
-                </div>
-                <div className="text-[0.5625rem] uppercase tracking-[0.12em] text-ink-subtle">
-                  hints
-                </div>
-              </div>
-            </div>
-          </HudPanel>
+            )}
+          </div>
         </aside>
       </div>
     </div>

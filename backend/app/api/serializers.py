@@ -70,6 +70,27 @@ def public_evidence(case: Case, state: GameState) -> list[dict]:
     return out
 
 
+def public_detectives(state: GameState) -> list[dict]:
+    """AI detective teammate cards for the sidebar (no hidden data)."""
+    out = []
+    for det in state.detectives.values():
+        out.append({
+            "detective_id": det.detective_id,
+            "name": det.name,
+            "specialty": det.specialty.value,
+            "tagline": det.tagline,
+            "avatar_seed": det.avatar_seed,
+            "gender": det.gender,
+            "status": det.status.value,
+            "assignment": det.assignment,
+            "progress": det.progress,
+            "confidence": det.confidence,
+            "interviews_done": det.interviews_done,
+            "last_report": det.last_report,
+        })
+    return out
+
+
 def public_state(case: Case, state: GameState) -> dict:
     return {
         "game_id": state.id,
@@ -101,6 +122,7 @@ def full_snapshot(case: Case, state: GameState) -> dict:
         "notebook": state.notebook.model_dump(),
         "transcript": public_transcript(state),
         "rooms": [r.model_dump() for r in case.rooms],
+        "detectives": public_detectives(state),
     }
     # reveal the solution only once the game is over
     if state.status != GameStatus.IN_PROGRESS:

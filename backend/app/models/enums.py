@@ -68,3 +68,22 @@ class NPCStatus(str, Enum):
     BUSY = "busy"             # occupied elsewhere
     SLEEPING = "sleeping"     # not reachable right now
     MISSING = "missing"       # cannot be found
+
+
+class DetectiveSpecialty(str, Enum):
+    """What an AI detective teammate is best at."""
+
+    PSYCHOLOGY = "psychology"   # body language, emotion, manipulation, behaviour
+    LOGIC = "logic"             # timelines, evidence, inconsistencies, deduction
+
+
+class DetectiveStatus(str, Enum):
+    """Live activity state of an AI detective teammate (drives the sidebar card)."""
+
+    IDLE = "idle"                 # nothing to do
+    LISTENING = "listening"       # passively observing an interaction
+    ANALYZING = "analyzing"       # thinking about what was just said
+    INVESTIGATING = "investigating"  # running an independent interview
+    RETURNING = "returning"       # interview done, walking back
+    WRITING_REPORT = "writing_report"  # composing findings
+

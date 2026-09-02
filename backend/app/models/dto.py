@@ -39,6 +39,22 @@ class HintRequest(BaseModel):
     game_id: str
 
 
+class DetectiveMessageRequest(BaseModel):
+    game_id: str
+    text: str = Field(..., min_length=1, description="What the lead detective says")
+
+
+class DetectiveInterviewRequest(BaseModel):
+    game_id: str
+    detective_id: str = Field(..., description="Which AI detective runs the interview")
+    character_id: str = Field(..., description="Suspect to be interviewed")
+
+
+class DetectiveSettleRequest(BaseModel):
+    game_id: str
+    detective_id: str
+
+
 # ---- responses --------------------------------------------------------------
 class ActionResponse(BaseModel):
     game_id: str

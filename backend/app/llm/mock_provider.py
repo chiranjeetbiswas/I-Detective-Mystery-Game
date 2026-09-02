@@ -176,6 +176,14 @@ class MockProvider(LLMProvider):
 
         if "case generator" in tag or "generate a complete" in tag:
             return self._gen_case(user)
+        if "intent router" in tag or "router for an ai detective" in tag:
+            return self._gen_detective_router(user)
+        if "interview plan" in tag or "run your own interview" in tag:
+            return self._gen_detective_interview(user)
+        if "reporting back after interviewing" in tag or "investigation report" in tag:
+            return self._gen_detective_report(user)
+        if "detective teammate" in tag:
+            return self._gen_detective_chat(user)
         if "npc" in tag or "in-character" in tag or "roleplay rules" in tag \
                 or "one real person" in tag:
             return self._gen_dialogue(user)
@@ -458,6 +466,139 @@ class MockProvider(LLMProvider):
             "Compare what each guest says about where they were with the clues you "
             "have found. The one whose story does not match the main clue, and whose "
             "papers look wrong, is the one to watch."
+        )
+
+    # ---- detective team (AI teammates) --------------------------------------
+    @staticmethod
+    def _suspect_ids(user: str) -> list[tuple[str, str]]:
+        """Parse the '- id: X | name: Y' suspect roster out of the context."""
+        out = []
+        for m in re.finditer(r"id:\s*([^\s|]+)\s*\|\s*name:\s*([^|]+)", user):
+            out.append((m.group(1).strip(), m.group(2).strip()))
+        return out
+
+    @staticmethod
+    def _detective_name(user: str) -> str:
+        m = re.search(r"You are ([A-Z][a-z]+ [A-Z][a-z]+)", user)
+        return m.group(1) if m else "Your teammate"
+
+    def _gen_detective_router(self, user: str) -> str:
+        low = user.lower()
+        line = re.search(r'lead detective says ---\s*"([^"]*)"', user, re.IGNORECASE)
+        text = (line.group(1) if line else user).lower()
+        suspects = self._suspect_ids(user)
+
+        # who: honour a named detective, else pick by specialty cue
+        if "ryan" in text:
+            det = "ryan"
+        elif "ava" in text:
+            det = "ava"
+        elif any(w in text for w in ("time", "when", "timeline", "evidence", "alibi", "clue", "match", "logic")):
+            det = "ryan"
+        else:
+            det = "ava"
+
+        # interview intent: verbs that mean "go question someone"
+        wants_interview = any(
+            w in text for w in (
+                "question", "interview", "follow up", "handle", "press",
+                "talk to", "ask ", "investigate", "look into", "check on",
+            )
+        )
+        target = ""
+        if wants_interview and suspects:
+            for sid, name in suspects:
+                first = name.split()[0].lower()
+                if first in text or name.lower() in text:
+                    target = sid
+                    break
+        action = "interview" if (wants_interview and target) else "chat"
+        reason = (
+            f"Player wants an interview of the named suspect."
+            if action == "interview" else "General discussion about the case."
+        )
+        return json.dumps({
+            "detective_id": det,
+            "action": action,
+            "target_character_id": target,
+            "reason": reason,
+        })
+
+    def _gen_detective_chat(self, user: str) -> str:
+        name = self._detective_name(user)
+        rng = random.Random(user[:80])
+        psych = "reads people" in user.lower() or "body language" in user.lower()
+        # ground the reply in whatever notes exist
+        has_contra = "contradictions you spotted:" in user.lower() and \
+            "none spotted" not in user.lower()
+        if psych:
+            base = [
+                "From how they carried themselves, one guest kept looking away when "
+                "money came up. That reaction is worth a second look.",
+                "Watch the calm ones. The person with nothing to hide usually shows "
+                "some worry — the too-smooth answers bother me.",
+                "I'd press the guest who smiled at the wrong moment. Their feelings "
+                "did not match their words.",
+            ]
+        else:
+            base = [
+                "Line up the times. If someone's story does not fit the clock we "
+                "already built, that is our thread to pull.",
+                "The evidence we found points one way, but one alibi does not line "
+                "up with it. That gap is where I would dig next.",
+                "Two statements we have cannot both be true. Sort that out and the "
+                "case gets a lot smaller.",
+            ]
+        tail = " We should question them again to be sure." if has_contra else ""
+        return rng.choice(base) + tail
+
+    def _gen_detective_interview(self, user: str) -> str:
+        rng = random.Random(user[:80])
+        # target name from the '--- the suspect you will question ---' block
+        m = re.search(r"suspect you will question ---\s*\nName:\s*([^\n]+)", user)
+        who = m.group(1).strip() if m else "the suspect"
+        psych = "reads people" in user.lower() or "psychology" in user.lower()
+        if psych:
+            qs = [
+                "How did you feel when you heard what happened?",
+                "You seem uneasy — is there something you have not told us?",
+                "Who here do you trust the least, and why?",
+                "When I mention the victim, your face changes — why is that?",
+                "Was there anyone you argued with tonight?",
+                "You paused just now. What were you about to say?",
+                "Who do you think is lying to me, and what makes you sure?",
+            ]
+            opening = f"Mind if I sit with you a moment, {who}? Just want to understand you."
+            goal = "Read their emotions and see what their reactions hide."
+        else:
+            qs = [
+                "Walk me through exactly where you were, minute by minute.",
+                "Who can confirm your story for that time?",
+                "The clue we found does not fit your account — can you explain that?",
+                "What time did you last see the victim?",
+                "How did you get from one room to the other so fast?",
+                "Someone placed you near the scene — is that wrong?",
+                "Your story and another guest's do not line up. Which is true?",
+            ]
+            opening = f"{who}, I need to go over the timeline with you again."
+            goal = "Nail down the timeline and test the alibi against the evidence."
+        return json.dumps({
+            "opening": opening,
+            "questions": rng.sample(qs, k=2),
+            "goal": goal,
+        })
+
+    def _gen_detective_report(self, user: str) -> str:
+        name = self._detective_name(user)
+        psych = "reads people" in user.lower() or "psychology" in user.lower()
+        if psych:
+            return (
+                "They tensed up whenever the crime came up — they are hiding a "
+                "feeling, not an alibi. Worth a second look."
+            )
+        return (
+            "Their timing is off by about fifteen minutes from our log. That gap "
+            "is new and suspicious — I'd confirm it with another guest."
         )
 
     # ---- ending -------------------------------------------------------------

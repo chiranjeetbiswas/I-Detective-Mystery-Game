@@ -28,9 +28,13 @@ import type { CharacterView, TranscriptLine } from "@/lib/types";
 export function Transcript({
   lines,
   characters = [],
+  detectiveNames = [],
 }: {
   lines: TranscriptLine[];
   characters?: CharacterView[];
+  /** Names of AI detective teammates — their lines render on the player's
+   *  side (like your own messages) but keep their name label. */
+  detectiveNames?: string[];
 }) {
   const endRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -39,6 +43,7 @@ export function Transcript({
 
   const byId = new Map(characters.map((c) => [c.id, c]));
   const byName = new Map(characters.map((c) => [c.name, c]));
+  const detectiveSet = new Set(detectiveNames);
 
   return (
     <div
@@ -99,6 +104,9 @@ export function Transcript({
 
         /* ── dialogue ────────────────────────────────────────────────── */
         const isYou = l.speaker === "You";
+        const isDetective = detectiveSet.has(l.speaker);
+        // detective messages sit on the player's side, like your own messages
+        const mine = isYou || isDetective;
         const char =
           (l.character_id && byId.get(l.character_id)) ||
           byName.get(l.speaker) ||
@@ -111,10 +119,10 @@ export function Transcript({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className={cn("flex gap-2.5", isYou ? "flex-row-reverse" : "flex-row")}
+            className={cn("flex gap-2.5", mine ? "flex-row-reverse" : "flex-row")}
           >
-            {/* portrait, speaker side only */}
-            {!isYou && char && (
+            {/* portrait, speaker side only (suspects) */}
+            {!mine && char && (
               <div className="mt-6 shrink-0">
                 <Avatar
                   seed={char.avatar_seed || char.id}
@@ -129,15 +137,21 @@ export function Transcript({
               </div>
             )}
 
-            <div className={cn("flex min-w-0 flex-col", isYou && "items-end")}>
+            <div className={cn("flex min-w-0 flex-col", mine && "items-end")}>
               {/* attribution */}
               <div className="mb-1 flex items-center gap-2 px-1">
                 <span
                   className={cn(
                     "font-display text-[0.6875rem] font-semibold uppercase tracking-[0.11em]",
-                    isYou ? "text-gold/90" : "text-ink"
+                    mine ? "text-gold/90" : "text-ink"
                   )}
-                  style={!isYou ? { color: accent } : undefined}
+                  style={
+                    isDetective
+                      ? { color: "hsl(190 60% 62%)" }
+                      : !mine
+                      ? { color: accent }
+                      : undefined
+                  }
                 >
                   {l.speaker}
                 </span>
@@ -151,7 +165,7 @@ export function Transcript({
                 className={cn(
                   "relative max-w-[46ch] rounded-xl px-4 py-2.5",
                   "type-dialogue text-ink",
-                  isYou
+                  mine
                     ? [
                         "border border-gold/30 bg-gradient-to-b from-gold/[0.14] to-gold/[0.05]",
                         "rounded-br-sm",

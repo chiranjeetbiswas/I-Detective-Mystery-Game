@@ -1,6 +1,8 @@
 import type {
   AccuseResponse,
   ActionResponse,
+  DetectiveInterviewResponse,
+  DetectiveMessageResponse,
   Difficulty,
   SaveSlot,
   Snapshot,
@@ -58,6 +60,32 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ game_id: gameId }),
     }),
+
+  // ---- AI detective team ----
+  detectiveMessage: (gameId: string, text: string) =>
+    req<DetectiveMessageResponse>(`/games/${gameId}/detectives/message`, {
+      method: "POST",
+      body: JSON.stringify({ game_id: gameId, text }),
+    }),
+
+  detectiveInterview: (gameId: string, detectiveId: string, characterId: string) =>
+    req<DetectiveInterviewResponse>(`/games/${gameId}/detectives/interview`, {
+      method: "POST",
+      body: JSON.stringify({
+        game_id: gameId,
+        detective_id: detectiveId,
+        character_id: characterId,
+      }),
+    }),
+
+  detectiveSettle: (gameId: string, detectiveId: string) =>
+    req<{ detectives: import("./types").DetectiveView[] }>(
+      `/games/${gameId}/detectives/settle`,
+      {
+        method: "POST",
+        body: JSON.stringify({ game_id: gameId, detective_id: detectiveId }),
+      }
+    ),
 
   accuse: (gameId: string, characterId: string) =>
     req<AccuseResponse>(`/games/${gameId}/accuse`, {

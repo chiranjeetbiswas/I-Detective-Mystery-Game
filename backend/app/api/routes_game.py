@@ -7,6 +7,9 @@ from ..engine import GameEngine
 from ..models.dto import (
     AccuseRequest,
     ActionRequest,
+    DetectiveInterviewRequest,
+    DetectiveMessageRequest,
+    DetectiveSettleRequest,
     HintRequest,
     NewGameRequest,
     SelectCharacterRequest,
@@ -99,6 +102,51 @@ def talk(game_id: str, req: TalkRequest):
         "notebook": state.notebook.model_dump(),
         "transcript": ser.public_transcript(state),
     }
+
+
+# ---- AI detective team ------------------------------------------------------
+@router.post("/games/{game_id}/detectives/message")
+def detective_message(game_id: str, req: DetectiveMessageRequest):
+    """Send a natural-language message to the detective team. The LLM decides
+    which detective responds and whether an interview should begin."""
+    case, state = _require_game(game_id)
+    result = engine().detective_message(case, state, req.text)
+    get_store().save_game(case, state)
+    return {
+        "result": result,
+        "state": ser.public_state(case, state),
+        "detectives": ser.public_detectives(state),
+        "characters": ser.public_characters(case, state),
+        "transcript": ser.public_transcript(state),
+    }
+
+
+@router.post("/games/{game_id}/detectives/interview")
+def detective_interview(game_id: str, req: DetectiveInterviewRequest):
+    """Run one autonomous interview. Returns the full scripted turn sequence and
+    the report so the client can stream it with typing delays."""
+    case, state = _require_game(game_id)
+    result = engine().detective_interview(
+        case, state, req.detective_id, req.character_id
+    )
+    get_store().save_game(case, state)
+    return {
+        "result": result,
+        "state": ser.public_state(case, state),
+        "detectives": ser.public_detectives(state),
+        "characters": ser.public_characters(case, state),
+        "notebook": state.notebook.model_dump(),
+        "transcript": ser.public_transcript(state),
+    }
+
+
+@router.post("/games/{game_id}/detectives/settle")
+def detective_settle(game_id: str, req: DetectiveSettleRequest):
+    """Mark a detective as back from an interview (client finished streaming)."""
+    case, state = _require_game(game_id)
+    engine().settle_detective(state, req.detective_id)
+    get_store().save_game(case, state)
+    return {"detectives": ser.public_detectives(state)}
 
 
 # ---- hint -------------------------------------------------------------------

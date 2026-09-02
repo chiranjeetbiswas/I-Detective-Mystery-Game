@@ -17,7 +17,7 @@ from ..llm import LLMMessage, get_provider
 from ..models.case import Case, CharacterProfile
 from ..models.dto import ActionResponse, NewGameRequest
 from ..models.enums import ActionType, GameStatus, NPCStatus
-from ..models.game_state import GameState, NPCState, TranscriptLine
+from ..models.game_state import GameState, NPCState, TranscriptLine, build_detective_roster
 from ..prompts import (
     build_ending_messages,
     build_hint_messages,
@@ -26,6 +26,7 @@ from ..prompts import (
 )
 from . import notebook as nb
 from . import trust_system as trust
+from . import detective_engine as det_engine
 from .action_parser import Intent, parse
 from .case_generator import generate_case
 from .time_system import advance_for, format_clock
@@ -55,6 +56,8 @@ class GameEngine:
             npc = NPCState(character_id=c.id, trust=bt)
             npc.mood = trust.recompute_mood(npc, c)
             state.npc_states[c.id] = npc
+        # AI detective teammates observe the whole case with independent memory
+        state.detectives = build_detective_roster()
         # pre-seed notebook with characters + timeline
         for c in case.characters:
             nb.record_character_met(state, c, case.start_time)
@@ -244,6 +247,67 @@ class GameEngine:
         return resp
 
 
+    # ---- AI detective team --------------------------------------------------
+    def detective_message(self, case: Case, state: GameState, text: str) -> dict:
+        """Route a natural-language message to the detective team. The LLM
+        decides which detective responds and whether to start an interview.
+
+        Returns a dict:
+          - for a chat:     {mode:'chat', detective_id, detective_name, reply, reason}
+          - for interview:  {mode:'interview', detective_id, detective_name,
+                             target_character_id, target_name, reason}
+            (the actual interview is run via detective_interview so the frontend
+             can stream it)
+        """
+        if state.status != GameStatus.IN_PROGRESS:
+            return {"mode": "chat", "reply": "The case is closed.",
+                    "detective_id": "", "detective_name": ""}
+
+        decision = det_engine.route_message(self._provider, case, state, text)
+        det = state.detectives[decision["detective_id"]]
+
+        if decision["action"] == "interview" and decision["target_character_id"]:
+            target = case.character_by_id(decision["target_character_id"])
+            det.assignment = f"About to question {target.name if target else 'a suspect'}"
+            state.touch()
+            return {
+                "mode": "interview",
+                "detective_id": det.detective_id,
+                "detective_name": det.name,
+                "target_character_id": decision["target_character_id"],
+                "target_name": target.name if target else "",
+                "reason": decision["reason"],
+            }
+
+        reply = det_engine.detective_chat(self._provider, case, state, det, text)
+        state.touch()
+        return {
+            "mode": "chat",
+            "detective_id": det.detective_id,
+            "detective_name": det.name,
+            "reply": reply,
+            "reason": decision["reason"],
+        }
+
+    def detective_interview(
+        self, case: Case, state: GameState, detective_id: str, character_id: str
+    ) -> dict:
+        """Run one autonomous interview end-to-end and return the full scripted
+        turn sequence + report for the frontend to stream."""
+        det = state.detectives.get(detective_id)
+        if det is None:
+            return {"error": "unknown detective"}
+        result = det_engine.run_interview(
+            self._provider, case, state, det, character_id
+        )
+        state.minutes_elapsed += 6  # an independent interview costs some time
+        state.touch()
+        return result
+
+    def settle_detective(self, state: GameState, detective_id: str) -> None:
+        det_engine.settle_after_interview(state, detective_id)
+        state.touch()
+
     # ---- handlers -----------------------------------------------------------
     def _talk(self, case: Case, state: GameState, intent: Intent) -> ActionResponse:
         cid = intent.target_character_id or state.active_character_id
@@ -299,6 +363,11 @@ class GameEngine:
                 character_id=cid,
             )
         )
+        # AI detectives are always listening: feed this exchange into their memory
+        det_engine.observe_exchange(
+            state, profile.name, intent.raw, dialogue, npc.mood.value,
+            format_clock(case.start_time, state.minutes_elapsed),
+        )
         return ActionResponse(
             game_id=state.id, speaker=profile.name, speaker_character_id=cid,
             dialogue=dialogue, at_time="", minutes_elapsed=0, status="",
@@ -350,6 +419,11 @@ class GameEngine:
                            speaker=profile.name, text=dialogue, kind="dialogue",
                            character_id=cid)
         )
+        det_engine.observe_exchange(
+            state, profile.name, f"[showed {ev.name if ev else 'a clue'}] {intent.raw}",
+            dialogue, npc.mood.value,
+            format_clock(case.start_time, state.minutes_elapsed),
+        )
         return ActionResponse(game_id=state.id, speaker=profile.name,
                               speaker_character_id=cid, dialogue=dialogue, at_time="",
                               minutes_elapsed=0, status="", active_character_id=cid,
@@ -377,6 +451,9 @@ class GameEngine:
         resp = self._narrate(case, state, intent,
                              revealed=newly, location=room)
         resp.new_evidence = newly
+        # detectives note any clues the team just found
+        if newly:
+            det_engine.sync_clue_memory(case, state)
         return resp
 
     def _observe(self, case: Case, state: GameState, intent: Intent) -> ActionResponse:
