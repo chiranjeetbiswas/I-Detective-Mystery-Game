@@ -19,7 +19,12 @@ class Settings(BaseSettings):
     data_dir: str = "./data"
     cors_origins: str = "http://localhost:3000"
     # Optional regex to allow origins by pattern (e.g. all Render preview URLs).
-    cors_origin_regex: str = ""
+    # Defaults to allowing any https *.onrender.com subdomain so the deployed
+    # frontend works out of the box; a "Disallowed CORS origin" 400 (which also
+    # strips the Access-Control-Allow-Origin header) no longer happens just
+    # because CORS_ORIGINS wasn't set on the backend service. Override or clear
+    # this env var to restrict access.
+    cors_origin_regex: str = r"https://.*\.onrender\.com"
 
     @property
     def cors_origin_list(self) -> list[str]:
