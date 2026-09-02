@@ -129,6 +129,8 @@ export default function InvestigationPage() {
   const [activeDetectiveId, setActiveDetectiveId] = useState<string>("");
   // which right-rail tab is showing: the case readout, or the detective team
   const [rightTab, setRightTab] = useState<"case" | "team">("case");
+  // mobile-only: which of the three panels is visible (they stack on phones)
+  const [mobileView, setMobileView] = useState<"left" | "chat" | "right">("chat");
   const [tab, setTab] = useState<Tab>("characters");
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -184,6 +186,7 @@ export default function InvestigationPage() {
     if (busy || (cid === activeCharId && !activeDetectiveId)) return;
     setBusy(true);
     setActiveDetectiveId(""); // talking to a suspect leaves any team chat
+    setMobileView("chat"); // on mobile, jump to the conversation
     try {
       const res = await api.selectCharacter(id, cid);
       applyResponse(res);
@@ -198,6 +201,7 @@ export default function InvestigationPage() {
   function selectDetective(detId: string) {
     if (busy) return;
     setActiveDetectiveId((cur) => (cur === detId ? "" : detId));
+    setMobileView("chat"); // on mobile, jump to the conversation
     inputRef.current?.focus();
   }
 
@@ -375,7 +379,12 @@ export default function InvestigationPage() {
       */}
       <div className="grid min-h-0 flex-1 grid-cols-1 grid-rows-[minmax(0,1fr)] overflow-hidden lg:grid-cols-[300px_1fr_260px]">
         {/* ══ LEFT: characters / evidence / notebook ══ */}
-        <aside className="hidden min-h-0 flex-col border-r border-hairline bg-gradient-to-b from-surface/50 to-canvas/40 lg:flex">
+        <aside
+          className={cn(
+            "min-h-0 flex-col border-r border-hairline bg-gradient-to-b from-surface/50 to-canvas/40 lg:flex",
+            mobileView === "left" ? "flex" : "hidden"
+          )}
+        >
           <div className="flex border-b border-hairline">
             {(["characters", "evidence", "notebook"] as Tab[]).map((t) => (
               <button
@@ -445,7 +454,12 @@ export default function InvestigationPage() {
         </aside>
 
         {/* ══ CENTER: conversation ══ */}
-        <section className="relative flex min-h-0 flex-col overflow-hidden">
+        <section
+          className={cn(
+            "relative min-h-0 flex-col overflow-hidden lg:flex",
+            mobileView === "chat" ? "flex" : "hidden"
+          )}
+        >
           {/* active character header */}
           {activeChar && (
             <div className="glass flex items-center gap-3 border-b px-5 py-3">
@@ -625,7 +639,12 @@ export default function InvestigationPage() {
         </section>
 
         {/* ══ RIGHT: tabbed — Case readout / Detective Team ══ */}
-        <aside className="hidden min-h-0 flex-col overflow-hidden border-l border-hairline bg-gradient-to-b from-surface/50 to-canvas/40 lg:flex">
+        <aside
+          className={cn(
+            "min-h-0 flex-col overflow-hidden border-l border-hairline bg-gradient-to-b from-surface/50 to-canvas/40 lg:flex",
+            mobileView === "right" ? "flex" : "hidden"
+          )}
+        >
           {/* right-rail tab bar */}
           <div className="flex border-b border-hairline">
             {(["case", "team"] as const).map((t) => (
@@ -738,6 +757,31 @@ export default function InvestigationPage() {
           </div>
         </aside>
       </div>
+
+      {/* ══ MOBILE NAV: switch panels on small screens (hidden on lg+) ══ */}
+      <nav className="glass flex shrink-0 border-t lg:hidden">
+        {([
+          { key: "left", label: "Guests", Icon: Users },
+          { key: "chat", label: "Chat", Icon: Send },
+          { key: "right", label: "Team", Icon: Gavel },
+        ] as const).map(({ key, label, Icon }) => (
+          <button
+            key={key}
+            onClick={() => {
+              setMobileView(key);
+              if (key === "right") setRightTab("team");
+            }}
+            aria-pressed={mobileView === key}
+            className={cn(
+              "flex flex-1 flex-col items-center gap-0.5 py-2 text-[0.625rem] font-bold uppercase tracking-[0.1em] transition-colors duration-200",
+              mobileView === key ? "text-gold" : "text-ink-subtle"
+            )}
+          >
+            <Icon className="h-4 w-4" aria-hidden strokeWidth={2.2} />
+            {label}
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }
