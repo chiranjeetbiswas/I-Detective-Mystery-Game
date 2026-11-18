@@ -136,6 +136,12 @@ export default function InvestigationPage() {
   const [busy, setBusy] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // The chat box is disabled while a reply loads, and a disabled field cannot
+  // hold focus. So put the cursor back only once React has re-enabled it.
+  useEffect(() => {
+    if (!busy) inputRef.current?.focus();
+  }, [busy]);
+
   // derived active character view from the latest characters array
   const activeCharId = snap?.state.active_character_id ?? "";
   const activeChar: CharacterView | undefined = snap?.characters.find(
@@ -192,7 +198,6 @@ export default function InvestigationPage() {
       applyResponse(res);
     } finally {
       setBusy(false);
-      inputRef.current?.focus();
     }
   }
 
@@ -299,7 +304,6 @@ export default function InvestigationPage() {
       }
     } finally {
       setBusy(false);
-      inputRef.current?.focus();
     }
   }
 
