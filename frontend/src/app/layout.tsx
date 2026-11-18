@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import { MotionProvider } from "@/components/motion-provider";
+import { AuthProvider } from "@/lib/auth";
 import "./globals.css";
 
 /* ── Display: engraved Roman capitals. Case files, titles, verdicts. ───── */
@@ -53,7 +54,9 @@ export default function RootLayout({
     >
       <body className="noir-grain antialiased">
         <MotionProvider>
-          <div className="relative z-10">{children}</div>
+          <AuthProvider>
+            <div className="relative z-10">{children}</div>
+          </AuthProvider>
         </MotionProvider>
       </body>
     </html>

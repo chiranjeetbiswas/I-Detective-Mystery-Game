@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -21,6 +22,14 @@ class Settings(BaseSettings):
     groq_base_url: str = "https://api.groq.com/openai/v1"
     llm_provider: str = "auto"  # auto | agentrouter | groq | mock
     data_dir: str = "./data"
+    # SQLAlchemy URL. Empty = a SQLite file inside data_dir (so the Docker
+    # volume keeps accounts across restarts). Set to a postgresql+psycopg://
+    # URL to use Postgres instead.
+    database_url: str = ""
+    # Secret used to sign login tokens. If left empty a random one is made at
+    # startup, which is safe but logs everyone out whenever the server restarts.
+    jwt_secret: str = ""
+    jwt_expire_minutes: int = 60 * 24 * 7
     cors_origins: str = "http://localhost:3000"
     # Optional regex to allow origins by pattern (e.g. all Render preview URLs).
     # Defaults to allowing any https *.onrender.com subdomain so the deployed
@@ -40,6 +49,12 @@ class Settings(BaseSettings):
             for o in self.cors_origins.split(",")
             if o.strip()
         ]
+
+    @property
+    def resolved_database_url(self) -> str:
+        if self.database_url.strip():
+            return self.database_url.strip()
+        return f"sqlite:///{Path(self.data_dir) / 'identity_hunt.db'}"
 
     @property
     def resolved_provider(self) -> str:

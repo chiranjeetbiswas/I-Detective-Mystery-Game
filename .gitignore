@@ -32,3 +32,8 @@ yarn-debug.log*
 .idea/
 .vscode/
 *.log
+
+# Local databases
+*.db
+backend/data_test/
+backend/data_live/

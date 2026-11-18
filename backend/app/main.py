@@ -5,9 +5,10 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from .api import game_router, meta_router
+from .api import auth_router, game_router, meta_router
 from .core.config import get_settings
 from .core.logging import get_logger
+from .db import init_db
 
 log = get_logger(__name__)
 
@@ -40,6 +41,9 @@ def create_app() -> FastAPI:
             content={"detail": "Internal server error", "error": str(exc)},
         )
 
+    init_db()
+
+    app.include_router(auth_router, prefix="/api", tags=["auth"])
     app.include_router(game_router, prefix="/api", tags=["game"])
     app.include_router(meta_router, prefix="/api", tags=["meta"])
 

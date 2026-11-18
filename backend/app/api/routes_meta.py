@@ -1,11 +1,15 @@
 """Save/resume/restart routes and statistics routes."""
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
 
+from ..db import User, get_db
 from ..services import get_stats_service, get_store
+from ..services.user_stats import load_statistics as load_user_statistics
 from . import serializers as ser
+from .deps import get_optional_user
 
 router = APIRouter()
 
@@ -76,8 +80,12 @@ def restart(game_id: str):
 
 # ---- statistics -------------------------------------------------------------
 @router.get("/stats")
-def stats():
-    s = get_stats_service().load()
+def stats(
+    user: User | None = Depends(get_optional_user),
+    db: Session = Depends(get_db),
+):
+    """The signed-in player's own record, or the shared guest record."""
+    s = load_user_statistics(db, user.id) if user else get_stats_service().load()
     data = s.model_dump()
     data["accuracy"] = s.accuracy
     data["average_solve_minutes"] = s.average_solve_minutes
