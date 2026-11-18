@@ -1,8 +1,10 @@
 """FastAPI routes for the game."""
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
 
+from ..db import User, get_db
 from ..engine import GameEngine
 from ..models.dto import (
     AccuseRequest,
@@ -16,7 +18,9 @@ from ..models.dto import (
     TalkRequest,
 )
 from ..services import get_stats_service, get_store
+from ..services.user_stats import record_result as record_user_result
 from . import serializers as ser
+from .deps import get_optional_user
 
 router = APIRouter()
 _engine: GameEngine | None = None
@@ -167,15 +171,31 @@ def notebook(game_id: str):
 
 # ---- accuse (single, final) -------------------------------------------------
 @router.post("/games/{game_id}/accuse")
-def accuse(game_id: str, req: AccuseRequest):
+def accuse(
+    game_id: str,
+    req: AccuseRequest,
+    user: User | None = Depends(get_optional_user),
+    db: Session = Depends(get_db),
+):
     case, state = _require_game(game_id)
     result = engine().accuse(case, state, req.character_id)
-    # record statistics on the terminal result
-    get_stats_service().record_result(
-        won=result.correct,
-        solve_minutes=state.minutes_elapsed,
-        difficulty=case.difficulty.value,
-    )
+    # record statistics on the terminal result: on the account if signed in,
+    # otherwise in the shared guest record
+    if user is not None:
+        record_user_result(
+            db,
+            user_id=user.id,
+            game_id=game_id,
+            won=result.correct,
+            solve_minutes=state.minutes_elapsed,
+            difficulty=case.difficulty.value,
+        )
+    else:
+        get_stats_service().record_result(
+            won=result.correct,
+            solve_minutes=state.minutes_elapsed,
+            difficulty=case.difficulty.value,
+        )
     get_store().save_game(case, state)
     return {
         "result": result.model_dump(),

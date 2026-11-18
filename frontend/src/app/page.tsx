@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Fingerprint, Search, BookOpen, BarChart3 } from "lucide-react";
+import { AuthBar } from "@/components/auth-bar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -37,6 +38,7 @@ const item = {
 export default function LandingPage() {
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center px-6 py-16 text-center">
+      <AuthBar />
       <motion.div variants={container} initial="hidden" animate="show">
         {/* seal */}
         <motion.div variants={item} className="mb-7 flex justify-center">

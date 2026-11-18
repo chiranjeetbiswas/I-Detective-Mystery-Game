@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Award, Loader2, Trophy } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { AuthBar } from "@/components/auth-bar";
 import { api } from "@/lib/api";
+import { useAuth } from "@/lib/auth";
 import type { Statistics } from "@/lib/types";
 
 function Stat({
@@ -39,11 +41,16 @@ function Stat({
 }
 
 export default function StatsPage() {
+  const { user, loading } = useAuth();
   const [stats, setStats] = useState<Statistics | null>(null);
 
+  // Wait until we know who is playing, then load that person's record (or the
+  // shared guest record), and reload if they sign in or out.
   useEffect(() => {
+    if (loading) return;
+    setStats(null);
     api.stats().then(setStats).catch(() => setStats(null));
-  }, []);
+  }, [loading, user?.id]);
 
   if (!stats) {
     return (
@@ -80,6 +87,7 @@ export default function StatsPage() {
 
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
+      <AuthBar />
       <Link
         href="/"
         className="mb-7 inline-flex items-center gap-2 text-micro font-semibold uppercase tracking-[0.12em] text-ink-subtle transition-colors hover:text-gold"
@@ -94,6 +102,16 @@ export default function StatsPage() {
         </Badge>
       </div>
       <div className="mb-8 h-px w-full bg-gradient-to-r from-gold/55 via-gold/20 to-transparent" />
+
+      {!user && (
+        <p className="mb-6 rounded-lg border border-gold/25 bg-gold/[0.05] px-4 py-3 text-ui text-ink-muted">
+          You are playing as a guest, so this is the shared guest record.{" "}
+          <Link href="/login?next=/stats" className="font-semibold text-gold underline-offset-4 hover:underline">
+            Sign in
+          </Link>{" "}
+          to keep your own record and awards.
+        </p>
+      )}
 
       <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {tiles.map((t, i) => (
