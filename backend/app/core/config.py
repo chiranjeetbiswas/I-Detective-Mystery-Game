@@ -15,7 +15,11 @@ class Settings(BaseSettings):
     agentrouter_api_key: str = ""
     agentrouter_model: str = "claude-opus-5"
     agentrouter_base_url: str = "https://agentrouter.org/v1"
-    llm_provider: str = "auto"  # auto | agentrouter | mock
+    # ---- Groq (OpenAI-compatible API, has a free tier) ----
+    groq_api_key: str = ""
+    groq_model: str = "openai/gpt-oss-20b"
+    groq_base_url: str = "https://api.groq.com/openai/v1"
+    llm_provider: str = "auto"  # auto | agentrouter | groq | mock
     data_dir: str = "./data"
     cors_origins: str = "http://localhost:3000"
     # Optional regex to allow origins by pattern (e.g. all Render preview URLs).
@@ -44,9 +48,13 @@ class Settings(BaseSettings):
             return "mock"
         if self.llm_provider == "agentrouter":
             return "agentrouter"
-        # auto: prefer AgentRouter, else offline mock
+        if self.llm_provider == "groq":
+            return "groq"
+        # auto: AgentRouter if it has a key, then Groq, else offline mock
         if self.agentrouter_api_key.strip():
             return "agentrouter"
+        if self.groq_api_key.strip():
+            return "groq"
         return "mock"
 
 

@@ -27,12 +27,33 @@ def _try_agentrouter(settings) -> LLMProvider | None:
         return None
 
 
+def _try_groq(settings) -> LLMProvider | None:
+    if not settings.groq_api_key.strip():
+        return None
+    try:
+        from .groq_provider import GroqProvider
+
+        return GroqProvider(
+            settings.groq_api_key,
+            settings.groq_model,
+            settings.groq_base_url,
+        )
+    except Exception as exc:  # pragma: no cover - defensive
+        log.warning("Groq init failed (%s); skipping it.", exc)
+        return None
+
+
+_BUILDERS = {"agentrouter": _try_agentrouter, "groq": _try_groq}
+# With LLM_PROVIDER=auto every provider that has a key joins the chain, in this order.
+_AUTO_ORDER = ("agentrouter", "groq")
+
+
 @lru_cache
 def get_provider() -> LLMProvider:
     """Build the provider.
 
     For the network-backed choice we return a failover chain: the configured
-    provider first, then the offline mock. That way an exhausted quota or a
+    provider(s) first, then the offline mock. That way an exhausted quota or a
     rate limit degrades the *quality* of the reply instead of turning every
     request into a 500.
     """
@@ -43,9 +64,12 @@ def get_provider() -> LLMProvider:
         log.info("Using mock LLM provider (offline).")
         return MockProvider()
 
-    chain: list[LLMProvider] = []
-    if choice == "agentrouter":
-        chain = [p for p in (_try_agentrouter(settings),) if p]
+    # auto: every provider with a key, so Groq can back up AgentRouter.
+    # Otherwise only the one that was asked for.
+    names = _AUTO_ORDER if settings.llm_provider == "auto" else (choice,)
+    chain: list[LLMProvider] = [
+        p for p in (_BUILDERS[n](settings) for n in names) if p
+    ]
 
     if not chain:
         log.warning("No network provider available; using mock provider.")
