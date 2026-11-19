@@ -6,6 +6,7 @@ are never sent to the client while the game is in progress.
 from __future__ import annotations
 
 from ..engine import format_clock
+from ..engine.time_system import time_warning
 from ..models.case import Case
 from ..models.enums import GameStatus
 from ..models.game_state import GameState
@@ -104,6 +105,15 @@ def public_state(case: Case, state: GameState) -> dict:
         "inventory": state.inventory,
         "hints_used": state.hints_used,
         "accusation_made": state.accusation_made,
+        "time_up": state.time_up,
+        # only a flag for the last five minutes, never a countdown
+        "time_warning": time_warning(state),
+        # the in-world time the guests leave (empty when the case has no limit)
+        "leave_time": (
+            format_clock(case.start_time, state.game_span_minutes or state.time_limit_minutes)
+            if state.time_limit_minutes
+            else ""
+        ),
         "discovered_evidence_count": len(state.discovered_evidence),
         "active_character_id": state.active_character_id,
     }

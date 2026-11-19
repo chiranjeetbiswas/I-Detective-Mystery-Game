@@ -29,7 +29,7 @@ from . import trust_system as trust
 from . import detective_engine as det_engine
 from .action_parser import Intent, parse
 from .case_generator import generate_case
-from .time_system import advance_for, format_clock
+from .time_system import add_minutes, advance_for, format_clock, limit_for, night_span
 
 log = get_logger(__name__)
 
@@ -48,6 +48,8 @@ class GameEngine:
             case_id=case.id,
             current_location=case.rooms[0].name if case.rooms else case.location_name,
             current_objective=self._build_objective(case),
+            time_limit_minutes=limit_for(len(case.characters)),
+            game_span_minutes=night_span(case.start_time),
         )
         # init per-NPC runtime state
         base_trust = {"beginner": 60, "normal": 50, "expert": 42, "master": 35}
@@ -154,7 +156,7 @@ class GameEngine:
         resp = handler(case, state, intent)
 
         # advance clock
-        state.minutes_elapsed += advance_for(intent.action)
+        add_minutes(state, advance_for(intent.action))
         state.touch()
         resp.at_time = format_clock(case.start_time, state.minutes_elapsed)
         resp.minutes_elapsed = state.minutes_elapsed
@@ -238,7 +240,7 @@ class GameEngine:
         intent = Intent(ActionType.TALK, target_character_id=cid, raw=text)
         resp = self._talk(case, state, intent)
 
-        state.minutes_elapsed += advance_for(ActionType.TALK)
+        add_minutes(state, advance_for(ActionType.TALK))
         state.touch()
         resp.at_time = format_clock(case.start_time, state.minutes_elapsed)
         resp.minutes_elapsed = state.minutes_elapsed
@@ -300,7 +302,7 @@ class GameEngine:
         result = det_engine.run_interview(
             self._provider, case, state, det, character_id
         )
-        state.minutes_elapsed += 6  # an independent interview costs some time
+        add_minutes(state, 6)  # an independent interview costs some time
         state.touch()
         return result
 
@@ -486,6 +488,29 @@ class GameEngine:
         )
         return ActionResponse(game_id=state.id, narration=hint, speaker="Hint",
                               at_time="", minutes_elapsed=0, status="")
+
+    # ---- time is up --------------------------------------------------------
+    def expire(self, case: Case, state: GameState) -> None:
+        """The limit ran out: every guest leaves and the case is lost."""
+        if state.status != GameStatus.IN_PROGRESS:
+            return
+        state.status = GameStatus.LOST
+        state.time_up = True
+        state.minutes_elapsed = state.game_span_minutes or state.time_limit_minutes
+        end = format_clock(case.start_time, state.game_span_minutes or state.time_limit_minutes)
+        place = case.location_name or "this place"
+        state.transcript.append(
+            TranscriptLine(
+                at_time=end,
+                speaker="Narrator",
+                text=(
+                    f"It is {end}. Time is up. The guests pick up their coats and "
+                    f"leave {place}, and the person who was hiding walks out with them."
+                ),
+                kind="narration",
+            )
+        )
+        state.touch()
 
     # ---- accusation (single, final) ----------------------------------------
     def accuse(self, case: Case, state: GameState, character_id: str):

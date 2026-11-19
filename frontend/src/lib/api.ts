@@ -92,6 +92,10 @@ export const api = {
 
   getGame: (gameId: string) => req<Snapshot>(`/games/${gameId}`),
 
+  /** Heartbeat: keeps play time counting and reports if time has run out. */
+  tick: (gameId: string) =>
+    req<Snapshot["state"]>(`/games/${gameId}/tick`, { method: "POST" }),
+
   action: (gameId: string, text: string) =>
     req<ActionResponse>(`/games/${gameId}/action`, {
       method: "POST",

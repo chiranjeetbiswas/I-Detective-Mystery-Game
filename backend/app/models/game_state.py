@@ -166,6 +166,15 @@ class GameState(BaseModel):
 
     # clock (minutes elapsed from case.start_time)
     minutes_elapsed: int = 0
+    # Real-time limit for the case. 0 means no limit (older saves). The clock above
+    # follows play time: only seconds while the player has the game open count.
+    time_limit_minutes: int = 0
+    # In-world minutes from the case start to the morning the guests leave. The
+    # clock runs this many game minutes across the real limit above.
+    game_span_minutes: int = 0
+    active_seconds: float = 0.0
+    last_tick_ts: float = 0.0
+    time_up: bool = False
     current_location: str = ""
     current_objective: str = "Find out which guest is not who they say they are."
 

@@ -71,6 +71,9 @@ const NON_TALK_PREFIXES = [
   "stuck",
 ];
 
+/** How often an open game pings the server so its play time keeps counting. */
+const HEARTBEAT_MS = 15_000;
+
 /** A reply never lands instantly: the "is thinking" dots stay up at least this long. */
 const THINK_MIN_MS = 1100;
 const THINK_JITTER_MS = 900;
@@ -172,6 +175,22 @@ export default function InvestigationPage() {
       })
       .catch(() => setSnap(null));
   }, [id, router]);
+
+  // While the case is open, tell the server so play time keeps counting. When
+  // the time runs out the guests leave, and the server closes the case.
+  useEffect(() => {
+    if (!snap || snap.state.status !== "in_progress") return;
+    const timer = setInterval(() => {
+      api
+        .tick(id)
+        .then((s) => {
+          if (s.status !== "in_progress") router.replace(`/result/${id}`);
+          else setSnap((prev) => (prev ? { ...prev, state: s } : prev));
+        })
+        .catch(() => {});
+    }, HEARTBEAT_MS);
+    return () => clearInterval(timer);
+  }, [id, router, snap?.state.status]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /** Apply an ActionResponse to local state. */
   function applyResponse(res: {
@@ -713,14 +732,40 @@ export default function InvestigationPage() {
             {rightTab === "case" && (
               <div className="flex flex-col gap-2.5">
                 {/* the clock is the hero of this rail: every action spends it */}
-                <div className="relative overflow-hidden rounded-lg border border-gold/25 bg-gradient-to-b from-gold/[0.09] to-surface/50 p-3 text-center shadow-[0_6px_20px_-10px_hsl(43_60%_30%/0.55),inset_0_1px_0_0_hsl(45_80%_80%/0.12)]">
-                  <Clock className="mx-auto mb-1 h-4 w-4 text-gold/90" aria-hidden strokeWidth={2.2} />
-                  <div className="type-num text-[1.625rem] font-bold leading-none text-gilt">
+                <div
+                  className={cn(
+                    "relative overflow-hidden rounded-lg border p-3 text-center",
+                    state.time_warning
+                      ? "animate-blink border-danger/70 bg-gradient-to-b from-danger/[0.22] to-surface/50 shadow-[0_0_24px_-6px_hsl(356_80%_50%/0.7)]"
+                      : "border-gold/25 bg-gradient-to-b from-gold/[0.09] to-surface/50 shadow-[0_6px_20px_-10px_hsl(43_60%_30%/0.55),inset_0_1px_0_0_hsl(45_80%_80%/0.12)]"
+                  )}
+                >
+                  <Clock
+                    className={cn(
+                      "mx-auto mb-1 h-4 w-4",
+                      state.time_warning ? "text-[hsl(356_80%_68%)]" : "text-gold/90"
+                    )}
+                    aria-hidden
+                    strokeWidth={2.2}
+                  />
+                  <div
+                    className={cn(
+                      "type-num text-[1.625rem] font-bold leading-none",
+                      state.time_warning ? "text-[hsl(356_85%_68%)]" : "text-gilt"
+                    )}
+                  >
                     {state.clock}
                   </div>
-                  <div className="mt-1.5 text-[0.5625rem] font-bold uppercase tracking-[0.16em] text-ink-subtle">
-                    {state.minutes_elapsed} minutes gone
-                  </div>
+                  {state.leave_time && (
+                    <div
+                      className={cn(
+                        "mt-1.5 text-[0.5625rem] font-bold uppercase tracking-[0.16em]",
+                        state.time_warning ? "text-[hsl(356_80%_74%)]" : "text-ink-subtle"
+                      )}
+                    >
+                      Everyone leaves at {state.leave_time}
+                    </div>
+                  )}
                 </div>
 
                 <HudPanel icon={MapPin} label="Where you are">

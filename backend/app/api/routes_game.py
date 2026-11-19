@@ -17,6 +17,7 @@ from ..models.dto import (
     SelectCharacterRequest,
     TalkRequest,
 )
+from ..engine.time_system import played_minutes, tick
 from ..services import get_stats_service, get_store
 from ..services.user_stats import record_result as record_user_result
 from . import serializers as ser
@@ -40,6 +41,29 @@ def _require_game(game_id: str):
     return loaded
 
 
+def live_game(
+    game_id: str,
+    user: User | None = Depends(get_optional_user),
+    db: Session = Depends(get_db),
+):
+    """Load a game and count the time it has been played. When the limit runs out
+    the guests leave, the case is lost and the loss goes on the player's record."""
+    case, state = _require_game(game_id)
+    if tick(state):
+        engine().expire(case, state)
+        if user is not None:
+            record_user_result(
+                db,
+                user_id=user.id,
+                game_id=game_id,
+                won=False,
+                solve_minutes=played_minutes(state),
+                difficulty=case.difficulty.value,
+            )
+    get_store().save_game(case, state)
+    return case, state
+
+
 # ---- new / snapshot ---------------------------------------------------------
 @router.post("/games")
 def new_game(req: NewGameRequest):
@@ -49,9 +73,17 @@ def new_game(req: NewGameRequest):
 
 
 @router.get("/games/{game_id}")
-def get_game(game_id: str):
-    case, state = _require_game(game_id)
+def get_game(game_id: str, live: tuple = Depends(live_game)):
+    case, state = live
     return ser.full_snapshot(case, state)
+
+
+@router.post("/games/{game_id}/tick")
+def heartbeat(live: tuple = Depends(live_game)):
+    """Sent every few seconds while a game is open, so play time keeps counting and
+    the page learns at once when the guests have left."""
+    case, state = live
+    return ser.public_state(case, state)
 
 
 @router.get("/games/{game_id}/brief")
@@ -62,8 +94,8 @@ def get_brief(game_id: str):
 
 # ---- action -----------------------------------------------------------------
 @router.post("/games/{game_id}/action")
-def action(game_id: str, req: ActionRequest):
-    case, state = _require_game(game_id)
+def action(game_id: str, req: ActionRequest, live: tuple = Depends(live_game)):
+    case, state = live
     resp = engine().handle_action(case, state, req.text)
     get_store().save_game(case, state)
     return {
@@ -78,8 +110,8 @@ def action(game_id: str, req: ActionRequest):
 
 # ---- select active character -------------------------------------------------
 @router.post("/games/{game_id}/select")
-def select_character(game_id: str, req: SelectCharacterRequest):
-    case, state = _require_game(game_id)
+def select_character(game_id: str, req: SelectCharacterRequest, live: tuple = Depends(live_game)):
+    case, state = live
     resp = engine().select_character(case, state, req.character_id)
     get_store().save_game(case, state)
     return {
@@ -94,8 +126,8 @@ def select_character(game_id: str, req: SelectCharacterRequest):
 
 # ---- talk (directed at active / given character) ----------------------------
 @router.post("/games/{game_id}/talk")
-def talk(game_id: str, req: TalkRequest):
-    case, state = _require_game(game_id)
+def talk(game_id: str, req: TalkRequest, live: tuple = Depends(live_game)):
+    case, state = live
     resp = engine().talk_to(case, state, req.text, req.character_id)
     get_store().save_game(case, state)
     return {
@@ -110,10 +142,10 @@ def talk(game_id: str, req: TalkRequest):
 
 # ---- AI detective team ------------------------------------------------------
 @router.post("/games/{game_id}/detectives/message")
-def detective_message(game_id: str, req: DetectiveMessageRequest):
+def detective_message(game_id: str, req: DetectiveMessageRequest, live: tuple = Depends(live_game)):
     """Send a natural-language message to the detective team. The LLM decides
     which detective responds and whether an interview should begin."""
-    case, state = _require_game(game_id)
+    case, state = live
     result = engine().detective_message(case, state, req.text)
     get_store().save_game(case, state)
     return {
@@ -126,10 +158,10 @@ def detective_message(game_id: str, req: DetectiveMessageRequest):
 
 
 @router.post("/games/{game_id}/detectives/interview")
-def detective_interview(game_id: str, req: DetectiveInterviewRequest):
+def detective_interview(game_id: str, req: DetectiveInterviewRequest, live: tuple = Depends(live_game)):
     """Run one autonomous interview. Returns the full scripted turn sequence and
     the report so the client can stream it with typing delays."""
-    case, state = _require_game(game_id)
+    case, state = live
     result = engine().detective_interview(
         case, state, req.detective_id, req.character_id
     )
@@ -145,9 +177,9 @@ def detective_interview(game_id: str, req: DetectiveInterviewRequest):
 
 
 @router.post("/games/{game_id}/detectives/settle")
-def detective_settle(game_id: str, req: DetectiveSettleRequest):
+def detective_settle(game_id: str, req: DetectiveSettleRequest, live: tuple = Depends(live_game)):
     """Mark a detective as back from an interview (client finished streaming)."""
-    case, state = _require_game(game_id)
+    case, state = live
     engine().settle_detective(state, req.detective_id)
     get_store().save_game(case, state)
     return {"detectives": ser.public_detectives(state)}
@@ -155,8 +187,8 @@ def detective_settle(game_id: str, req: DetectiveSettleRequest):
 
 # ---- hint -------------------------------------------------------------------
 @router.post("/games/{game_id}/hint")
-def hint(game_id: str, _req: HintRequest | None = None):
-    case, state = _require_game(game_id)
+def hint(game_id: str, _req: HintRequest | None = None, live: tuple = Depends(live_game)):
+    case, state = live
     resp = engine().handle_action(case, state, "give me a hint")
     get_store().save_game(case, state)
     return {"result": resp.model_dump(), "state": ser.public_state(case, state)}
@@ -174,10 +206,11 @@ def notebook(game_id: str):
 def accuse(
     game_id: str,
     req: AccuseRequest,
+    live: tuple = Depends(live_game),
     user: User | None = Depends(get_optional_user),
     db: Session = Depends(get_db),
 ):
-    case, state = _require_game(game_id)
+    case, state = live
     result = engine().accuse(case, state, req.character_id)
     # record statistics on the terminal result: on the account if signed in,
     # otherwise in the shared guest record
@@ -187,13 +220,13 @@ def accuse(
             user_id=user.id,
             game_id=game_id,
             won=result.correct,
-            solve_minutes=state.minutes_elapsed,
+            solve_minutes=played_minutes(state),
             difficulty=case.difficulty.value,
         )
     else:
         get_stats_service().record_result(
             won=result.correct,
-            solve_minutes=state.minutes_elapsed,
+            solve_minutes=played_minutes(state),
             difficulty=case.difficulty.value,
         )
     get_store().save_game(case, state)

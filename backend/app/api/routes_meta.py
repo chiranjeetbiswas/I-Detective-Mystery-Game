@@ -6,6 +6,7 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from ..db import User, get_db
+from ..engine.time_system import limit_for, night_span
 from ..services import get_stats_service, get_store
 from ..services.user_stats import load_statistics as load_user_statistics
 from . import serializers as ser
@@ -62,6 +63,8 @@ def restart(game_id: str):
         id=f"game_{_uuid.uuid4().hex[:12]}",
         case_id=case.id,
         current_location=case.rooms[0].name if case.rooms else case.location_name,
+        time_limit_minutes=limit_for(len(case.characters)),
+        game_span_minutes=night_span(case.start_time),
     )
     for c in case.characters:
         state.npc_states[c.id] = NPCState(character_id=c.id, trust=bt)

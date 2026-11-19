@@ -137,6 +137,11 @@ const config: Config = {
           from: { opacity: "0", transform: "scale(0.97)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+        /* Hard on/off flash for the last minutes on the clock. */
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.2" },
+        },
         /* Slow gold breath for the active suspect. */
         "pulse-gold": {
           "0%, 100%": { boxShadow: "0 0 0 0 hsl(var(--gold) / 0.35)" },
@@ -168,6 +173,7 @@ const config: Config = {
         "fade-in": "fade-in 0.42s cubic-bezier(0.22,1,0.36,1) both",
         "fade-in-scale": "fade-in-scale 0.36s cubic-bezier(0.22,1,0.36,1) both",
         "pulse-gold": "pulse-gold 2.6s ease-out infinite",
+        blink: "blink 0.9s ease-in-out infinite",
         breathe: "breathe 5.5s ease-in-out infinite",
         shimmer: "shimmer 2.4s ease-in-out 1",
         "dot-bob": "dot-bob 1.3s ease-in-out infinite",

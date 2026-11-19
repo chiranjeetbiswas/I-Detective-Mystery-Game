@@ -147,6 +147,12 @@ export interface GameStateView {
   inventory: string[];
   hints_used: number;
   accusation_made: boolean;
+  /** True when the time limit ran out and the guests left. */
+  time_up: boolean;
+  /** True in the last five minutes: the clock blinks red. Never a countdown. */
+  time_warning: boolean;
+  /** The in-world time the guests leave (empty if the case has no limit). */
+  leave_time: string;
   discovered_evidence_count: number;
   active_character_id: string;
 }

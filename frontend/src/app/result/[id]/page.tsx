@@ -44,8 +44,11 @@ export default function ResultPage() {
   }
 
   const won = snap.state.status === "won";
+  const timeUp = snap.state.time_up;
   const sol = snap.solution;
-  const verdict = snap.transcript.filter((t) => t.speaker === "Verdict").pop();
+  const verdict = snap.transcript
+    .filter((t) => t.speaker === (timeUp ? "Narrator" : "Verdict"))
+    .pop();
 
   return (
     <main className="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center px-6 py-12 text-center">
@@ -81,7 +84,7 @@ export default function ResultPage() {
 
         <h1 className="type-display-lg mb-3">
           <span className={won ? "text-gilt" : "text-[hsl(356_72%_74%)]"}>
-            {won ? "Case Solved" : "They Got Away"}
+            {won ? "Case Solved" : timeUp ? "Time Is Up" : "They Got Away"}
           </span>
         </h1>
         <div
@@ -92,6 +95,8 @@ export default function ResultPage() {
         <p className="mb-8 font-prose text-[1.125rem] italic text-ink-muted">
           {won
             ? "You worked it out, detective."
+            : timeUp
+            ? "The guests have all left the place. You ran out of time."
             : "You picked the wrong person. This one got away."}
         </p>
 

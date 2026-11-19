@@ -74,6 +74,11 @@ export default function NewGamePage() {
           </CardTitle>
         </CardHeader>
         <CardContent>
+          <p className="mb-4 text-ui leading-relaxed text-ink-muted">
+            The case has a time limit. With 4 or 5 guests you have 30 minutes. With 6
+            or 8 guests you have 1 hour. The night in the game goes by fast. When the
+            clock reaches 6:00 in the morning, the guests leave and you lose.
+          </p>
           <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4">
             {COUNTS.map((c) => (
               <button

@@ -41,7 +41,9 @@ r = client.post(f"/api/games/{gid}/action",
                 json={"game_id": gid, "text": f"Talk to {case.characters[0].name}"})
 check("talk 200", r.status_code == 200)
 adata = r.json()
-check("clock advanced", adata["state"]["minutes_elapsed"] > start_minutes)
+# timed games follow real time, so a quick action does not move the clock
+check("clock did not go back", adata["state"]["minutes_elapsed"] >= start_minutes)
+check("still in progress", adata["state"]["status"] == "in_progress")
 check("has dialogue or narration",
       bool(adata["result"]["dialogue"] or adata["result"]["narration"]))
 
