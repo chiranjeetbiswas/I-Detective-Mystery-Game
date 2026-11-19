@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, Award, Loader2, Trophy } from "lucide-react";
+import { ArrowLeft, Award, Loader2, Lock, Trophy } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AuthBar } from "@/components/auth-bar";
@@ -49,8 +50,38 @@ export default function StatsPage() {
   useEffect(() => {
     if (loading) return;
     setStats(null);
+    // Only signed-in players have a record; guests are asked to sign in below.
+    if (!user) return;
     api.stats().then(setStats).catch(() => setStats(null));
-  }, [loading, user?.id]);
+  }, [loading, user]);
+
+  if (!loading && !user) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-12">
+        <AuthBar />
+        <Link
+          href="/"
+          className="mb-7 inline-flex items-center gap-2 text-micro font-semibold uppercase tracking-[0.12em] text-ink-subtle transition-colors hover:text-gold"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" /> Back
+        </Link>
+        <h1 className="type-display-lg mb-2 text-gilt">Your Record</h1>
+        <div className="mb-8 h-px w-full bg-gradient-to-r from-gold/55 via-gold/20 to-transparent" />
+        <Card>
+          <CardContent className="flex flex-col items-center gap-4 py-10 text-center">
+            <Lock className="h-7 w-7 text-gold" strokeWidth={1.8} aria-hidden />
+            <p className="max-w-md text-body leading-relaxed text-ink-muted">
+              Please log in first. Your record and awards are only kept for
+              players who sign in with an email. Guests do not get a record.
+            </p>
+            <Link href="/login?next=/stats">
+              <Button size="lg">Log in or sign up</Button>
+            </Link>
+          </CardContent>
+        </Card>
+      </main>
+    );
+  }
 
   if (!stats) {
     return (
@@ -102,16 +133,6 @@ export default function StatsPage() {
         </Badge>
       </div>
       <div className="mb-8 h-px w-full bg-gradient-to-r from-gold/55 via-gold/20 to-transparent" />
-
-      {!user && (
-        <p className="mb-6 rounded-lg border border-gold/25 bg-gold/[0.05] px-4 py-3 text-ui text-ink-muted">
-          You are playing as a guest, so this is the shared guest record.{" "}
-          <Link href="/login?next=/stats" className="font-semibold text-gold underline-offset-4 hover:underline">
-            Sign in
-          </Link>{" "}
-          to keep your own record and awards.
-        </p>
-      )}
 
       <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {tiles.map((t, i) => (

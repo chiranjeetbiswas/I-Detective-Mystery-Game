@@ -14,6 +14,7 @@ import {
   Package,
   BookOpen,
   Gavel,
+  LogOut,
   ArrowLeftRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -69,6 +70,10 @@ const NON_TALK_PREFIXES = [
   "help me",
   "stuck",
 ];
+
+/** A reply never lands instantly: the "is thinking" dots stay up at least this long. */
+const THINK_MIN_MS = 1100;
+const THINK_JITTER_MS = 900;
 
 function isNonTalkAction(text: string): boolean {
   const low = text.toLowerCase().trim();
@@ -135,11 +140,15 @@ export default function InvestigationPage() {
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const thinkingRef = useRef<HTMLDivElement>(null);
+  const [quitOpen, setQuitOpen] = useState(false);
+  const [quitting, setQuitting] = useState(false);
 
   // The chat box is disabled while a reply loads, and a disabled field cannot
   // hold focus. So put the cursor back only once React has re-enabled it.
   useEffect(() => {
     if (!busy) inputRef.current?.focus();
+    else thinkingRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }, [busy]);
 
   // derived active character view from the latest characters array
@@ -295,11 +304,19 @@ export default function InvestigationPage() {
     try {
       if (activeDetectiveId) {
         await sendToTeam(text);
-      } else if (activeCharId && !isNonTalkAction(text)) {
-        const res = await api.talk(id, text);
-        applyResponse(res);
       } else {
-        const res = await api.action(id, text);
+        // show the player's own line right away, then let the guest "think"
+        pushLine({
+          at_time: snap?.state.clock ?? "",
+          speaker: "You",
+          text,
+          kind: "dialogue",
+        });
+        const talking = activeCharId && !isNonTalkAction(text);
+        const [res] = await Promise.all([
+          talking ? api.talk(id, text) : api.action(id, text),
+          sleep(THINK_MIN_MS + Math.random() * THINK_JITTER_MS),
+        ]);
         applyResponse(res);
       }
     } finally {
@@ -325,6 +342,21 @@ export default function InvestigationPage() {
     if (!slot) return;
     await api.save(id, slot);
     alert(`Saved as "${slot}".`);
+  }
+
+  /** Leave the case. With `keep`, save to a slot named after the case first. */
+  async function quit(keep: boolean) {
+    setQuitting(true);
+    try {
+      if (keep && snap) {
+        const name = snap.brief.title.replace(/[^\w -]/g, "").trim().slice(0, 40);
+        await api.save(id, `${name || "case"} ${id.slice(0, 6)}`);
+      }
+      router.push("/");
+    } catch {
+      alert("Could not save the game, so you have not left. Try again.");
+      setQuitting(false);
+    }
   }
 
   if (!snap) {
@@ -362,6 +394,9 @@ export default function InvestigationPage() {
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" onClick={save}>
             <Save className="h-3.5 w-3.5" /> Save
+          </Button>
+          <Button variant="ghost" size="sm" onClick={() => setQuitOpen(true)}>
+            <LogOut className="h-3.5 w-3.5" /> Quit
           </Button>
           <Button
             variant="destructive"
@@ -568,7 +603,7 @@ export default function InvestigationPage() {
               detectiveNames={detectives.map((d) => d.name)}
             />
             {busy && (
-              <div className="mt-5 flex items-center gap-2.5 pl-1">
+              <div ref={thinkingRef} className="mt-5 flex items-center gap-2.5 pl-1">
                 <ThinkingDots />
                 <span className="text-micro italic text-ink-subtle">
                   {activeDetective
@@ -761,6 +796,46 @@ export default function InvestigationPage() {
           </div>
         </aside>
       </div>
+
+      {/* ══ QUIT dialog ══ */}
+      {quitOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-canvas/80 p-4 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Quit the game"
+          onClick={() => !quitting && setQuitOpen(false)}
+        >
+          <div
+            className="glass w-full max-w-sm rounded-xl border p-5 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="mb-1 font-display text-[1.0625rem] font-bold text-gilt">
+              Leave this case?
+            </h2>
+            <p className="mb-4 text-ui leading-relaxed text-ink-muted">
+              Save your game to come back to it later, or quit and lose your
+              progress.
+            </p>
+            <div className="flex flex-col gap-2">
+              <Button onClick={() => quit(true)} disabled={quitting}>
+                {quitting ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Save className="h-4 w-4" />
+                )}{" "}
+                Save &amp; quit
+              </Button>
+              <Button variant="outline" onClick={() => quit(false)} disabled={quitting}>
+                <LogOut className="h-4 w-4" /> Quit without saving
+              </Button>
+              <Button variant="ghost" onClick={() => setQuitOpen(false)} disabled={quitting}>
+                Keep playing
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ══ MOBILE NAV: switch panels on small screens (hidden on lg+) ══ */}
       <nav className="glass flex shrink-0 border-t lg:hidden">

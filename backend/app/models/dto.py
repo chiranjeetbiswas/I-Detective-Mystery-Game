@@ -8,7 +8,7 @@ from .enums import Difficulty
 
 # ---- requests ---------------------------------------------------------------
 class NewGameRequest(BaseModel):
-    num_characters: int = Field(6, ge=4, le=12)
+    num_characters: int = Field(5, ge=4, le=8)
     difficulty: Difficulty = Difficulty.NORMAL
 
 

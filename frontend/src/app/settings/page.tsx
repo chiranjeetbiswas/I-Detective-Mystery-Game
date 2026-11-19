@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ArrowLeft, Loader2, Play, Server, Save } from "lucide-react";
+import { ArrowLeft, Loader2, Play, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { api } from "@/lib/api";
 import { setActiveGame } from "@/lib/session";
 import type { SaveSlot } from "@/lib/types";
@@ -15,16 +14,13 @@ import type { SaveSlot } from "@/lib/types";
 export default function SettingsPage() {
   const router = useRouter();
   const [saves, setSaves] = useState<SaveSlot[]>([]);
-  const [provider, setProvider] = useState<string>("");
   const [loading, setLoading] = useState(true);
   const [resuming, setResuming] = useState("");
 
   useEffect(() => {
-    Promise.all([api.listSaves(), api.health().catch(() => null)])
-      .then(([s, h]) => {
-        setSaves(s.saves);
-        if (h) setProvider(h.provider);
-      })
+    api
+      .listSaves()
+      .then((s) => setSaves(s.saves))
       .finally(() => setLoading(false));
   }, []);
 
@@ -54,54 +50,6 @@ export default function SettingsPage() {
 
       <h1 className="type-display-lg mb-3 text-gilt">Settings &amp; Saved Games</h1>
       <div className="mb-8 h-px w-full bg-gradient-to-r from-gold/55 via-gold/20 to-transparent" />
-
-      <Card className="mb-5">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2.5">
-            <Server className="h-4 w-4 text-gold" strokeWidth={2} aria-hidden />
-            Backend
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="text-[0.625rem] font-bold uppercase tracking-[0.13em] text-ink-subtle">
-              API URL
-            </span>
-            <code className="type-num rounded border border-hairline bg-canvas/70 px-2 py-0.5 text-micro text-ink-muted">
-              {process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}
-            </code>
-          </div>
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="text-[0.625rem] font-bold uppercase tracking-[0.13em] text-ink-subtle">
-              LLM provider
-            </span>
-            {provider ? (
-              <Badge variant={provider === "mock" ? "outline" : "gold"}>
-                {provider}
-              </Badge>
-            ) : (
-              <Badge variant="danger">offline</Badge>
-            )}
-          </div>
-          <div className="rule-gold opacity-25" />
-          <p className="text-ui leading-relaxed text-ink-muted">
-            Put{" "}
-            <code className="rounded bg-surface-3/70 px-1 py-0.5 font-mono text-micro text-gold/90">
-              GROQ_API_KEY
-            </code>{" "}
-            or{" "}
-            <code className="rounded bg-surface-3/70 px-1 py-0.5 font-mono text-micro text-gold/90">
-              AGENTROUTER_API_KEY
-            </code>{" "}
-            in the backend{" "}
-            <code className="rounded bg-surface-3/70 px-1 py-0.5 font-mono text-micro text-gold/90">
-              .env
-            </code>{" "}
-            file to use that provider. If both are set, the second is the backup. With
-            no key, the built-in mock provider runs the whole game offline.
-          </p>
-        </CardContent>
-      </Card>
 
       <Card>
         <CardHeader>

@@ -12,7 +12,8 @@ import { api } from "@/lib/api";
 import { setActiveGame } from "@/lib/session";
 import type { Difficulty } from "@/lib/types";
 
-const COUNTS = [4, 5, 6, 8, 10, 12];
+const COUNTS = [4, 5, 6, 8];
+const RECOMMENDED_COUNT = 5;
 const DIFFICULTIES: { id: Difficulty; name: string; blurb: string }[] = [
   { id: "beginner", name: "Beginner", blurb: "More clues · guests tell the truth · hints on" },
   { id: "normal", name: "Normal", blurb: "A fair mix — good for most players" },
@@ -31,7 +32,7 @@ const tile = (selected: boolean) =>
 
 export default function NewGamePage() {
   const router = useRouter();
-  const [count, setCount] = useState(6);
+  const [count, setCount] = useState(RECOMMENDED_COUNT);
   const [difficulty, setDifficulty] = useState<Difficulty>("normal");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -73,7 +74,7 @@ export default function NewGamePage() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-6">
+          <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4">
             {COUNTS.map((c) => (
               <button
                 key={c}
@@ -94,7 +95,7 @@ export default function NewGamePage() {
                 >
                   {c}
                 </span>
-                {c === 6 && (
+                {c === RECOMMENDED_COUNT && (
                   <span className="mt-1 block text-[0.5625rem] font-semibold uppercase tracking-[0.1em] text-ink-subtle">
                     recommended
                   </span>
